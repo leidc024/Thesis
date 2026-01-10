@@ -1,0 +1,5445 @@
+[
+  {
+    "sentence": "Di man lang nagbabago ang kulay o inaanay",
+    "words": [
+      "di",
+      "man",
+      "lang",
+      "nagbabago",
+      "ang",
+      "kulay",
+      "o",
+      "inaanay"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "di",
+        "position": 0,
+        "ambiguity_type": "COMBINED",
+        "candidates": [
+          "de",
+          "di",
+          "re",
+          "ri"
+        ]
+      },
+      {
+        "word": "o",
+        "position": 6,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "o",
+          "u"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U",
+      "COMBINED"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "May ibang gumagawa nito at siyang maghuhukom",
+    "words": [
+      "may",
+      "ibang",
+      "gumagawa",
+      "nito",
+      "at",
+      "siyang",
+      "maghuhukom"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "nito",
+        "position": 3,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "neto",
+          "nito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Religious"
+  },
+  {
+    "sentence": "Mga salita ng buhay magpakailanman meron ka",
+    "words": [
+      "mga",
+      "salita",
+      "ng",
+      "buhay",
+      "magpakailanman",
+      "meron",
+      "ka"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "meron",
+        "position": 5,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "meron",
+          "miron"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Religious"
+  },
+  {
+    "sentence": "Nagkaroon sila ng maraming anak",
+    "words": [
+      "nagkaroon",
+      "sila",
+      "ng",
+      "maraming",
+      "anak"
+    ],
+    "word_count": 5,
+    "ambiguous_words": [
+      {
+        "word": "sila",
+        "position": 1,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "sela",
+          "sila"
+        ]
+      },
+      {
+        "word": "maraming",
+        "position": 3,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "madaming",
+          "maraming"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Ito ang dating tagpuan nila ni Laya",
+    "words": [
+      "ito",
+      "ang",
+      "dating",
+      "tagpuan",
+      "nila",
+      "ni",
+      "laya"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "ito",
+        "position": 0,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Walang lingon akong tumakbo nang buong bilis",
+    "words": [
+      "walang",
+      "lingon",
+      "akong",
+      "tumakbo",
+      "nang",
+      "buong",
+      "bilis"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "buong",
+        "position": 5,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "boong",
+          "buong"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Lalong tumibay ang paghanga na matanda sa kanya",
+    "words": [
+      "lalong",
+      "tumibay",
+      "ang",
+      "paghanga",
+      "na",
+      "matanda",
+      "sa",
+      "kanya"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "lalong",
+        "position": 0,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "lalong",
+          "lalung"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Buti na lang at kokonti pa ang mga istudyante",
+    "words": [
+      "buti",
+      "na",
+      "lang",
+      "at",
+      "kokonti",
+      "pa",
+      "ang",
+      "mga",
+      "istudyante"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "buti",
+        "position": 0,
+        "ambiguity_type": "COMBINED",
+        "candidates": [
+          "bote",
+          "buti"
+        ]
+      },
+      {
+        "word": "istudyante",
+        "position": 8,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "estudyante",
+          "istudyante"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "COMBINED",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Malaki ang kanyang pasasalamat at naramdaman kong",
+    "words": [
+      "malaki",
+      "ang",
+      "kanyang",
+      "pasasalamat",
+      "at",
+      "naramdaman",
+      "kong"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "kong",
+        "position": 6,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Parang mga boses ipis din sila kung mag usap",
+    "words": [
+      "parang",
+      "mga",
+      "boses",
+      "ipis",
+      "din",
+      "sila",
+      "kung",
+      "mag",
+      "usap"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "din",
+        "position": 4,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      },
+      {
+        "word": "sila",
+        "position": 5,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "sela",
+          "sila"
+        ]
+      },
+      {
+        "word": "kung",
+        "position": 6,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 3,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U",
+      "D/R",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Noon dumating ang isang uhaw na uhaw na kambing",
+    "words": [
+      "noon",
+      "dumating",
+      "ang",
+      "isang",
+      "uhaw",
+      "na",
+      "uhaw",
+      "na",
+      "kambing"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "noon",
+        "position": 0,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "noon",
+          "nuon"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Pumapasok ang tubig ulan sa pader",
+    "words": [
+      "pumapasok",
+      "ang",
+      "tubig",
+      "ulan",
+      "sa",
+      "pader"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "pader",
+        "position": 5,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "paded",
+          "pader"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Sa isang kumperensya, may nakalapit akong babaeng guro",
+    "words": [
+      "sa",
+      "isang",
+      "kumperensya",
+      "may",
+      "nakalapit",
+      "akong",
+      "babaeng",
+      "guro"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "kumperensya",
+        "position": 2,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "komperensya",
+          "kumperensya"
+        ]
+      },
+      {
+        "word": "babaeng",
+        "position": 6,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "babaeng",
+          "babaing"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Noon ko lang nakitang naging malungkot si Kuya",
+    "words": [
+      "noon",
+      "ko",
+      "lang",
+      "nakitang",
+      "naging",
+      "malungkot",
+      "si",
+      "kuya"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "noon",
+        "position": 0,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "noon",
+          "nuon"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kung minsan, nudels, sabon, at kung ano ano pa",
+    "words": [
+      "kung",
+      "minsan",
+      "nudels",
+      "sabon",
+      "at",
+      "kung",
+      "ano",
+      "ano",
+      "pa"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "kung",
+        "position": 0,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      },
+      {
+        "word": "kung",
+        "position": 5,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Nagsimula muli akong mag ipon at bumili ng mga libro",
+    "words": [
+      "nagsimula",
+      "muli",
+      "akong",
+      "mag",
+      "ipon",
+      "at",
+      "bumili",
+      "ng",
+      "mga",
+      "libro"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "muli",
+        "position": 1,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "mule",
+          "muli"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Para siyang turompong kangkarot na walang patutunguhan",
+    "words": [
+      "para",
+      "siyang",
+      "turompong",
+      "kangkarot",
+      "na",
+      "walang",
+      "patutunguhan"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "para",
+        "position": 0,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "pada",
+          "para"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Alam ko si Kuya rin at ang kariton",
+    "words": [
+      "alam",
+      "ko",
+      "si",
+      "kuya",
+      "rin",
+      "at",
+      "ang",
+      "kariton"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "rin",
+        "position": 4,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Gusto kong hintayin ang pagdating ni Tatay",
+    "words": [
+      "gusto",
+      "kong",
+      "hintayin",
+      "ang",
+      "pagdating",
+      "ni",
+      "tatay"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "kong",
+        "position": 1,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Maraming mga ligaw na aso ang nagkalat sa kalsada",
+    "words": [
+      "maraming",
+      "mga",
+      "ligaw",
+      "na",
+      "aso",
+      "ang",
+      "nagkalat",
+      "sa",
+      "kalsada"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "maraming",
+        "position": 0,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "madaming",
+          "maraming"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Maaaring mapagpalaya o nakasasakal ang mga relasyong ito",
+    "words": [
+      "maaaring",
+      "mapagpalaya",
+      "o",
+      "nakasasakal",
+      "ang",
+      "mga",
+      "relasyong",
+      "ito"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "o",
+        "position": 2,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "o",
+          "u"
+        ]
+      },
+      {
+        "word": "ito",
+        "position": 7,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Nakita ko ito hanggang sa kainin na sila ng alapaap",
+    "words": [
+      "nakita",
+      "ko",
+      "ito",
+      "hanggang",
+      "sa",
+      "kainin",
+      "na",
+      "sila",
+      "ng",
+      "alapaap"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "ito",
+        "position": 2,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      },
+      {
+        "word": "sila",
+        "position": 7,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "sela",
+          "sila"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Ayon sa paniniwala, nagiging malilimutin ang naglalarong pagong",
+    "words": [
+      "ayon",
+      "sa",
+      "paniniwala",
+      "nagiging",
+      "malilimutin",
+      "ang",
+      "naglalarong",
+      "pagong"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "ayon",
+        "position": 0,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "ayon",
+          "ayun"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Muli kong natawag ang pangalan ni Mama Mary",
+    "words": [
+      "muli",
+      "kong",
+      "natawag",
+      "ang",
+      "pangalan",
+      "ni",
+      "mama",
+      "mary"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "muli",
+        "position": 0,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "mule",
+          "muli"
+        ]
+      },
+      {
+        "word": "kong",
+        "position": 1,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Nakita ko na ang daan patungong bayan",
+    "words": [
+      "nakita",
+      "ko",
+      "na",
+      "ang",
+      "daan",
+      "patungong",
+      "bayan"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "daan",
+        "position": 4,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "daan",
+          "raan"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Pero di man lang natakot si Nanay",
+    "words": [
+      "pero",
+      "di",
+      "man",
+      "lang",
+      "natakot",
+      "si",
+      "nanay"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "di",
+        "position": 1,
+        "ambiguity_type": "COMBINED",
+        "candidates": [
+          "de",
+          "di",
+          "re",
+          "ri"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "COMBINED"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Maraming pagkain sa kabilang malaking pulo at tumpak",
+    "words": [
+      "maraming",
+      "pagkain",
+      "sa",
+      "kabilang",
+      "malaking",
+      "pulo",
+      "at",
+      "tumpak"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "maraming",
+        "position": 0,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "madaming",
+          "maraming"
+        ]
+      },
+      {
+        "word": "pulo",
+        "position": 5,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "polo",
+          "pulo"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U",
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "May isinagawa ba silang survey para patotohanan ito",
+    "words": [
+      "may",
+      "isinagawa",
+      "ba",
+      "silang",
+      "survey",
+      "para",
+      "patotohanan",
+      "ito"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "silang",
+        "position": 3,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "selang",
+          "silang"
+        ]
+      },
+      {
+        "word": "para",
+        "position": 5,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "pada",
+          "para"
+        ]
+      },
+      {
+        "word": "ito",
+        "position": 7,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 3,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Madali rin niyang naisusuot ang sinulid sa karayom",
+    "words": [
+      "madali",
+      "rin",
+      "niyang",
+      "naisusuot",
+      "ang",
+      "sinulid",
+      "sa",
+      "karayom"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "madali",
+        "position": 0,
+        "ambiguity_type": "COMBINED",
+        "candidates": [
+          "madale",
+          "madali",
+          "marali"
+        ]
+      },
+      {
+        "word": "rin",
+        "position": 1,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R",
+      "COMBINED"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Maraming kuwento si Kuya tungkol sa mga bituin",
+    "words": [
+      "maraming",
+      "kuwento",
+      "si",
+      "kuya",
+      "tungkol",
+      "sa",
+      "mga",
+      "bituin"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "maraming",
+        "position": 0,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "madaming",
+          "maraming"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Hindi na rin mabilang ang pinakulong niya sa piitan",
+    "words": [
+      "hindi",
+      "na",
+      "rin",
+      "mabilang",
+      "ang",
+      "pinakulong",
+      "niya",
+      "sa",
+      "piitan"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "hindi",
+        "position": 0,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "hinde",
+          "hindi"
+        ]
+      },
+      {
+        "word": "rin",
+        "position": 2,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Sa buong maghapon, walang pahinga ang kariton",
+    "words": [
+      "sa",
+      "buong",
+      "maghapon",
+      "walang",
+      "pahinga",
+      "ang",
+      "kariton"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "buong",
+        "position": 1,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "boong",
+          "buong"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "At kung umuulan, ibinababa ang transparent na trapal",
+    "words": [
+      "at",
+      "kung",
+      "umuulan",
+      "ibinababa",
+      "ang",
+      "transparent",
+      "na",
+      "trapal"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "kung",
+        "position": 1,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kinabukasan ay tuluyan na akong hindi pumasok sa eskwela",
+    "words": [
+      "kinabukasan",
+      "ay",
+      "tuluyan",
+      "na",
+      "akong",
+      "hindi",
+      "pumasok",
+      "sa",
+      "eskwela"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "hindi",
+        "position": 5,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "hinde",
+          "hindi"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Sa mga tulad nga nila ang kaharian ng Diyos",
+    "words": [
+      "sa",
+      "mga",
+      "tulad",
+      "nga",
+      "nila",
+      "ang",
+      "kaharian",
+      "ng",
+      "diyos"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "diyos",
+        "position": 8,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "diyos",
+          "diyus"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Religious"
+  },
+  {
+    "sentence": "Mayroon siyang isang maliit na karinderya sa aming lugar",
+    "words": [
+      "mayroon",
+      "siyang",
+      "isang",
+      "maliit",
+      "na",
+      "karinderya",
+      "sa",
+      "aming",
+      "lugar"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "lugar",
+        "position": 8,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "lugad",
+          "lugar"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Sa mga tulad nga nila ang kaharian ng Diyos",
+    "words": [
+      "sa",
+      "mga",
+      "tulad",
+      "nga",
+      "nila",
+      "ang",
+      "kaharian",
+      "ng",
+      "diyos"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "diyos",
+        "position": 8,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "diyos",
+          "diyus"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Religious"
+  },
+  {
+    "sentence": "Sa isang kolehiyo sa Maynila nag aaral noon si Ate",
+    "words": [
+      "sa",
+      "isang",
+      "kolehiyo",
+      "sa",
+      "maynila",
+      "nag",
+      "aaral",
+      "noon",
+      "si",
+      "ate"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "noon",
+        "position": 7,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "noon",
+          "nuon"
+        ]
+      },
+      {
+        "word": "ate",
+        "position": 9,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "ate",
+          "ati"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "O/U",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Hindi ka nag ipon ng makakain noong tag araw",
+    "words": [
+      "hindi",
+      "ka",
+      "nag",
+      "ipon",
+      "ng",
+      "makakain",
+      "noong",
+      "tag",
+      "araw"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "hindi",
+        "position": 0,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "hinde",
+          "hindi"
+        ]
+      },
+      {
+        "word": "noong",
+        "position": 6,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "noong",
+          "nuong"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Nagawa rin niyang higaan ang bunton ng mga water lily",
+    "words": [
+      "nagawa",
+      "rin",
+      "niyang",
+      "higaan",
+      "ang",
+      "bunton",
+      "ng",
+      "mga",
+      "water",
+      "lily"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "rin",
+        "position": 1,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Naniniraahan sila sa esterong malapit sa Tulay Jueblo",
+    "words": [
+      "naniniraahan",
+      "sila",
+      "sa",
+      "esterong",
+      "malapit",
+      "sa",
+      "tulay",
+      "jueblo"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "sila",
+        "position": 1,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "sela",
+          "sila"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Ginawa niyang hiwain ang tiyan nito upang malaman ang laman",
+    "words": [
+      "ginawa",
+      "niyang",
+      "hiwain",
+      "ang",
+      "tiyan",
+      "nito",
+      "upang",
+      "malaman",
+      "ang",
+      "laman"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "nito",
+        "position": 5,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "neto",
+          "nito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Balak nilang tunawin ito kapagka nakuha nila",
+    "words": [
+      "balak",
+      "nilang",
+      "tunawin",
+      "ito",
+      "kapagka",
+      "nakuha",
+      "nila"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "ito",
+        "position": 3,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Makikita rin ito bilang bagay na espiritwal",
+    "words": [
+      "makikita",
+      "rin",
+      "ito",
+      "bilang",
+      "bagay",
+      "na",
+      "espiritwal"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "rin",
+        "position": 1,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      },
+      {
+        "word": "ito",
+        "position": 2,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      },
+      {
+        "word": "espiritwal",
+        "position": 6,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "espiritwal",
+          "ispiritwal"
+        ]
+      }
+    ],
+    "ambiguity_count": 3,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Di ko napigilan, nalunok ko ang isang maliit na buto",
+    "words": [
+      "di",
+      "ko",
+      "napigilan",
+      "nalunok",
+      "ko",
+      "ang",
+      "isang",
+      "maliit",
+      "na",
+      "buto"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "di",
+        "position": 0,
+        "ambiguity_type": "COMBINED",
+        "candidates": [
+          "de",
+          "di",
+          "re",
+          "ri"
+        ]
+      },
+      {
+        "word": "buto",
+        "position": 9,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "boto",
+          "buto"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "O/U",
+      "COMBINED"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Pagdating sa palasyo, niyakap ng Datu ang prinsipe",
+    "words": [
+      "pagdating",
+      "sa",
+      "palasyo",
+      "niyakap",
+      "ng",
+      "datu",
+      "ang",
+      "prinsipe"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "datu",
+        "position": 5,
+        "ambiguity_type": "COMBINED",
+        "candidates": [
+          "dato",
+          "datu",
+          "rato"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "COMBINED"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Husto rin lagi ang kanyang bayad sa amin",
+    "words": [
+      "husto",
+      "rin",
+      "lagi",
+      "ang",
+      "kanyang",
+      "bayad",
+      "sa",
+      "amin"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "rin",
+        "position": 1,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      },
+      {
+        "word": "amin",
+        "position": 7,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "amen",
+          "amin"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Lalong naging mahiwaga sa akin ang lumang aparador",
+    "words": [
+      "lalong",
+      "naging",
+      "mahiwaga",
+      "sa",
+      "akin",
+      "ang",
+      "lumang",
+      "aparador"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "lalong",
+        "position": 0,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "lalong",
+          "lalung"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kapangyarihang maipalaganap ang totoong identidad ng kababaihang Pilipino",
+    "words": [
+      "kapangyarihang",
+      "maipalaganap",
+      "ang",
+      "totoong",
+      "identidad",
+      "ng",
+      "kababaihang",
+      "pilipino"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "totoong",
+        "position": 3,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "totoong",
+          "tutoong"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Pagkatapos mag aral ng magkapatid, pupunta sila sa Jones Bridge",
+    "words": [
+      "pagkatapos",
+      "mag",
+      "aral",
+      "ng",
+      "magkapatid",
+      "pupunta",
+      "sila",
+      "sa",
+      "jones",
+      "bridge"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "sila",
+        "position": 6,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "sela",
+          "sila"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kung ano ang aking itinuturo",
+    "words": [
+      "kung",
+      "ano",
+      "ang",
+      "aking",
+      "itinuturo"
+    ],
+    "word_count": 5,
+    "ambiguous_words": [
+      {
+        "word": "kung",
+        "position": 0,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Sa buong maghapon, nagkargador si Tatay",
+    "words": [
+      "sa",
+      "buong",
+      "maghapon",
+      "nagkargador",
+      "si",
+      "tatay"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "buong",
+        "position": 1,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "boong",
+          "buong"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Tama po ba mga taga Komisyon",
+    "words": [
+      "tama",
+      "po",
+      "ba",
+      "mga",
+      "taga",
+      "komisyon"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "komisyon",
+        "position": 5,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "komisyon",
+          "kumisyon"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Suot din niya ang hindi nabibiling kapal ng mukha",
+    "words": [
+      "suot",
+      "din",
+      "niya",
+      "ang",
+      "hindi",
+      "nabibiling",
+      "kapal",
+      "ng",
+      "mukha"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "din",
+        "position": 1,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      },
+      {
+        "word": "hindi",
+        "position": 4,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "hinde",
+          "hindi"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Tila batang nagmamaktol sa inang nagkakait ng gatas",
+    "words": [
+      "tila",
+      "batang",
+      "nagmamaktol",
+      "sa",
+      "inang",
+      "nagkakait",
+      "ng",
+      "gatas"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "tila",
+        "position": 0,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "tela",
+          "tila"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Walang bakas ng anumang sinag ng araw ang bintanang kapis",
+    "words": [
+      "walang",
+      "bakas",
+      "ng",
+      "anumang",
+      "sinag",
+      "ng",
+      "araw",
+      "ang",
+      "bintanang",
+      "kapis"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "anumang",
+        "position": 3,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "anomang",
+          "anumang"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Nagalit si Sangkalan at isinumpa ang Diyos",
+    "words": [
+      "nagalit",
+      "si",
+      "sangkalan",
+      "at",
+      "isinumpa",
+      "ang",
+      "diyos"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "diyos",
+        "position": 6,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "diyos",
+          "diyus"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kung kailan siya didilat at yayakap sa akin",
+    "words": [
+      "kung",
+      "kailan",
+      "siya",
+      "didilat",
+      "at",
+      "yayakap",
+      "sa",
+      "akin"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "kung",
+        "position": 0,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Ayon sa naririnig ko ako naghuhukom",
+    "words": [
+      "ayon",
+      "sa",
+      "naririnig",
+      "ko",
+      "ako",
+      "naghuhukom"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "ayon",
+        "position": 0,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "ayon",
+          "ayun"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Religious"
+  },
+  {
+    "sentence": "Naririto rin ang kadalisayan ng aking pagkatao",
+    "words": [
+      "naririto",
+      "rin",
+      "ang",
+      "kadalisayan",
+      "ng",
+      "aking",
+      "pagkatao"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "rin",
+        "position": 1,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Pinaniwalaan ko agad na mapapasaakin ito",
+    "words": [
+      "pinaniwalaan",
+      "ko",
+      "agad",
+      "na",
+      "mapapasaakin",
+      "ito"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "ito",
+        "position": 5,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Binasag ng kuwentong ito ang tradisyunal na depinisyon na pamilya",
+    "words": [
+      "binasag",
+      "ng",
+      "kuwentong",
+      "ito",
+      "ang",
+      "tradisyunal",
+      "na",
+      "depinisyon",
+      "na",
+      "pamilya"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "ito",
+        "position": 3,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      },
+      {
+        "word": "tradisyunal",
+        "position": 5,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "tradisyonal",
+          "tradisyunal"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "O/U",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Naghahalong berde at abo ang paligid",
+    "words": [
+      "naghahalong",
+      "berde",
+      "at",
+      "abo",
+      "ang",
+      "paligid"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "abo",
+        "position": 3,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "abo",
+          "abu"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Maaga kung sumilay ang araw kung tag init",
+    "words": [
+      "maaga",
+      "kung",
+      "sumilay",
+      "ang",
+      "araw",
+      "kung",
+      "tag",
+      "init"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "kung",
+        "position": 1,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      },
+      {
+        "word": "kung",
+        "position": 5,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kung gaano kadalas ang kanyang paghinga",
+    "words": [
+      "kung",
+      "gaano",
+      "kadalas",
+      "ang",
+      "kanyang",
+      "paghinga"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "kung",
+        "position": 0,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Tuluy tuloy siya sa mesa ng mga ito",
+    "words": [
+      "tuluy",
+      "tuloy",
+      "siya",
+      "sa",
+      "mesa",
+      "ng",
+      "mga",
+      "ito"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "mesa",
+        "position": 4,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "mesa",
+          "misa"
+        ]
+      },
+      {
+        "word": "ito",
+        "position": 7,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Sa kasalukuyan, naging takbuhan ako ng mga kapatid kong nagigipit",
+    "words": [
+      "sa",
+      "kasalukuyan",
+      "naging",
+      "takbuhan",
+      "ako",
+      "ng",
+      "mga",
+      "kapatid",
+      "kong",
+      "nagigipit"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "kong",
+        "position": 8,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Mag aaral akong mabuti para kay Mama",
+    "words": [
+      "mag",
+      "aaral",
+      "akong",
+      "mabuti",
+      "para",
+      "kay",
+      "mama"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "para",
+        "position": 4,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "pada",
+          "para"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Hindi ko maintindihan subalit mahirap para tanggihan ko pa ito",
+    "words": [
+      "hindi",
+      "ko",
+      "maintindihan",
+      "subalit",
+      "mahirap",
+      "para",
+      "tanggihan",
+      "ko",
+      "pa",
+      "ito"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "hindi",
+        "position": 0,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "hinde",
+          "hindi"
+        ]
+      },
+      {
+        "word": "para",
+        "position": 5,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "pada",
+          "para"
+        ]
+      },
+      {
+        "word": "ito",
+        "position": 9,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 3,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Nagsisimula na ring magtago ang ikalawang araw",
+    "words": [
+      "nagsisimula",
+      "na",
+      "ring",
+      "magtago",
+      "ang",
+      "ikalawang",
+      "araw"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "ring",
+        "position": 2,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "ding",
+          "ring"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Sindak sila sa bilis ng mga humahabol",
+    "words": [
+      "sindak",
+      "sila",
+      "sa",
+      "bilis",
+      "ng",
+      "mga",
+      "humahabol"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "sila",
+        "position": 1,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "sela",
+          "sila"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kailangan kong mapaniwala si Duerme",
+    "words": [
+      "kailangan",
+      "kong",
+      "mapaniwala",
+      "si",
+      "duerme"
+    ],
+    "word_count": 5,
+    "ambiguous_words": [
+      {
+        "word": "kong",
+        "position": 1,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Nakalaman sa aking database ang bawat sulok ng lugar",
+    "words": [
+      "nakalaman",
+      "sa",
+      "aking",
+      "database",
+      "ang",
+      "bawat",
+      "sulok",
+      "ng",
+      "lugar"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "lugar",
+        "position": 8,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "lugad",
+          "lugar"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Sabi ni Lola, kinakabag lang daw ako",
+    "words": [
+      "sabi",
+      "ni",
+      "lola",
+      "kinakabag",
+      "lang",
+      "daw",
+      "ako"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "lola",
+        "position": 2,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "lola",
+          "lula"
+        ]
+      },
+      {
+        "word": "daw",
+        "position": 5,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "daw",
+          "raw"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U",
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Ano ang gagawin natin sa napakarami nating dyip",
+    "words": [
+      "ano",
+      "ang",
+      "gagawin",
+      "natin",
+      "sa",
+      "napakarami",
+      "nating",
+      "dyip"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "natin",
+        "position": 3,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "naten",
+          "natin"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kaya binibilang kong lagi, siyam kaming magkakapatid",
+    "words": [
+      "kaya",
+      "binibilang",
+      "kong",
+      "lagi",
+      "siyam",
+      "kaming",
+      "magkakapatid"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "kong",
+        "position": 2,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Nakalabas nga ng balon ang lobo sa tulong ng kambing",
+    "words": [
+      "nakalabas",
+      "nga",
+      "ng",
+      "balon",
+      "ang",
+      "lobo",
+      "sa",
+      "tulong",
+      "ng",
+      "kambing"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "balon",
+        "position": 3,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "balon",
+          "balun"
+        ]
+      },
+      {
+        "word": "lobo",
+        "position": 5,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "lobo",
+          "lubo"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Lahat ng tao, nagtutulak ng bahay",
+    "words": [
+      "lahat",
+      "ng",
+      "tao",
+      "nagtutulak",
+      "ng",
+      "bahay"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "tao",
+        "position": 2,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "tao",
+          "tau"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Ang iyong mata ang lampara ng iyong katawan",
+    "words": [
+      "ang",
+      "iyong",
+      "mata",
+      "ang",
+      "lampara",
+      "ng",
+      "iyong",
+      "katawan"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "iyong",
+        "position": 1,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "iyong",
+          "iyung"
+        ]
+      },
+      {
+        "word": "iyong",
+        "position": 6,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "iyong",
+          "iyung"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Religious"
+  },
+  {
+    "sentence": "Nagsawa na ito sa pag iyak",
+    "words": [
+      "nagsawa",
+      "na",
+      "ito",
+      "sa",
+      "pag",
+      "iyak"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "ito",
+        "position": 2,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Hinampas ito ng agos at kaagad bumagsak",
+    "words": [
+      "hinampas",
+      "ito",
+      "ng",
+      "agos",
+      "at",
+      "kaagad",
+      "bumagsak"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "ito",
+        "position": 1,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Religious"
+  },
+  {
+    "sentence": "Lulan nito ay mga lasing na Kastila",
+    "words": [
+      "lulan",
+      "nito",
+      "ay",
+      "mga",
+      "lasing",
+      "na",
+      "kastila"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "nito",
+        "position": 1,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "neto",
+          "nito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kabilang ito sa pinakamabiling aklat pambata ng Adarna House",
+    "words": [
+      "kabilang",
+      "ito",
+      "sa",
+      "pinakamabiling",
+      "aklat",
+      "pambata",
+      "ng",
+      "adarna",
+      "house"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "ito",
+        "position": 1,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Walang wala na akong dapat pang pagtaguan",
+    "words": [
+      "walang",
+      "wala",
+      "na",
+      "akong",
+      "dapat",
+      "pang",
+      "pagtaguan"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "dapat",
+        "position": 4,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "dapat",
+          "rapat"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Iba ang awra nito kaysa sa mga ordinaryong balita",
+    "words": [
+      "iba",
+      "ang",
+      "awra",
+      "nito",
+      "kaysa",
+      "sa",
+      "mga",
+      "ordinaryong",
+      "balita"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "nito",
+        "position": 3,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "neto",
+          "nito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Inabot na ng kung anumang nilalang ang aking kinalalagyan",
+    "words": [
+      "inabot",
+      "na",
+      "ng",
+      "kung",
+      "anumang",
+      "nilalang",
+      "ang",
+      "aking",
+      "kinalalagyan"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "kung",
+        "position": 3,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      },
+      {
+        "word": "anumang",
+        "position": 4,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "anomang",
+          "anumang"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Ang kanilang kahilingan ay hindi naman pinagkaitan ng Panginoong Diyos",
+    "words": [
+      "ang",
+      "kanilang",
+      "kahilingan",
+      "ay",
+      "hindi",
+      "naman",
+      "pinagkaitan",
+      "ng",
+      "panginoong",
+      "diyos"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "hindi",
+        "position": 4,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "hinde",
+          "hindi"
+        ]
+      },
+      {
+        "word": "diyos",
+        "position": 9,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "diyos",
+          "diyus"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "O/U",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Laging akong may baong bio data sa aking bag",
+    "words": [
+      "laging",
+      "akong",
+      "may",
+      "baong",
+      "bio",
+      "data",
+      "sa",
+      "aking",
+      "bag"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "data",
+        "position": 5,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "data",
+          "rata"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Ang dambuhalang baboy damo , si Tandayag",
+    "words": [
+      "ang",
+      "dambuhalang",
+      "baboy",
+      "damo",
+      "si",
+      "tandayag"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "damo",
+        "position": 3,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "damo",
+          "ramo"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Nagdalawang isip din naman ako nung una",
+    "words": [
+      "nagdalawang",
+      "isip",
+      "din",
+      "naman",
+      "ako",
+      "nung",
+      "una"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "din",
+        "position": 2,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kahit parang bitin man sa isa, ayos na ayos na",
+    "words": [
+      "kahit",
+      "parang",
+      "bitin",
+      "man",
+      "sa",
+      "isa",
+      "ayos",
+      "na",
+      "ayos",
+      "na"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "ayos",
+        "position": 6,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "ayos",
+          "ayus"
+        ]
+      },
+      {
+        "word": "ayos",
+        "position": 8,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "ayos",
+          "ayus"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kaya ba ito ng konsensya mo",
+    "words": [
+      "kaya",
+      "ba",
+      "ito",
+      "ng",
+      "konsensya",
+      "mo"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "ito",
+        "position": 2,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kahit pilitin ko pa, hinding hindi ko na siya makita",
+    "words": [
+      "kahit",
+      "pilitin",
+      "ko",
+      "pa",
+      "hinding",
+      "hindi",
+      "ko",
+      "na",
+      "siya",
+      "makita"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "hindi",
+        "position": 5,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "hinde",
+          "hindi"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kayang kaya maibigay pati ang mga hindi sinasabi",
+    "words": [
+      "kayang",
+      "kaya",
+      "maibigay",
+      "pati",
+      "ang",
+      "mga",
+      "hindi",
+      "sinasabi"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "hindi",
+        "position": 6,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "hinde",
+          "hindi"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Sa panahong din ito nakilala ang Pilipinas",
+    "words": [
+      "sa",
+      "panahong",
+      "din",
+      "ito",
+      "nakilala",
+      "ang",
+      "pilipinas"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "din",
+        "position": 2,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      },
+      {
+        "word": "ito",
+        "position": 3,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Bumilis ang tibok ng aking puso",
+    "words": [
+      "bumilis",
+      "ang",
+      "tibok",
+      "ng",
+      "aking",
+      "puso"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "puso",
+        "position": 5,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "poso",
+          "puso"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Siya ay sumusunod sa usapan o sa napagkasunduan",
+    "words": [
+      "siya",
+      "ay",
+      "sumusunod",
+      "sa",
+      "usapan",
+      "o",
+      "sa",
+      "napagkasunduan"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "sumusunod",
+        "position": 2,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "sumusonod",
+          "sumusunod"
+        ]
+      },
+      {
+        "word": "o",
+        "position": 5,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "o",
+          "u"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "May dapat ka bang balikan",
+    "words": [
+      "may",
+      "dapat",
+      "ka",
+      "bang",
+      "balikan"
+    ],
+    "word_count": 5,
+    "ambiguous_words": [
+      {
+        "word": "dapat",
+        "position": 1,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "dapat",
+          "rapat"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Sa paraang ito makikita ang pagiging malikhain ng mga Pilipino",
+    "words": [
+      "sa",
+      "paraang",
+      "ito",
+      "makikita",
+      "ang",
+      "pagiging",
+      "malikhain",
+      "ng",
+      "mga",
+      "pilipino"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "ito",
+        "position": 2,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Maisulat ang mga guwang o nakaligtaang kasaysayan",
+    "words": [
+      "maisulat",
+      "ang",
+      "mga",
+      "guwang",
+      "o",
+      "nakaligtaang",
+      "kasaysayan"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "o",
+        "position": 4,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "o",
+          "u"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Dito ko siya minamasahe hanggang sa makatulog siya",
+    "words": [
+      "dito",
+      "ko",
+      "siya",
+      "minamasahe",
+      "hanggang",
+      "sa",
+      "makatulog",
+      "siya"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "dito",
+        "position": 0,
+        "ambiguity_type": "COMBINED",
+        "candidates": [
+          "dito",
+          "reto",
+          "rito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "COMBINED"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Ayokong magbayad dahil ayokong maging halimbawa ang gagawin kong pagbabayad",
+    "words": [
+      "ayokong",
+      "magbayad",
+      "dahil",
+      "ayokong",
+      "maging",
+      "halimbawa",
+      "ang",
+      "gagawin",
+      "kong",
+      "pagbabayad"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "dahil",
+        "position": 2,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "dahil",
+          "rahil"
+        ]
+      },
+      {
+        "word": "kong",
+        "position": 8,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "O/U",
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Doon din niya tinanggal ang nakasuklob sa aking sako",
+    "words": [
+      "doon",
+      "din",
+      "niya",
+      "tinanggal",
+      "ang",
+      "nakasuklob",
+      "sa",
+      "aking",
+      "sako"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "doon",
+        "position": 0,
+        "ambiguity_type": "COMBINED",
+        "candidates": [
+          "doon",
+          "duon",
+          "roon",
+          "ruon"
+        ]
+      },
+      {
+        "word": "din",
+        "position": 1,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R",
+      "COMBINED"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Sumesenyas na lamang siya sa kanila at nanatiling pipi",
+    "words": [
+      "sumesenyas",
+      "na",
+      "lamang",
+      "siya",
+      "sa",
+      "kanila",
+      "at",
+      "nanatiling",
+      "pipi"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "kanila",
+        "position": 5,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "kanela",
+          "kanila"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Religious"
+  },
+  {
+    "sentence": "Manalig kayo sa Diyos, at manalig din kayo sa akin",
+    "words": [
+      "manalig",
+      "kayo",
+      "sa",
+      "diyos",
+      "at",
+      "manalig",
+      "din",
+      "kayo",
+      "sa",
+      "akin"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "diyos",
+        "position": 3,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "diyos",
+          "diyus"
+        ]
+      },
+      {
+        "word": "din",
+        "position": 6,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "O/U",
+      "D/R"
+    ],
+    "source": "Religious"
+  },
+  {
+    "sentence": "Ito ang mga homepage na hindi ko makuhang layuan",
+    "words": [
+      "ito",
+      "ang",
+      "mga",
+      "homepage",
+      "na",
+      "hindi",
+      "ko",
+      "makuhang",
+      "layuan"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "ito",
+        "position": 0,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      },
+      {
+        "word": "hindi",
+        "position": 5,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "hinde",
+          "hindi"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Lalong malulungkot si Lola dun",
+    "words": [
+      "lalong",
+      "malulungkot",
+      "si",
+      "lola",
+      "dun"
+    ],
+    "word_count": 5,
+    "ambiguous_words": [
+      {
+        "word": "lalong",
+        "position": 0,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "lalong",
+          "lalung"
+        ]
+      },
+      {
+        "word": "lola",
+        "position": 3,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "lola",
+          "lula"
+        ]
+      },
+      {
+        "word": "dun",
+        "position": 4,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "don",
+          "dun"
+        ]
+      }
+    ],
+    "ambiguity_count": 3,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Dito unang nagpasya si Laya",
+    "words": [
+      "dito",
+      "unang",
+      "nagpasya",
+      "si",
+      "laya"
+    ],
+    "word_count": 5,
+    "ambiguous_words": [
+      {
+        "word": "dito",
+        "position": 0,
+        "ambiguity_type": "COMBINED",
+        "candidates": [
+          "dito",
+          "reto",
+          "rito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "COMBINED"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Sinasabayan ng tibok ng puso ang bilis ng aking pagtakbo",
+    "words": [
+      "sinasabayan",
+      "ng",
+      "tibok",
+      "ng",
+      "puso",
+      "ang",
+      "bilis",
+      "ng",
+      "aking",
+      "pagtakbo"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "puso",
+        "position": 4,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "poso",
+          "puso"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Isang gabi ay mahimbing ang tulog ni Irog",
+    "words": [
+      "isang",
+      "gabi",
+      "ay",
+      "mahimbing",
+      "ang",
+      "tulog",
+      "ni",
+      "irog"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "gabi",
+        "position": 1,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "gabe",
+          "gabi"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kinausap lang niya ako nang gabing iyon",
+    "words": [
+      "kinausap",
+      "lang",
+      "niya",
+      "ako",
+      "nang",
+      "gabing",
+      "iyon"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "iyon",
+        "position": 6,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "iyon",
+          "iyun"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Emilia ang naging pamagat ng tulang ito",
+    "words": [
+      "emilia",
+      "ang",
+      "naging",
+      "pamagat",
+      "ng",
+      "tulang",
+      "ito"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "ito",
+        "position": 6,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Lalo akong bumilib kay Tatay",
+    "words": [
+      "lalo",
+      "akong",
+      "bumilib",
+      "kay",
+      "tatay"
+    ],
+    "word_count": 5,
+    "ambiguous_words": [
+      {
+        "word": "lalo",
+        "position": 0,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "lalo",
+          "lalu"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Pinagpala rin ang bunga ng iyong sinapupunan",
+    "words": [
+      "pinagpala",
+      "rin",
+      "ang",
+      "bunga",
+      "ng",
+      "iyong",
+      "sinapupunan"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "rin",
+        "position": 1,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      },
+      {
+        "word": "iyong",
+        "position": 5,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "iyong",
+          "iyung"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U",
+      "D/R"
+    ],
+    "source": "Religious"
+  },
+  {
+    "sentence": "Parang paghingang kailangang gawin para malubos ang buhay",
+    "words": [
+      "parang",
+      "paghingang",
+      "kailangang",
+      "gawin",
+      "para",
+      "malubos",
+      "ang",
+      "buhay"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "para",
+        "position": 4,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "pada",
+          "para"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Nang may ikatlong araw nabuhay na mag uli",
+    "words": [
+      "nang",
+      "may",
+      "ikatlong",
+      "araw",
+      "nabuhay",
+      "na",
+      "mag",
+      "uli"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "uli",
+        "position": 7,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "ule",
+          "uli"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Religious"
+  },
+  {
+    "sentence": "Ng pagsasama ng dalawang lalaki o ng babae",
+    "words": [
+      "ng",
+      "pagsasama",
+      "ng",
+      "dalawang",
+      "lalaki",
+      "o",
+      "ng",
+      "babae"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "lalaki",
+        "position": 4,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "lalake",
+          "lalaki"
+        ]
+      },
+      {
+        "word": "o",
+        "position": 5,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "o",
+          "u"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Bagaman, hindi ako nakaramdam ng takot",
+    "words": [
+      "bagaman",
+      "hindi",
+      "ako",
+      "nakaramdam",
+      "ng",
+      "takot"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "hindi",
+        "position": 1,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "hinde",
+          "hindi"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Biruin mo, empleyado ako sa isang kilalang kompanya",
+    "words": [
+      "biruin",
+      "mo",
+      "empleyado",
+      "ako",
+      "sa",
+      "isang",
+      "kilalang",
+      "kompanya"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "kompanya",
+        "position": 7,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kompanya",
+          "kumpanya"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Sabi ng nanay niya, nagkalagnat daw",
+    "words": [
+      "sabi",
+      "ng",
+      "nanay",
+      "niya",
+      "nagkalagnat",
+      "daw"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "daw",
+        "position": 5,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "daw",
+          "raw"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Wala pa akong nakikita na kasing laki ng aming bahay",
+    "words": [
+      "wala",
+      "pa",
+      "akong",
+      "nakikita",
+      "na",
+      "kasing",
+      "laki",
+      "ng",
+      "aming",
+      "bahay"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "laki",
+        "position": 6,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "lake",
+          "laki"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kayang kayang ninuman ang sumulat ng kuwentong pambata",
+    "words": [
+      "kayang",
+      "kayang",
+      "ninuman",
+      "ang",
+      "sumulat",
+      "ng",
+      "kuwentong",
+      "pambata"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "ninuman",
+        "position": 2,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "ninoman",
+          "ninuman"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Hindi nagtagal at nagbutil butil ang pawis sa kanyang noo",
+    "words": [
+      "hindi",
+      "nagtagal",
+      "at",
+      "nagbutil",
+      "butil",
+      "ang",
+      "pawis",
+      "sa",
+      "kanyang",
+      "noo"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "hindi",
+        "position": 0,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "hinde",
+          "hindi"
+        ]
+      },
+      {
+        "word": "noo",
+        "position": 9,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "noo",
+          "nuo"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "O/U",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Isa isa kong tinignan ang aming mga gamit",
+    "words": [
+      "isa",
+      "isa",
+      "kong",
+      "tinignan",
+      "ang",
+      "aming",
+      "mga",
+      "gamit"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "kong",
+        "position": 2,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Tiyak na matatagalan bago uli ito mabuksan",
+    "words": [
+      "tiyak",
+      "na",
+      "matatagalan",
+      "bago",
+      "uli",
+      "ito",
+      "mabuksan"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "uli",
+        "position": 4,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "ule",
+          "uli"
+        ]
+      },
+      {
+        "word": "ito",
+        "position": 5,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Mula pa sa sinapupunan, ito ang ating pinakamimithi",
+    "words": [
+      "mula",
+      "pa",
+      "sa",
+      "sinapupunan",
+      "ito",
+      "ang",
+      "ating",
+      "pinakamimithi"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "ito",
+        "position": 4,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Buko dito, hinihintay rin niyang magkita silang muli ni Joey",
+    "words": [
+      "buko",
+      "dito",
+      "hinihintay",
+      "rin",
+      "niyang",
+      "magkita",
+      "silang",
+      "muli",
+      "ni",
+      "joey"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "dito",
+        "position": 1,
+        "ambiguity_type": "COMBINED",
+        "candidates": [
+          "dito",
+          "reto",
+          "rito"
+        ]
+      },
+      {
+        "word": "rin",
+        "position": 3,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      },
+      {
+        "word": "silang",
+        "position": 6,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "selang",
+          "silang"
+        ]
+      },
+      {
+        "word": "muli",
+        "position": 7,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "mule",
+          "muli"
+        ]
+      }
+    ],
+    "ambiguity_count": 4,
+    "density_level": "high",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R",
+      "COMBINED",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Ginamit ang mga aklat na ito bilang mga propaganda",
+    "words": [
+      "ginamit",
+      "ang",
+      "mga",
+      "aklat",
+      "na",
+      "ito",
+      "bilang",
+      "mga",
+      "propaganda"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "ito",
+        "position": 5,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kapag gumawa ng di mabuti, pinarurusahan",
+    "words": [
+      "kapag",
+      "gumawa",
+      "ng",
+      "di",
+      "mabuti",
+      "pinarurusahan"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "di",
+        "position": 3,
+        "ambiguity_type": "COMBINED",
+        "candidates": [
+          "de",
+          "di",
+          "re",
+          "ri"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "COMBINED"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Walang pagod ang mababakas sa kanyang mukha at tikas",
+    "words": [
+      "walang",
+      "pagod",
+      "ang",
+      "mababakas",
+      "sa",
+      "kanyang",
+      "mukha",
+      "at",
+      "tikas"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "tikas",
+        "position": 8,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "tekas",
+          "tikas"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Pinalampas ko lang ang lahat ng ito",
+    "words": [
+      "pinalampas",
+      "ko",
+      "lang",
+      "ang",
+      "lahat",
+      "ng",
+      "ito"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "ito",
+        "position": 6,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "At ngayon ay hihingi pa siya ng isang pabor",
+    "words": [
+      "at",
+      "ngayon",
+      "ay",
+      "hihingi",
+      "pa",
+      "siya",
+      "ng",
+      "isang",
+      "pabor"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "pabor",
+        "position": 8,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "pabod",
+          "pabor"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Naguguluhan lamang ako sa narinig kong balita mula sa iyo",
+    "words": [
+      "naguguluhan",
+      "lamang",
+      "ako",
+      "sa",
+      "narinig",
+      "kong",
+      "balita",
+      "mula",
+      "sa",
+      "iyo"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "narinig",
+        "position": 4,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "nadinig",
+          "narinig"
+        ]
+      },
+      {
+        "word": "kong",
+        "position": 5,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "O/U",
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Hindi nga panahon ng igos",
+    "words": [
+      "hindi",
+      "nga",
+      "panahon",
+      "ng",
+      "igos"
+    ],
+    "word_count": 5,
+    "ambiguous_words": [
+      {
+        "word": "hindi",
+        "position": 0,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "hinde",
+          "hindi"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Religious"
+  },
+  {
+    "sentence": "At napatunayan kong tama ako",
+    "words": [
+      "at",
+      "napatunayan",
+      "kong",
+      "tama",
+      "ako"
+    ],
+    "word_count": 5,
+    "ambiguous_words": [
+      {
+        "word": "kong",
+        "position": 2,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Ikaw ang mapagpalang Ama, tumutulong at gumagabay sa amin",
+    "words": [
+      "ikaw",
+      "ang",
+      "mapagpalang",
+      "ama",
+      "tumutulong",
+      "at",
+      "gumagabay",
+      "sa",
+      "amin"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "amin",
+        "position": 8,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "amen",
+          "amin"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "E/I"
+    ],
+    "source": "Religious"
+  },
+  {
+    "sentence": "Higit kong naintindihan ang impeyerno sa lupa",
+    "words": [
+      "higit",
+      "kong",
+      "naintindihan",
+      "ang",
+      "impeyerno",
+      "sa",
+      "lupa"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "kong",
+        "position": 1,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "At baka bigla kayong datnan ng araw na iyon",
+    "words": [
+      "at",
+      "baka",
+      "bigla",
+      "kayong",
+      "datnan",
+      "ng",
+      "araw",
+      "na",
+      "iyon"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "iyon",
+        "position": 8,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "iyon",
+          "iyun"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Religious"
+  },
+  {
+    "sentence": "Ipinakain niya sa lalim ng dagat ang kanyang sarili",
+    "words": [
+      "ipinakain",
+      "niya",
+      "sa",
+      "lalim",
+      "ng",
+      "dagat",
+      "ang",
+      "kanyang",
+      "sarili"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "dagat",
+        "position": 5,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "dagat",
+          "ragat"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Hindi ko maintindihan noong una",
+    "words": [
+      "hindi",
+      "ko",
+      "maintindihan",
+      "noong",
+      "una"
+    ],
+    "word_count": 5,
+    "ambiguous_words": [
+      {
+        "word": "hindi",
+        "position": 0,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "hinde",
+          "hindi"
+        ]
+      },
+      {
+        "word": "noong",
+        "position": 3,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "noong",
+          "nuong"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Alam kong nabibigatan na rin siya sa akin",
+    "words": [
+      "alam",
+      "kong",
+      "nabibigatan",
+      "na",
+      "rin",
+      "siya",
+      "sa",
+      "akin"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "kong",
+        "position": 1,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      },
+      {
+        "word": "rin",
+        "position": 4,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U",
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Para itong natatawang nandidiri sa itsura ni Inay",
+    "words": [
+      "para",
+      "itong",
+      "natatawang",
+      "nandidiri",
+      "sa",
+      "itsura",
+      "ni",
+      "inay"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "para",
+        "position": 0,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "pada",
+          "para"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "May gamot sa sipon at ubo",
+    "words": [
+      "may",
+      "gamot",
+      "sa",
+      "sipon",
+      "at",
+      "ubo"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "ubo",
+        "position": 5,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "obo",
+          "ubo"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Nasa tamang edad ka na para lumagay sa tahimik",
+    "words": [
+      "nasa",
+      "tamang",
+      "edad",
+      "ka",
+      "na",
+      "para",
+      "lumagay",
+      "sa",
+      "tahimik"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "edad",
+        "position": 2,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "edad",
+          "idad"
+        ]
+      },
+      {
+        "word": "para",
+        "position": 5,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "pada",
+          "para"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R",
+      "E/I"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Maraming gamit ang unan ni Lola",
+    "words": [
+      "maraming",
+      "gamit",
+      "ang",
+      "unan",
+      "ni",
+      "lola"
+    ],
+    "word_count": 6,
+    "ambiguous_words": [
+      {
+        "word": "maraming",
+        "position": 0,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "madaming",
+          "maraming"
+        ]
+      },
+      {
+        "word": "lola",
+        "position": 5,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "lola",
+          "lula"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U",
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Ang kanyang walang alinlangang panananamplataya ay dapat tularan",
+    "words": [
+      "ang",
+      "kanyang",
+      "walang",
+      "alinlangang",
+      "panananamplataya",
+      "ay",
+      "dapat",
+      "tularan"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "dapat",
+        "position": 6,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "dapat",
+          "rapat"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "D/R"
+    ],
+    "source": "Religious"
+  },
+  {
+    "sentence": "Papauwi, patutulinin ni Kuya ang asul na kariton",
+    "words": [
+      "papauwi",
+      "patutulinin",
+      "ni",
+      "kuya",
+      "ang",
+      "asul",
+      "na",
+      "kariton"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "asul",
+        "position": 5,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "asol",
+          "asul"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Kung may kakain ng tinapay na ito, mabubuhay siya magpakailanman",
+    "words": [
+      "kung",
+      "may",
+      "kakain",
+      "ng",
+      "tinapay",
+      "na",
+      "ito",
+      "mabubuhay",
+      "siya",
+      "magpakailanman"
+    ],
+    "word_count": 10,
+    "ambiguous_words": [
+      {
+        "word": "kung",
+        "position": 0,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      },
+      {
+        "word": "ito",
+        "position": 6,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "eto",
+          "ito"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "medium",
+    "ambiguity_types": [
+      "O/U",
+      "E/I"
+    ],
+    "source": "Religious"
+  },
+  {
+    "sentence": "May bahid ng mapusyaw na asul ang langit",
+    "words": [
+      "may",
+      "bahid",
+      "ng",
+      "mapusyaw",
+      "na",
+      "asul",
+      "ang",
+      "langit"
+    ],
+    "word_count": 8,
+    "ambiguous_words": [
+      {
+        "word": "asul",
+        "position": 5,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "asol",
+          "asul"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Lalo namang nagselos at nainggit si Larisa kay Mangita",
+    "words": [
+      "lalo",
+      "namang",
+      "nagselos",
+      "at",
+      "nainggit",
+      "si",
+      "larisa",
+      "kay",
+      "mangita"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "lalo",
+        "position": 0,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "lalo",
+          "lalu"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Huli rin kung banlawan ang kamisetang dilaw",
+    "words": [
+      "huli",
+      "rin",
+      "kung",
+      "banlawan",
+      "ang",
+      "kamisetang",
+      "dilaw"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "rin",
+        "position": 1,
+        "ambiguity_type": "D/R",
+        "candidates": [
+          "din",
+          "rin"
+        ]
+      },
+      {
+        "word": "kung",
+        "position": 2,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "kong",
+          "kung"
+        ]
+      }
+    ],
+    "ambiguity_count": 2,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U",
+      "D/R"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "May isang bagay ako noon na gustong gustong makamit",
+    "words": [
+      "may",
+      "isang",
+      "bagay",
+      "ako",
+      "noon",
+      "na",
+      "gustong",
+      "gustong",
+      "makamit"
+    ],
+    "word_count": 9,
+    "ambiguous_words": [
+      {
+        "word": "noon",
+        "position": 4,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "noon",
+          "nuon"
+        ]
+      }
+    ],
+    "ambiguity_count": 1,
+    "density_level": "low",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U"
+    ],
+    "source": "Literary"
+  },
+  {
+    "sentence": "Tila aporong sumusunod kay Mamang ang lalaki",
+    "words": [
+      "tila",
+      "aporong",
+      "sumusunod",
+      "kay",
+      "mamang",
+      "ang",
+      "lalaki"
+    ],
+    "word_count": 7,
+    "ambiguous_words": [
+      {
+        "word": "tila",
+        "position": 0,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "tela",
+          "tila"
+        ]
+      },
+      {
+        "word": "sumusunod",
+        "position": 2,
+        "ambiguity_type": "O/U",
+        "candidates": [
+          "sumusonod",
+          "sumusunod"
+        ]
+      },
+      {
+        "word": "lalaki",
+        "position": 6,
+        "ambiguity_type": "E/I",
+        "candidates": [
+          "lalake",
+          "lalaki"
+        ]
+      }
+    ],
+    "ambiguity_count": 3,
+    "density_level": "medium",
+    "difficulty_estimate": "hard",
+    "ambiguity_types": [
+      "O/U",
+      "E/I"
+    ],
+    "source": "Literary"
+  }
+]

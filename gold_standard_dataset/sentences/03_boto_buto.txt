@@ -1,0 +1,10 @@
+# Pair 03: boto, buto
+# boto = vote (election)
+# buto = bone / seed
+# Target: 100 sentences (50 boto + 50 buto)
+
+### BOTO (vote) - 50 sentences ###
+# Add sentences here...
+
+### BUTO (bone/seed) - 50 sentences ###
+# Add sentences here...

@@ -1,0 +1,415 @@
+# Dataset Creation Workflow
+## Visual Reference Guide
+
+```
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                    BAYBAYIN DISAMBIGUATION DATASET                        ║
+║                         Creation Workflow                                 ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ PHASE 0: SETUP (5 minutes)                                              │
+├─────────────────────────────────────────────────────────────────────────┤
+│ Script: 00_setup_directories.py                                         │
+│                                                                          │
+│ Input:  None                                                            │
+│ Output: dataset/ directory structure                                    │
+│                                                                          │
+│ Creates:                                                                │
+│   ├── dataset/raw/                                                      │
+│   ├── dataset/processed/                                                │
+│   ├── dataset/splits/                                                   │
+│   ├── dataset/analysis/                                                 │
+│   └── dataset/documentation/                                            │
+└─────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│ PHASE 1: DISCOVERY (10-15 minutes)                                      │
+├─────────────────────────────────────────────────────────────────────────┤
+│ Script: 01_find_ambiguous_pairs.py                                      │
+│                                                                          │
+│ Input:  MaBaybay-OCR/Filipino Word Corpus/Tagalog_words_74419+.csv     │
+│         (74,419+ Filipino words)                                        │
+│                                                                          │
+│ Process:                                                                │
+│   1. Load corpus ─────────────────────► 74,419 words                   │
+│   2. Convert to Baybayin ─────────────► 74,419 transliterations       │
+│   3. Group by Baybayin ───────────────► ~500-1,500 ambiguous patterns │
+│   4. Classify ambiguity type ─────────► E/I, O/U, D/R, COMBINED       │
+│   5. Generate statistics ─────────────► Counts, distributions          │
+│                                                                          │
+│ Output:                                                                 │
+│   ├── ambiguous_pairs_complete.csv ──► All pairs (spreadsheet)         │
+│   ├── ambiguous_pairs_complete.json ─► Detailed data + metadata        │
+│   └── ambiguity_statistics.txt ──────► Summary report                  │
+│                                                                          │
+│ Expected Results:                                                       │
+│   • E/I ambiguities: ~40-50% of patterns                               │
+│   • O/U ambiguities: ~40-50% of patterns                               │
+│   • D/R ambiguities: ~5-10% of patterns                                │
+│   • Combined: ~5-10% of patterns                                        │
+│   • Total: 500-1,500 ambiguous Baybayin patterns                       │
+│   • Total: 2,000-5,000 ambiguous words                                 │
+└─────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│ PHASE 2: EXTRACTION (10-20 minutes)                                     │
+├─────────────────────────────────────────────────────────────────────────┤
+│ Script: 02_extract_sentences.py                                         │
+│                                                                          │
+│ Input:  • Tagalog_Literary_Text.txt                                    │
+│         • Tagalog_Religious_Text.txt                                   │
+│         • ambiguous_pairs_complete.json (from Phase 1)                 │
+│                                                                          │
+│ Process:                                                                │
+│   Literary Corpus ─┐                                                   │
+│                     ├──► Segment sentences ──► Filter length ──┐       │
+│   Religious Corpus ─┘                          (5-20 words)     │       │
+│                                                                  ▼       │
+│                                         Find ambiguous words ───────►   │
+│                                         Classify density ───────────►   │
+│                                         Estimate difficulty ────────►   │
+│                                                                  │       │
+│                                                                  ▼       │
+│                                         Candidate Sentences      │       │
+│                                         (500-2,000 total)       │       │
+│                                                                          │
+│ Output:                                                                 │
+│   └── candidate_sentences.json                                         │
+│       • sentence text                                                   │
+│       • ambiguous_words: [positions, candidates]                       │
+│       • density_level: low/medium/high                                 │
+│       • difficulty_estimate: easy/medium/hard                          │
+│       • ambiguity_types: [E/I, O/U, D/R]                              │
+│       • source: Literary/Religious                                     │
+│                                                                          │
+│ Statistics Generated:                                                   │
+│   • By source: Literary vs Religious                                   │
+│   • By density: low (1 word) / medium (2-3) / high (4+)              │
+│   • By difficulty: easy / medium / hard                                │
+│   • By ambiguity type: E/I, O/U, D/R, COMBINED                        │
+└─────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│ PHASE 3: CURATION (1-2 weeks)                                           │
+├─────────────────────────────────────────────────────────────────────────┤
+│ MANUAL WORK: Strategic Selection + Construction                         │
+│                                                                          │
+│ Step 3A: Review Candidate Sentences                                     │
+│ ────────────────────────────────────────────────────────                │
+│   Load: candidate_sentences.json                                       │
+│                                                                          │
+│   Analyze:                                                              │
+│   ├─ Current distribution by type                                      │
+│   ├─ Current distribution by density                                   │
+│   ├─ Current distribution by difficulty                                │
+│   ├─ Coverage of ambiguous pairs                                       │
+│   └─ Sentence quality assessment                                       │
+│                                                                          │
+│   Identify Gaps:                                                        │
+│   ├─ Which ambiguity types underrepresented?                           │
+│   ├─ Which difficulty levels missing?                                  │
+│   ├─ Which ambiguous pairs have 0 examples?                            │
+│   └─ Which density levels need more?                                   │
+│                                                                          │
+│ Step 3B: Select from Candidates                                         │
+│ ────────────────────────────────────────────────────────                │
+│   For each category (E/I, O/U, D/R, etc.):                            │
+│   ├─ Calculate needed: target% × total_goal                           │
+│   ├─ Review available candidates                                       │
+│   ├─ Select best quality sentences                                     │
+│   └─ Ensure difficulty distribution                                    │
+│                                                                          │
+│   Target Distribution (for 500-1,000 sentences):                       │
+│   ┌─────────────────┬──────────┬─────────────┐                        │
+│   │ Category        │ Target % │ Count Range │                        │
+│   ├─────────────────┼──────────┼─────────────┤                        │
+│   │ E/I ambiguity   │   35%    │  175-350    │                        │
+│   │ O/U ambiguity   │   35%    │  175-350    │                        │
+│   │ D/R ambiguity   │   15%    │   75-150    │                        │
+│   │ Combined        │   10%    │   50-100    │                        │
+│   │ Control (none)  │    5%    │   25-50     │                        │
+│   └─────────────────┴──────────┴─────────────┘                        │
+│                                                                          │
+│ Step 3C: Construct Missing Sentences                                    │
+│ ────────────────────────────────────────────────────────                │
+│   For identified gaps:                                                  │
+│   ├─ Target specific ambiguous pairs                                   │
+│   ├─ Vary context strength deliberately                                │
+│   ├─ Use natural Filipino sentence patterns                            │
+│   ├─ Validate words exist in corpus                                    │
+│   └─ Ensure grammatical correctness                                    │
+│                                                                          │
+│   Examples:                                                             │
+│   ┌────────────────────────────────────────────────────────────┐       │
+│   │ EASY (strong context):                                     │       │
+│   │ "May nakita akong bote ng tubig sa mesa"                  │       │
+│   │  → "bottle" obvious with "water"                          │       │
+│   ├────────────────────────────────────────────────────────────┤       │
+│   │ MEDIUM (moderate context):                                 │       │
+│   │ "Bumili ako ng mangga na walang buto"                     │       │
+│   │  → "seed" suggested by "mango"                            │       │
+│   ├────────────────────────────────────────────────────────────┤       │
+│   │ HARD (weak context):                                       │       │
+│   │ "Ang bote ay nasa bahay"                                  │       │
+│   │  → Both "bottle" and "good" plausible                     │       │
+│   └────────────────────────────────────────────────────────────┘       │
+│                                                                          │
+│ Step 3D: Create Final Dataset                                           │
+│ ────────────────────────────────────────────────────────                │
+│   Compile selected + constructed sentences                             │
+│   Save as: filipino_sentences_v1.txt                                   │
+│   Format: One sentence per line                                        │
+│   Total: 500-1,000 sentences                                           │
+│                                                                          │
+│   Documentation:                                                        │
+│   ├─ Source tracking (extracted vs constructed)                        │
+│   ├─ Construction notes                                                │
+│   └─ Challenging decisions log                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│ PHASE 4: IMAGE GENERATION (30 minutes)                                  │
+├─────────────────────────────────────────────────────────────────────────┤
+│ Script: create_dataset.py (your existing script, adapted)               │
+│                                                                          │
+│ Input:  filipino_sentences_v1.txt                                      │
+│                                                                          │
+│ Process:                                                                │
+│   For each sentence:                                                   │
+│   ├─ Convert Latin → Baybayin                                         │
+│   ├─ Render as high-quality image (300 DPI)                           │
+│   ├─ Save as PNG                                                       │
+│   └─ Record in annotations.csv                                         │
+│                                                                          │
+│ Output:                                                                 │
+│   ├── baybayin_dataset_images/                                         │
+│   │   ├── sentence_1.png                                              │
+│   │   ├── sentence_2.png                                              │
+│   │   └── ... (500-1,000 images)                                      │
+│   └── annotations_v1.csv                                               │
+│       ├── filename                                                     │
+│       ├── baybayin_text                                                │
+│       └── latin_text (ground truth)                                    │
+└─────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│ PHASE 5: CANDIDATE GENERATION (5 minutes)                               │
+├─────────────────────────────────────────────────────────────────────────┤
+│ Script: generate_candidate_results.py (your existing script, adapted)   │
+│                                                                          │
+│ Input:  • annotations_v1.csv                                           │
+│         • Tagalog_words_74419+.csv (for validation)                   │
+│                                                                          │
+│ Process:                                                                │
+│   For each sentence:                                                   │
+│   ├─ Analyze each word for ambiguity                                  │
+│   ├─ Generate E/I, O/U, D/R variants                                  │
+│   ├─ Filter by corpus (word must exist)                               │
+│   └─ Create candidate list                                             │
+│                                                                          │
+│ Output:                                                                 │
+│   └── candidates_results_v1.json                                       │
+│       [                                                                │
+│         {                                                              │
+│           "image": "sentence_1.png",                                   │
+│           "baybayin_text": "...",                                      │
+│           "ground_truth": "Bawat isa ay may boto sa halalan",         │
+│           "ocr_candidates": [                                          │
+│             "bawat",                                                   │
+│             "isa",                                                     │
+│             "ay",                                                      │
+│             "may",                                                     │
+│             ["boto", "buto"],  ← ambiguous                            │
+│             "sa",                                                      │
+│             "halalan"                                                  │
+│           ]                                                            │
+│         }                                                              │
+│       ]                                                                │
+└─────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│ PHASE 6: VALIDATION (15 minutes)                                        │
+├─────────────────────────────────────────────────────────────────────────┤
+│ Script: 05_validate_dataset.py                                          │
+│                                                                          │
+│ Input:  • filipino_sentences_v1.txt                                    │
+│         • annotations_v1.csv                                           │
+│         • candidates_results_v1.json                                   │
+│         • Tagalog_words_74419+.csv                                     │
+│                                                                          │
+│ Validation Tests:                                                       │
+│   ┌──────────────────────────────────────────────────┐                │
+│   │ 1. Dataset Size                                  │                │
+│   │    ✓ 500-1,000 sentences                        │                │
+│   ├──────────────────────────────────────────────────┤                │
+│   │ 2. No Duplicates                                 │                │
+│   │    ✓ All sentences unique                       │                │
+│   ├──────────────────────────────────────────────────┤                │
+│   │ 3. Sentence Length                               │                │
+│   │    ✓ 5-20 words per sentence                    │                │
+│   ├──────────────────────────────────────────────────┤                │
+│   │ 4. Corpus Word Validation                        │                │
+│   │    ✓ All words exist in 74,419+ corpus          │                │
+│   ├──────────────────────────────────────────────────┤                │
+│   │ 5. Distribution Validation                       │                │
+│   │    ✓ E/I: 30-40% (target: 35%)                 │                │
+│   │    ✓ O/U: 30-40% (target: 35%)                 │                │
+│   │    ✓ D/R: 10-20% (target: 15%)                 │                │
+│   ├──────────────────────────────────────────────────┤                │
+│   │ 6. Ambiguous Pair Coverage                       │                │
+│   │    ✓ Minimum 3 examples per pair                │                │
+│   └──────────────────────────────────────────────────┘                │
+│                                                                          │
+│ Output:                                                                 │
+│   └── validation_report.json                                           │
+│       • Test results (pass/fail)                                       │
+│       • Dataset statistics                                             │
+│       • Quality metrics                                                │
+│       • Issue details (if any)                                         │
+│                                                                          │
+│ Summary:                                                                │
+│   ✓ PASS → Dataset ready for use                                      │
+│   ✗ FAIL → Review issues and iterate                                  │
+└─────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│ PHASE 7: SPLITTING (10 minutes)                                         │
+├─────────────────────────────────────────────────────────────────────────┤
+│ Script: create_splits.py (to be created)                                │
+│                                                                          │
+│ Input:  candidates_results_v1.json                                     │
+│                                                                          │
+│ Process:                                                                │
+│   1. Stratified split (maintain distribution)                          │
+│   2. Train: 70% (350-700 sentences)                                    │
+│   3. Validation: 15% (75-150 sentences)                                │
+│   4. Test: 15% (75-150 sentences)                                      │
+│                                                                          │
+│ Stratification Keys:                                                    │
+│   • Ambiguity type (E/I, O/U, D/R, COMBINED)                          │
+│   • Density level (low, medium, high)                                  │
+│   • Difficulty estimate (easy, medium, hard)                           │
+│                                                                          │
+│ Output:                                                                 │
+│   ├── train.json (70%)                                                 │
+│   ├── validation.json (15%)                                            │
+│   └── test.json (15%)                                                  │
+│                                                                          │
+│ Each split maintains similar:                                           │
+│   • Ambiguity type distribution                                        │
+│   • Difficulty distribution                                            │
+│   • Density distribution                                               │
+└─────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+╔═════════════════════════════════════════════════════════════════════════╗
+║                         DATASET COMPLETE!                               ║
+╠═════════════════════════════════════════════════════════════════════════╣
+║                                                                         ║
+║  Ready for:                                                            ║
+║    • Graph-based model evaluation                                      ║
+║    • Baseline comparison (embedding @ 77%)                             ║
+║    • Performance analysis by difficulty                                ║
+║    • Thesis methodology documentation                                  ║
+║    • Results chapter data                                              ║
+║                                                                         ║
+║  Deliverables:                                                         ║
+║    ✓ 500-1,000 curated Filipino sentences                             ║
+║    ✓ High-quality Baybayin images                                     ║
+║    ✓ OCR candidate mappings                                            ║
+║    ✓ Train/validation/test splits                                      ║
+║    ✓ Comprehensive documentation                                       ║
+║    ✓ Quality validation report                                         ║
+║                                                                         ║
+╚═════════════════════════════════════════════════════════════════════════╝
+
+═══════════════════════════════════════════════════════════════════════════
+                              FILE OUTPUTS
+═══════════════════════════════════════════════════════════════════════════
+
+dataset/
+├── raw/
+│   └── candidate_sentences.json .............. Extracted from corpora
+│
+├── processed/
+│   ├── filipino_sentences_v1.txt ............. Final curated sentences
+│   ├── annotations_v1.csv .................... Ground truth mappings
+│   └── candidates_results_v1.json ............ OCR candidates
+│
+├── splits/
+│   ├── train.json (70%) ...................... Training set
+│   ├── validation.json (15%) ................. Validation set
+│   └── test.json (15%) ....................... Test set
+│
+├── analysis/
+│   ├── ambiguous_pairs_complete.csv .......... All discovered pairs
+│   ├── ambiguous_pairs_complete.json ......... Detailed pair data
+│   ├── ambiguity_statistics.txt .............. Discovery statistics
+│   └── validation_report.json ................ Quality assurance
+│
+└── documentation/
+    └── README.md ............................. Dataset documentation
+
+baybayin_dataset_images/
+└── sentence_*.png (500-1,000 images) ......... Baybayin renderings
+
+═══════════════════════════════════════════════════════════════════════════
+                            TIMELINE SUMMARY
+═══════════════════════════════════════════════════════════════════════════
+
+Week 1: DISCOVERY & EXTRACTION (automated)
+  Day 1: Setup + Ambiguous pair discovery ........... 20 min
+  Day 2: Review discovery results ................... 2 hours
+  Day 3: Sentence extraction ........................ 20 min
+  Day 4-5: Gap analysis and planning ................ 4 hours
+
+Week 2-3: CURATION (manual)
+  Selection from candidates ......................... 6 hours
+  Construction for gaps ............................. 8 hours
+  Quality review .................................... 2 hours
+
+Week 4: GENERATION & VALIDATION (automated)
+  Image generation .................................. 30 min
+  Candidate generation .............................. 5 min
+  Validation ........................................ 15 min
+  Splitting ......................................... 10 min
+  Documentation ..................................... 2 hours
+
+TOTAL TIME: ~24 hours over 4 weeks
+
+═══════════════════════════════════════════════════════════════════════════
+                          QUALITY GUARANTEES
+═══════════════════════════════════════════════════════════════════════════
+
+✓ Comprehensive Coverage
+  • All major ambiguous pairs represented
+  • Minimum 3 examples per pair
+  • E/I, O/U, D/R, and combined cases
+
+✓ Balanced Distribution
+  • Within ±5% of target percentages
+  • Stratified across difficulty levels
+  • Even split across train/val/test
+
+✓ High Quality
+  • All words validated in corpus
+  • No duplicate sentences
+  • Natural Filipino grammar
+  • Appropriate sentence length (5-20 words)
+
+✓ Research Rigor
+  • Reproducible methodology
+  • Systematic construction process
+  • Documented decisions and limitations
+  • Independent test set for evaluation
+
+═══════════════════════════════════════════════════════════════════════════
+```

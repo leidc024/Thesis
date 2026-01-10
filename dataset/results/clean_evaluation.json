@@ -1,0 +1,12 @@
+{
+  "note": "Clean evaluation - test sentences excluded from corpus statistics",
+  "test_sentences": 500,
+  "metrics": {
+    "total_words": 4500,
+    "correct_words": 4428,
+    "total_accuracy": 0.984,
+    "total_ambiguous": 756,
+    "correct_ambiguous": 701,
+    "ambiguous_accuracy": 0.9272486772486772
+  }
+}

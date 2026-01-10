@@ -1,0 +1,442 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║         BAYBAYIN DISAMBIGUATION SYSTEM - UPDATED WORKFLOW                     ║
+║                    Gold Standard Dataset + Graph Solution                     ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                         CURRENT PROGRESS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [✅] PHASE 1: Disambiguation Model        - COMPLETE
+  [✅] PHASE 2: MaBaybay Integration        - COMPLETE  
+  [⏳] PHASE 3: Gold Standard Dataset       - IN PROGRESS (1/15 pairs done)
+  [⬜] PHASE 4: Final Evaluation            - PENDING
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                    PHASE 1: DISAMBIGUATION MODEL [✅ COMPLETE]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ WHAT WAS IMPLEMENTED                                                        │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│ A graph-based multi-feature scoring system that selects the most likely    │
+│ word from ambiguous Baybayin transliteration candidates.                   │
+│                                                                             │
+│ HOW IT WORKS:                                                               │
+│                                                                             │
+│ When MaBaybay OCR encounters ambiguous Baybayin characters (like ᜊᜓᜆᜒ      │
+│ which could be "bote" or "buti"), the system scores each candidate using   │
+│ four features and selects the one with the highest combined score.         │
+│                                                                             │
+│ THE FOUR FEATURES:                                                          │
+│                                                                             │
+│ 1. SEMANTIC SIMILARITY (Weight: 0.3)                                       │
+│    • Uses pre-trained RoBERTa model (jcblaise/roberta-tagalog-base)        │
+│    • Computes embeddings for each candidate word                           │
+│    • Compares with context embedding (surrounding unambiguous words)       │
+│    • Words that fit semantically with context get higher scores            │
+│    • Example: "buti" scores higher in "___na lang at dumating ka"          │
+│                                                                             │
+│ 2. CORPUS FREQUENCY (Weight: 0.4) ← HIGHEST WEIGHT                         │
+│    • Counts word occurrences in Filipino text corpora                      │
+│    • Uses Tagalog_Literary_Text.txt (~203k words)                          │
+│    • Uses Tagalog_Religious_Text.txt (~87k words)                          │
+│    • Log-normalized to prevent common words from dominating                │
+│    • Real Filipino words beat rare/non-words                               │
+│                                                                             │
+│ 3. CO-OCCURRENCE/BIGRAM (Weight: 0.2)                                      │
+│    • Calculates P(current_word | previous_word)                            │
+│    • Also considers P(next_word | current_word)                            │
+│    • Uses Laplace smoothing to handle unseen bigrams                       │
+│    • Word sequences that appear together in corpus score higher            │
+│                                                                             │
+│ 4. MORPHOLOGICAL ANALYSIS (Weight: 0.1)                                    │
+│    • Checks for valid Filipino affixes (mag-, nag-, -in, -an, etc.)       │
+│    • Detects reduplication patterns (common in Filipino)                   │
+│    • Validates word endings typical in Filipino                            │
+│    • Properly formed Filipino words score higher                           │
+│                                                                             │
+│ FINAL SCORING FORMULA:                                                      │
+│ score = 0.3×semantic + 0.4×frequency + 0.2×cooccur + 0.1×morphology        │
+│                                                                             │
+│ FILES CREATED:                                                              │
+│ • src/disambiguator.py  - Main disambiguation logic                        │
+│ • src/corpus.py         - Corpus frequency and bigram statistics           │
+│ • src/morphology.py     - Filipino morphological pattern analyzer          │
+│ • src/baselines.py      - Baseline methods for comparison                  │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ARCHITECTURE DIAGRAM                                                        │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│                        ┌─────────────────────┐                              │
+│                        │   INPUT SENTENCE    │                              │
+│                        │  with OCR candidates│                              │
+│                        └──────────┬──────────┘                              │
+│                                   │                                         │
+│          ┌────────────────────────┼────────────────────────┐                │
+│          │                        │                        │                │
+│          ▼                        ▼                        ▼                │
+│  ┌───────────────┐      ┌───────────────┐      ┌───────────────┐           │
+│  │   SEMANTIC    │      │   FREQUENCY   │      │ CO-OCCURRENCE │           │
+│  │   SIMILARITY  │      │    SCORE      │      │   (BIGRAM)    │           │
+│  │   RoBERTa     │      │   Corpus      │      │   P(word|     │           │
+│  │  Weight: 0.3  │      │  Weight: 0.4  │      │  Weight: 0.2  │           │
+│  └───────┬───────┘      └───────┬───────┘      └───────┬───────┘           │
+│          │                      │                      │                    │
+│          │              ┌───────────────┐              │                    │
+│          │              │ MORPHOLOGICAL │              │                    │
+│          │              │  Weight: 0.1  │              │                    │
+│          │              └───────┬───────┘              │                    │
+│          │                      │                      │                    │
+│          └──────────────────────┼──────────────────────┘                    │
+│                                 │                                           │
+│                                 ▼                                           │
+│                    ┌─────────────────────────┐                              │
+│                    │    WEIGHTED SCORING     │                              │
+│                    │ score = Σ(weight×feat)  │                              │
+│                    └────────────┬────────────┘                              │
+│                                 │                                           │
+│                                 ▼                                           │
+│                    ┌─────────────────────────┐                              │
+│                    │   SELECT BEST CANDIDATE │                              │
+│                    │   (highest score wins)  │                              │
+│                    └─────────────────────────┘                              │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                   PHASE 2: MABAYBAY INTEGRATION [✅ COMPLETE]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ WHAT WAS IMPLEMENTED                                                        │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│ A MATLAB-Python bridge that connects the disambiguation model to the       │
+│ existing MaBaybay OCR system. This allows MaBaybay to automatically        │
+│ select the correct word instead of just showing all possibilities.         │
+│                                                                             │
+│ HOW IT WORKS:                                                               │
+│                                                                             │
+│ 1. MaBaybay OCR processes a Baybayin image and generates candidates        │
+│    Example: For ᜊᜓᜆᜒ, it finds ["bote", "buti"] in the dictionary         │
+│                                                                             │
+│ 2. The modified Baybayintransliterations.m detects ambiguous words         │
+│    (words with multiple candidates) and triggers disambiguation            │
+│                                                                             │
+│ 3. disambiguate_candidates.m (MATLAB) converts candidates to JSON          │
+│    and calls the Python script via system command                          │
+│                                                                             │
+│ 4. disambiguate.py (Python) loads the model, scores candidates,            │
+│    and returns the best word for each position                             │
+│                                                                             │
+│ 5. MATLAB receives the result and displays the disambiguated text          │
+│                                                                             │
+│ KEY MODIFICATIONS TO MABAYBAY:                                              │
+│                                                                             │
+│ • Baybayintransliterations.m (lines 207-247):                              │
+│   - Added ambiguity detection loop                                         │
+│   - Added call to disambiguate_candidates()                                │
+│   - Added debug output showing disambiguation process                      │
+│                                                                             │
+│ • disambiguate_candidates.m (new file):                                    │
+│   - Converts MATLAB cell array to JSON format                              │
+│   - Calls Python with virtual environment                                  │
+│   - Parses stdout result back to MATLAB                                    │
+│                                                                             │
+│ • disambiguate.py (Python entry point):                                    │
+│   - Loads model with suppressed output (MATLAB captures stdout)            │
+│   - Processes JSON input from temp file                                    │
+│   - Prints space-separated disambiguated words                             │
+│                                                                             │
+│ EXAMPLE FLOW:                                                               │
+│                                                                             │
+│   Baybayin Image: "ᜊᜓᜆᜒ ᜈᜎᜅ᜔ ᜀᜆ᜔ ᜇᜓᜋᜆᜒᜅ᜔ ᜃ ᜐ ᜆᜋᜅ᜔ ᜂᜇᜐ᜔"              │
+│                            ↓                                                │
+│   MaBaybay OCR Output: [["bote","buti"], ["nalang"], ["at"], ...]          │
+│                            ↓                                                │
+│   Disambiguation: "buti" selected (fits context better)                    │
+│                            ↓                                                │
+│   Final Output: "buti nalang at dumating ka sa tamang oras"                │
+│                                                                             │
+│ FILES CREATED/MODIFIED:                                                     │
+│ • MaBaybay-OCR/Algorithms/Baybayintransliterations.m (modified)            │
+│ • MaBaybay-OCR/Algorithms/disambiguate_candidates.m (new)                  │
+│ • disambiguate.py (new - Python entry point)                               │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ INTEGRATION DIAGRAM                                                         │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│   ┌─────────────┐     ┌─────────────┐     ┌─────────────┐                  │
+│   │  BAYBAYIN   │     │  MABAYBAY   │     │ CANDIDATE   │                  │
+│   │   IMAGE     │────►│    OCR      │────►│   LIST      │                  │
+│   │             │     │  (MATLAB)   │     │ [bote,buti] │                  │
+│   └─────────────┘     └─────────────┘     └──────┬──────┘                  │
+│                                                   │                         │
+│                                                   ▼                         │
+│                        ┌──────────────────────────────────────┐            │
+│                        │        MATLAB-PYTHON BRIDGE          │            │
+│                        │   disambiguate_candidates.m          │            │
+│                        │                                      │            │
+│                        │   1. Save candidates as JSON         │            │
+│                        │   2. Call: python disambiguate.py    │            │
+│                        │   3. Capture stdout result           │            │
+│                        └──────────────────┬───────────────────┘            │
+│                                           │                                 │
+│                                           ▼                                 │
+│                        ┌──────────────────────────────────────┐            │
+│                        │     PYTHON DISAMBIGUATOR             │            │
+│                        │   disambiguate.py                    │            │
+│                        │                                      │            │
+│                        │   • Load RoBERTa model               │            │
+│                        │   • Load corpus statistics           │            │
+│                        │   • Score each candidate             │            │
+│                        │   • Print best words to stdout       │            │
+│                        └──────────────────┬───────────────────┘            │
+│                                           │                                 │
+│                                           ▼                                 │
+│                        ┌──────────────────────────────────────┐            │
+│                        │     DISAMBIGUATED OUTPUT             │            │
+│                        │                                      │            │
+│                        │   "buti nalang at dumating ka..."    │            │
+│                        └──────────────────────────────────────┘            │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+               PHASE 3: GOLD STANDARD DATASET [⏳ IN PROGRESS]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ WHAT IS BEING IMPLEMENTED                                                   │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│ A manually-created gold standard dataset of Filipino sentences for         │
+│ evaluating the disambiguation system. Each sentence uses exactly ONE       │
+│ word from an ambiguous pair, with context making the meaning clear.        │
+│                                                                             │
+│ WHY MANUAL CREATION (not corpus extraction):                               │
+│                                                                             │
+│ • Ensures 50 sentences per SENSE (balanced evaluation)                     │
+│ • Guarantees context makes word meaning unmistakable                       │
+│ • Avoids noise from automatic extraction                                   │
+│ • Creates true "gold standard" for thesis evaluation                       │
+│                                                                             │
+│ METHOD:                                                                     │
+│                                                                             │
+│ 1. Use Baybayin Dataset Manager (ambigious_test.html)                      │
+│    - Select ambiguous pair from dropdown                                   │
+│    - Use "AI Assist" button to generate sentence ideas via Gemini          │
+│    - Review and edit for naturalness                                       │
+│    - Save to local storage                                                 │
+│                                                                             │
+│ 2. Export sentences to gold_standard_dataset/sentences/ folder             │
+│    - One file per ambiguous pair                                           │
+│    - Format: plain text, one sentence per line                             │
+│    - Organized by word (50 for word1, 50 for word2, etc.)                  │
+│                                                                             │
+│ 3. Test each pair with test_bote_buti.py (modified per pair)               │
+│                                                                             │
+│ SENTENCE REQUIREMENTS:                                                      │
+│                                                                             │
+│ ✓ Natural Filipino - sounds like a native speaker wrote it                 │
+│ ✓ Clear context - meaning is unmistakable from surrounding words           │
+│ ✓ Varied structures - different sentence patterns and topics               │
+│ ✓ Complete - grammatically correct and makes sense                         │
+│                                                                             │
+│ EXAMPLE (bote vs buti):                                                     │
+│                                                                             │
+│   BOTE (bottle):                                                           │
+│   "Ang malaking bote ng tubig ay nasa lamesa."                             │
+│   Context: "ng tubig", "nasa lamesa" → clearly a container                 │
+│                                                                             │
+│   BUTI (goodness/fortunately):                                             │
+│   "Buti na lang at dumating ka sa tamang oras."                            │
+│   Context: "na lang at" → clearly the expression "fortunately"             │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ PROGRESS TRACKER                                                            │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│   │ #  │ Pair                │ Words │ Sentences │ Status      │           │
+│   │────│─────────────────────│───────│───────────│─────────────│           │
+│   │ 1  │ asero, asido        │   2   │    100    │ ⬜ Pending  │           │
+│   │ 2  │ bote, buti          │   2   │    100    │ ✅ COMPLETE │           │
+│   │ 3  │ boto, buto          │   2   │    100    │ ⬜ Pending  │           │
+│   │ 4  │ higante, higanti    │   2   │    100    │ ⬜ Pending  │           │
+│   │ 5  │ hito, heto          │   2   │    100    │ ⬜ Pending  │           │
+│   │ 6  │ itodo, ituro        │   2   │    100    │ ⬜ Pending  │           │
+│   │ 7  │ kamada, kamara      │   2   │    100    │ ⬜ Pending  │           │
+│   │ 8  │ kompas, kumpas      │   2   │    100    │ ⬜ Pending  │           │
+│   │ 9  │ kumita, kometa      │   2   │    100    │ ⬜ Pending  │           │
+│   │ 10 │ mesa, misa          │   2   │    100    │ ⬜ Pending  │           │
+│   │ 11 │ polo, pulo          │   2   │    100    │ ⬜ Pending  │           │
+│   │ 12 │ poso, puso          │   2   │    100    │ ⬜ Pending  │           │
+│   │ 13 │ tela, tila          │   2   │    100    │ ⬜ Pending  │           │
+│   │ 14 │ todo, toro, turo    │   3   │    150    │ ⬜ Pending  │           │
+│   │ 15 │ toyo, tuyo          │   2   │    100    │ ⬜ Pending  │           │
+│   │────│─────────────────────│───────│───────────│─────────────│           │
+│   │    │ TOTAL               │  31   │   1,550   │ 100/1550    │           │
+│                                                                             │
+│   WORD MEANINGS REFERENCE:                                                  │
+│   ┌─────────────────────────────────────────────────────────────────┐      │
+│   │ asero=steel      │ asido=acid                                   │      │
+│   │ bote=bottle      │ buti=goodness/fortunately                    │      │
+│   │ boto=vote        │ buto=bone/seed                               │      │
+│   │ higante=giant    │ higanti=revenge                              │      │
+│   │ hito=catfish     │ heto=here it is                              │      │
+│   │ itodo=go all out │ ituro=point/teach                            │      │
+│   │ kamada=stack     │ kamara=camera/chamber                        │      │
+│   │ kompas=compass   │ kumpas=wave/gesture                          │      │
+│   │ kumita=to earn   │ kometa=comet                                 │      │
+│   │ mesa=table       │ misa=mass (religious)                        │      │
+│   │ polo=polo shirt  │ pulo=island                                  │      │
+│   │ poso=well        │ puso=heart                                   │      │
+│   │ tela=cloth       │ tila=seems like                              │      │
+│   │ todo=full force  │ toro=bull        │ turo=teaching             │      │
+│   │ toyo=soy sauce   │ tuyo=dried fish                              │      │
+│   └─────────────────────────────────────────────────────────────────┘      │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                    PHASE 4: FINAL EVALUATION [⬜ PENDING]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ WHAT WILL BE IMPLEMENTED                                                    │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│ Comprehensive evaluation of the disambiguation system using the complete   │
+│ gold standard dataset, comparing against baseline methods.                 │
+│                                                                             │
+│ EVALUATION METHODOLOGY:                                                     │
+│                                                                             │
+│ 1. CLEAN EVALUATION (No Data Leakage)                                      │
+│    • Test sentences are EXCLUDED from corpus statistics                    │
+│    • RoBERTa is pre-trained, NOT fine-tuned on test data                  │
+│    • Ensures fair, unbiased results                                        │
+│                                                                             │
+│ 2. METRICS TO CALCULATE                                                    │
+│    • Overall Accuracy: correct words / total words                         │
+│    • Ambiguous Accuracy: correct ambiguous / total ambiguous ← KEY        │
+│    • Per-Pair Accuracy: breakdown by each ambiguous pair                   │
+│    • Confusion Matrix: which words get confused with which                 │
+│                                                                             │
+│ 3. BASELINE COMPARISONS                                                    │
+│    • MaBaybay Default: always pick first candidate (~50% expected)         │
+│    • Random Selection: randomly pick candidate (~50% expected)             │
+│    • Frequency Only: pick most frequent word in corpus                     │
+│    • Our System: full multi-feature scoring                                │
+│                                                                             │
+│ 4. EXPECTED RESULTS FORMAT                                                 │
+│                                                                             │
+│    │ Method                    │ Ambiguous Accuracy │                      │
+│    │───────────────────────────│────────────────────│                      │
+│    │ MaBaybay Default          │      ~50%          │                      │
+│    │ Random Selection          │      ~50%          │                      │
+│    │ Frequency Only            │      ~70%          │                      │
+│    │ ★ Our System              │      ~90%+ ★       │                      │
+│                                                                             │
+│ STEPS TO RUN (after Phase 3 complete):                                     │
+│                                                                             │
+│ 1. Combine all sentences:                                                  │
+│    python scripts/combine_sentences.py                                     │
+│                                                                             │
+│ 2. Run full evaluation:                                                    │
+│    python evaluate.py --dataset gold_standard                              │
+│                                                                             │
+│ 3. Generate thesis-ready results:                                          │
+│    python generate_results_table.py                                        │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                         FILE STRUCTURE (UPDATED)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Thesis/
+├── src/                                 # Core disambiguation model
+│   ├── disambiguator.py                 #   Main model (RoBERTa + features)
+│   ├── corpus.py                        #   Corpus statistics
+│   ├── morphology.py                    #   Filipino morphological analyzer
+│   └── baselines.py                     #   Baseline implementations
+│
+├── gold_standard_dataset/               # ⭐ Manual sentence dataset
+│   ├── README.md                        #   Dataset documentation
+│   ├── sentences/                       #   Individual pair files
+│   │   ├── 01_asero_asido.txt
+│   │   ├── 02_bote_buti.txt            #   ✅ Complete (100 sentences)
+│   │   ├── 03_boto_buto.txt
+│   │   ├── ... (15 files total)
+│   │   └── 15_toyo_tuyo.txt
+│   └── combined/                        #   All sentences combined
+│       └── all_sentences.txt
+│
+├── MaBaybay-OCR/                        # Modified MaBaybay OCR
+│   └── Algorithms/
+│       ├── Baybayintransliterations.m   #   Modified to call disambiguator
+│       └── disambiguate_candidates.m    #   MATLAB-Python bridge
+│
+├── archive/                             # Old/unused files
+│   ├── old_scripts/                     #   Previous extraction scripts
+│   └── old_docs/                        #   Previous documentation
+│
+├── Tagalog_Literary_Text.txt            # Corpus for frequency statistics
+├── Tagalog_Religious_Text.txt           # Corpus for frequency statistics
+│
+├── disambiguate.py                      # Entry point for MATLAB integration
+├── evaluate.py                          # Evaluation script
+├── test_bote_buti.py                    # Test script for single pair
+│
+└── WORKFLOW.txt                         # This file
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                              QUICK COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Test single pair (after adding sentences):
+python test_bote_buti.py
+
+# Run full evaluation (after all sentences complete):
+python evaluate.py
+
+# Test in MaBaybay OCR:
+1. Open MATLAB
+2. Run MaBaybay OCR on Baybayin image
+3. Check console for "=== DISAMBIGUATION TRIGGERED ==="
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                              SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PROBLEM:  Baybayin script has inherent ambiguities (d/r, e/i, o/u)
+          MaBaybay OCR outputs multiple candidates, defaults to first one
+
+SOLUTION: Multi-feature scoring using:
+          • RoBERTa semantic embeddings (0.3)
+          • Corpus frequency statistics (0.4)  
+          • Bigram co-occurrence (0.2)
+          • Morphological analysis (0.1)
+
+STATUS:   ✅ Model complete and integrated with MaBaybay
+          ⏳ Creating gold standard dataset (1/15 pairs done)
+          
+NEXT:     Complete remaining 14 ambiguous pairs (1,450 sentences)

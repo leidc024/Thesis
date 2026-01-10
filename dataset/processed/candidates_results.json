@@ -1,0 +1,9843 @@
+[
+  {
+    "sentence_id": 1,
+    "ground_truth": "Luma na ang bisikleta ni Lolo, pero matulin pa rin ito",
+    "ocr_candidates": [
+      "luma",
+      "na",
+      "ang",
+      [
+        "bisekleta",
+        "bisikleta"
+      ],
+      [
+        "ne",
+        "ni"
+      ],
+      "lolo,",
+      [
+        "pero",
+        "peru"
+      ],
+      "matulin",
+      "pa",
+      [
+        "din",
+        "rin"
+      ],
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 2,
+    "ground_truth": "Hinahaplos ng hangin ang aming mga katawang tila pinaglalapit",
+    "ocr_candidates": [
+      "hinahaplos",
+      "ng",
+      "hangin",
+      "ang",
+      "aming",
+      "mga",
+      "katawang",
+      [
+        "tela",
+        "tila"
+      ],
+      "pinaglalapit"
+    ]
+  },
+  {
+    "sentence_id": 3,
+    "ground_truth": "Ito ay pinamatnugutan ni Carla Pacis",
+    "ocr_candidates": [
+      [
+        "eto",
+        "ito"
+      ],
+      "ay",
+      "pinamatnugutan",
+      [
+        "ne",
+        "ni"
+      ],
+      "carla",
+      "pacis"
+    ]
+  },
+  {
+    "sentence_id": 4,
+    "ground_truth": "Akala ng mga bata ay nananaginip lang sila",
+    "ocr_candidates": [
+      "akala",
+      "ng",
+      "mga",
+      "bata",
+      "ay",
+      "nananaginip",
+      "lang",
+      [
+        "sela",
+        "sila"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 5,
+    "ground_truth": "Ganoon pala ang napapala kung panlamigan ang isa sa mag asawa",
+    "ocr_candidates": [
+      [
+        "ganoon",
+        "ganuon"
+      ],
+      "pala",
+      "ang",
+      "napapala",
+      [
+        "kong",
+        "kung"
+      ],
+      "panlamigan",
+      "ang",
+      "isa",
+      "sa",
+      "mag",
+      "asawa"
+    ]
+  },
+  {
+    "sentence_id": 6,
+    "ground_truth": "Hindi puwedeng gamitin nang mag isa",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "puwedeng",
+      "gamitin",
+      "nang",
+      "mag",
+      "isa"
+    ]
+  },
+  {
+    "sentence_id": 7,
+    "ground_truth": "Wala akong kamalay malay, pagiging isang titser pala ang pinasok ko",
+    "ocr_candidates": [
+      "wala",
+      "akong",
+      "kamalay",
+      "malay,",
+      "pagiging",
+      "isang",
+      [
+        "titsed",
+        "titser"
+      ],
+      "pala",
+      "ang",
+      "pinasok",
+      "ko"
+    ]
+  },
+  {
+    "sentence_id": 8,
+    "ground_truth": "Nang nadalaga na si Ilang, maraming lalaki ang naakit sa kaniya",
+    "ocr_candidates": [
+      "nang",
+      "nadalaga",
+      "na",
+      "si",
+      "ilang,",
+      [
+        "madaming",
+        "maraming"
+      ],
+      [
+        "lalake",
+        "lalaki"
+      ],
+      "ang",
+      "naakit",
+      "sa",
+      "kaniya"
+    ]
+  },
+  {
+    "sentence_id": 9,
+    "ground_truth": "Ang bunsong walang sinuman ang may responsibilidad",
+    "ocr_candidates": [
+      "ang",
+      "bunsong",
+      "walang",
+      [
+        "sinoman",
+        "sinuman"
+      ],
+      "ang",
+      "may",
+      "responsibilidad"
+    ]
+  },
+  {
+    "sentence_id": 10,
+    "ground_truth": "Mula noon, pinagkatakutan ang lansones",
+    "ocr_candidates": [
+      "mula",
+      "noon,",
+      "pinagkatakutan",
+      "ang",
+      "lansones"
+    ]
+  },
+  {
+    "sentence_id": 11,
+    "ground_truth": "Nasa ikalabing dalawang palapag ako nakatalagang mag opisina",
+    "ocr_candidates": [
+      "nasa",
+      "ikalabing",
+      "dalawang",
+      "palapag",
+      "ako",
+      "nakatalagang",
+      "mag",
+      [
+        "opisina",
+        "upisina"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 12,
+    "ground_truth": "Ayon sa matatanda, ang Bathalang lumikha ng daigdig ay si Laor",
+    "ocr_candidates": [
+      [
+        "ayon",
+        "ayun"
+      ],
+      "sa",
+      "matatanda,",
+      "ang",
+      "bathalang",
+      "lumikha",
+      "ng",
+      "daigdig",
+      "ay",
+      "si",
+      "laor"
+    ]
+  },
+  {
+    "sentence_id": 13,
+    "ground_truth": "Umalis na ang mga bandido para nakawan ang ibang pang bayan",
+    "ocr_candidates": [
+      "umalis",
+      "na",
+      "ang",
+      "mga",
+      "bandido",
+      [
+        "pada",
+        "para"
+      ],
+      "nakawan",
+      "ang",
+      "ibang",
+      "pang",
+      "bayan"
+    ]
+  },
+  {
+    "sentence_id": 14,
+    "ground_truth": "Investment, kung gayon, ang pagpapaputi at pagpapaganda",
+    "ocr_candidates": [
+      "investment,",
+      [
+        "kong",
+        "kung"
+      ],
+      "gayon,",
+      "ang",
+      "pagpapaputi",
+      "at",
+      "pagpapaganda"
+    ]
+  },
+  {
+    "sentence_id": 15,
+    "ground_truth": "Parang hindi nila ako nakikita",
+    "ocr_candidates": [
+      "parang",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "nila",
+      "ako",
+      "nakikita"
+    ]
+  },
+  {
+    "sentence_id": 16,
+    "ground_truth": "Tila unos ang pagpatak ng ulan",
+    "ocr_candidates": [
+      [
+        "tela",
+        "tila"
+      ],
+      "unos",
+      "ang",
+      "pagpatak",
+      "ng",
+      "ulan"
+    ]
+  },
+  {
+    "sentence_id": 17,
+    "ground_truth": "Ngunit matapos ang kasal, ganun na lamang ang gulat ng lahat",
+    "ocr_candidates": [
+      "ngunit",
+      "matapos",
+      "ang",
+      "kasal,",
+      [
+        "ganon",
+        "ganun"
+      ],
+      "na",
+      "lamang",
+      "ang",
+      "gulat",
+      "ng",
+      "lahat"
+    ]
+  },
+  {
+    "sentence_id": 18,
+    "ground_truth": "Nagsimulang magkaroon ng buhay ang aking halaman sa mesa",
+    "ocr_candidates": [
+      "nagsimulang",
+      "magkaroon",
+      "ng",
+      "buhay",
+      "ang",
+      "aking",
+      "halaman",
+      "sa",
+      [
+        "mesa",
+        "misa"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 19,
+    "ground_truth": "Naniniraahan sila sa esterong malapit sa Tulay Jueblo",
+    "ocr_candidates": [
+      "naniniraahan",
+      [
+        "sela",
+        "sila"
+      ],
+      "sa",
+      "esterong",
+      "malapit",
+      "sa",
+      "tulay",
+      "jueblo"
+    ]
+  },
+  {
+    "sentence_id": 20,
+    "ground_truth": "Lumipat ng tirahan sina Perla at ang kanyang mga magulang",
+    "ocr_candidates": [
+      "lumipat",
+      "ng",
+      "tirahan",
+      [
+        "sena",
+        "sina"
+      ],
+      "perla",
+      "at",
+      "ang",
+      "kanyang",
+      "mga",
+      "magulang"
+    ]
+  },
+  {
+    "sentence_id": 21,
+    "ground_truth": "At nakikiapid din ang nagpapakasal sa babaeng diborsiyada",
+    "ocr_candidates": [
+      "at",
+      "nakikiapid",
+      [
+        "din",
+        "rin"
+      ],
+      "ang",
+      "nagpapakasal",
+      "sa",
+      [
+        "babaeng",
+        "babaing"
+      ],
+      "diborsiyada"
+    ]
+  },
+  {
+    "sentence_id": 22,
+    "ground_truth": "Nakalaman sa aking database ang bawat sulok ng lugar",
+    "ocr_candidates": [
+      "nakalaman",
+      "sa",
+      "aking",
+      "database",
+      "ang",
+      "bawat",
+      "sulok",
+      "ng",
+      [
+        "lugad",
+        "lugar"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 23,
+    "ground_truth": "Iilan na lamang ang nasa burol nang kanyang dalawin ito",
+    "ocr_candidates": [
+      "iilan",
+      "na",
+      "lamang",
+      "ang",
+      "nasa",
+      "burol",
+      "nang",
+      "kanyang",
+      "dalawin",
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 24,
+    "ground_truth": "Hindi na marahil mauulit pa",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "na",
+      "marahil",
+      "mauulit",
+      "pa"
+    ]
+  },
+  {
+    "sentence_id": 25,
+    "ground_truth": "Laganap ang mapanganib na praktis sa pakikipag sex ng mga lalabintauning lalaki",
+    "ocr_candidates": [
+      "laganap",
+      "ang",
+      "mapanganib",
+      "na",
+      "praktis",
+      "sa",
+      "pakikipag",
+      "sex",
+      "ng",
+      "mga",
+      "lalabintauning",
+      [
+        "lalake",
+        "lalaki"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 26,
+    "ground_truth": "Sa ganitong paraan, nagpapakilala kami sa aming bahay",
+    "ocr_candidates": [
+      "sa",
+      "ganitong",
+      "paraan,",
+      "nagpapakilala",
+      "kami",
+      "sa",
+      "aming",
+      "bahay"
+    ]
+  },
+  {
+    "sentence_id": 27,
+    "ground_truth": "Inalay nito sa hari ang naturang butil ng mais",
+    "ocr_candidates": [
+      "inalay",
+      [
+        "neto",
+        "nito"
+      ],
+      "sa",
+      [
+        "hade",
+        "hari"
+      ],
+      "ang",
+      "naturang",
+      "butil",
+      "ng",
+      "mais"
+    ]
+  },
+  {
+    "sentence_id": 28,
+    "ground_truth": "Umusal pa ang lalaki sa dilim, nakilala niya ang tinig nito",
+    "ocr_candidates": [
+      "umusal",
+      "pa",
+      "ang",
+      [
+        "lalake",
+        "lalaki"
+      ],
+      "sa",
+      "dilim,",
+      "nakilala",
+      "niya",
+      "ang",
+      "tinig",
+      [
+        "neto",
+        "nito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 29,
+    "ground_truth": "Ang lalaking mag iingat ng bunga ng kanyang sinapupunan",
+    "ocr_candidates": [
+      "ang",
+      [
+        "lalakeng",
+        "lalaking"
+      ],
+      "mag",
+      "iingat",
+      "ng",
+      "bunga",
+      "ng",
+      "kanyang",
+      "sinapupunan"
+    ]
+  },
+  {
+    "sentence_id": 30,
+    "ground_truth": "Iwasan natin silang hubugin ayon lamang sa ating kagustuhan, bilang matatanda",
+    "ocr_candidates": [
+      "iwasan",
+      [
+        "naten",
+        "natin"
+      ],
+      [
+        "selang",
+        "silang"
+      ],
+      "hubugin",
+      [
+        "ayon",
+        "ayun"
+      ],
+      "lamang",
+      "sa",
+      "ating",
+      "kagustuhan,",
+      "bilang",
+      "matatanda"
+    ]
+  },
+  {
+    "sentence_id": 31,
+    "ground_truth": "Halos hindi na siya kumukurap",
+    "ocr_candidates": [
+      "halos",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "na",
+      "siya",
+      "kumukurap"
+    ]
+  },
+  {
+    "sentence_id": 32,
+    "ground_truth": "Tubig na hindi naman namin hinihingi kundi binabayaran namin buwan buwan",
+    "ocr_candidates": [
+      "tubig",
+      "na",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "naman",
+      "namin",
+      "hinihingi",
+      [
+        "konde",
+        "kundi"
+      ],
+      "binabayaran",
+      "namin",
+      "buwan",
+      "buwan"
+    ]
+  },
+  {
+    "sentence_id": 33,
+    "ground_truth": "Naglalakad nang dahan dahan at walang anumang nililikhang ingay o kaluskos",
+    "ocr_candidates": [
+      "naglalakad",
+      "nang",
+      "dahan",
+      "dahan",
+      "at",
+      "walang",
+      [
+        "anomang",
+        "anumang"
+      ],
+      "nililikhang",
+      "ingay",
+      [
+        "o",
+        "u"
+      ],
+      "kaluskos"
+    ]
+  },
+  {
+    "sentence_id": 34,
+    "ground_truth": "Marami itong suot na alahas sa katawan",
+    "ocr_candidates": [
+      [
+        "madami",
+        "marami"
+      ],
+      "itong",
+      "suot",
+      "na",
+      "alahas",
+      "sa",
+      "katawan"
+    ]
+  },
+  {
+    "sentence_id": 35,
+    "ground_truth": "Ligtas na ako sa lalaking nangangabayo",
+    "ocr_candidates": [
+      "ligtas",
+      "na",
+      "ako",
+      "sa",
+      [
+        "lalakeng",
+        "lalaking"
+      ],
+      "nangangabayo"
+    ]
+  },
+  {
+    "sentence_id": 36,
+    "ground_truth": "Sa kanyang paglundag, di man lang niya natatapakan ang mga guhit",
+    "ocr_candidates": [
+      "sa",
+      "kanyang",
+      "paglundag,",
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "man",
+      "lang",
+      "niya",
+      "natatapakan",
+      "ang",
+      "mga",
+      "guhit"
+    ]
+  },
+  {
+    "sentence_id": 37,
+    "ground_truth": "Para siyang batang ngayon lamang natutong umiyak",
+    "ocr_candidates": [
+      [
+        "pada",
+        "para"
+      ],
+      "siyang",
+      "batang",
+      "ngayon",
+      "lamang",
+      "natutong",
+      "umiyak"
+    ]
+  },
+  {
+    "sentence_id": 38,
+    "ground_truth": "Web designer at systems operator ako sa kompanyang ito",
+    "ocr_candidates": [
+      "web",
+      "designer",
+      "at",
+      "systems",
+      "operator",
+      "ako",
+      "sa",
+      [
+        "kompanyang",
+        "kumpanyang"
+      ],
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 39,
+    "ground_truth": "Hindi ko pipiliting umayon sa akin ang lahat",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "ko",
+      "pipiliting",
+      "umayon",
+      "sa",
+      "akin",
+      "ang",
+      "lahat"
+    ]
+  },
+  {
+    "sentence_id": 40,
+    "ground_truth": "Bahagyang napinid ang diin ng kanyang pagkakahawak sa patalim",
+    "ocr_candidates": [
+      "bahagyang",
+      "napinid",
+      "ang",
+      [
+        "diin",
+        "reen",
+        "riin"
+      ],
+      "ng",
+      "kanyang",
+      "pagkakahawak",
+      "sa",
+      "patalim"
+    ]
+  },
+  {
+    "sentence_id": 41,
+    "ground_truth": "Umaabot ito sa libu libong Kbps",
+    "ocr_candidates": [
+      "umaabot",
+      [
+        "eto",
+        "ito"
+      ],
+      "sa",
+      "libo",
+      "libong",
+      "kbps"
+    ]
+  },
+  {
+    "sentence_id": 42,
+    "ground_truth": "Nagi guilty ako kapag hindi ako nakapagdasal sa loob ng isang maghapon",
+    "ocr_candidates": [
+      "nagi",
+      "guilty",
+      "ako",
+      "kapag",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "ako",
+      "nakapagdasal",
+      "sa",
+      "loob",
+      "ng",
+      "isang",
+      "maghapon"
+    ]
+  },
+  {
+    "sentence_id": 43,
+    "ground_truth": "Lumapit ako kay Lola at ibinigay ko sa kanya ang unan",
+    "ocr_candidates": [
+      "lumapit",
+      "ako",
+      "kay",
+      [
+        "lola",
+        "lula"
+      ],
+      "at",
+      "ibinigay",
+      "ko",
+      "sa",
+      "kanya",
+      "ang",
+      "unan"
+    ]
+  },
+  {
+    "sentence_id": 44,
+    "ground_truth": "Itinaob pa namin ang kariton para mapinturahan din ang ilalim",
+    "ocr_candidates": [
+      "itinaob",
+      "pa",
+      "namin",
+      "ang",
+      "kariton",
+      [
+        "pada",
+        "para"
+      ],
+      "mapinturahan",
+      [
+        "din",
+        "rin"
+      ],
+      "ang",
+      "ilalim"
+    ]
+  },
+  {
+    "sentence_id": 45,
+    "ground_truth": "Ito ay naging isang napakakisig na lalaki, higit kay Prinsipe Algori",
+    "ocr_candidates": [
+      [
+        "eto",
+        "ito"
+      ],
+      "ay",
+      "naging",
+      "isang",
+      "napakakisig",
+      "na",
+      "lalaki,",
+      "higit",
+      "kay",
+      "prinsipe",
+      "algori"
+    ]
+  },
+  {
+    "sentence_id": 46,
+    "ground_truth": "Kayang kaya maibigay pati ang mga hindi sinasabi",
+    "ocr_candidates": [
+      "kayang",
+      "kaya",
+      "maibigay",
+      "pati",
+      "ang",
+      "mga",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "sinasabi"
+    ]
+  },
+  {
+    "sentence_id": 47,
+    "ground_truth": "Siguro salbahe ang mumu sa bintana",
+    "ocr_candidates": [
+      [
+        "seguro",
+        "siguro"
+      ],
+      "salbahe",
+      "ang",
+      "mumo",
+      "sa",
+      "bintana"
+    ]
+  },
+  {
+    "sentence_id": 48,
+    "ground_truth": "Pagkarinig nila sa Salita, kaagad nila itong tinanggap nang buong kasiyahan",
+    "ocr_candidates": [
+      "pagkarinig",
+      "nila",
+      "sa",
+      "salita,",
+      "kaagad",
+      "nila",
+      "itong",
+      "tinanggap",
+      "nang",
+      [
+        "boong",
+        "buong"
+      ],
+      "kasiyahan"
+    ]
+  },
+  {
+    "sentence_id": 49,
+    "ground_truth": "Hindi ko alam kung bakit",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "ko",
+      "alam",
+      [
+        "kong",
+        "kung"
+      ],
+      "bakit"
+    ]
+  },
+  {
+    "sentence_id": 50,
+    "ground_truth": "Doon niya kinagisnan ang pamumuhay sa tore",
+    "ocr_candidates": [
+      [
+        "doon",
+        "duon",
+        "roon",
+        "ruon"
+      ],
+      "niya",
+      "kinagisnan",
+      "ang",
+      "pamumuhay",
+      "sa",
+      [
+        "tore",
+        "turi"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 51,
+    "ground_truth": "Ang sinumang manuya sa kanyang kapatid ay lilitisin sa Sanggunian",
+    "ocr_candidates": [
+      "ang",
+      [
+        "sinomang",
+        "sinumang"
+      ],
+      "manuya",
+      "sa",
+      "kanyang",
+      "kapatid",
+      "ay",
+      "lilitisin",
+      "sa",
+      "sanggunian"
+    ]
+  },
+  {
+    "sentence_id": 52,
+    "ground_truth": "Noon ako nagpasyang tumigil na sa pagdarasal",
+    "ocr_candidates": [
+      [
+        "noon",
+        "nuon"
+      ],
+      "ako",
+      "nagpasyang",
+      "tumigil",
+      "na",
+      "sa",
+      "pagdarasal"
+    ]
+  },
+  {
+    "sentence_id": 53,
+    "ground_truth": "Tila binubutas nito ang bumbunan at ginagalusan ang balat sa aking pagpasok",
+    "ocr_candidates": [
+      [
+        "tela",
+        "tila"
+      ],
+      "binubutas",
+      [
+        "neto",
+        "nito"
+      ],
+      "ang",
+      "bumbunan",
+      "at",
+      "ginagalusan",
+      "ang",
+      "balat",
+      "sa",
+      "aking",
+      "pagpasok"
+    ]
+  },
+  {
+    "sentence_id": 54,
+    "ground_truth": "Hinubog nito ang kanyang katawang binabalot ng balat na sinunog ng araw",
+    "ocr_candidates": [
+      "hinubog",
+      [
+        "neto",
+        "nito"
+      ],
+      "ang",
+      "kanyang",
+      "katawang",
+      "binabalot",
+      "ng",
+      "balat",
+      "na",
+      "sinunog",
+      "ng",
+      "araw"
+    ]
+  },
+  {
+    "sentence_id": 55,
+    "ground_truth": "Nuong araw ding iyon, ikinasal sina Lam Ang at Ines",
+    "ocr_candidates": [
+      [
+        "noong",
+        "nuong"
+      ],
+      "araw",
+      [
+        "ding",
+        "ring"
+      ],
+      "iyon,",
+      "ikinasal",
+      [
+        "sena",
+        "sina"
+      ],
+      "lam",
+      "ang",
+      "at",
+      "inis"
+    ]
+  },
+  {
+    "sentence_id": 56,
+    "ground_truth": "Alam ko, gumagaan ang pakiramdam ni Lolo",
+    "ocr_candidates": [
+      "alam",
+      "ko,",
+      "gumagaan",
+      "ang",
+      "pakiramdam",
+      [
+        "ne",
+        "ni"
+      ],
+      [
+        "lolo",
+        "lulo"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 57,
+    "ground_truth": "Hindi mula sa sarili ko sinasabi ang mga salitang binibigkas ko",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "mula",
+      "sa",
+      "sarili",
+      "ko",
+      "sinasabi",
+      "ang",
+      "mga",
+      "salitang",
+      "binibigkas",
+      "ko"
+    ]
+  },
+  {
+    "sentence_id": 58,
+    "ground_truth": "Nakita nilang ang balat ng bunga ay manipis at maliit ang buto",
+    "ocr_candidates": [
+      "nakita",
+      "nilang",
+      "ang",
+      "balat",
+      "ng",
+      "bunga",
+      "ay",
+      "manipis",
+      "at",
+      "maliit",
+      "ang",
+      [
+        "boto",
+        "buto"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 59,
+    "ground_truth": "Sa buong maghapon, kami na ang magkasama",
+    "ocr_candidates": [
+      "sa",
+      [
+        "boong",
+        "buong"
+      ],
+      "maghapon,",
+      "kami",
+      "na",
+      "ang",
+      "magkasama"
+    ]
+  },
+  {
+    "sentence_id": 60,
+    "ground_truth": "Kung gayon, may dinaramdam ka",
+    "ocr_candidates": [
+      [
+        "kong",
+        "kung"
+      ],
+      "gayon,",
+      "may",
+      "dinaramdam",
+      "ka"
+    ]
+  },
+  {
+    "sentence_id": 61,
+    "ground_truth": "Kapansin pansin din ang pagtutulungan ng mga pasahero sa loob ng dyip",
+    "ocr_candidates": [
+      "kapansin",
+      "pansin",
+      [
+        "din",
+        "rin"
+      ],
+      "ang",
+      "pagtutulungan",
+      "ng",
+      "mga",
+      "pasahero",
+      "sa",
+      "loob",
+      "ng",
+      "dyip"
+    ]
+  },
+  {
+    "sentence_id": 62,
+    "ground_truth": "Pero bago sila umuwi, bumibili sila ng tukneneng",
+    "ocr_candidates": [
+      [
+        "pero",
+        "peru"
+      ],
+      "bago",
+      [
+        "sela",
+        "sila"
+      ],
+      "umuwi,",
+      "bumibili",
+      [
+        "sela",
+        "sila"
+      ],
+      "ng",
+      "tukneneng"
+    ]
+  },
+  {
+    "sentence_id": 63,
+    "ground_truth": "Noong unang panahon, may mga ispesyalistang namamahala sa mga ritwal",
+    "ocr_candidates": [
+      [
+        "noong",
+        "nuong"
+      ],
+      "unang",
+      "panahon,",
+      "may",
+      "mga",
+      "espesyalistang",
+      "namamahala",
+      "sa",
+      "mga",
+      "ritwal"
+    ]
+  },
+  {
+    "sentence_id": 64,
+    "ground_truth": "Ilang messages ang pumasok dito",
+    "ocr_candidates": [
+      "ilang",
+      "messages",
+      "ang",
+      "pumasok",
+      [
+        "dito",
+        "reto",
+        "rito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 65,
+    "ground_truth": "Napansin ko ang malaking pagbabago kay Lolo",
+    "ocr_candidates": [
+      "napansin",
+      "ko",
+      "ang",
+      "malaking",
+      "pagbabago",
+      "kay",
+      [
+        "lolo",
+        "lulo"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 66,
+    "ground_truth": "Noon lang napansin ng lalaki ang iwing ganda ng babae",
+    "ocr_candidates": [
+      [
+        "noon",
+        "nuon"
+      ],
+      "lang",
+      "napansin",
+      "ng",
+      [
+        "lalake",
+        "lalaki"
+      ],
+      "ang",
+      "iwing",
+      "ganda",
+      "ng",
+      "babae"
+    ]
+  },
+  {
+    "sentence_id": 67,
+    "ground_truth": "Hindi na siya makasigaw nang gulatin siya ng katawang nakahandusay sa eskalon",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "na",
+      "siya",
+      "makasigaw",
+      "nang",
+      "gulatin",
+      "siya",
+      "ng",
+      "katawang",
+      "nakahandusay",
+      "sa",
+      "eskalon"
+    ]
+  },
+  {
+    "sentence_id": 68,
+    "ground_truth": "Uuwi sila ng La Union",
+    "ocr_candidates": [
+      "uuwi",
+      [
+        "sela",
+        "sila"
+      ],
+      "ng",
+      "la",
+      "union"
+    ]
+  },
+  {
+    "sentence_id": 69,
+    "ground_truth": "Hindi niya alam kung ano ang uunahin",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "niya",
+      "alam",
+      [
+        "kong",
+        "kung"
+      ],
+      [
+        "ano",
+        "anu"
+      ],
+      "ang",
+      "uunahin"
+    ]
+  },
+  {
+    "sentence_id": 70,
+    "ground_truth": "Mahirap tuloy maibenta ang palabas o pagtatanghal sa mga venue na binanggit",
+    "ocr_candidates": [
+      "mahirap",
+      "tuloy",
+      "maibenta",
+      "ang",
+      "palabas",
+      [
+        "o",
+        "u"
+      ],
+      "pagtatanghal",
+      "sa",
+      "mga",
+      "venue",
+      "na",
+      "binanggit"
+    ]
+  },
+  {
+    "sentence_id": 71,
+    "ground_truth": "Ang PCP ang karaniwang sakit ng may AIDS",
+    "ocr_candidates": [
+      "ang",
+      "pcp",
+      "ang",
+      "karaniwang",
+      [
+        "saket",
+        "sakit"
+      ],
+      "ng",
+      "may",
+      "aids"
+    ]
+  },
+  {
+    "sentence_id": 72,
+    "ground_truth": "Gamitin natin ang panitikang pambata upang itama ang ating mga pagkakamali",
+    "ocr_candidates": [
+      "gamitin",
+      [
+        "naten",
+        "natin"
+      ],
+      "ang",
+      "panitikang",
+      "pambata",
+      "upang",
+      "itama",
+      "ang",
+      "ating",
+      "mga",
+      "pagkakamali"
+    ]
+  },
+  {
+    "sentence_id": 73,
+    "ground_truth": "Matalas siyang tumingin dahil malabo na ang kaniyang mga mata",
+    "ocr_candidates": [
+      "matalas",
+      "siyang",
+      "tumingin",
+      [
+        "dahil",
+        "rahil"
+      ],
+      "malabo",
+      "na",
+      "ang",
+      "kaniyang",
+      "mga",
+      "mata"
+    ]
+  },
+  {
+    "sentence_id": 74,
+    "ground_truth": "Natambad sa kaalaman ng madla ang idinudulot nito",
+    "ocr_candidates": [
+      "natambad",
+      "sa",
+      "kaalaman",
+      "ng",
+      "madla",
+      "ang",
+      "idinudulot",
+      [
+        "neto",
+        "nito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 75,
+    "ground_truth": "Walang bansang umunlad na hindi gumamit ng sariling wika",
+    "ocr_candidates": [
+      "walang",
+      "bansang",
+      "umunlad",
+      "na",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "gumamit",
+      "ng",
+      "sariling",
+      "wika"
+    ]
+  },
+  {
+    "sentence_id": 76,
+    "ground_truth": "Naiwan din siya ng batang kanyang kasa kasama nang dalawang buwan",
+    "ocr_candidates": [
+      "naiwan",
+      [
+        "din",
+        "rin"
+      ],
+      "siya",
+      "ng",
+      "batang",
+      "kanyang",
+      "kasa",
+      "kasama",
+      "nang",
+      "dalawang",
+      "buwan"
+    ]
+  },
+  {
+    "sentence_id": 77,
+    "ground_truth": "Alam ko na kung papaano siya pumipikit para pasukin ang pagtulog",
+    "ocr_candidates": [
+      "alam",
+      "ko",
+      "na",
+      [
+        "kong",
+        "kung"
+      ],
+      "papaano",
+      "siya",
+      "pumipikit",
+      [
+        "pada",
+        "para"
+      ],
+      "pasukin",
+      "ang",
+      "pagtulog"
+    ]
+  },
+  {
+    "sentence_id": 78,
+    "ground_truth": "Naghiyawan at nagdikit dikit uli ang mga palito ng posporo",
+    "ocr_candidates": [
+      "naghiyawan",
+      "at",
+      "nagdikit",
+      [
+        "dikit",
+        "rikit"
+      ],
+      [
+        "ule",
+        "uli"
+      ],
+      "ang",
+      "mga",
+      "palito",
+      "ng",
+      [
+        "posporo",
+        "puspuro"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 79,
+    "ground_truth": "Napangiti siya at tila lumiwanag ang lahat ng bagay para sa kanya",
+    "ocr_candidates": [
+      "napangiti",
+      "siya",
+      "at",
+      [
+        "tela",
+        "tila"
+      ],
+      "lumiwanag",
+      "ang",
+      "lahat",
+      "ng",
+      "bagay",
+      [
+        "pada",
+        "para"
+      ],
+      "sa",
+      "kanya"
+    ]
+  },
+  {
+    "sentence_id": 80,
+    "ground_truth": "Di na sumagot si Tatay",
+    "ocr_candidates": [
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "na",
+      "sumagot",
+      "si",
+      "tatay"
+    ]
+  },
+  {
+    "sentence_id": 81,
+    "ground_truth": "Kaya naniwala sila sa Kasulatan at sa salitang sinabi ni Jesus",
+    "ocr_candidates": [
+      "kaya",
+      "naniwala",
+      [
+        "sela",
+        "sila"
+      ],
+      "sa",
+      "kasulatan",
+      "at",
+      "sa",
+      "salitang",
+      "sinabi",
+      [
+        "ne",
+        "ni"
+      ],
+      "jesus"
+    ]
+  },
+  {
+    "sentence_id": 82,
+    "ground_truth": "Madaling tumubo ang mga buto dahil hindi malalim ang lupa",
+    "ocr_candidates": [
+      "madaling",
+      "tumubo",
+      "ang",
+      "mga",
+      [
+        "boto",
+        "buto"
+      ],
+      [
+        "dahil",
+        "rahil"
+      ],
+      [
+        "hinde",
+        "hindi"
+      ],
+      "malalim",
+      "ang",
+      "lupa"
+    ]
+  },
+  {
+    "sentence_id": 83,
+    "ground_truth": "Ngayon, walang tahi ang tunika, at hinabi nang buo mula taas",
+    "ocr_candidates": [
+      "ngayon,",
+      "walang",
+      "tahi",
+      "ang",
+      "tunika,",
+      "at",
+      "hinabi",
+      "nang",
+      [
+        "boo",
+        "buo"
+      ],
+      "mula",
+      "taas"
+    ]
+  },
+  {
+    "sentence_id": 84,
+    "ground_truth": "Dapat ay naging maingat ka",
+    "ocr_candidates": [
+      [
+        "dapat",
+        "rapat"
+      ],
+      "ay",
+      "naging",
+      "maingat",
+      "ka"
+    ]
+  },
+  {
+    "sentence_id": 85,
+    "ground_truth": "Muli kong natawag ang pangalan ni Mama Mary",
+    "ocr_candidates": [
+      [
+        "mule",
+        "muli"
+      ],
+      [
+        "kong",
+        "kung"
+      ],
+      "natawag",
+      "ang",
+      "pangalan",
+      [
+        "ne",
+        "ni"
+      ],
+      "mama",
+      "mary"
+    ]
+  },
+  {
+    "sentence_id": 86,
+    "ground_truth": "Balak nilang tunawin ito kapagka nakuha nila",
+    "ocr_candidates": [
+      "balak",
+      "nilang",
+      "tunawin",
+      [
+        "eto",
+        "ito"
+      ],
+      "kapagka",
+      "nakuha",
+      "nila"
+    ]
+  },
+  {
+    "sentence_id": 87,
+    "ground_truth": "Ayaw niyang maniwalang ito ang kanyang asawa, hindi niya makakaya ang maniwala",
+    "ocr_candidates": [
+      "ayaw",
+      "niyang",
+      "maniwalang",
+      [
+        "eto",
+        "ito"
+      ],
+      "ang",
+      "kanyang",
+      "asawa,",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "niya",
+      "makakaya",
+      "ang",
+      "maniwala"
+    ]
+  },
+  {
+    "sentence_id": 88,
+    "ground_truth": "Walang pagkain, walang pitaka o pera sa sinturon",
+    "ocr_candidates": [
+      "walang",
+      "pagkain,",
+      "walang",
+      "pitaka",
+      [
+        "o",
+        "u"
+      ],
+      "pera",
+      "sa",
+      "sinturon"
+    ]
+  },
+  {
+    "sentence_id": 89,
+    "ground_truth": "Puno ito ng mga deboto",
+    "ocr_candidates": [
+      "puno",
+      [
+        "eto",
+        "ito"
+      ],
+      "ng",
+      "mga",
+      "deboto"
+    ]
+  },
+  {
+    "sentence_id": 90,
+    "ground_truth": "Nakaipon ako nang higit sa aking maiipon kung mananalbos ako",
+    "ocr_candidates": [
+      "nakaipon",
+      "ako",
+      "nang",
+      "higit",
+      "sa",
+      "aking",
+      "maiipon",
+      [
+        "kong",
+        "kung"
+      ],
+      "mananalbos",
+      "ako"
+    ]
+  },
+  {
+    "sentence_id": 91,
+    "ground_truth": "O tanging ang batayan lamang ng ispeling ay pagkakasulat ng mga letra",
+    "ocr_candidates": [
+      [
+        "o",
+        "u"
+      ],
+      "tanging",
+      "ang",
+      "batayan",
+      "lamang",
+      "ng",
+      "ispeling",
+      "ay",
+      "pagkakasulat",
+      "ng",
+      "mga",
+      "letra"
+    ]
+  },
+  {
+    "sentence_id": 92,
+    "ground_truth": "Hinding hindi rin lumalapat sa linya ang kanyang mga paa",
+    "ocr_candidates": [
+      "hinding",
+      [
+        "hinde",
+        "hindi"
+      ],
+      [
+        "din",
+        "rin"
+      ],
+      "lumalapat",
+      "sa",
+      "linya",
+      "ang",
+      "kanyang",
+      "mga",
+      "paa"
+    ]
+  },
+  {
+    "sentence_id": 93,
+    "ground_truth": "Nais din niyang maiyak dahil kahit papaano ay may katotohanan ito",
+    "ocr_candidates": [
+      "nais",
+      [
+        "din",
+        "rin"
+      ],
+      "niyang",
+      "maiyak",
+      [
+        "dahil",
+        "rahil"
+      ],
+      "kahit",
+      "papaano",
+      "ay",
+      "may",
+      [
+        "katotohanan",
+        "katutuhanan"
+      ],
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 94,
+    "ground_truth": "Samakatuwid, mayroon ding aspektong naratibo",
+    "ocr_candidates": [
+      "samakatuwid,",
+      "mayroon",
+      [
+        "ding",
+        "ring"
+      ],
+      "aspektong",
+      "naratibo"
+    ]
+  },
+  {
+    "sentence_id": 95,
+    "ground_truth": "May bahid ng mapusyaw na asul ang langit",
+    "ocr_candidates": [
+      "may",
+      "bahid",
+      "ng",
+      "mapusyaw",
+      "na",
+      [
+        "asol",
+        "asul"
+      ],
+      "ang",
+      "langit"
+    ]
+  },
+  {
+    "sentence_id": 96,
+    "ground_truth": "Bahagi ng pang araw araw na pamumuhay ng mga tao ang pamamahayag",
+    "ocr_candidates": [
+      "bahagi",
+      "ng",
+      "pang",
+      "araw",
+      "araw",
+      "na",
+      "pamumuhay",
+      "ng",
+      "mga",
+      [
+        "tao",
+        "tau"
+      ],
+      "ang",
+      "pamamahayag"
+    ]
+  },
+  {
+    "sentence_id": 97,
+    "ground_truth": "Nagpapautang din ang mga makasalanan sa mga makasalanan para matanggap ang katumbas",
+    "ocr_candidates": [
+      "nagpapautang",
+      [
+        "din",
+        "rin"
+      ],
+      "ang",
+      "mga",
+      "makasalanan",
+      "sa",
+      "mga",
+      "makasalanan",
+      [
+        "pada",
+        "para"
+      ],
+      "matanggap",
+      "ang",
+      "katumbas"
+    ]
+  },
+  {
+    "sentence_id": 98,
+    "ground_truth": "Alam kong malayo na ito sa akin",
+    "ocr_candidates": [
+      "alam",
+      [
+        "kong",
+        "kung"
+      ],
+      "malayo",
+      "na",
+      [
+        "eto",
+        "ito"
+      ],
+      "sa",
+      "akin"
+    ]
+  },
+  {
+    "sentence_id": 99,
+    "ground_truth": "Tanging si Gat Urong Sulong ang nagmumukmok sa kalungkutan",
+    "ocr_candidates": [
+      "tanging",
+      "si",
+      "gat",
+      "urong",
+      [
+        "solong",
+        "sulong"
+      ],
+      "ang",
+      "nagmumukmok",
+      "sa",
+      "kalungkutan"
+    ]
+  },
+  {
+    "sentence_id": 100,
+    "ground_truth": "Sinadya kong iwan si Inay sa paglakad at mauna sa kanya",
+    "ocr_candidates": [
+      "sinadya",
+      [
+        "kong",
+        "kung"
+      ],
+      [
+        "ewan",
+        "iwan"
+      ],
+      "si",
+      "inay",
+      "sa",
+      "paglakad",
+      "at",
+      "mauna",
+      "sa",
+      "kanya"
+    ]
+  },
+  {
+    "sentence_id": 101,
+    "ground_truth": "Maraming gamit ang unan ni Lola",
+    "ocr_candidates": [
+      [
+        "madaming",
+        "maraming"
+      ],
+      "gamit",
+      "ang",
+      "unan",
+      [
+        "ne",
+        "ni"
+      ],
+      [
+        "lola",
+        "lula"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 102,
+    "ground_truth": "Ang kabutihan ng isang tao ay nasusukat sa kanyang pakikipagkapwa",
+    "ocr_candidates": [
+      "ang",
+      "kabutihan",
+      "ng",
+      "isang",
+      [
+        "tao",
+        "tau"
+      ],
+      "ay",
+      "nasusukat",
+      "sa",
+      "kanyang",
+      "pakikipagkapwa"
+    ]
+  },
+  {
+    "sentence_id": 103,
+    "ground_truth": "Kahit ayaw ko ng matulog, pinatutulog pa rin niya ako",
+    "ocr_candidates": [
+      "kahit",
+      "ayaw",
+      "ko",
+      "ng",
+      "matulog,",
+      "pinatutulog",
+      "pa",
+      [
+        "din",
+        "rin"
+      ],
+      "niya",
+      "ako"
+    ]
+  },
+  {
+    "sentence_id": 104,
+    "ground_truth": "May iba namang ipinakapon ng tao",
+    "ocr_candidates": [
+      "may",
+      "iba",
+      "namang",
+      "ipinakapon",
+      "ng",
+      [
+        "tao",
+        "tau"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 105,
+    "ground_truth": "Hindi nasiyahan si Bathala sa una niyang pagsubok",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "nasiyahan",
+      "si",
+      "bathala",
+      "sa",
+      "una",
+      "niyang",
+      "pagsubok"
+    ]
+  },
+  {
+    "sentence_id": 106,
+    "ground_truth": "Pagdating ng hapon, puno na ng barya ang aking bulsa",
+    "ocr_candidates": [
+      "pagdating",
+      "ng",
+      "hapon,",
+      "puno",
+      "na",
+      "ng",
+      [
+        "badya",
+        "barya"
+      ],
+      "ang",
+      "aking",
+      [
+        "bolsa",
+        "bulsa"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 107,
+    "ground_truth": "At nakita ko agad ang paborito kong kamisetang dilaw",
+    "ocr_candidates": [
+      "at",
+      "nakita",
+      "ko",
+      "agad",
+      "ang",
+      "paborito",
+      [
+        "kong",
+        "kung"
+      ],
+      "kamisetang",
+      "dilaw"
+    ]
+  },
+  {
+    "sentence_id": 108,
+    "ground_truth": "Binigyang diin niya ang pagpapasakit ng Anak ng Diyos",
+    "ocr_candidates": [
+      "binigyang",
+      [
+        "diin",
+        "reen",
+        "riin"
+      ],
+      "niya",
+      "ang",
+      "pagpapasakit",
+      "ng",
+      "anak",
+      "ng",
+      [
+        "diyos",
+        "diyus"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 109,
+    "ground_truth": "Mahalagang kilalanin muna kung sino ang batang Pilipino",
+    "ocr_candidates": [
+      "mahalagang",
+      "kilalanin",
+      "muna",
+      [
+        "kong",
+        "kung"
+      ],
+      "sino",
+      "ang",
+      "batang",
+      "pilipino"
+    ]
+  },
+  {
+    "sentence_id": 110,
+    "ground_truth": "Kung ako'y masawi ito'y malalanta",
+    "ocr_candidates": [
+      [
+        "kong",
+        "kung"
+      ],
+      "ako'y",
+      "masawi",
+      "ito'y",
+      "malalanta"
+    ]
+  },
+  {
+    "sentence_id": 111,
+    "ground_truth": "Naisip ko kanina, bilhan kayo ng pintura, ng asul na pintura",
+    "ocr_candidates": [
+      "naisip",
+      "ko",
+      "kanina,",
+      "bilhan",
+      "kayo",
+      "ng",
+      "pintura,",
+      "ng",
+      [
+        "asol",
+        "asul"
+      ],
+      "na",
+      "pintura"
+    ]
+  },
+  {
+    "sentence_id": 112,
+    "ground_truth": "Ang nabanggit na korona ay lagging suot niya saanman siya magpunta",
+    "ocr_candidates": [
+      "ang",
+      "nabanggit",
+      "na",
+      [
+        "korona",
+        "koruna",
+        "kurona"
+      ],
+      "ay",
+      "lagging",
+      "suot",
+      "niya",
+      "saanman",
+      "siya",
+      "magpunta"
+    ]
+  },
+  {
+    "sentence_id": 113,
+    "ground_truth": "May aninong tumatakbo sa eskinitang niyayakap ng karimlan ng gabi",
+    "ocr_candidates": [
+      "may",
+      "aninong",
+      "tumatakbo",
+      "sa",
+      "eskinitang",
+      "niyayakap",
+      "ng",
+      "karimlan",
+      "ng",
+      [
+        "gabe",
+        "gabi"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 114,
+    "ground_truth": "Marami ring masasarap na pagkain, may keso, karne at tinapay",
+    "ocr_candidates": [
+      [
+        "madami",
+        "marami"
+      ],
+      [
+        "ding",
+        "ring"
+      ],
+      "masasarap",
+      "na",
+      "pagkain,",
+      "may",
+      "keso,",
+      "karne",
+      "at",
+      "tinapay"
+    ]
+  },
+  {
+    "sentence_id": 115,
+    "ground_truth": "Ang paksa ng pagpupulong ay para bigyan ng pangalan ang kanilang bayan",
+    "ocr_candidates": [
+      "ang",
+      "paksa",
+      "ng",
+      "pagpupulong",
+      "ay",
+      [
+        "pada",
+        "para"
+      ],
+      "bigyan",
+      "ng",
+      "pangalan",
+      "ang",
+      "kanilang",
+      "bayan"
+    ]
+  },
+  {
+    "sentence_id": 116,
+    "ground_truth": "Kinambatan niya ang mga tao para lumapit",
+    "ocr_candidates": [
+      "kinambatan",
+      "niya",
+      "ang",
+      "mga",
+      [
+        "tao",
+        "tau"
+      ],
+      [
+        "pada",
+        "para"
+      ],
+      "lumapit"
+    ]
+  },
+  {
+    "sentence_id": 117,
+    "ground_truth": "Mga bulag na gabay sila",
+    "ocr_candidates": [
+      "mga",
+      "bulag",
+      "na",
+      "gabay",
+      [
+        "sela",
+        "sila"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 118,
+    "ground_truth": "Sinusuhayan ito ng mga nakasulat sa copy",
+    "ocr_candidates": [
+      "sinusuhayan",
+      [
+        "eto",
+        "ito"
+      ],
+      "ng",
+      "mga",
+      "nakasulat",
+      "sa",
+      "copy"
+    ]
+  },
+  {
+    "sentence_id": 119,
+    "ground_truth": "Ito ang dalisay na kasiyahan na naging katiyakan sa pamamagitan ni Maria",
+    "ocr_candidates": [
+      [
+        "eto",
+        "ito"
+      ],
+      "ang",
+      "dalisay",
+      "na",
+      "kasiyahan",
+      "na",
+      "naging",
+      "katiyakan",
+      "sa",
+      "pamamagitan",
+      [
+        "ne",
+        "ni"
+      ],
+      "maria"
+    ]
+  },
+  {
+    "sentence_id": 120,
+    "ground_truth": "Sila ang mga taong nagbibigay buhay at pag asa sa ibang tao",
+    "ocr_candidates": [
+      [
+        "sela",
+        "sila"
+      ],
+      "ang",
+      "mga",
+      "taong",
+      "nagbibigay",
+      "buhay",
+      "at",
+      "pag",
+      "asa",
+      "sa",
+      "ibang",
+      [
+        "tao",
+        "tau"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 121,
+    "ground_truth": "Kakatwa man, ilang ulit niyang inasahang makita ring muli si Mr",
+    "ocr_candidates": [
+      "kakatwa",
+      "man,",
+      "ilang",
+      "ulit",
+      "niyang",
+      "inasahang",
+      "makita",
+      [
+        "ding",
+        "ring"
+      ],
+      [
+        "mule",
+        "muli"
+      ],
+      "si",
+      "mr"
+    ]
+  },
+  {
+    "sentence_id": 122,
+    "ground_truth": "Nakagapos na siya sa nakasusulasok na katotohanan",
+    "ocr_candidates": [
+      "nakagapos",
+      "na",
+      "siya",
+      "sa",
+      "nakasusulasok",
+      "na",
+      [
+        "katotohanan",
+        "katutuhanan"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 123,
+    "ground_truth": "Kalong kalong nito ang may sakit na Mangita",
+    "ocr_candidates": [
+      "kalong",
+      "kalong",
+      [
+        "neto",
+        "nito"
+      ],
+      "ang",
+      "may",
+      [
+        "saket",
+        "sakit"
+      ],
+      "na",
+      "mangita"
+    ]
+  },
+  {
+    "sentence_id": 124,
+    "ground_truth": "O para ba pahirapan talaga kami",
+    "ocr_candidates": [
+      [
+        "o",
+        "u"
+      ],
+      [
+        "pada",
+        "para"
+      ],
+      "ba",
+      "pahirapan",
+      "talaga",
+      "kami"
+    ]
+  },
+  {
+    "sentence_id": 125,
+    "ground_truth": "Sila ang dapat manaig lagi",
+    "ocr_candidates": [
+      [
+        "sela",
+        "sila"
+      ],
+      "ang",
+      [
+        "dapat",
+        "rapat"
+      ],
+      "manaig",
+      "lagi"
+    ]
+  },
+  {
+    "sentence_id": 126,
+    "ground_truth": "Nagkasundo sila ni Giliw at tuluyan nang nagsama",
+    "ocr_candidates": [
+      "nagkasundo",
+      [
+        "sela",
+        "sila"
+      ],
+      [
+        "ne",
+        "ni"
+      ],
+      "giliw",
+      "at",
+      "tuluyan",
+      "nang",
+      "nagsama"
+    ]
+  },
+  {
+    "sentence_id": 127,
+    "ground_truth": "Simula pa noong una ay sa amin na siya nakatira",
+    "ocr_candidates": [
+      "simula",
+      "pa",
+      [
+        "noong",
+        "nuong"
+      ],
+      "una",
+      "ay",
+      "sa",
+      [
+        "amen",
+        "amin"
+      ],
+      "na",
+      "siya",
+      "nakatira"
+    ]
+  },
+  {
+    "sentence_id": 128,
+    "ground_truth": "Hindi niya napansing palaki nang palaki ang bundok",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "niya",
+      "napansing",
+      "palaki",
+      "nang",
+      "palaki",
+      "ang",
+      "bundok"
+    ]
+  },
+  {
+    "sentence_id": 129,
+    "ground_truth": "Gusto kong hintayin ang pagdating ni Tatay",
+    "ocr_candidates": [
+      "gusto",
+      [
+        "kong",
+        "kung"
+      ],
+      "hintayin",
+      "ang",
+      "pagdating",
+      [
+        "ne",
+        "ni"
+      ],
+      "tatay"
+    ]
+  },
+  {
+    "sentence_id": 130,
+    "ground_truth": "Sumpa ito ni Ama bago siya mamayapa",
+    "ocr_candidates": [
+      "sumpa",
+      [
+        "eto",
+        "ito"
+      ],
+      [
+        "ne",
+        "ni"
+      ],
+      "ama",
+      "bago",
+      "siya",
+      "mamayapa"
+    ]
+  },
+  {
+    "sentence_id": 131,
+    "ground_truth": "Pero ako, ayokong iwan ang malaking malaki kong bahay",
+    "ocr_candidates": [
+      [
+        "pero",
+        "peru"
+      ],
+      "ako,",
+      "ayokong",
+      [
+        "ewan",
+        "iwan"
+      ],
+      "ang",
+      "malaking",
+      "malaki",
+      [
+        "kong",
+        "kung"
+      ],
+      "bahay"
+    ]
+  },
+  {
+    "sentence_id": 132,
+    "ground_truth": "Walang bahid ng anumang galit o tuwa",
+    "ocr_candidates": [
+      "walang",
+      "bahid",
+      "ng",
+      [
+        "anomang",
+        "anumang"
+      ],
+      "galit",
+      [
+        "o",
+        "u"
+      ],
+      "tuwa"
+    ]
+  },
+  {
+    "sentence_id": 133,
+    "ground_truth": "Nakarating iyon sa pandinig ni Prinsipe Malakas ng Pangasinan",
+    "ocr_candidates": [
+      "nakarating",
+      [
+        "iyon",
+        "iyun"
+      ],
+      "sa",
+      "pandinig",
+      [
+        "ne",
+        "ni"
+      ],
+      "prinsipe",
+      "malakas",
+      "ng",
+      "pangasinan"
+    ]
+  },
+  {
+    "sentence_id": 134,
+    "ground_truth": "Samantala, ang nanay niya ay di mapakali sa kahahanap kay Gardo",
+    "ocr_candidates": [
+      "samantala,",
+      "ang",
+      "nanay",
+      "niya",
+      "ay",
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "mapakali",
+      "sa",
+      "kahahanap",
+      "kay",
+      "gardo"
+    ]
+  },
+  {
+    "sentence_id": 135,
+    "ground_truth": "Ang silid ay apat na sulukan na tila kahon",
+    "ocr_candidates": [
+      "ang",
+      "silid",
+      "ay",
+      "apat",
+      "na",
+      "sulukan",
+      "na",
+      [
+        "tela",
+        "tila"
+      ],
+      "kahon"
+    ]
+  },
+  {
+    "sentence_id": 136,
+    "ground_truth": "Gumuhong lahat ang kanyang mga binuong pangarap para sa kanyang pitong kuting",
+    "ocr_candidates": [
+      "gumuhong",
+      "lahat",
+      "ang",
+      "kanyang",
+      "mga",
+      "binuong",
+      "pangarap",
+      [
+        "pada",
+        "para"
+      ],
+      "sa",
+      "kanyang",
+      "pitong",
+      "kuting"
+    ]
+  },
+  {
+    "sentence_id": 137,
+    "ground_truth": "Mahilig din akong gumamit ng tulay o padrino sa pagdarasal ko",
+    "ocr_candidates": [
+      "mahilig",
+      [
+        "din",
+        "rin"
+      ],
+      "akong",
+      "gumamit",
+      "ng",
+      "tulay",
+      [
+        "o",
+        "u"
+      ],
+      "padrino",
+      "sa",
+      "pagdarasal",
+      "ko"
+    ]
+  },
+  {
+    "sentence_id": 138,
+    "ground_truth": "Nagngingitngit ang lalaking nagpatalim sa gulok noong isang gabi",
+    "ocr_candidates": [
+      "nagngingitngit",
+      "ang",
+      [
+        "lalakeng",
+        "lalaking"
+      ],
+      "nagpatalim",
+      "sa",
+      "gulok",
+      [
+        "noong",
+        "nuong"
+      ],
+      "isang",
+      [
+        "gabe",
+        "gabi"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 139,
+    "ground_truth": "Bibinyagan niya kayo sa Espiritu Santo at sa apoy",
+    "ocr_candidates": [
+      "bibinyagan",
+      "niya",
+      "kayo",
+      "sa",
+      [
+        "espirito",
+        "espiritu",
+        "ispirito"
+      ],
+      "santo",
+      "at",
+      "sa",
+      "apoy"
+    ]
+  },
+  {
+    "sentence_id": 140,
+    "ground_truth": "Kay Inay o sa aking sarili",
+    "ocr_candidates": [
+      "kay",
+      "inay",
+      [
+        "o",
+        "u"
+      ],
+      "sa",
+      "aking",
+      "sarili"
+    ]
+  },
+  {
+    "sentence_id": 141,
+    "ground_truth": "Sabi ng doktor, kailangang sa ospital muna raw tumira si Lola",
+    "ocr_candidates": [
+      "sabi",
+      "ng",
+      "doktor,",
+      "kailangang",
+      "sa",
+      "ospital",
+      "muna",
+      [
+        "daw",
+        "raw"
+      ],
+      "tumira",
+      "si",
+      [
+        "lola",
+        "lula"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 142,
+    "ground_truth": "Sinundan ko si Ate pero nakakandado ang kanyang silid",
+    "ocr_candidates": [
+      "sinundan",
+      "ko",
+      "si",
+      [
+        "ate",
+        "ati"
+      ],
+      [
+        "pero",
+        "peru"
+      ],
+      "nakakandado",
+      "ang",
+      "kanyang",
+      "silid"
+    ]
+  },
+  {
+    "sentence_id": 143,
+    "ground_truth": "Alam kong may magagawa tayo",
+    "ocr_candidates": [
+      "alam",
+      [
+        "kong",
+        "kung"
+      ],
+      "may",
+      "magagawa",
+      "tayo"
+    ]
+  },
+  {
+    "sentence_id": 144,
+    "ground_truth": "Ang iyong mata ang lampara ng iyong katawan",
+    "ocr_candidates": [
+      "ang",
+      [
+        "iyong",
+        "iyung"
+      ],
+      "mata",
+      "ang",
+      "lampara",
+      "ng",
+      [
+        "iyong",
+        "iyung"
+      ],
+      "katawan"
+    ]
+  },
+  {
+    "sentence_id": 145,
+    "ground_truth": "Hindi ko rin kailangang magpatulong sa maraming santo",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "ko",
+      [
+        "din",
+        "rin"
+      ],
+      "kailangang",
+      "magpatulong",
+      "sa",
+      [
+        "madaming",
+        "maraming"
+      ],
+      "santo"
+    ]
+  },
+  {
+    "sentence_id": 146,
+    "ground_truth": "Malaki ang butas ng kaniyang ilong",
+    "ocr_candidates": [
+      "malaki",
+      "ang",
+      [
+        "botas",
+        "butas"
+      ],
+      "ng",
+      "kaniyang",
+      "ilong"
+    ]
+  },
+  {
+    "sentence_id": 147,
+    "ground_truth": "Kanino nga ba ako dapat magalit",
+    "ocr_candidates": [
+      "kanino",
+      "nga",
+      "ba",
+      "ako",
+      [
+        "dapat",
+        "rapat"
+      ],
+      "magalit"
+    ]
+  },
+  {
+    "sentence_id": 148,
+    "ground_truth": "Sapagkat wala pang kaloob na espiritu dahil hindi pa niluluwalhati si Jesus",
+    "ocr_candidates": [
+      "sapagkat",
+      "wala",
+      "pang",
+      "kaloob",
+      "na",
+      [
+        "espirito",
+        "espiritu",
+        "ispirito"
+      ],
+      [
+        "dahil",
+        "rahil"
+      ],
+      [
+        "hinde",
+        "hindi"
+      ],
+      "pa",
+      "niluluwalhati",
+      "si",
+      "jesus"
+    ]
+  },
+  {
+    "sentence_id": 149,
+    "ground_truth": "Ang rima ay walang talinghaga, gayong ang tula ayon kay Dr",
+    "ocr_candidates": [
+      "ang",
+      "rima",
+      "ay",
+      "walang",
+      "talinghaga,",
+      [
+        "gayong",
+        "gayung"
+      ],
+      "ang",
+      [
+        "tola",
+        "tula"
+      ],
+      [
+        "ayon",
+        "ayun"
+      ],
+      "kay",
+      "dr"
+    ]
+  },
+  {
+    "sentence_id": 150,
+    "ground_truth": "Iyan ang kaloob ko sa mga tao",
+    "ocr_candidates": [
+      "iyan",
+      "ang",
+      "kaloob",
+      "ko",
+      "sa",
+      "mga",
+      [
+        "tao",
+        "tau"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 151,
+    "ground_truth": "Ang bungang iyon ay ligid ng kayraming mga mata",
+    "ocr_candidates": [
+      "ang",
+      "bungang",
+      [
+        "iyon",
+        "iyun"
+      ],
+      "ay",
+      [
+        "leger",
+        "ligid"
+      ],
+      "ng",
+      "kayraming",
+      "mga",
+      "mata"
+    ]
+  },
+  {
+    "sentence_id": 152,
+    "ground_truth": "Nakagawa din siya ng isang bahay kubo sa gitna ng ilog",
+    "ocr_candidates": [
+      "nakagawa",
+      [
+        "din",
+        "rin"
+      ],
+      "siya",
+      "ng",
+      "isang",
+      "bahay",
+      "kubo",
+      "sa",
+      "gitna",
+      "ng",
+      "ilog"
+    ]
+  },
+  {
+    "sentence_id": 153,
+    "ground_truth": "At gumaling ang bata sa sandaling iyon",
+    "ocr_candidates": [
+      "at",
+      "gumaling",
+      "ang",
+      "bata",
+      "sa",
+      "sandaling",
+      [
+        "iyon",
+        "iyun"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 154,
+    "ground_truth": "Saka lamang niya masasaid ang lahat ng ari arian nito",
+    "ocr_candidates": [
+      "saka",
+      "lamang",
+      "niya",
+      "masasaid",
+      "ang",
+      "lahat",
+      "ng",
+      "ari",
+      "arian",
+      [
+        "neto",
+        "nito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 155,
+    "ground_truth": "Sa kasalukuyan, naging takbuhan ako ng mga kapatid kong nagigipit",
+    "ocr_candidates": [
+      "sa",
+      "kasalukuyan,",
+      "naging",
+      "takbuhan",
+      "ako",
+      "ng",
+      "mga",
+      "kapatid",
+      [
+        "kong",
+        "kung"
+      ],
+      "nagigipit"
+    ]
+  },
+  {
+    "sentence_id": 156,
+    "ground_truth": "Kaya din niyang ipaglaban ang kanyang karapatan at hindi basta nagpapaapi lamang",
+    "ocr_candidates": [
+      "kaya",
+      [
+        "din",
+        "rin"
+      ],
+      "niyang",
+      "ipaglaban",
+      "ang",
+      "kanyang",
+      "karapatan",
+      "at",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "basta",
+      "nagpapaapi",
+      "lamang"
+    ]
+  },
+  {
+    "sentence_id": 157,
+    "ground_truth": "Lahat ito ay kanyang ipinalulon sa kanyang briefcase",
+    "ocr_candidates": [
+      "lahat",
+      [
+        "eto",
+        "ito"
+      ],
+      "ay",
+      "kanyang",
+      "ipinalulon",
+      "sa",
+      "kanyang",
+      "briefcase"
+    ]
+  },
+  {
+    "sentence_id": 158,
+    "ground_truth": "May gamot sa sipon at ubo",
+    "ocr_candidates": [
+      "may",
+      "gamot",
+      "sa",
+      "sipon",
+      "at",
+      [
+        "obo",
+        "ubo"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 159,
+    "ground_truth": "Nangyari ito at patuloy na nangyayari sa inaakala nating dambuhalang wikang Ingles",
+    "ocr_candidates": [
+      "nangyari",
+      [
+        "eto",
+        "ito"
+      ],
+      "at",
+      "patuloy",
+      "na",
+      "nangyayari",
+      "sa",
+      "inaakala",
+      "nating",
+      "dambuhalang",
+      "wikang",
+      [
+        "englis",
+        "ingles",
+        "inglis"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 160,
+    "ground_truth": "Kapag sila ay nagbigay ng tulong, hindi sila naghihintay ng kapalit",
+    "ocr_candidates": [
+      "kapag",
+      [
+        "sela",
+        "sila"
+      ],
+      "ay",
+      "nagbigay",
+      "ng",
+      "tulong,",
+      [
+        "hinde",
+        "hindi"
+      ],
+      [
+        "sela",
+        "sila"
+      ],
+      "naghihintay",
+      "ng",
+      "kapalit"
+    ]
+  },
+  {
+    "sentence_id": 161,
+    "ground_truth": "Ayon sa paniniwala, may tungkuling inaako ang mga anito",
+    "ocr_candidates": [
+      [
+        "ayon",
+        "ayun"
+      ],
+      "sa",
+      "paniniwala,",
+      "may",
+      "tungkuling",
+      "inaako",
+      "ang",
+      "mga",
+      "anito"
+    ]
+  },
+  {
+    "sentence_id": 162,
+    "ground_truth": "Biruin mo, empleyado ako sa isang kilalang kompanya",
+    "ocr_candidates": [
+      "biruin",
+      "mo,",
+      "empleyado",
+      "ako",
+      "sa",
+      "isang",
+      "kilalang",
+      [
+        "kompanya",
+        "kumpanya"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 163,
+    "ground_truth": "Siya ang pinakamahusay sa lahat ng manghahabi sa kanilang komunidad",
+    "ocr_candidates": [
+      "siya",
+      "ang",
+      "pinakamahusay",
+      "sa",
+      "lahat",
+      "ng",
+      "manghahabi",
+      "sa",
+      "kanilang",
+      [
+        "komunidad",
+        "kumunidad"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 164,
+    "ground_truth": "Hindi ito gawa ni Abraham",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      [
+        "eto",
+        "ito"
+      ],
+      "gawa",
+      [
+        "ne",
+        "ni"
+      ],
+      "abraham"
+    ]
+  },
+  {
+    "sentence_id": 165,
+    "ground_truth": "Hindi palahian o pambahay lamang ang mga babae",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "palahian",
+      [
+        "o",
+        "u"
+      ],
+      "pambahay",
+      "lamang",
+      "ang",
+      "mga",
+      "babae"
+    ]
+  },
+  {
+    "sentence_id": 166,
+    "ground_truth": "Hindi ka nag ipon ng makakain noong tag araw",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "ka",
+      "nag",
+      "ipon",
+      "ng",
+      "makakain",
+      [
+        "noong",
+        "nuong"
+      ],
+      "tag",
+      "araw"
+    ]
+  },
+  {
+    "sentence_id": 167,
+    "ground_truth": "Ang Pilipinas ay hindi umabot sa listahang inilathala",
+    "ocr_candidates": [
+      "ang",
+      "pilipinas",
+      "ay",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "umabot",
+      "sa",
+      "listahang",
+      "inilathala"
+    ]
+  },
+  {
+    "sentence_id": 168,
+    "ground_truth": "Sinisiguro ko sa inyo na nagantimpalaan na sila nang husto",
+    "ocr_candidates": [
+      "sinisiguro",
+      "ko",
+      "sa",
+      "inyo",
+      "na",
+      "nagantimpalaan",
+      "na",
+      [
+        "sela",
+        "sila"
+      ],
+      "nang",
+      "husto"
+    ]
+  },
+  {
+    "sentence_id": 169,
+    "ground_truth": "Marahil ay hinahanap niya sa ilalim ng dagat ang kanyang nawawalang asawa",
+    "ocr_candidates": [
+      "marahil",
+      "ay",
+      "hinahanap",
+      "niya",
+      "sa",
+      "ilalim",
+      "ng",
+      [
+        "dagat",
+        "ragat"
+      ],
+      "ang",
+      "kanyang",
+      "nawawalang",
+      "asawa"
+    ]
+  },
+  {
+    "sentence_id": 170,
+    "ground_truth": "Lahat tayo ay nakatakdang maghiwalay, di man ngayon, maaaring bukas",
+    "ocr_candidates": [
+      "lahat",
+      "tayo",
+      "ay",
+      "nakatakdang",
+      "maghiwalay,",
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "man",
+      "ngayon,",
+      "maaaring",
+      "bukas"
+    ]
+  },
+  {
+    "sentence_id": 171,
+    "ground_truth": "Ngunit paiikliin ito ng Diyos alang alang sa kanyang mga pinili",
+    "ocr_candidates": [
+      "ngunit",
+      "paiikliin",
+      [
+        "eto",
+        "ito"
+      ],
+      "ng",
+      [
+        "diyos",
+        "diyus"
+      ],
+      "alang",
+      "alang",
+      "sa",
+      "kanyang",
+      "mga",
+      "pinili"
+    ]
+  },
+  {
+    "sentence_id": 172,
+    "ground_truth": "Hindi niya alam kung may iiwasan pang lubak",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "niya",
+      "alam",
+      [
+        "kong",
+        "kung"
+      ],
+      "may",
+      "iiwasan",
+      "pang",
+      "lubak"
+    ]
+  },
+  {
+    "sentence_id": 173,
+    "ground_truth": "Ano't gusto n'yo na namang marinig",
+    "ocr_candidates": [
+      "ano't",
+      "gusto",
+      "n'yo",
+      "na",
+      "namang",
+      [
+        "madinig",
+        "marinig"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 174,
+    "ground_truth": "Naramdaman niyang hindi siya itinuturing na kapatid ng ate niya",
+    "ocr_candidates": [
+      "naramdaman",
+      "niyang",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "siya",
+      "itinuturing",
+      "na",
+      "kapatid",
+      "ng",
+      [
+        "ate",
+        "ati"
+      ],
+      "niya"
+    ]
+  },
+  {
+    "sentence_id": 175,
+    "ground_truth": "Minsan tuloy, naiisip kong ampon lang ako",
+    "ocr_candidates": [
+      "minsan",
+      "tuloy,",
+      "naiisip",
+      [
+        "kong",
+        "kung"
+      ],
+      "ampon",
+      "lang",
+      "ako"
+    ]
+  },
+  {
+    "sentence_id": 176,
+    "ground_truth": "Tuwing Sabado at Linggo, sinigang na bangus ang lagi naming ulam",
+    "ocr_candidates": [
+      "tuwing",
+      "sabado",
+      "at",
+      "linggo,",
+      "sinigang",
+      "na",
+      [
+        "bangos",
+        "bangus"
+      ],
+      "ang",
+      "lagi",
+      "naming",
+      "ulam"
+    ]
+  },
+  {
+    "sentence_id": 177,
+    "ground_truth": "Nagiging isang mahiyaing Ate na siya",
+    "ocr_candidates": [
+      "nagiging",
+      "isang",
+      "mahiyaing",
+      [
+        "ate",
+        "ati"
+      ],
+      "na",
+      "siya"
+    ]
+  },
+  {
+    "sentence_id": 178,
+    "ground_truth": "Kinakalimutan na niya ang sarili kung lubog na ang araw",
+    "ocr_candidates": [
+      "kinakalimutan",
+      "na",
+      "niya",
+      "ang",
+      "sarili",
+      [
+        "kong",
+        "kung"
+      ],
+      "lubog",
+      "na",
+      "ang",
+      "araw"
+    ]
+  },
+  {
+    "sentence_id": 179,
+    "ground_truth": "Lalo pa akong nahilig sa pagbabasa nang makahiligan ko rin ang pagsusulat",
+    "ocr_candidates": [
+      [
+        "lalo",
+        "lalu"
+      ],
+      "pa",
+      "akong",
+      "nahilig",
+      "sa",
+      "pagbabasa",
+      "nang",
+      "makahiligan",
+      "ko",
+      [
+        "din",
+        "rin"
+      ],
+      "ang",
+      "pagsusulat"
+    ]
+  },
+  {
+    "sentence_id": 180,
+    "ground_truth": "Dito ko inaani ang walang kaparis na linamnam at bango",
+    "ocr_candidates": [
+      [
+        "dito",
+        "reto",
+        "rito"
+      ],
+      "ko",
+      "inaani",
+      "ang",
+      "walang",
+      [
+        "kapares",
+        "kaparis"
+      ],
+      "na",
+      "linamnam",
+      "at",
+      "bango"
+    ]
+  },
+  {
+    "sentence_id": 181,
+    "ground_truth": "Naging malubha ang kanyang sakit",
+    "ocr_candidates": [
+      "naging",
+      "malubha",
+      "ang",
+      "kanyang",
+      [
+        "saket",
+        "sakit"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 182,
+    "ground_truth": "Noong unang panahon ang mga tao ay walang palay",
+    "ocr_candidates": [
+      [
+        "noong",
+        "nuong"
+      ],
+      "unang",
+      "panahon",
+      "ang",
+      "mga",
+      [
+        "tao",
+        "tau"
+      ],
+      "ay",
+      "walang",
+      "palay"
+    ]
+  },
+  {
+    "sentence_id": 183,
+    "ground_truth": "Noong unang panahon ang mga ahas ay walang kamandag",
+    "ocr_candidates": [
+      [
+        "noong",
+        "nuong"
+      ],
+      "unang",
+      "panahon",
+      "ang",
+      "mga",
+      "ahas",
+      "ay",
+      "walang",
+      "kamandag"
+    ]
+  },
+  {
+    "sentence_id": 184,
+    "ground_truth": "At baka bigla kayong datnan ng araw na iyon",
+    "ocr_candidates": [
+      "at",
+      "baka",
+      "bigla",
+      "kayong",
+      "datnan",
+      "ng",
+      "araw",
+      "na",
+      [
+        "iyon",
+        "iyun"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 185,
+    "ground_truth": "Naging highest pa nga ako sa mga pagsusulit noon sa klase",
+    "ocr_candidates": [
+      "naging",
+      "highest",
+      "pa",
+      "nga",
+      "ako",
+      "sa",
+      "mga",
+      "pagsusulit",
+      [
+        "noon",
+        "nuon"
+      ],
+      "sa",
+      "klase"
+    ]
+  },
+  {
+    "sentence_id": 186,
+    "ground_truth": "Hindi ko na siya binigyan ng pagkakataong madugtungan pa ang kanyang sinasabi",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "ko",
+      "na",
+      "siya",
+      "binigyan",
+      "ng",
+      "pagkakataong",
+      "madugtungan",
+      "pa",
+      "ang",
+      "kanyang",
+      "sinasabi"
+    ]
+  },
+  {
+    "sentence_id": 187,
+    "ground_truth": "Nabalita sa buong Baranggay namin ang ukol sa aking pagtatapos",
+    "ocr_candidates": [
+      "nabalita",
+      "sa",
+      [
+        "boong",
+        "buong"
+      ],
+      "baranggay",
+      "namin",
+      "ang",
+      "ukol",
+      "sa",
+      "aking",
+      "pagtatapos"
+    ]
+  },
+  {
+    "sentence_id": 188,
+    "ground_truth": "SABI NINA MAMA AT Papa, ang magkapareha ay hindi dapat maghiwalay",
+    "ocr_candidates": [
+      "sabi",
+      "nina",
+      "mama",
+      "at",
+      "papa,",
+      "ang",
+      "magkapareha",
+      "ay",
+      [
+        "hinde",
+        "hindi"
+      ],
+      [
+        "dapat",
+        "rapat"
+      ],
+      "maghiwalay"
+    ]
+  },
+  {
+    "sentence_id": 189,
+    "ground_truth": "Si Ester ito at kasama si Marites",
+    "ocr_candidates": [
+      "si",
+      "ester",
+      [
+        "eto",
+        "ito"
+      ],
+      "at",
+      "kasama",
+      "si",
+      "marites"
+    ]
+  },
+  {
+    "sentence_id": 190,
+    "ground_truth": "Pareho pa rin silang nagtuturo at nagkukuwento sa akin sa gabi",
+    "ocr_candidates": [
+      "pareho",
+      "pa",
+      [
+        "din",
+        "rin"
+      ],
+      [
+        "selang",
+        "silang"
+      ],
+      "nagtuturo",
+      "at",
+      "nagkukuwento",
+      "sa",
+      "akin",
+      "sa",
+      [
+        "gabe",
+        "gabi"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 191,
+    "ground_truth": "Kadalasang nasa inuman ang mga lalabintauning lalaki kaysa babae",
+    "ocr_candidates": [
+      "kadalasang",
+      "nasa",
+      "inuman",
+      "ang",
+      "mga",
+      "lalabintauning",
+      [
+        "lalake",
+        "lalaki"
+      ],
+      "kaysa",
+      "babae"
+    ]
+  },
+  {
+    "sentence_id": 192,
+    "ground_truth": "Pang apat, magaling umawit ang aking Ate Charito",
+    "ocr_candidates": [
+      "pang",
+      "apat,",
+      "magaling",
+      "umawit",
+      "ang",
+      "aking",
+      [
+        "ate",
+        "ati"
+      ],
+      "charito"
+    ]
+  },
+  {
+    "sentence_id": 193,
+    "ground_truth": "Gumagawa ng kabutihan ngunit hindi umaasa ng anumang kapalit",
+    "ocr_candidates": [
+      "gumagawa",
+      "ng",
+      "kabutihan",
+      "ngunit",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "umaasa",
+      "ng",
+      [
+        "anomang",
+        "anumang"
+      ],
+      "kapalit"
+    ]
+  },
+  {
+    "sentence_id": 194,
+    "ground_truth": "Bagaman, nagpasya si Marites nang muli niyang makita ang oras sa relo",
+    "ocr_candidates": [
+      "bagaman,",
+      "nagpasya",
+      "si",
+      "marites",
+      "nang",
+      [
+        "mule",
+        "muli"
+      ],
+      "niyang",
+      "makita",
+      "ang",
+      "oras",
+      "sa",
+      "relo"
+    ]
+  },
+  {
+    "sentence_id": 195,
+    "ground_truth": "At pumunta siya para maghanap ng mga bunga pero wala siyang nakita",
+    "ocr_candidates": [
+      "at",
+      "pumunta",
+      "siya",
+      [
+        "pada",
+        "para"
+      ],
+      "maghanap",
+      "ng",
+      "mga",
+      "bunga",
+      [
+        "pero",
+        "peru"
+      ],
+      "wala",
+      "siyang",
+      "nakita"
+    ]
+  },
+  {
+    "sentence_id": 196,
+    "ground_truth": "Kapag nagtatago siya, madali siyang nakikita",
+    "ocr_candidates": [
+      "kapag",
+      "nagtatago",
+      "siya,",
+      [
+        "madale",
+        "madali",
+        "marali"
+      ],
+      "siyang",
+      "nakikita"
+    ]
+  },
+  {
+    "sentence_id": 197,
+    "ground_truth": "Ang paglipat ay hindi lang simpleng paglipat",
+    "ocr_candidates": [
+      "ang",
+      "paglipat",
+      "ay",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "lang",
+      "simpleng",
+      "paglipat"
+    ]
+  },
+  {
+    "sentence_id": 198,
+    "ground_truth": "Kung minsan, tagapalo ng matitigas na damit tulad ng pantalon",
+    "ocr_candidates": [
+      [
+        "kong",
+        "kung"
+      ],
+      "minsan,",
+      "tagapalo",
+      "ng",
+      "matitigas",
+      "na",
+      "damit",
+      "tulad",
+      "ng",
+      "pantalon"
+    ]
+  },
+  {
+    "sentence_id": 199,
+    "ground_truth": "Sama sama pa rin ang puti",
+    "ocr_candidates": [
+      "sama",
+      "sama",
+      "pa",
+      [
+        "din",
+        "rin"
+      ],
+      "ang",
+      "puti"
+    ]
+  },
+  {
+    "sentence_id": 200,
+    "ground_truth": "Gigibain na talaga ang mga bahay sa Daang bakal",
+    "ocr_candidates": [
+      "gigibain",
+      "na",
+      "talaga",
+      "ang",
+      "mga",
+      "bahay",
+      "sa",
+      [
+        "daang",
+        "raang"
+      ],
+      "bakal"
+    ]
+  },
+  {
+    "sentence_id": 201,
+    "ground_truth": "Doon nagsimula ang pamumuhay ko sa labas ng Gubat ng Tamis",
+    "ocr_candidates": [
+      [
+        "doon",
+        "duon",
+        "roon",
+        "ruon"
+      ],
+      "nagsimula",
+      "ang",
+      "pamumuhay",
+      "ko",
+      "sa",
+      "labas",
+      "ng",
+      "gubat",
+      "ng",
+      "tamis"
+    ]
+  },
+  {
+    "sentence_id": 202,
+    "ground_truth": "Iminungkahi namin sa aming sarili ang gabi gabing pagtatalik",
+    "ocr_candidates": [
+      "iminungkahi",
+      "namin",
+      "sa",
+      "aming",
+      "sarili",
+      "ang",
+      [
+        "gabe",
+        "gabi"
+      ],
+      "gabing",
+      "pagtatalik"
+    ]
+  },
+  {
+    "sentence_id": 203,
+    "ground_truth": "Ganon naman sila e, minsan kasa kasama ko, minsan hindi",
+    "ocr_candidates": [
+      [
+        "ganon",
+        "ganun"
+      ],
+      "naman",
+      [
+        "sela",
+        "sila"
+      ],
+      "e,",
+      "minsan",
+      "kasa",
+      "kasama",
+      "ko,",
+      "minsan",
+      [
+        "hinde",
+        "hindi"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 204,
+    "ground_truth": "Hindi ako taga mundong ito",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "ako",
+      "taga",
+      "mundong",
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 205,
+    "ground_truth": "Sa Lumang Tipan ay makikita rin ang negatibong imahen ng mga babae",
+    "ocr_candidates": [
+      "sa",
+      "lumang",
+      "tipan",
+      "ay",
+      "makikita",
+      [
+        "din",
+        "rin"
+      ],
+      "ang",
+      "negatibong",
+      "imahen",
+      "ng",
+      "mga",
+      "babae"
+    ]
+  },
+  {
+    "sentence_id": 206,
+    "ground_truth": "Namangha pa sila sa kanyang sagot at tumahimik",
+    "ocr_candidates": [
+      "namangha",
+      "pa",
+      [
+        "sela",
+        "sila"
+      ],
+      "sa",
+      "kanyang",
+      "sagot",
+      "at",
+      "tumahimik"
+    ]
+  },
+  {
+    "sentence_id": 207,
+    "ground_truth": "Mas mataas ang pagkilala sa mga nagtuturo ng Ingles",
+    "ocr_candidates": [
+      "mas",
+      "mataas",
+      "ang",
+      "pagkilala",
+      "sa",
+      "mga",
+      "nagtuturo",
+      "ng",
+      [
+        "englis",
+        "ingles",
+        "inglis"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 208,
+    "ground_truth": "At sa aming pagkukusot, susulpot ang mga bulang lobo",
+    "ocr_candidates": [
+      "at",
+      "sa",
+      "aming",
+      "pagkukusot,",
+      "susulpot",
+      "ang",
+      "mga",
+      "bolang",
+      [
+        "lobo",
+        "lubo"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 209,
+    "ground_truth": "Sa halip, ang realidad ang repleksyon ng midya",
+    "ocr_candidates": [
+      "sa",
+      "halip,",
+      "ang",
+      "realidad",
+      "ang",
+      "repleksyon",
+      "ng",
+      [
+        "medya",
+        "midya"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 210,
+    "ground_truth": "Lagi siyang wala sa bahay at tumutulong sa mga tao",
+    "ocr_candidates": [
+      "lagi",
+      "siyang",
+      "wala",
+      "sa",
+      "bahay",
+      "at",
+      "tumutulong",
+      "sa",
+      "mga",
+      [
+        "tao",
+        "tau"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 211,
+    "ground_truth": "Kumikita ako noon ng dalawang daan at singkwenta pesos sa isang araw",
+    "ocr_candidates": [
+      "kumikita",
+      "ako",
+      [
+        "noon",
+        "nuon"
+      ],
+      "ng",
+      "dalawang",
+      [
+        "daan",
+        "raan"
+      ],
+      "at",
+      "singkwenta",
+      "pesos",
+      "sa",
+      "isang",
+      "araw"
+    ]
+  },
+  {
+    "sentence_id": 212,
+    "ground_truth": "Tiyak ni Aling Ining, hinihintay rin Mang Tuning ang pagbaba ng tubig",
+    "ocr_candidates": [
+      "tiyak",
+      [
+        "ne",
+        "ni"
+      ],
+      "aling",
+      "ining,",
+      "hinihintay",
+      [
+        "din",
+        "rin"
+      ],
+      "mang",
+      "tuning",
+      "ang",
+      "pagbaba",
+      "ng",
+      "tubig"
+    ]
+  },
+  {
+    "sentence_id": 213,
+    "ground_truth": "Lubhang Maawaing Hesus, Ikaw an Liwanag ng buong mundo",
+    "ocr_candidates": [
+      "lubhang",
+      "maawaing",
+      "hesus,",
+      "ikaw",
+      "an",
+      "liwanag",
+      "ng",
+      [
+        "boong",
+        "buong"
+      ],
+      [
+        "mondo",
+        "mundo"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 214,
+    "ground_truth": "Dadalawin niya ang Basilika ng Quiapo para muling isangguni ang kanyang kalagayan",
+    "ocr_candidates": [
+      "dadalawin",
+      "niya",
+      "ang",
+      "basilika",
+      "ng",
+      "quiapo",
+      [
+        "pada",
+        "para"
+      ],
+      "muling",
+      "isangguni",
+      "ang",
+      "kanyang",
+      "kalagayan"
+    ]
+  },
+  {
+    "sentence_id": 215,
+    "ground_truth": "Siya pa ring batang masunurin",
+    "ocr_candidates": [
+      "siya",
+      "pa",
+      [
+        "ding",
+        "ring"
+      ],
+      "batang",
+      "masunurin"
+    ]
+  },
+  {
+    "sentence_id": 216,
+    "ground_truth": "Natatakot kasi akong baka magising ang higante sa loob nito",
+    "ocr_candidates": [
+      "natatakot",
+      [
+        "kase",
+        "kasi"
+      ],
+      "akong",
+      "baka",
+      "magising",
+      "ang",
+      [
+        "higante",
+        "higanti"
+      ],
+      "sa",
+      "loob",
+      [
+        "neto",
+        "nito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 217,
+    "ground_truth": "Iyon lang at umunat na ako sa mahabang silya namin sa sala",
+    "ocr_candidates": [
+      [
+        "iyon",
+        "iyun"
+      ],
+      "lang",
+      "at",
+      "umunat",
+      "na",
+      "ako",
+      "sa",
+      "mahabang",
+      "silya",
+      "namin",
+      "sa",
+      "sala"
+    ]
+  },
+  {
+    "sentence_id": 218,
+    "ground_truth": "May pakpak ang mga ito",
+    "ocr_candidates": [
+      "may",
+      "pakpak",
+      "ang",
+      "mga",
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 219,
+    "ground_truth": "Minsan, pinaparusahan niya ang mga ito",
+    "ocr_candidates": [
+      "minsan,",
+      "pinaparusahan",
+      "niya",
+      "ang",
+      "mga",
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 220,
+    "ground_truth": "Nawala pa ang dagdag sanang ihahain nila sa hapag",
+    "ocr_candidates": [
+      "nawala",
+      "pa",
+      "ang",
+      [
+        "dagdag",
+        "ragdag"
+      ],
+      "sanang",
+      "ihahain",
+      "nila",
+      "sa",
+      "hapag"
+    ]
+  },
+  {
+    "sentence_id": 221,
+    "ground_truth": "Kakaiba ang unan ni Lola",
+    "ocr_candidates": [
+      "kakaiba",
+      "ang",
+      "unan",
+      [
+        "ne",
+        "ni"
+      ],
+      [
+        "lola",
+        "lula"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 222,
+    "ground_truth": "Kung sasabihin nilang 'Nasa isang tagong lugar siya,' huwag kayong maniniwala",
+    "ocr_candidates": [
+      [
+        "kong",
+        "kung"
+      ],
+      "sasabihin",
+      "nilang",
+      "'nasa",
+      "isang",
+      "tagong",
+      [
+        "lugad",
+        "lugar"
+      ],
+      "siya,'",
+      "huwag",
+      "kayong",
+      "maniniwala"
+    ]
+  },
+  {
+    "sentence_id": 223,
+    "ground_truth": "Sa akin nakasalalay kung makapagpapatuloy pa ako ng pag aaral",
+    "ocr_candidates": [
+      "sa",
+      "akin",
+      "nakasalalay",
+      [
+        "kong",
+        "kung"
+      ],
+      "makapagpapatuloy",
+      "pa",
+      "ako",
+      "ng",
+      "pag",
+      "aaral"
+    ]
+  },
+  {
+    "sentence_id": 224,
+    "ground_truth": "Di naglaon ay unti ulnting nanghina ang katawan ni Leona",
+    "ocr_candidates": [
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "naglaon",
+      "ay",
+      "unti",
+      "ulnting",
+      "nanghina",
+      "ang",
+      "katawan",
+      [
+        "ne",
+        "ni"
+      ],
+      "leona"
+    ]
+  },
+  {
+    "sentence_id": 225,
+    "ground_truth": "Aaminin kong may panghihinayang ako kung mawawala rin siya sa akin",
+    "ocr_candidates": [
+      "aaminin",
+      [
+        "kong",
+        "kung"
+      ],
+      "may",
+      "panghihinayang",
+      "ako",
+      [
+        "kong",
+        "kung"
+      ],
+      "mawawala",
+      [
+        "din",
+        "rin"
+      ],
+      "siya",
+      "sa",
+      "akin"
+    ]
+  },
+  {
+    "sentence_id": 226,
+    "ground_truth": "Ito talaga ang dahilan kung bakit lalong naging abala si David",
+    "ocr_candidates": [
+      [
+        "eto",
+        "ito"
+      ],
+      "talaga",
+      "ang",
+      "dahilan",
+      [
+        "kong",
+        "kung"
+      ],
+      "bakit",
+      [
+        "lalong",
+        "lalung"
+      ],
+      "naging",
+      "abala",
+      "si",
+      "david"
+    ]
+  },
+  {
+    "sentence_id": 227,
+    "ground_truth": "Nalungkot ako dahil walang address o telepono akong nakita",
+    "ocr_candidates": [
+      "nalungkot",
+      "ako",
+      [
+        "dahil",
+        "rahil"
+      ],
+      "walang",
+      "address",
+      [
+        "o",
+        "u"
+      ],
+      "telepono",
+      "akong",
+      "nakita"
+    ]
+  },
+  {
+    "sentence_id": 228,
+    "ground_truth": "Subalit matalik kitang kaibigan, kaya kukunin ko para sa iyo",
+    "ocr_candidates": [
+      "subalit",
+      "matalik",
+      "kitang",
+      "kaibigan,",
+      "kaya",
+      "kukunin",
+      "ko",
+      [
+        "pada",
+        "para"
+      ],
+      "sa",
+      "iyo"
+    ]
+  },
+  {
+    "sentence_id": 229,
+    "ground_truth": "Pinaniwalaan ko agad na mapapasaakin ito",
+    "ocr_candidates": [
+      "pinaniwalaan",
+      "ko",
+      "agad",
+      "na",
+      "mapapasaakin",
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 230,
+    "ground_truth": "Kasyang kasya lahat ang mga ito sa loob ng aming malaking bahay",
+    "ocr_candidates": [
+      "kasyang",
+      "kasya",
+      "lahat",
+      "ang",
+      "mga",
+      [
+        "eto",
+        "ito"
+      ],
+      "sa",
+      "loob",
+      "ng",
+      "aming",
+      "malaking",
+      "bahay"
+    ]
+  },
+  {
+    "sentence_id": 231,
+    "ground_truth": "Kapag gumawa ng di mabuti, pinarurusahan",
+    "ocr_candidates": [
+      "kapag",
+      "gumawa",
+      "ng",
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "mabuti,",
+      "pinarurusahan"
+    ]
+  },
+  {
+    "sentence_id": 232,
+    "ground_truth": "Noong unang panahon, isang binata ang nanirahan sa isang malaking pulo",
+    "ocr_candidates": [
+      [
+        "noong",
+        "nuong"
+      ],
+      "unang",
+      "panahon,",
+      "isang",
+      "binata",
+      "ang",
+      "nanirahan",
+      "sa",
+      "isang",
+      "malaking",
+      [
+        "polo",
+        "pulo"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 233,
+    "ground_truth": "Nagulat ito nang makita si Irog",
+    "ocr_candidates": [
+      "nagulat",
+      [
+        "eto",
+        "ito"
+      ],
+      "nang",
+      "makita",
+      "si",
+      "irog"
+    ]
+  },
+  {
+    "sentence_id": 234,
+    "ground_truth": "Ibinigay ito sa kanya ng isang sundalong Hapones noong panahon ng giyera",
+    "ocr_candidates": [
+      "ibinigay",
+      [
+        "eto",
+        "ito"
+      ],
+      "sa",
+      "kanya",
+      "ng",
+      "isang",
+      "sundalong",
+      "hapones",
+      [
+        "noong",
+        "nuong"
+      ],
+      "panahon",
+      "ng",
+      "giyera"
+    ]
+  },
+  {
+    "sentence_id": 235,
+    "ground_truth": "Isang araw, isinugod sa ospital si Lolo",
+    "ocr_candidates": [
+      "isang",
+      "araw,",
+      "isinugod",
+      "sa",
+      "ospital",
+      "si",
+      [
+        "lolo",
+        "lulo"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 236,
+    "ground_truth": "Hinabol sila at nagtatakbo sila sa lungga upang magtago",
+    "ocr_candidates": [
+      "hinabol",
+      [
+        "sela",
+        "sila"
+      ],
+      "at",
+      "nagtatakbo",
+      [
+        "sela",
+        "sila"
+      ],
+      "sa",
+      "lungga",
+      "upang",
+      "magtago"
+    ]
+  },
+  {
+    "sentence_id": 237,
+    "ground_truth": "Pero di maintindihan ni Tolits ang lahat ng ito",
+    "ocr_candidates": [
+      [
+        "pero",
+        "peru"
+      ],
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "maintindihan",
+      [
+        "ne",
+        "ni"
+      ],
+      "tolits",
+      "ang",
+      "lahat",
+      "ng",
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 238,
+    "ground_truth": "Biniyayaan sila ng dalawang anak makaraan ang ilang taon",
+    "ocr_candidates": [
+      "biniyayaan",
+      [
+        "sela",
+        "sila"
+      ],
+      "ng",
+      "dalawang",
+      "anak",
+      "makaraan",
+      "ang",
+      "ilang",
+      "taon"
+    ]
+  },
+  {
+    "sentence_id": 239,
+    "ground_truth": "Dito na niya inabutan ang pagtaas ng tubig ng dagat",
+    "ocr_candidates": [
+      [
+        "dito",
+        "reto",
+        "rito"
+      ],
+      "na",
+      "niya",
+      "inabutan",
+      "ang",
+      "pagtaas",
+      "ng",
+      "tubig",
+      "ng",
+      [
+        "dagat",
+        "ragat"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 240,
+    "ground_truth": "Nakinig si Gat Tayao sa hinaing ng mga tao",
+    "ocr_candidates": [
+      "nakinig",
+      "si",
+      "gat",
+      "tayao",
+      "sa",
+      "hinaing",
+      "ng",
+      "mga",
+      [
+        "tao",
+        "tau"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 241,
+    "ground_truth": "Hindi sa akin kundi kay Inay ang huling ganti",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "sa",
+      "akin",
+      [
+        "konde",
+        "kundi"
+      ],
+      "kay",
+      "inay",
+      "ang",
+      "huling",
+      "ganti"
+    ]
+  },
+  {
+    "sentence_id": 242,
+    "ground_truth": "Naunawaan nga nila na sila mismo ang tinutukoy niya sa talinhagang ito",
+    "ocr_candidates": [
+      "naunawaan",
+      "nga",
+      "nila",
+      "na",
+      [
+        "sela",
+        "sila"
+      ],
+      "mismo",
+      "ang",
+      "tinutukoy",
+      "niya",
+      "sa",
+      "talinhagang",
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 243,
+    "ground_truth": "Tinanong ko agad si Nanay kung sino ang batang nasa larawan",
+    "ocr_candidates": [
+      "tinanong",
+      "ko",
+      "agad",
+      "si",
+      "nanay",
+      [
+        "kong",
+        "kung"
+      ],
+      "sino",
+      "ang",
+      "batang",
+      "nasa",
+      "larawan"
+    ]
+  },
+  {
+    "sentence_id": 244,
+    "ground_truth": "Mahal naming Ama, tunay na mahiwaga ang Iyong mga gawa at pamamaraan",
+    "ocr_candidates": [
+      "mahal",
+      "naming",
+      "ama,",
+      "tunay",
+      "na",
+      "mahiwaga",
+      "ang",
+      [
+        "iyong",
+        "iyung"
+      ],
+      "mga",
+      "gawa",
+      "at",
+      "pamamaraan"
+    ]
+  },
+  {
+    "sentence_id": 245,
+    "ground_truth": "Niyakap ako ni Lola at ipinaunan niya sa akin ang kanyang unan",
+    "ocr_candidates": [
+      "niyakap",
+      "ako",
+      [
+        "ne",
+        "ni"
+      ],
+      [
+        "lola",
+        "lula"
+      ],
+      "at",
+      "ipinaunan",
+      "niya",
+      "sa",
+      "akin",
+      "ang",
+      "kanyang",
+      "unan"
+    ]
+  },
+  {
+    "sentence_id": 246,
+    "ground_truth": "Binubuwag nito ang matatatag na pader ng kaakuhan ng ating bansa",
+    "ocr_candidates": [
+      "binubuwag",
+      [
+        "neto",
+        "nito"
+      ],
+      "ang",
+      "matatatag",
+      "na",
+      [
+        "paded",
+        "pader"
+      ],
+      "ng",
+      "kaakuhan",
+      "ng",
+      "ating",
+      "bansa"
+    ]
+  },
+  {
+    "sentence_id": 247,
+    "ground_truth": "Lalo pa na nabubuhay ako sa isang virtual reality",
+    "ocr_candidates": [
+      [
+        "lalo",
+        "lalu"
+      ],
+      "pa",
+      "na",
+      "nabubuhay",
+      "ako",
+      "sa",
+      "isang",
+      "virtual",
+      "reality"
+    ]
+  },
+  {
+    "sentence_id": 248,
+    "ground_truth": "Pinagdikit dikit ng mga taga Daang bakal ang kanilang mga katawan",
+    "ocr_candidates": [
+      "pinagdikit",
+      [
+        "dikit",
+        "rikit"
+      ],
+      "ng",
+      "mga",
+      "taga",
+      [
+        "daang",
+        "raang"
+      ],
+      "bakal",
+      "ang",
+      "kanilang",
+      "mga",
+      "katawan"
+    ]
+  },
+  {
+    "sentence_id": 249,
+    "ground_truth": "At hindi niya ako pinagtatawanan kahit mali mali ang Ingles ko",
+    "ocr_candidates": [
+      "at",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "niya",
+      "ako",
+      "pinagtatawanan",
+      "kahit",
+      [
+        "male",
+        "mali"
+      ],
+      [
+        "male",
+        "mali"
+      ],
+      "ang",
+      [
+        "englis",
+        "ingles",
+        "inglis"
+      ],
+      "ko"
+    ]
+  },
+  {
+    "sentence_id": 250,
+    "ground_truth": "Isang masamang balita ang inihatid nito",
+    "ocr_candidates": [
+      "isang",
+      "masamang",
+      "balita",
+      "ang",
+      "inihatid",
+      [
+        "neto",
+        "nito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 251,
+    "ground_truth": "Muli kong iniiwan ang mundo at papunta sa Ama",
+    "ocr_candidates": [
+      [
+        "mule",
+        "muli"
+      ],
+      [
+        "kong",
+        "kung"
+      ],
+      "iniiwan",
+      "ang",
+      [
+        "mondo",
+        "mundo"
+      ],
+      "at",
+      "papunta",
+      "sa",
+      "ama"
+    ]
+  },
+  {
+    "sentence_id": 252,
+    "ground_truth": "Naalala ko, di nga pala sa akin ang kamiseta",
+    "ocr_candidates": [
+      "naalala",
+      "ko,",
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "nga",
+      "pala",
+      "sa",
+      "akin",
+      "ang",
+      "kamiseta"
+    ]
+  },
+  {
+    "sentence_id": 253,
+    "ground_truth": "Bakit sila pa ang magbibigay",
+    "ocr_candidates": [
+      "bakit",
+      [
+        "sela",
+        "sila"
+      ],
+      "pa",
+      "ang",
+      "magbibigay"
+    ]
+  },
+  {
+    "sentence_id": 254,
+    "ground_truth": "Ang Taal ang pinakamatibay na moog laban sa Kamorohan",
+    "ocr_candidates": [
+      "ang",
+      "taal",
+      "ang",
+      "pinakamatibay",
+      "na",
+      [
+        "moog",
+        "muog"
+      ],
+      "laban",
+      "sa",
+      "kamorohan"
+    ]
+  },
+  {
+    "sentence_id": 255,
+    "ground_truth": "Sa wakas, narinig na rin niya ang kanyang pangalan",
+    "ocr_candidates": [
+      "sa",
+      "wakas,",
+      [
+        "nadinig",
+        "narinig"
+      ],
+      "na",
+      [
+        "din",
+        "rin"
+      ],
+      "niya",
+      "ang",
+      "kanyang",
+      "pangalan"
+    ]
+  },
+  {
+    "sentence_id": 256,
+    "ground_truth": "Teacher daw siya ng Ingles",
+    "ocr_candidates": [
+      [
+        "teached",
+        "teacher"
+      ],
+      [
+        "daw",
+        "raw"
+      ],
+      "siya",
+      "ng",
+      [
+        "englis",
+        "ingles",
+        "inglis"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 257,
+    "ground_truth": "Sa pupuntahan ni Lolo, tiyak na magiging malakas na uli siya",
+    "ocr_candidates": [
+      "sa",
+      "pupuntahan",
+      [
+        "ne",
+        "ni"
+      ],
+      "lolo,",
+      "tiyak",
+      "na",
+      "magiging",
+      "malakas",
+      "na",
+      [
+        "ule",
+        "uli"
+      ],
+      "siya"
+    ]
+  },
+  {
+    "sentence_id": 258,
+    "ground_truth": "Sila ang dahilan ng pagkawala ng Matandang Brino",
+    "ocr_candidates": [
+      [
+        "sela",
+        "sila"
+      ],
+      "ang",
+      "dahilan",
+      "ng",
+      "pagkawala",
+      "ng",
+      "matandang",
+      "brino"
+    ]
+  },
+  {
+    "sentence_id": 259,
+    "ground_truth": "At doon na maiibsan ang uhaw ng kanyang diwa at kaluluwa",
+    "ocr_candidates": [
+      "at",
+      [
+        "doon",
+        "duon",
+        "roon",
+        "ruon"
+      ],
+      "na",
+      "maiibsan",
+      "ang",
+      "uhaw",
+      "ng",
+      "kanyang",
+      "diwa",
+      "at",
+      "kaluluwa"
+    ]
+  },
+  {
+    "sentence_id": 260,
+    "ground_truth": "Itinanong nila kung siya ang aking kaibigan",
+    "ocr_candidates": [
+      "itinanong",
+      "nila",
+      [
+        "kong",
+        "kung"
+      ],
+      "siya",
+      "ang",
+      "aking",
+      "kaibigan"
+    ]
+  },
+  {
+    "sentence_id": 261,
+    "ground_truth": "Nuong wala pang pangalan ang Bicol",
+    "ocr_candidates": [
+      [
+        "noong",
+        "nuong"
+      ],
+      "wala",
+      "pang",
+      "pangalan",
+      "ang",
+      "bicol"
+    ]
+  },
+  {
+    "sentence_id": 262,
+    "ground_truth": "Magmula noon ay inalagaan nila ng mabuti ang halaman",
+    "ocr_candidates": [
+      "magmula",
+      [
+        "noon",
+        "nuon"
+      ],
+      "ay",
+      "inalagaan",
+      "nila",
+      "ng",
+      "mabuti",
+      "ang",
+      "halaman"
+    ]
+  },
+  {
+    "sentence_id": 263,
+    "ground_truth": "Minsan ay masaya silang nag uusap nang magtanong si Ligaya",
+    "ocr_candidates": [
+      "minsan",
+      "ay",
+      "masaya",
+      [
+        "selang",
+        "silang"
+      ],
+      "nag",
+      "uusap",
+      "nang",
+      "magtanong",
+      "si",
+      "ligaya"
+    ]
+  },
+  {
+    "sentence_id": 264,
+    "ground_truth": "Si Tagumpay naman ay masipag at mabait din",
+    "ocr_candidates": [
+      "si",
+      "tagumpay",
+      "naman",
+      "ay",
+      "masipag",
+      "at",
+      "mabait",
+      [
+        "din",
+        "rin"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 265,
+    "ground_truth": "Taos puso silang humingi ng tawad",
+    "ocr_candidates": [
+      "taos",
+      [
+        "poso",
+        "puso"
+      ],
+      [
+        "selang",
+        "silang"
+      ],
+      "humingi",
+      "ng",
+      "tawad"
+    ]
+  },
+  {
+    "sentence_id": 266,
+    "ground_truth": "Di na rin ako nagtatabi tabi po",
+    "ocr_candidates": [
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "na",
+      [
+        "din",
+        "rin"
+      ],
+      "ako",
+      "nagtatabi",
+      "tabi",
+      "po"
+    ]
+  },
+  {
+    "sentence_id": 267,
+    "ground_truth": "Tapos na ang ipinamanang ito nang nakalipas",
+    "ocr_candidates": [
+      "tapos",
+      "na",
+      "ang",
+      "ipinamanang",
+      [
+        "eto",
+        "ito"
+      ],
+      "nang",
+      "nakalipas"
+    ]
+  },
+  {
+    "sentence_id": 268,
+    "ground_truth": "Lumubog sila dahil sa kapangyarihan ng matandang nuno na binalak silang mapinsala",
+    "ocr_candidates": [
+      "lumubog",
+      [
+        "sela",
+        "sila"
+      ],
+      [
+        "dahil",
+        "rahil"
+      ],
+      "sa",
+      "kapangyarihan",
+      "ng",
+      "matandang",
+      "nuno",
+      "na",
+      "binalak",
+      [
+        "selang",
+        "silang"
+      ],
+      "mapinsala"
+    ]
+  },
+  {
+    "sentence_id": 269,
+    "ground_truth": "Batay sa deskripsyon sa body copy, ideyal ang pagtira rito",
+    "ocr_candidates": [
+      "batay",
+      "sa",
+      "deskripsyon",
+      "sa",
+      "body",
+      "copy,",
+      "ideyal",
+      "ang",
+      "pagtira",
+      [
+        "dito",
+        "reto",
+        "rito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 270,
+    "ground_truth": "MAY multiply factor ang midya",
+    "ocr_candidates": [
+      "may",
+      "multiply",
+      "factor",
+      "ang",
+      [
+        "medya",
+        "midya"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 271,
+    "ground_truth": "Kung may kakain ng tinapay na ito, mabubuhay siya magpakailanman",
+    "ocr_candidates": [
+      [
+        "kong",
+        "kung"
+      ],
+      "may",
+      "kakain",
+      "ng",
+      "tinapay",
+      "na",
+      "ito,",
+      "mabubuhay",
+      "siya",
+      "magpakailanman"
+    ]
+  },
+  {
+    "sentence_id": 272,
+    "ground_truth": "Naguguluhan lamang ako sa narinig kong balita mula sa iyo",
+    "ocr_candidates": [
+      "naguguluhan",
+      "lamang",
+      "ako",
+      "sa",
+      [
+        "nadinig",
+        "narinig"
+      ],
+      [
+        "kong",
+        "kung"
+      ],
+      "balita",
+      "mula",
+      "sa",
+      "iyo"
+    ]
+  },
+  {
+    "sentence_id": 273,
+    "ground_truth": "Kaya agad silang nagkapalagayan at nagkahulihan ng loob",
+    "ocr_candidates": [
+      "kaya",
+      "agad",
+      [
+        "selang",
+        "silang"
+      ],
+      "nagkapalagayan",
+      "at",
+      "nagkahulihan",
+      "ng",
+      "loob"
+    ]
+  },
+  {
+    "sentence_id": 274,
+    "ground_truth": "Marami ang nabibighani sa kagandahan ni Perla",
+    "ocr_candidates": [
+      [
+        "madami",
+        "marami"
+      ],
+      "ang",
+      "nabibighani",
+      "sa",
+      "kagandahan",
+      [
+        "ne",
+        "ni"
+      ],
+      "perla"
+    ]
+  },
+  {
+    "sentence_id": 275,
+    "ground_truth": "Linawin natin ang pahayag na ito",
+    "ocr_candidates": [
+      "linawin",
+      [
+        "naten",
+        "natin"
+      ],
+      "ang",
+      "pahayag",
+      "na",
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 276,
+    "ground_truth": "Kakaiba sa ibang Lola ang aking Lola Epang",
+    "ocr_candidates": [
+      "kakaiba",
+      "sa",
+      "ibang",
+      [
+        "lola",
+        "lula"
+      ],
+      "ang",
+      "aking",
+      [
+        "lola",
+        "lula"
+      ],
+      "epang"
+    ]
+  },
+  {
+    "sentence_id": 277,
+    "ground_truth": "Lalo mo lamang pinabibigat ang aking suliranin",
+    "ocr_candidates": [
+      [
+        "lalo",
+        "lalu"
+      ],
+      "mo",
+      "lamang",
+      "pinabibigat",
+      "ang",
+      "aking",
+      "suliranin"
+    ]
+  },
+  {
+    "sentence_id": 278,
+    "ground_truth": "Marami ring pagkain sa loob ng aming bahay",
+    "ocr_candidates": [
+      [
+        "madami",
+        "marami"
+      ],
+      [
+        "ding",
+        "ring"
+      ],
+      "pagkain",
+      "sa",
+      "loob",
+      "ng",
+      "aming",
+      "bahay"
+    ]
+  },
+  {
+    "sentence_id": 279,
+    "ground_truth": "Itinuro na rin ng ama, ang paggalang dito",
+    "ocr_candidates": [
+      "itinuro",
+      "na",
+      [
+        "din",
+        "rin"
+      ],
+      "ng",
+      "ama,",
+      "ang",
+      "paggalang",
+      [
+        "dito",
+        "reto",
+        "rito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 280,
+    "ground_truth": "At Siya ang nakaaalam na totoo ang sinasabi niya para maniwala kayo",
+    "ocr_candidates": [
+      "at",
+      "siya",
+      "ang",
+      "nakaaalam",
+      "na",
+      "totoo",
+      "ang",
+      "sinasabi",
+      "niya",
+      [
+        "pada",
+        "para"
+      ],
+      "maniwala",
+      "kayo"
+    ]
+  },
+  {
+    "sentence_id": 281,
+    "ground_truth": "At nang malaman ng mga tao sa bayan at munisipyo, pinaalis sila",
+    "ocr_candidates": [
+      "at",
+      "nang",
+      "malaman",
+      "ng",
+      "mga",
+      [
+        "tao",
+        "tau"
+      ],
+      "sa",
+      "bayan",
+      "at",
+      "munisipyo,",
+      "pinaalis",
+      [
+        "sela",
+        "sila"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 282,
+    "ground_truth": "Hindi rin nagpahuli ang angkan ni Bukaneg mula sa Kabisayaan at Kabikulan",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      [
+        "din",
+        "rin"
+      ],
+      "nagpahuli",
+      "ang",
+      "angkan",
+      [
+        "ne",
+        "ni"
+      ],
+      "bukaneg",
+      "mula",
+      "sa",
+      "kabisayaan",
+      "at",
+      "kabikulan"
+    ]
+  },
+  {
+    "sentence_id": 283,
+    "ground_truth": "Suriin natin sa dalawang paraan at subuking basahin pagkatapos",
+    "ocr_candidates": [
+      "suriin",
+      [
+        "naten",
+        "natin"
+      ],
+      "sa",
+      "dalawang",
+      [
+        "padaan",
+        "paraan"
+      ],
+      "at",
+      "subuking",
+      "basahin",
+      "pagkatapos"
+    ]
+  },
+  {
+    "sentence_id": 284,
+    "ground_truth": "Pinulbuhan ako ni Ate Rowena",
+    "ocr_candidates": [
+      "pinulbuhan",
+      "ako",
+      [
+        "ne",
+        "ni"
+      ],
+      [
+        "ate",
+        "ati"
+      ],
+      "ruwina"
+    ]
+  },
+  {
+    "sentence_id": 285,
+    "ground_truth": "Pauwi, nilingon ko si Ate Rowena sa malaking bintana",
+    "ocr_candidates": [
+      "pauwi,",
+      "nilingon",
+      "ko",
+      "si",
+      [
+        "ate",
+        "ati"
+      ],
+      "ruwina",
+      "sa",
+      "malaking",
+      "bintana"
+    ]
+  },
+  {
+    "sentence_id": 286,
+    "ground_truth": "Magsasama sama na uli kaming lahat sa bahay na aking bubuuin",
+    "ocr_candidates": [
+      "magsasama",
+      "sama",
+      "na",
+      [
+        "ule",
+        "uli"
+      ],
+      "kaming",
+      "lahat",
+      "sa",
+      "bahay",
+      "na",
+      "aking",
+      "bubuuin"
+    ]
+  },
+  {
+    "sentence_id": 287,
+    "ground_truth": "Pagpintig lamang ng ugat sa kanyang noo ang bumabakat na naghuhumiyaw",
+    "ocr_candidates": [
+      "pagpintig",
+      "lamang",
+      "ng",
+      "ugat",
+      "sa",
+      "kanyang",
+      [
+        "noo",
+        "nuo"
+      ],
+      "ang",
+      "bumabakat",
+      "na",
+      "naghuhumiyaw"
+    ]
+  },
+  {
+    "sentence_id": 288,
+    "ground_truth": "Samakatuwid, ang batang Pilipino ay kapos sa maraming bagay",
+    "ocr_candidates": [
+      "samakatuwid,",
+      "ang",
+      "batang",
+      "pilipino",
+      "ay",
+      "kapos",
+      "sa",
+      [
+        "madaming",
+        "maraming"
+      ],
+      "bagay"
+    ]
+  },
+  {
+    "sentence_id": 289,
+    "ground_truth": "Dahil dito, nakapag boarding house na ako",
+    "ocr_candidates": [
+      [
+        "dahil",
+        "rahil"
+      ],
+      "dito,",
+      "nakapag",
+      "boarding",
+      "house",
+      "na",
+      "ako"
+    ]
+  },
+  {
+    "sentence_id": 290,
+    "ground_truth": "Maraming pagkain sa kabilang malaking pulo at tumpak",
+    "ocr_candidates": [
+      [
+        "madaming",
+        "maraming"
+      ],
+      "pagkain",
+      "sa",
+      "kabilang",
+      "malaking",
+      [
+        "polo",
+        "pulo"
+      ],
+      "at",
+      "tumpak"
+    ]
+  },
+  {
+    "sentence_id": 291,
+    "ground_truth": "Ano raw ba ang kakayahan kong magturo sa kolehiyo",
+    "ocr_candidates": [
+      [
+        "ano",
+        "anu"
+      ],
+      [
+        "daw",
+        "raw"
+      ],
+      "ba",
+      "ang",
+      "kakayahan",
+      [
+        "kong",
+        "kung"
+      ],
+      "magturo",
+      "sa",
+      "kolehiyo"
+    ]
+  },
+  {
+    "sentence_id": 292,
+    "ground_truth": "Dayo ito subalit matiwasay silang nagsasama",
+    "ocr_candidates": [
+      "dayo",
+      [
+        "eto",
+        "ito"
+      ],
+      "subalit",
+      "matiwasay",
+      [
+        "selang",
+        "silang"
+      ],
+      "nagsasama"
+    ]
+  },
+  {
+    "sentence_id": 293,
+    "ground_truth": "Hawig ng nasa kanyang panaginip bagamat itinuturing din niyang isa ito",
+    "ocr_candidates": [
+      "hawig",
+      "ng",
+      "nasa",
+      "kanyang",
+      "panaginip",
+      "bagamat",
+      "itinuturing",
+      [
+        "din",
+        "rin"
+      ],
+      "niyang",
+      "isa",
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 294,
+    "ground_truth": "Dumating na ang sukdulan ng sakit ng kanyang anak",
+    "ocr_candidates": [
+      "dumating",
+      "na",
+      "ang",
+      "sukdulan",
+      "ng",
+      [
+        "saket",
+        "sakit"
+      ],
+      "ng",
+      "kanyang",
+      "anak"
+    ]
+  },
+  {
+    "sentence_id": 295,
+    "ground_truth": "Tawagin ninyo siyang Ilang, subalit iwasan ninyo na mahawakan siya ng lalaki",
+    "ocr_candidates": [
+      "tawagin",
+      "ninyo",
+      "siyang",
+      "ilang,",
+      "subalit",
+      "iwasan",
+      "ninyo",
+      "na",
+      "mahawakan",
+      "siya",
+      "ng",
+      [
+        "lalake",
+        "lalaki"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 296,
+    "ground_truth": "Sa Tagalog, sila ang catalonan, sa mga Bisaya, sila ang mga babaylan",
+    "ocr_candidates": [
+      "sa",
+      "tagalog,",
+      [
+        "sela",
+        "sila"
+      ],
+      "ang",
+      "catalonan,",
+      "sa",
+      "mga",
+      "bisaya,",
+      [
+        "sela",
+        "sila"
+      ],
+      "ang",
+      "mga",
+      "babaylan"
+    ]
+  },
+  {
+    "sentence_id": 297,
+    "ground_truth": "Di na siya makita ng kanyang mga kalaban",
+    "ocr_candidates": [
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "na",
+      "siya",
+      "makita",
+      "ng",
+      "kanyang",
+      "mga",
+      "kalaban"
+    ]
+  },
+  {
+    "sentence_id": 298,
+    "ground_truth": "Ang kalutasan naman sa diskoneksyong ito ay ang makikita sa masayang tinig",
+    "ocr_candidates": [
+      "ang",
+      "kalutasan",
+      "naman",
+      "sa",
+      "diskoneksyong",
+      [
+        "eto",
+        "ito"
+      ],
+      "ay",
+      "ang",
+      "makikita",
+      "sa",
+      "masayang",
+      "tinig"
+    ]
+  },
+  {
+    "sentence_id": 299,
+    "ground_truth": "Walang lingon akong tumakbo nang buong bilis",
+    "ocr_candidates": [
+      "walang",
+      "lingon",
+      "akong",
+      "tumakbo",
+      "nang",
+      [
+        "boong",
+        "buong"
+      ],
+      "bilis"
+    ]
+  },
+  {
+    "sentence_id": 300,
+    "ground_truth": "Araw nga ng Pahinga ang araw na iyon",
+    "ocr_candidates": [
+      "araw",
+      "nga",
+      "ng",
+      "pahinga",
+      "ang",
+      "araw",
+      "na",
+      [
+        "iyon",
+        "iyun"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 301,
+    "ground_truth": "Ano kaya ang nasa loob nito",
+    "ocr_candidates": [
+      [
+        "ano",
+        "anu"
+      ],
+      "kaya",
+      "ang",
+      "nasa",
+      "loob",
+      [
+        "neto",
+        "nito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 302,
+    "ground_truth": "Mga salita ng buhay magpakailanman meron ka",
+    "ocr_candidates": [
+      "mga",
+      "salita",
+      "ng",
+      "buhay",
+      "magpakailanman",
+      [
+        "meron",
+        "miron"
+      ],
+      "ka"
+    ]
+  },
+  {
+    "sentence_id": 303,
+    "ground_truth": "Si Ate Sally, naghihintay naman sa ibaba ng bintana",
+    "ocr_candidates": [
+      "si",
+      [
+        "ate",
+        "ati"
+      ],
+      "sally,",
+      "naghihintay",
+      "naman",
+      "sa",
+      "ibaba",
+      "ng",
+      "bintana"
+    ]
+  },
+  {
+    "sentence_id": 304,
+    "ground_truth": "Nakita na rin siya ng kanyang Nanay at Tatay",
+    "ocr_candidates": [
+      "nakita",
+      "na",
+      [
+        "din",
+        "rin"
+      ],
+      "siya",
+      "ng",
+      "kanyang",
+      "nanay",
+      "at",
+      "tatay"
+    ]
+  },
+  {
+    "sentence_id": 305,
+    "ground_truth": "Masyado ngang dinamdam nito ang pagpanaw ni Maryben",
+    "ocr_candidates": [
+      "masyado",
+      "ngang",
+      "dinamdam",
+      [
+        "neto",
+        "nito"
+      ],
+      "ang",
+      "pagpanaw",
+      [
+        "ne",
+        "ni"
+      ],
+      "maryben"
+    ]
+  },
+  {
+    "sentence_id": 306,
+    "ground_truth": "Naitanong niya kung ano nga ba ang tula sa matanda",
+    "ocr_candidates": [
+      "naitanong",
+      "niya",
+      [
+        "kong",
+        "kung"
+      ],
+      [
+        "ano",
+        "anu"
+      ],
+      "nga",
+      "ba",
+      "ang",
+      [
+        "tola",
+        "tula"
+      ],
+      "sa",
+      "matanda"
+    ]
+  },
+  {
+    "sentence_id": 307,
+    "ground_truth": "Kumita siya ng sapat lamang pambili ng pagkain",
+    "ocr_candidates": [
+      [
+        "kometa",
+        "kumita"
+      ],
+      "siya",
+      "ng",
+      "sapat",
+      "lamang",
+      "pambili",
+      "ng",
+      "pagkain"
+    ]
+  },
+  {
+    "sentence_id": 308,
+    "ground_truth": "Kung sumasakit ang kanyang tiyan,iinom ng tubig na pinangalagaan ng halaman",
+    "ocr_candidates": [
+      [
+        "kong",
+        "kung"
+      ],
+      "sumasakit",
+      "ang",
+      "kanyang",
+      "tiyan,iinom",
+      "ng",
+      "tubig",
+      "na",
+      "pinangalagaan",
+      "ng",
+      "halaman"
+    ]
+  },
+  {
+    "sentence_id": 309,
+    "ground_truth": "Nagkakagulo ang mga tao sa kanilang lugar",
+    "ocr_candidates": [
+      "nagkakagulo",
+      "ang",
+      "mga",
+      [
+        "tao",
+        "tau"
+      ],
+      "sa",
+      "kanilang",
+      [
+        "lugad",
+        "lugar"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 310,
+    "ground_truth": "Sadya kong inayos nang ayon sa mga letrang may fonemik istatus",
+    "ocr_candidates": [
+      "sadya",
+      [
+        "kong",
+        "kung"
+      ],
+      "inayos",
+      "nang",
+      [
+        "ayon",
+        "ayun"
+      ],
+      "sa",
+      "mga",
+      "letrang",
+      "may",
+      "fonemik",
+      [
+        "istatos",
+        "istatus"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 311,
+    "ground_truth": "Kapangyarihang maipalaganap ang totoong identidad ng kababaihang Pilipino",
+    "ocr_candidates": [
+      "kapangyarihang",
+      "maipalaganap",
+      "ang",
+      [
+        "totoong",
+        "tutoong"
+      ],
+      "identidad",
+      "ng",
+      "kababaihang",
+      "pilipino"
+    ]
+  },
+  {
+    "sentence_id": 312,
+    "ground_truth": "Ngunit kung babaybayin sa Filipino, ang digrapong SY ang dapat na gamitin",
+    "ocr_candidates": [
+      "ngunit",
+      [
+        "kong",
+        "kung"
+      ],
+      "babaybayin",
+      "sa",
+      "filipino,",
+      "ang",
+      "digrapong",
+      "sy",
+      "ang",
+      [
+        "dapat",
+        "rapat"
+      ],
+      "na",
+      "gamitin"
+    ]
+  },
+  {
+    "sentence_id": 313,
+    "ground_truth": "Hindi ko malimutan ang aking unang araw dito",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "ko",
+      "malimutan",
+      "ang",
+      "aking",
+      "unang",
+      "araw",
+      [
+        "dito",
+        "reto",
+        "rito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 314,
+    "ground_truth": "Nagawa rin niyang higaan ang bunton ng mga water lily",
+    "ocr_candidates": [
+      "nagawa",
+      [
+        "din",
+        "rin"
+      ],
+      "niyang",
+      "higaan",
+      "ang",
+      "bunton",
+      "ng",
+      "mga",
+      "water",
+      "lily"
+    ]
+  },
+  {
+    "sentence_id": 315,
+    "ground_truth": "Ang mga ganitong pangyayari kung gabi ay inililihim ng bata",
+    "ocr_candidates": [
+      "ang",
+      "mga",
+      "ganitong",
+      "pangyayari",
+      [
+        "kong",
+        "kung"
+      ],
+      [
+        "gabe",
+        "gabi"
+      ],
+      "ay",
+      "inililihim",
+      "ng",
+      "bata"
+    ]
+  },
+  {
+    "sentence_id": 316,
+    "ground_truth": "Gayon din nila tutuparin ang sa inyo",
+    "ocr_candidates": [
+      [
+        "gayon",
+        "gayun"
+      ],
+      [
+        "din",
+        "rin"
+      ],
+      "nila",
+      "tutuparin",
+      "ang",
+      "sa",
+      "inyo"
+    ]
+  },
+  {
+    "sentence_id": 317,
+    "ground_truth": "Lulan nito ay mga lasing na Kastila",
+    "ocr_candidates": [
+      "lulan",
+      [
+        "neto",
+        "nito"
+      ],
+      "ay",
+      "mga",
+      "lasing",
+      "na",
+      "kastila"
+    ]
+  },
+  {
+    "sentence_id": 318,
+    "ground_truth": "Ang bodega ay puno ng mga mais, bigas, at damo",
+    "ocr_candidates": [
+      "ang",
+      "bodega",
+      "ay",
+      "puno",
+      "ng",
+      "mga",
+      "mais,",
+      "bigas,",
+      "at",
+      [
+        "damo",
+        "ramo"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 319,
+    "ground_truth": "Isang aso ang nakahukay ng buto sa lupa",
+    "ocr_candidates": [
+      "isang",
+      "aso",
+      "ang",
+      "nakahukay",
+      "ng",
+      [
+        "boto",
+        "buto"
+      ],
+      "sa",
+      "lupa"
+    ]
+  },
+  {
+    "sentence_id": 320,
+    "ground_truth": "Lihim na lihim ko itong ginagawa dahil isa akong Iglesia",
+    "ocr_candidates": [
+      "lihim",
+      "na",
+      "lihim",
+      "ko",
+      "itong",
+      "ginagawa",
+      [
+        "dahil",
+        "rahil"
+      ],
+      "isa",
+      "akong",
+      "iglesia"
+    ]
+  },
+  {
+    "sentence_id": 321,
+    "ground_truth": "Ang ganda ganda kasi nito",
+    "ocr_candidates": [
+      "ang",
+      "ganda",
+      "ganda",
+      [
+        "kase",
+        "kasi"
+      ],
+      [
+        "neto",
+        "nito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 322,
+    "ground_truth": "Madalas ko rin namang pagsabihan at pangaralan ang ating apo",
+    "ocr_candidates": [
+      "madalas",
+      "ko",
+      [
+        "din",
+        "rin"
+      ],
+      "namang",
+      "pagsabihan",
+      "at",
+      "pangaralan",
+      "ang",
+      "ating",
+      "apo"
+    ]
+  },
+  {
+    "sentence_id": 323,
+    "ground_truth": "Tahimik kong nilisan ang Gubat ng Tamis",
+    "ocr_candidates": [
+      "tahimik",
+      [
+        "kong",
+        "kung"
+      ],
+      "nilisan",
+      "ang",
+      "gubat",
+      "ng",
+      "tamis"
+    ]
+  },
+  {
+    "sentence_id": 324,
+    "ground_truth": "Di niya maunawaan kung bakit kailangang umalis ng pinakamatanda niyang kuya",
+    "ocr_candidates": [
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "niya",
+      "maunawaan",
+      [
+        "kong",
+        "kung"
+      ],
+      "bakit",
+      "kailangang",
+      "umalis",
+      "ng",
+      "pinakamatanda",
+      "niyang",
+      "kuya"
+    ]
+  },
+  {
+    "sentence_id": 325,
+    "ground_truth": "Maraming tao ang sumunod sa kanya",
+    "ocr_candidates": [
+      [
+        "madaming",
+        "maraming"
+      ],
+      [
+        "tao",
+        "tau"
+      ],
+      "ang",
+      "sumunod",
+      "sa",
+      "kanya"
+    ]
+  },
+  {
+    "sentence_id": 326,
+    "ground_truth": "Ang babae kung gayon ay nagsisilbing tagaaliw lamang ng lalaki",
+    "ocr_candidates": [
+      "ang",
+      "babae",
+      [
+        "kong",
+        "kung"
+      ],
+      [
+        "gayon",
+        "gayun"
+      ],
+      "ay",
+      "nagsisilbing",
+      "tagaaliw",
+      "lamang",
+      "ng",
+      [
+        "lalake",
+        "lalaki"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 327,
+    "ground_truth": "Nang malapit na siya, nagtatakbo ang dalaga at nawalang parang bula",
+    "ocr_candidates": [
+      "nang",
+      "malapit",
+      "na",
+      "siya,",
+      "nagtatakbo",
+      "ang",
+      "dalaga",
+      "at",
+      "nawalang",
+      "parang",
+      [
+        "bola",
+        "bula"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 328,
+    "ground_truth": "Lalo naman siyang humahanga sa sarili habang lumalaon",
+    "ocr_candidates": [
+      [
+        "lalo",
+        "lalu"
+      ],
+      "naman",
+      "siyang",
+      "humahanga",
+      "sa",
+      "sarili",
+      "habang",
+      "lumalaon"
+    ]
+  },
+  {
+    "sentence_id": 329,
+    "ground_truth": "Pati mga tuyong dahon ng saging pinatos ko rin upang magkapera",
+    "ocr_candidates": [
+      "pati",
+      "mga",
+      "tuyong",
+      "dahon",
+      "ng",
+      "saging",
+      "pinatos",
+      "ko",
+      [
+        "din",
+        "rin"
+      ],
+      "upang",
+      "magkapera"
+    ]
+  },
+  {
+    "sentence_id": 330,
+    "ground_truth": "Naisip niyang komplikado at napakaraming pangangailangan para sa ganitong kasimpleng pamumuhay",
+    "ocr_candidates": [
+      "naisip",
+      "niyang",
+      [
+        "komplikado",
+        "kumplikado"
+      ],
+      "at",
+      "napakaraming",
+      "pangangailangan",
+      [
+        "pada",
+        "para"
+      ],
+      "sa",
+      "ganitong",
+      "kasimpleng",
+      "pamumuhay"
+    ]
+  },
+  {
+    "sentence_id": 331,
+    "ground_truth": "Nabulabog daw ang mga duwende sa kanilang tahimik na pagbabasa",
+    "ocr_candidates": [
+      "nabulabog",
+      [
+        "daw",
+        "raw"
+      ],
+      "ang",
+      "mga",
+      "duwende",
+      "sa",
+      "kanilang",
+      "tahimik",
+      "na",
+      "pagbabasa"
+    ]
+  },
+  {
+    "sentence_id": 332,
+    "ground_truth": "Datu Mulawin ang ngalan ng lalaki at nagmula siya sa Nasugbo",
+    "ocr_candidates": [
+      [
+        "dato",
+        "datu",
+        "rato"
+      ],
+      "mulawin",
+      "ang",
+      "ngalan",
+      "ng",
+      [
+        "lalake",
+        "lalaki"
+      ],
+      "at",
+      "nagmula",
+      "siya",
+      "sa",
+      "nasugbu"
+    ]
+  },
+  {
+    "sentence_id": 333,
+    "ground_truth": "Ang muling makapag isip sa kandungan ng punongkahoy na aking kinahiratihan",
+    "ocr_candidates": [
+      "ang",
+      "muling",
+      "makapag",
+      "isip",
+      "sa",
+      "kandungan",
+      "ng",
+      [
+        "punongkahoy",
+        "punungkahoy"
+      ],
+      "na",
+      "aking",
+      "kinahiratihan"
+    ]
+  },
+  {
+    "sentence_id": 334,
+    "ground_truth": "At kasuklam suklam sa paningin ng Diyos ang mataas sa mga tao",
+    "ocr_candidates": [
+      "at",
+      "kasuklam",
+      "suklam",
+      "sa",
+      "paningin",
+      "ng",
+      [
+        "diyos",
+        "diyus"
+      ],
+      "ang",
+      "mataas",
+      "sa",
+      "mga",
+      [
+        "tao",
+        "tau"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 335,
+    "ground_truth": "Sa buong maghapon, walang pahinga ang kariton",
+    "ocr_candidates": [
+      "sa",
+      [
+        "boong",
+        "buong"
+      ],
+      "maghapon,",
+      "walang",
+      "pahinga",
+      "ang",
+      "kariton"
+    ]
+  },
+  {
+    "sentence_id": 336,
+    "ground_truth": "Lumaki ako sa pamilyang bibihira o talagang walang nagbabasa",
+    "ocr_candidates": [
+      "lumaki",
+      "ako",
+      "sa",
+      "pamilyang",
+      "bibihira",
+      [
+        "o",
+        "u"
+      ],
+      "talagang",
+      "walang",
+      "nagbabasa"
+    ]
+  },
+  {
+    "sentence_id": 337,
+    "ground_truth": "Nanabik ako at umasang pagmimilagruhan ako ng Dios pero hindi ito nangyari",
+    "ocr_candidates": [
+      "nanabik",
+      "ako",
+      "at",
+      "umasang",
+      "pagmimilagruhan",
+      "ako",
+      "ng",
+      "dios",
+      [
+        "pero",
+        "peru"
+      ],
+      [
+        "hinde",
+        "hindi"
+      ],
+      [
+        "eto",
+        "ito"
+      ],
+      "nangyari"
+    ]
+  },
+  {
+    "sentence_id": 338,
+    "ground_truth": "Sa mga tsuper, kapag mas maraming nakalagay, mas makulay, masaya at maganda",
+    "ocr_candidates": [
+      "sa",
+      "mga",
+      "tsuper,",
+      "kapag",
+      "mas",
+      [
+        "madaming",
+        "maraming"
+      ],
+      "nakalagay,",
+      "mas",
+      "makulay,",
+      "masaya",
+      "at",
+      "maganda"
+    ]
+  },
+  {
+    "sentence_id": 339,
+    "ground_truth": "Pulos dugo ang iyong mga bisig at binti",
+    "ocr_candidates": [
+      "pulos",
+      "dugo",
+      "ang",
+      [
+        "iyong",
+        "iyung"
+      ],
+      "mga",
+      "bisig",
+      "at",
+      [
+        "bente",
+        "binti"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 340,
+    "ground_truth": "Na ang mamimili at bote ng Coca Cola ay may iisang kaakuhan",
+    "ocr_candidates": [
+      "na",
+      "ang",
+      "mamimili",
+      "at",
+      [
+        "bote",
+        "buti"
+      ],
+      "ng",
+      "coca",
+      "cola",
+      "ay",
+      "may",
+      "iisang",
+      "kaakuhan"
+    ]
+  },
+  {
+    "sentence_id": 341,
+    "ground_truth": "Ngunit hindi nila ikinikilos ni isang daliri para galawin ang mga iyon",
+    "ocr_candidates": [
+      "ngunit",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "nila",
+      "ikinikilos",
+      [
+        "ne",
+        "ni"
+      ],
+      "isang",
+      "daliri",
+      [
+        "pada",
+        "para"
+      ],
+      "galawin",
+      "ang",
+      "mga",
+      [
+        "iyon",
+        "iyun"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 342,
+    "ground_truth": "Madalas 'yan mangyari lalo't matagal na akong hindi nakakauwi sa lalawigan",
+    "ocr_candidates": [
+      "madalas",
+      "'yan",
+      "mangyari",
+      "lalo't",
+      "matagal",
+      "na",
+      "akong",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "nakakauwi",
+      "sa",
+      "lalawigan"
+    ]
+  },
+  {
+    "sentence_id": 343,
+    "ground_truth": "Biyaya itong itinakda ng kalikasan sa sinumang nagtatalik, mortal man o imortal",
+    "ocr_candidates": [
+      "biyaya",
+      "itong",
+      "itinakda",
+      "ng",
+      "kalikasan",
+      "sa",
+      [
+        "sinomang",
+        "sinumang"
+      ],
+      "nagtatalik,",
+      "mortal",
+      "man",
+      [
+        "o",
+        "u"
+      ],
+      "imortal"
+    ]
+  },
+  {
+    "sentence_id": 344,
+    "ground_truth": "Panangga laban sa kanila ay walis sa may pinto",
+    "ocr_candidates": [
+      "panangga",
+      "laban",
+      "sa",
+      [
+        "kanela",
+        "kanila"
+      ],
+      "ay",
+      "walis",
+      "sa",
+      "may",
+      "pinto"
+    ]
+  },
+  {
+    "sentence_id": 345,
+    "ground_truth": "Pero kahit anong pilit niya, di siya makalabas",
+    "ocr_candidates": [
+      [
+        "pero",
+        "peru"
+      ],
+      "kahit",
+      "anong",
+      "pilit",
+      "niya,",
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "siya",
+      "makalabas"
+    ]
+  },
+  {
+    "sentence_id": 346,
+    "ground_truth": "Nasa dagat siya at nasa tabing dagat naman ang lahat",
+    "ocr_candidates": [
+      "nasa",
+      [
+        "dagat",
+        "ragat"
+      ],
+      "siya",
+      "at",
+      "nasa",
+      "tabing",
+      [
+        "dagat",
+        "ragat"
+      ],
+      "naman",
+      "ang",
+      "lahat"
+    ]
+  },
+  {
+    "sentence_id": 347,
+    "ground_truth": "Hindi niya kasi ako pinapalo",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "niya",
+      [
+        "kase",
+        "kasi"
+      ],
+      "ako",
+      "pinapalo"
+    ]
+  },
+  {
+    "sentence_id": 348,
+    "ground_truth": "Hindi niya mabatang lisanin siya ng kanyang minamahal",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "niya",
+      "mabatang",
+      "lisanin",
+      "siya",
+      "ng",
+      "kanyang",
+      "minamahal"
+    ]
+  },
+  {
+    "sentence_id": 349,
+    "ground_truth": "Iligal parking daw kasi ang aming bahay",
+    "ocr_candidates": [
+      [
+        "ilegal",
+        "iligal"
+      ],
+      "parking",
+      [
+        "daw",
+        "raw"
+      ],
+      [
+        "kase",
+        "kasi"
+      ],
+      "ang",
+      "aming",
+      "bahay"
+    ]
+  },
+  {
+    "sentence_id": 350,
+    "ground_truth": "Sila ay makapangyarihan subalit magagalang",
+    "ocr_candidates": [
+      [
+        "sela",
+        "sila"
+      ],
+      "ay",
+      "makapangyarihan",
+      "subalit",
+      "magagalang"
+    ]
+  },
+  {
+    "sentence_id": 351,
+    "ground_truth": "At huwag ninyong batiin ang sinuman sa daan",
+    "ocr_candidates": [
+      "at",
+      "huwag",
+      "ninyong",
+      "batiin",
+      "ang",
+      [
+        "sinoman",
+        "sinuman"
+      ],
+      "sa",
+      [
+        "daan",
+        "raan"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 352,
+    "ground_truth": "Talagang di ko naging problema ang pagbabayad sa aking matrikula",
+    "ocr_candidates": [
+      "talagang",
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "ko",
+      "naging",
+      "problema",
+      "ang",
+      "pagbabayad",
+      "sa",
+      "aking",
+      "matrikula"
+    ]
+  },
+  {
+    "sentence_id": 353,
+    "ground_truth": "Pero lalo akong bumilib kay Tatay",
+    "ocr_candidates": [
+      [
+        "pero",
+        "peru"
+      ],
+      [
+        "lalo",
+        "lalu"
+      ],
+      "akong",
+      "bumilib",
+      "kay",
+      "tatay"
+    ]
+  },
+  {
+    "sentence_id": 354,
+    "ground_truth": "Sa ad na ito, ang tauhan ay nasa isang balisang kalagayan",
+    "ocr_candidates": [
+      "sa",
+      [
+        "ad",
+        "ar"
+      ],
+      "na",
+      "ito,",
+      "ang",
+      "tauhan",
+      "ay",
+      "nasa",
+      "isang",
+      "balisang",
+      "kalagayan"
+    ]
+  },
+  {
+    "sentence_id": 355,
+    "ground_truth": "Umakyat sa langit, naluklok sa kanan ng Diyos Amang makapangyarihan sa lahat",
+    "ocr_candidates": [
+      "umakyat",
+      "sa",
+      "langit,",
+      "naluklok",
+      "sa",
+      "kanan",
+      "ng",
+      [
+        "diyos",
+        "diyus"
+      ],
+      "amang",
+      "makapangyarihan",
+      "sa",
+      "lahat"
+    ]
+  },
+  {
+    "sentence_id": 356,
+    "ground_truth": "Pinili kong lumabas matapos ang ilang sandali",
+    "ocr_candidates": [
+      "pinili",
+      [
+        "kong",
+        "kung"
+      ],
+      "lumabas",
+      "matapos",
+      "ang",
+      "ilang",
+      "sandali"
+    ]
+  },
+  {
+    "sentence_id": 357,
+    "ground_truth": "Subalit malayo nang magkagayon pa ito",
+    "ocr_candidates": [
+      "subalit",
+      "malayo",
+      "nang",
+      "magkagayon",
+      "pa",
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 358,
+    "ground_truth": "Kung ano ang aking itinuturo",
+    "ocr_candidates": [
+      [
+        "kong",
+        "kung"
+      ],
+      [
+        "ano",
+        "anu"
+      ],
+      "ang",
+      "aking",
+      "itinuturo"
+    ]
+  },
+  {
+    "sentence_id": 359,
+    "ground_truth": "Madalas na walang prutas ang altar at hindi rin nalilinis ito",
+    "ocr_candidates": [
+      "madalas",
+      "na",
+      "walang",
+      "prutas",
+      "ang",
+      "altar",
+      "at",
+      [
+        "hinde",
+        "hindi"
+      ],
+      [
+        "din",
+        "rin"
+      ],
+      "nalilinis",
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 360,
+    "ground_truth": "Pero wala doon si Maria",
+    "ocr_candidates": [
+      [
+        "pero",
+        "peru"
+      ],
+      "wala",
+      [
+        "doon",
+        "duon",
+        "roon",
+        "ruon"
+      ],
+      "si",
+      "maria"
+    ]
+  },
+  {
+    "sentence_id": 361,
+    "ground_truth": "Nadapa siya ngunit kahit hirap na ay pilit pa ring gumapang",
+    "ocr_candidates": [
+      "nadapa",
+      "siya",
+      "ngunit",
+      "kahit",
+      "hirap",
+      "na",
+      "ay",
+      "pilit",
+      "pa",
+      [
+        "ding",
+        "ring"
+      ],
+      "gumapang"
+    ]
+  },
+  {
+    "sentence_id": 362,
+    "ground_truth": "Di na rin karton ang aming dingding",
+    "ocr_candidates": [
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "na",
+      [
+        "din",
+        "rin"
+      ],
+      [
+        "karton",
+        "kartun"
+      ],
+      "ang",
+      "aming",
+      "dingding"
+    ]
+  },
+  {
+    "sentence_id": 363,
+    "ground_truth": "Ngunit kung mamatay ito, nagdudulot ito ng maraming bunga",
+    "ocr_candidates": [
+      "ngunit",
+      [
+        "kong",
+        "kung"
+      ],
+      "mamatay",
+      "ito,",
+      "nagdudulot",
+      [
+        "eto",
+        "ito"
+      ],
+      "ng",
+      [
+        "madaming",
+        "maraming"
+      ],
+      "bunga"
+    ]
+  },
+  {
+    "sentence_id": 364,
+    "ground_truth": "Noon ito marahang lumapit sa munting daga",
+    "ocr_candidates": [
+      [
+        "noon",
+        "nuon"
+      ],
+      [
+        "eto",
+        "ito"
+      ],
+      "marahang",
+      "lumapit",
+      "sa",
+      "munting",
+      "daga"
+    ]
+  },
+  {
+    "sentence_id": 365,
+    "ground_truth": "Kung hindi ka marunong mag Ingles, limitado ang iyong oportunidad",
+    "ocr_candidates": [
+      [
+        "kong",
+        "kung"
+      ],
+      [
+        "hinde",
+        "hindi"
+      ],
+      "ka",
+      "marunong",
+      "mag",
+      "ingles,",
+      "limitado",
+      "ang",
+      [
+        "iyong",
+        "iyung"
+      ],
+      [
+        "oportunidad",
+        "opurtunidad"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 366,
+    "ground_truth": "Nalulungkot ako dahil ipinagdiriwang pa natin ito",
+    "ocr_candidates": [
+      "nalulungkot",
+      "ako",
+      [
+        "dahil",
+        "rahil"
+      ],
+      "ipinagdiriwang",
+      "pa",
+      [
+        "naten",
+        "natin"
+      ],
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 367,
+    "ground_truth": "Nababawan ako sa praktis na ito",
+    "ocr_candidates": [
+      "nababawan",
+      "ako",
+      "sa",
+      "praktis",
+      "na",
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 368,
+    "ground_truth": "Lahat sila ay kabang kaba",
+    "ocr_candidates": [
+      "lahat",
+      [
+        "sela",
+        "sila"
+      ],
+      "ay",
+      "kabang",
+      "kaba"
+    ]
+  },
+  {
+    "sentence_id": 369,
+    "ground_truth": "Duon sila tumahan hanggang sa humupa ang tubig",
+    "ocr_candidates": [
+      [
+        "doon",
+        "duon",
+        "roon",
+        "ruon"
+      ],
+      [
+        "sela",
+        "sila"
+      ],
+      "tumahan",
+      "hanggang",
+      "sa",
+      "humupa",
+      "ang",
+      "tubig"
+    ]
+  },
+  {
+    "sentence_id": 370,
+    "ground_truth": "Tuwang tuwa ako dahil malaking halaga na ito noon",
+    "ocr_candidates": [
+      "tuwang",
+      "tuwa",
+      "ako",
+      [
+        "dahil",
+        "rahil"
+      ],
+      "malaking",
+      "halaga",
+      "na",
+      [
+        "eto",
+        "ito"
+      ],
+      [
+        "noon",
+        "nuon"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 371,
+    "ground_truth": "Kaya pala hinding hinding nahihiwalay kay Lola Dominga ang kanyang unan",
+    "ocr_candidates": [
+      "kaya",
+      "pala",
+      "hinding",
+      "hinding",
+      "nahihiwalay",
+      "kay",
+      [
+        "lola",
+        "lula"
+      ],
+      "dominga",
+      "ang",
+      "kanyang",
+      "unan"
+    ]
+  },
+  {
+    "sentence_id": 372,
+    "ground_truth": "Nag iisa siya roon nang gumabi",
+    "ocr_candidates": [
+      "nag",
+      "iisa",
+      "siya",
+      [
+        "doon",
+        "duon",
+        "roon",
+        "ruon"
+      ],
+      "nang",
+      "gumabi"
+    ]
+  },
+  {
+    "sentence_id": 373,
+    "ground_truth": "Siguro ang pangit pangit ng mukha ng mumu",
+    "ocr_candidates": [
+      [
+        "seguro",
+        "siguro"
+      ],
+      "ang",
+      "pangit",
+      "pangit",
+      "ng",
+      "mukha",
+      "ng",
+      "mumo"
+    ]
+  },
+  {
+    "sentence_id": 374,
+    "ground_truth": "Papalaki na nang papalaki ang nawawalang asul sa kulay sa katawan nito",
+    "ocr_candidates": [
+      "papalaki",
+      "na",
+      "nang",
+      "papalaki",
+      "ang",
+      "nawawalang",
+      [
+        "asol",
+        "asul"
+      ],
+      "sa",
+      "kulay",
+      "sa",
+      "katawan",
+      [
+        "neto",
+        "nito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 375,
+    "ground_truth": "Pero hindi ko nagawang magsalita",
+    "ocr_candidates": [
+      [
+        "pero",
+        "peru"
+      ],
+      [
+        "hinde",
+        "hindi"
+      ],
+      "ko",
+      "nagawang",
+      "magsalita"
+    ]
+  },
+  {
+    "sentence_id": 376,
+    "ground_truth": "Nagawa niyang mailuklok ang kanyang sarili sa pedestal kahanay ng mga ito",
+    "ocr_candidates": [
+      "nagawa",
+      "niyang",
+      "mailuklok",
+      "ang",
+      "kanyang",
+      "sarili",
+      "sa",
+      "pedestal",
+      "kahanay",
+      "ng",
+      "mga",
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 377,
+    "ground_truth": "Walang mabuti kundi ang Diyos lamang",
+    "ocr_candidates": [
+      "walang",
+      "mabuti",
+      [
+        "konde",
+        "kundi"
+      ],
+      "ang",
+      [
+        "diyos",
+        "diyus"
+      ],
+      "lamang"
+    ]
+  },
+  {
+    "sentence_id": 378,
+    "ground_truth": "Minarapat na lamang niyang ikubli muli ito",
+    "ocr_candidates": [
+      "minarapat",
+      "na",
+      "lamang",
+      "niyang",
+      "ikubli",
+      [
+        "mule",
+        "muli"
+      ],
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 379,
+    "ground_truth": "Tinikman ito ni Jesus ngunit hindi niya ito ininom",
+    "ocr_candidates": [
+      "tinikman",
+      [
+        "eto",
+        "ito"
+      ],
+      [
+        "ne",
+        "ni"
+      ],
+      "jesus",
+      "ngunit",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "niya",
+      [
+        "eto",
+        "ito"
+      ],
+      [
+        "ininom",
+        "ininum"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 380,
+    "ground_truth": "Pinakakamahal na Ina bahaginan mo kami ng iyong malaking pagtitiwala sa Diyos",
+    "ocr_candidates": [
+      "pinakakamahal",
+      "na",
+      "ina",
+      "bahaginan",
+      "mo",
+      "kami",
+      "ng",
+      [
+        "iyong",
+        "iyung"
+      ],
+      "malaking",
+      "pagtitiwala",
+      "sa",
+      [
+        "diyos",
+        "diyus"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 381,
+    "ground_truth": "Pero paano naman kapag tayo na ang nakapulot ng pera o pitaka",
+    "ocr_candidates": [
+      [
+        "pero",
+        "peru"
+      ],
+      "paano",
+      "naman",
+      "kapag",
+      "tayo",
+      "na",
+      "ang",
+      "nakapulot",
+      "ng",
+      "pera",
+      [
+        "o",
+        "u"
+      ],
+      "pitaka"
+    ]
+  },
+  {
+    "sentence_id": 382,
+    "ground_truth": "Bihirang bihira ko na rin siyang makitang gumagalaw man lang",
+    "ocr_candidates": [
+      "bihirang",
+      "bihira",
+      "ko",
+      "na",
+      [
+        "din",
+        "rin"
+      ],
+      "siyang",
+      "makitang",
+      "gumagalaw",
+      "man",
+      "lang"
+    ]
+  },
+  {
+    "sentence_id": 383,
+    "ground_truth": "Pero alam ko na ang nakaraan niya at kilala ko na siya",
+    "ocr_candidates": [
+      [
+        "pero",
+        "peru"
+      ],
+      "alam",
+      "ko",
+      "na",
+      "ang",
+      [
+        "nakadaan",
+        "nakaraan"
+      ],
+      "niya",
+      "at",
+      "kilala",
+      "ko",
+      "na",
+      "siya"
+    ]
+  },
+  {
+    "sentence_id": 384,
+    "ground_truth": "Dito kami dinadala upang sa kalye ay hindi magpagala gala",
+    "ocr_candidates": [
+      [
+        "dito",
+        "reto",
+        "rito"
+      ],
+      "kami",
+      "dinadala",
+      "upang",
+      "sa",
+      "kalye",
+      "ay",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "magpagala",
+      "gala"
+    ]
+  },
+  {
+    "sentence_id": 385,
+    "ground_truth": "Maisulat ang mga guwang o nakaligtaang kasaysayan",
+    "ocr_candidates": [
+      "maisulat",
+      "ang",
+      "mga",
+      "guwang",
+      [
+        "o",
+        "u"
+      ],
+      "nakaligtaang",
+      "kasaysayan"
+    ]
+  },
+  {
+    "sentence_id": 386,
+    "ground_truth": "Hindi naman ako sadyang naniniwala sa silbi at saysay ng firewall",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "naman",
+      "ako",
+      "sadyang",
+      "naniniwala",
+      "sa",
+      "silbi",
+      "at",
+      "saysay",
+      "ng",
+      "firewall"
+    ]
+  },
+  {
+    "sentence_id": 387,
+    "ground_truth": "Nakahiga ito sa dahon ng saging",
+    "ocr_candidates": [
+      "nakahiga",
+      [
+        "eto",
+        "ito"
+      ],
+      "sa",
+      "dahon",
+      "ng",
+      "saging"
+    ]
+  },
+  {
+    "sentence_id": 388,
+    "ground_truth": "Ang mga ito ay engkantada pala",
+    "ocr_candidates": [
+      "ang",
+      "mga",
+      [
+        "eto",
+        "ito"
+      ],
+      "ay",
+      "engkantada",
+      "pala"
+    ]
+  },
+  {
+    "sentence_id": 389,
+    "ground_truth": "Pareho na silang ulila at malayo sa mga kamag anak",
+    "ocr_candidates": [
+      "pareho",
+      "na",
+      [
+        "selang",
+        "silang"
+      ],
+      "ulila",
+      "at",
+      "malayo",
+      "sa",
+      "mga",
+      "kamag",
+      "anak"
+    ]
+  },
+  {
+    "sentence_id": 390,
+    "ground_truth": "Ibibigay nga sa inyo sa sandaling iyon ang inyong sasabihin",
+    "ocr_candidates": [
+      "ibibigay",
+      "nga",
+      "sa",
+      "inyo",
+      "sa",
+      "sandaling",
+      [
+        "iyon",
+        "iyun"
+      ],
+      "ang",
+      "inyong",
+      "sasabihin"
+    ]
+  },
+  {
+    "sentence_id": 391,
+    "ground_truth": "Tila aporong sumusunod kay Mamang ang lalaki",
+    "ocr_candidates": [
+      [
+        "tela",
+        "tila"
+      ],
+      "aporong",
+      [
+        "sumusonod",
+        "sumusunod"
+      ],
+      "kay",
+      "mamang",
+      "ang",
+      [
+        "lalake",
+        "lalaki"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 392,
+    "ground_truth": "Sigurado akong may software ito na naka install sa aking PC",
+    "ocr_candidates": [
+      [
+        "segurado",
+        "sigurado"
+      ],
+      "akong",
+      "may",
+      "software",
+      [
+        "eto",
+        "ito"
+      ],
+      "na",
+      "naka",
+      "install",
+      "sa",
+      "aking",
+      "pc"
+    ]
+  },
+  {
+    "sentence_id": 393,
+    "ground_truth": "Palaging sapat lang o kulang pa ang perang kanyag ibinibigay",
+    "ocr_candidates": [
+      "palaging",
+      "sapat",
+      "lang",
+      [
+        "o",
+        "u"
+      ],
+      "kulang",
+      "pa",
+      "ang",
+      "perang",
+      "kanyag",
+      "ibinibigay"
+    ]
+  },
+  {
+    "sentence_id": 394,
+    "ground_truth": "Nagalit si Sangkalan at isinumpa ang Diyos",
+    "ocr_candidates": [
+      "nagalit",
+      "si",
+      "sangkalan",
+      "at",
+      "isinumpa",
+      "ang",
+      [
+        "diyos",
+        "diyus"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 395,
+    "ground_truth": "Paano siya makakarating sa kabilang pulo",
+    "ocr_candidates": [
+      "paano",
+      "siya",
+      "makakarating",
+      "sa",
+      "kabilang",
+      [
+        "polo",
+        "pulo"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 396,
+    "ground_truth": "Ayon sa naririnig ko ako naghuhukom",
+    "ocr_candidates": [
+      [
+        "ayon",
+        "ayun"
+      ],
+      "sa",
+      "naririnig",
+      "ko",
+      "ako",
+      "naghuhukom"
+    ]
+  },
+  {
+    "sentence_id": 397,
+    "ground_truth": "Bawat kilos ay may kahulugan sa amin",
+    "ocr_candidates": [
+      "bawat",
+      "kilos",
+      "ay",
+      "may",
+      [
+        "kahulogan",
+        "kahulugan"
+      ],
+      "sa",
+      [
+        "amen",
+        "amin"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 398,
+    "ground_truth": "Dito rin nila ibinabatay kung paano sila makikisalamuha sa iba pang indibidwal",
+    "ocr_candidates": [
+      [
+        "dito",
+        "reto",
+        "rito"
+      ],
+      [
+        "din",
+        "rin"
+      ],
+      "nila",
+      "ibinabatay",
+      [
+        "kong",
+        "kung"
+      ],
+      "paano",
+      [
+        "sela",
+        "sila"
+      ],
+      "makikisalamuha",
+      "sa",
+      "iba",
+      "pang",
+      "indibidwal"
+    ]
+  },
+  {
+    "sentence_id": 399,
+    "ground_truth": "Agad agad naming isinugod sa ospital si Lola",
+    "ocr_candidates": [
+      "agad",
+      "agad",
+      "naming",
+      "isinugod",
+      "sa",
+      "ospital",
+      "si",
+      [
+        "lola",
+        "lula"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 400,
+    "ground_truth": "Ito ang kanilang pambenta sa mga manononood",
+    "ocr_candidates": [
+      [
+        "eto",
+        "ito"
+      ],
+      "ang",
+      "kanilang",
+      "pambenta",
+      "sa",
+      "mga",
+      "manononood"
+    ]
+  },
+  {
+    "sentence_id": 401,
+    "ground_truth": "Hindi puwedeng maging alagad ko ang di tumatalikod sa lahat ng kanya",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "puwedeng",
+      "maging",
+      "alagad",
+      "ko",
+      "ang",
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "tumatalikod",
+      "sa",
+      "lahat",
+      "ng",
+      "kanya"
+    ]
+  },
+  {
+    "sentence_id": 402,
+    "ground_truth": "Paano na ang mga batang darating at aalis",
+    "ocr_candidates": [
+      "paano",
+      "na",
+      "ang",
+      "mga",
+      "batang",
+      [
+        "dadating",
+        "darating"
+      ],
+      "at",
+      "aalis"
+    ]
+  },
+  {
+    "sentence_id": 403,
+    "ground_truth": "May gamit din naman ang aming bahay tulad ng ibang bahay",
+    "ocr_candidates": [
+      "may",
+      "gamit",
+      [
+        "din",
+        "rin"
+      ],
+      "naman",
+      "ang",
+      "aming",
+      "bahay",
+      "tulad",
+      "ng",
+      "ibang",
+      "bahay"
+    ]
+  },
+  {
+    "sentence_id": 404,
+    "ground_truth": "Ano naman kaya ang mararamdaman natin",
+    "ocr_candidates": [
+      [
+        "ano",
+        "anu"
+      ],
+      "naman",
+      "kaya",
+      "ang",
+      "mararamdaman",
+      [
+        "naten",
+        "natin"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 405,
+    "ground_truth": "Idinadahilan kong busog pa ako o kaya naman ay may importanteng ginagawa",
+    "ocr_candidates": [
+      "idinadahilan",
+      [
+        "kong",
+        "kung"
+      ],
+      "busog",
+      "pa",
+      "ako",
+      [
+        "o",
+        "u"
+      ],
+      "kaya",
+      "naman",
+      "ay",
+      "may",
+      "importanteng",
+      "ginagawa"
+    ]
+  },
+  {
+    "sentence_id": 406,
+    "ground_truth": "May limang pasilyo ito na may bubong",
+    "ocr_candidates": [
+      "may",
+      "limang",
+      "pasilyo",
+      [
+        "eto",
+        "ito"
+      ],
+      "na",
+      "may",
+      "bubong"
+    ]
+  },
+  {
+    "sentence_id": 407,
+    "ground_truth": "Matapos ipapatay ang misyunero ay hindi mapalagay si Datu Diliwariw",
+    "ocr_candidates": [
+      "matapos",
+      "ipapatay",
+      "ang",
+      "misyonero",
+      "ay",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "mapalagay",
+      "si",
+      [
+        "dato",
+        "datu",
+        "rato"
+      ],
+      "diliwariw"
+    ]
+  },
+  {
+    "sentence_id": 408,
+    "ground_truth": "Isang panahong kakailanganin kong magdasal nang taimtim at makiusap muli sa Kanya",
+    "ocr_candidates": [
+      "isang",
+      "panahong",
+      "kakailanganin",
+      [
+        "kong",
+        "kung"
+      ],
+      "magdasal",
+      "nang",
+      "taimtim",
+      "at",
+      "makiusap",
+      [
+        "mule",
+        "muli"
+      ],
+      "sa",
+      "kanya"
+    ]
+  },
+  {
+    "sentence_id": 409,
+    "ground_truth": "Kung aalis naman ako, ipadadala ko siya sa inyo",
+    "ocr_candidates": [
+      [
+        "kong",
+        "kung"
+      ],
+      "aalis",
+      "naman",
+      "ako,",
+      "ipadadala",
+      "ko",
+      "siya",
+      "sa",
+      "inyo"
+    ]
+  },
+  {
+    "sentence_id": 410,
+    "ground_truth": "Dagli nitong isinuot ang mga pakpak at dagli ring lumipad palayo",
+    "ocr_candidates": [
+      "dagli",
+      [
+        "netong",
+        "nitong"
+      ],
+      "isinuot",
+      "ang",
+      "mga",
+      "pakpak",
+      "at",
+      "dagli",
+      [
+        "ding",
+        "ring"
+      ],
+      "lumipad",
+      "palayo"
+    ]
+  },
+  {
+    "sentence_id": 411,
+    "ground_truth": "Bawat espasyo ay kailangang lagyan ng disenyo",
+    "ocr_candidates": [
+      "bawat",
+      [
+        "espasyo",
+        "ispasyo"
+      ],
+      "ay",
+      "kailangang",
+      "lagyan",
+      "ng",
+      "disenyo"
+    ]
+  },
+  {
+    "sentence_id": 412,
+    "ground_truth": "Naging dahilan pa ito ng patuloy niyang pagsulat",
+    "ocr_candidates": [
+      "naging",
+      "dahilan",
+      "pa",
+      [
+        "eto",
+        "ito"
+      ],
+      "ng",
+      "patuloy",
+      "niyang",
+      "pagsulat"
+    ]
+  },
+  {
+    "sentence_id": 413,
+    "ground_truth": "Kahit parang bitin man sa isa, ayos na ayos na",
+    "ocr_candidates": [
+      "kahit",
+      "parang",
+      "bitin",
+      "man",
+      "sa",
+      "isa,",
+      [
+        "ayos",
+        "ayus"
+      ],
+      "na",
+      [
+        "ayos",
+        "ayus"
+      ],
+      "na"
+    ]
+  },
+  {
+    "sentence_id": 414,
+    "ground_truth": "Kaya nagturo siya sa kanila",
+    "ocr_candidates": [
+      "kaya",
+      "nagturo",
+      "siya",
+      "sa",
+      [
+        "kanela",
+        "kanila"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 415,
+    "ground_truth": "Pinakamatalinong nilalang ng Diyos ang tao",
+    "ocr_candidates": [
+      "pinakamatalinong",
+      "nilalang",
+      "ng",
+      [
+        "diyos",
+        "diyus"
+      ],
+      "ang",
+      [
+        "tao",
+        "tau"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 416,
+    "ground_truth": "Ang pangatlo kong anghel ay si Angel Rowena",
+    "ocr_candidates": [
+      "ang",
+      "pangatlo",
+      [
+        "kong",
+        "kung"
+      ],
+      "anghel",
+      "ay",
+      "si",
+      "angil",
+      "ruwina"
+    ]
+  },
+  {
+    "sentence_id": 417,
+    "ground_truth": "Ikinalugod ng Ama na ang buo Niyang pagka Diyos ay sumasa iyo",
+    "ocr_candidates": [
+      "ikinalugod",
+      "ng",
+      "ama",
+      "na",
+      "ang",
+      [
+        "boo",
+        "buo"
+      ],
+      "niyang",
+      "pagka",
+      [
+        "diyos",
+        "diyus"
+      ],
+      "ay",
+      "sumasa",
+      "iyo"
+    ]
+  },
+  {
+    "sentence_id": 418,
+    "ground_truth": "Hindi ko alam kung saan kinukuha ni Tatay ang kanyang mga inuuwi",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "ko",
+      "alam",
+      [
+        "kong",
+        "kung"
+      ],
+      "saan",
+      "kinukuha",
+      [
+        "ne",
+        "ni"
+      ],
+      "tatay",
+      "ang",
+      "kanyang",
+      "mga",
+      "inuuwi"
+    ]
+  },
+  {
+    "sentence_id": 419,
+    "ground_truth": "Buong kababaang loob kaming lumalapit sa Iyo",
+    "ocr_candidates": [
+      [
+        "boong",
+        "buong"
+      ],
+      "kababaang",
+      "loob",
+      "kaming",
+      "lumalapit",
+      "sa",
+      "iyo"
+    ]
+  },
+  {
+    "sentence_id": 420,
+    "ground_truth": "Gusto ko na pong makauwi",
+    "ocr_candidates": [
+      "gusto",
+      "ko",
+      "na",
+      [
+        "pong",
+        "pung"
+      ],
+      "makauwi"
+    ]
+  },
+  {
+    "sentence_id": 421,
+    "ground_truth": "Mayroon itong sinusundang daloy o salaysay",
+    "ocr_candidates": [
+      "mayroon",
+      "itong",
+      "sinusundang",
+      "daloy",
+      [
+        "o",
+        "u"
+      ],
+      "salaysay"
+    ]
+  },
+  {
+    "sentence_id": 422,
+    "ground_truth": "At napunit naman sa gitna ang kurtina ng Templo",
+    "ocr_candidates": [
+      "at",
+      "napunit",
+      "naman",
+      "sa",
+      "gitna",
+      "ang",
+      [
+        "kortina",
+        "kurtina"
+      ],
+      "ng",
+      "templo"
+    ]
+  },
+  {
+    "sentence_id": 423,
+    "ground_truth": "Mahalagang ma locate kung nasaan ang isang babae sa ganitong matrix",
+    "ocr_candidates": [
+      "mahalagang",
+      "ma",
+      "locate",
+      [
+        "kong",
+        "kung"
+      ],
+      "nasaan",
+      "ang",
+      "isang",
+      "babae",
+      "sa",
+      "ganitong",
+      "matrix"
+    ]
+  },
+  {
+    "sentence_id": 424,
+    "ground_truth": "Nakakubli o nakatago ang ideolohiyang nais ipabatid ng kuwento",
+    "ocr_candidates": [
+      "nakakubli",
+      [
+        "o",
+        "u"
+      ],
+      "nakatago",
+      "ang",
+      "ideolohiyang",
+      "nais",
+      "ipabatid",
+      "ng",
+      "kuwento"
+    ]
+  },
+  {
+    "sentence_id": 425,
+    "ground_truth": "Noon ko napansin ang tamis ng kanyang luha at labi",
+    "ocr_candidates": [
+      [
+        "noon",
+        "nuon"
+      ],
+      "ko",
+      "napansin",
+      "ang",
+      "tamis",
+      "ng",
+      "kanyang",
+      "luha",
+      "at",
+      "labi"
+    ]
+  },
+  {
+    "sentence_id": 426,
+    "ground_truth": "Isang totoong bahay na ang bahay namin ni Tatay",
+    "ocr_candidates": [
+      "isang",
+      [
+        "totoong",
+        "tutoong"
+      ],
+      "bahay",
+      "na",
+      "ang",
+      "bahay",
+      "namin",
+      [
+        "ne",
+        "ni"
+      ],
+      "tatay"
+    ]
+  },
+  {
+    "sentence_id": 427,
+    "ground_truth": "Naghintay siya nang kung ilang araw sa dalampasigan",
+    "ocr_candidates": [
+      "naghintay",
+      "siya",
+      "nang",
+      [
+        "kong",
+        "kung"
+      ],
+      "ilang",
+      "araw",
+      "sa",
+      "dalampasigan"
+    ]
+  },
+  {
+    "sentence_id": 428,
+    "ground_truth": "Kailangan ko ring matapos ito, dahil ayokong maipunan ng gawain",
+    "ocr_candidates": [
+      "kailangan",
+      "ko",
+      [
+        "ding",
+        "ring"
+      ],
+      "matapos",
+      "ito,",
+      [
+        "dahil",
+        "rahil"
+      ],
+      "ayokong",
+      "maipunan",
+      "ng",
+      "gawain"
+    ]
+  },
+  {
+    "sentence_id": 429,
+    "ground_truth": "Itinanim niya itong tila isang binhi ng halaman",
+    "ocr_candidates": [
+      "itinanim",
+      "niya",
+      "itong",
+      [
+        "tela",
+        "tila"
+      ],
+      "isang",
+      "binhi",
+      "ng",
+      "halaman"
+    ]
+  },
+  {
+    "sentence_id": 430,
+    "ground_truth": "May estribo para sa marunong sumabit",
+    "ocr_candidates": [
+      "may",
+      "estribo",
+      [
+        "pada",
+        "para"
+      ],
+      "sa",
+      "marunong",
+      "sumabit"
+    ]
+  },
+  {
+    "sentence_id": 431,
+    "ground_truth": "Tulad ng dalawang sawa ang babaing Oryol at ang duling na Sarimao",
+    "ocr_candidates": [
+      "tulad",
+      "ng",
+      "dalawang",
+      "sawa",
+      "ang",
+      [
+        "babaeng",
+        "babaing"
+      ],
+      "oryol",
+      "at",
+      "ang",
+      "duling",
+      "na",
+      "sarimao"
+    ]
+  },
+  {
+    "sentence_id": 432,
+    "ground_truth": "Ang batang prinsipe ay kanyang nagustuhan pagkat magalang at nakakahalina kung kumilos",
+    "ocr_candidates": [
+      "ang",
+      "batang",
+      "prinsipe",
+      "ay",
+      "kanyang",
+      "nagustuhan",
+      "pagkat",
+      "magalang",
+      "at",
+      "nakakahalina",
+      [
+        "kong",
+        "kung"
+      ],
+      "kumilos"
+    ]
+  },
+  {
+    "sentence_id": 433,
+    "ground_truth": "At ipinakiusap niya kay Jesus na palayasin ang demonyo sa kanyang anak",
+    "ocr_candidates": [
+      "at",
+      "ipinakiusap",
+      "niya",
+      "kay",
+      "jesus",
+      "na",
+      "palayasin",
+      "ang",
+      [
+        "demonyo",
+        "dimonyo"
+      ],
+      "sa",
+      "kanyang",
+      "anak"
+    ]
+  },
+  {
+    "sentence_id": 434,
+    "ground_truth": "Marami sa kanila ang sumagot ng HINDI",
+    "ocr_candidates": [
+      [
+        "madami",
+        "marami"
+      ],
+      "sa",
+      [
+        "kanela",
+        "kanila"
+      ],
+      "ang",
+      "sumagot",
+      "ng",
+      [
+        "hinde",
+        "hindi"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 435,
+    "ground_truth": "Subalit nakikita kong ikaw ay pagod na pagod, at sugatan",
+    "ocr_candidates": [
+      "subalit",
+      "nakikita",
+      [
+        "kong",
+        "kung"
+      ],
+      "ikaw",
+      "ay",
+      "pagod",
+      "na",
+      "pagod,",
+      "at",
+      "sugatan"
+    ]
+  },
+  {
+    "sentence_id": 436,
+    "ground_truth": "Sa tuwa ng Elepanteay kumembut kembot ito sa pag indak",
+    "ocr_candidates": [
+      "sa",
+      "tuwa",
+      "ng",
+      "elepanteay",
+      "kumimbot",
+      "kimbot",
+      [
+        "eto",
+        "ito"
+      ],
+      "sa",
+      "pag",
+      "indak"
+    ]
+  },
+  {
+    "sentence_id": 437,
+    "ground_truth": "Sapat na ito upang maging matagumpay ang retrival na isinasagawa",
+    "ocr_candidates": [
+      "sapat",
+      "na",
+      [
+        "eto",
+        "ito"
+      ],
+      "upang",
+      "maging",
+      "matagumpay",
+      "ang",
+      "retrival",
+      "na",
+      "isinasagawa"
+    ]
+  },
+  {
+    "sentence_id": 438,
+    "ground_truth": "Si Lola na laging kong kasama sa bahay",
+    "ocr_candidates": [
+      "si",
+      [
+        "lola",
+        "lula"
+      ],
+      "na",
+      "laging",
+      [
+        "kong",
+        "kung"
+      ],
+      "kasama",
+      "sa",
+      "bahay"
+    ]
+  },
+  {
+    "sentence_id": 439,
+    "ground_truth": "Hindi ko maintindihan pero may takot ako",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "ko",
+      "maintindihan",
+      [
+        "pero",
+        "peru"
+      ],
+      "may",
+      "takot",
+      "ako"
+    ]
+  },
+  {
+    "sentence_id": 440,
+    "ground_truth": "Tahimik ang buong paligid, wala nang galit na pagkahol",
+    "ocr_candidates": [
+      "tahimik",
+      "ang",
+      [
+        "boong",
+        "buong"
+      ],
+      "paligid,",
+      "wala",
+      "nang",
+      "galit",
+      "na",
+      "pagkahol"
+    ]
+  },
+  {
+    "sentence_id": 441,
+    "ground_truth": "Nakatawag ng pansin ang masama nitong amoy",
+    "ocr_candidates": [
+      "nakatawag",
+      "ng",
+      "pansin",
+      "ang",
+      "masama",
+      [
+        "netong",
+        "nitong"
+      ],
+      "amoy"
+    ]
+  },
+  {
+    "sentence_id": 442,
+    "ground_truth": "Sa antas gradwado naman, kung saan ako ang Koordineytor ng Programang M.A",
+    "ocr_candidates": [
+      "sa",
+      "antas",
+      "gradwado",
+      "naman,",
+      [
+        "kong",
+        "kung"
+      ],
+      "saan",
+      "ako",
+      "ang",
+      "koordineytor",
+      "ng",
+      "programang",
+      "m.a"
+    ]
+  },
+  {
+    "sentence_id": 443,
+    "ground_truth": "Ipinagdasal ko ito nang taimtim",
+    "ocr_candidates": [
+      "ipinagdasal",
+      "ko",
+      [
+        "eto",
+        "ito"
+      ],
+      "nang",
+      "taimtim"
+    ]
+  },
+  {
+    "sentence_id": 444,
+    "ground_truth": "Gamitin natin ang panitikang pambata upang maitanim ang punla ng nasyonalismo",
+    "ocr_candidates": [
+      "gamitin",
+      [
+        "naten",
+        "natin"
+      ],
+      "ang",
+      "panitikang",
+      "pambata",
+      "upang",
+      "maitanim",
+      "ang",
+      "punla",
+      "ng",
+      "nasyonalismo"
+    ]
+  },
+  {
+    "sentence_id": 445,
+    "ground_truth": "Kung wala Ka, walang kabuluhan ang aming buhay",
+    "ocr_candidates": [
+      [
+        "kong",
+        "kung"
+      ],
+      "wala",
+      "ka,",
+      "walang",
+      "kabuluhan",
+      "ang",
+      "aming",
+      "buhay"
+    ]
+  },
+  {
+    "sentence_id": 446,
+    "ground_truth": "Hindi lahat ng tao ay maaaring mamuno sa isang ritwal",
+    "ocr_candidates": [
+      [
+        "hinde",
+        "hindi"
+      ],
+      "lahat",
+      "ng",
+      [
+        "tao",
+        "tau"
+      ],
+      "ay",
+      "maaaring",
+      "mamuno",
+      "sa",
+      "isang",
+      "ritwal"
+    ]
+  },
+  {
+    "sentence_id": 447,
+    "ground_truth": "Namukadkad din ang mahalimuyak na bulaklak nang biglang tumunog ang nakabibinging kampana",
+    "ocr_candidates": [
+      "namukadkad",
+      [
+        "din",
+        "rin"
+      ],
+      "ang",
+      "mahalimuyak",
+      "na",
+      "bulaklak",
+      "nang",
+      "biglang",
+      "tumunog",
+      "ang",
+      "nakabibinging",
+      "kampana"
+    ]
+  },
+  {
+    "sentence_id": 448,
+    "ground_truth": "Mag isa na lang nilang ginagawa ang lahat ng ito sa akin",
+    "ocr_candidates": [
+      "mag",
+      "isa",
+      "na",
+      "lang",
+      "nilang",
+      "ginagawa",
+      "ang",
+      "lahat",
+      "ng",
+      [
+        "eto",
+        "ito"
+      ],
+      "sa",
+      "akin"
+    ]
+  },
+  {
+    "sentence_id": 449,
+    "ground_truth": "Kita mo na halos ang kalawakan ng dagat",
+    "ocr_candidates": [
+      "kita",
+      "mo",
+      "na",
+      "halos",
+      "ang",
+      "kalawakan",
+      "ng",
+      [
+        "dagat",
+        "ragat"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 450,
+    "ground_truth": "Ngunit ito ay imahen lamang",
+    "ocr_candidates": [
+      "ngunit",
+      [
+        "eto",
+        "ito"
+      ],
+      "ay",
+      "imahen",
+      "lamang"
+    ]
+  },
+  {
+    "sentence_id": 451,
+    "ground_truth": "Sa madaling salita, hitik ng talinghaga ang isang tunay na tula",
+    "ocr_candidates": [
+      "sa",
+      "madaling",
+      "salita,",
+      "hitik",
+      "ng",
+      "talinghaga",
+      "ang",
+      "isang",
+      "tunay",
+      "na",
+      [
+        "tola",
+        "tula"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 452,
+    "ground_truth": "Isinuksok ng lalaki ang mga luya sa luob ng kanyang salakot",
+    "ocr_candidates": [
+      "isinuksok",
+      "ng",
+      [
+        "lalake",
+        "lalaki"
+      ],
+      "ang",
+      "mga",
+      "luya",
+      "sa",
+      "loob",
+      "ng",
+      "kanyang",
+      "salakot"
+    ]
+  },
+  {
+    "sentence_id": 453,
+    "ground_truth": "Hinihintay nila kung anong unang ibong dadapo sa tuktok ng kawayan",
+    "ocr_candidates": [
+      "hinihintay",
+      "nila",
+      [
+        "kong",
+        "kung"
+      ],
+      "anong",
+      "unang",
+      "ibong",
+      "dadapo",
+      "sa",
+      "tuktok",
+      "ng",
+      "kawayan"
+    ]
+  },
+  {
+    "sentence_id": 454,
+    "ground_truth": "Ikinubli ng makukulay na buhok ni Raquel ang tunay niyang sakit",
+    "ocr_candidates": [
+      "ikinubli",
+      "ng",
+      "makukulay",
+      "na",
+      "buhok",
+      [
+        "ne",
+        "ni"
+      ],
+      "raquel",
+      "ang",
+      "tunay",
+      "niyang",
+      [
+        "saket",
+        "sakit"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 455,
+    "ground_truth": "Maraming mga ligaw na aso ang nagkalat sa kalsada",
+    "ocr_candidates": [
+      [
+        "madaming",
+        "maraming"
+      ],
+      "mga",
+      "ligaw",
+      "na",
+      "aso",
+      "ang",
+      "nagkalat",
+      "sa",
+      "kalsada"
+    ]
+  },
+  {
+    "sentence_id": 456,
+    "ground_truth": "Lalong nagbibigay ng lamig na nagsisilbing pampalabo sa salamin ng kanyang sasakyan",
+    "ocr_candidates": [
+      [
+        "lalong",
+        "lalung"
+      ],
+      "nagbibigay",
+      "ng",
+      "lamig",
+      "na",
+      "nagsisilbing",
+      "pampalabo",
+      "sa",
+      "salamin",
+      "ng",
+      "kanyang",
+      "sasakyan"
+    ]
+  },
+  {
+    "sentence_id": 457,
+    "ground_truth": "Walang tigil ang agos ng tubig galing sa butas na tubo",
+    "ocr_candidates": [
+      "walang",
+      "tigil",
+      "ang",
+      "agos",
+      "ng",
+      "tubig",
+      "galing",
+      "sa",
+      [
+        "botas",
+        "butas"
+      ],
+      "na",
+      "tubo"
+    ]
+  },
+  {
+    "sentence_id": 458,
+    "ground_truth": "Huwag mabagabag ang inyong puso, ni panghinaan ng loob",
+    "ocr_candidates": [
+      "huwag",
+      "mabagabag",
+      "ang",
+      "inyong",
+      "puso,",
+      [
+        "ne",
+        "ni"
+      ],
+      "panghinaan",
+      "ng",
+      "loob"
+    ]
+  },
+  {
+    "sentence_id": 459,
+    "ground_truth": "Mukhang nag aral sa Dela Salle sa Maynila",
+    "ocr_candidates": [
+      "mukhang",
+      "nag",
+      "aral",
+      "sa",
+      [
+        "dela",
+        "dila"
+      ],
+      "salle",
+      "sa",
+      "maynila"
+    ]
+  },
+  {
+    "sentence_id": 460,
+    "ground_truth": "Di kaya nabibigatan na si Ate Charito sa nuno sa kanyang likod",
+    "ocr_candidates": [
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "kaya",
+      "nabibigatan",
+      "na",
+      "si",
+      [
+        "ate",
+        "ati"
+      ],
+      "charito",
+      "sa",
+      "nuno",
+      "sa",
+      "kanyang",
+      [
+        "likod",
+        "likor"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 461,
+    "ground_truth": "Binabasa ni lolo ang mga tula sa kanyang apo",
+    "ocr_candidates": [
+      "binabasa",
+      [
+        "ne",
+        "ni"
+      ],
+      [
+        "lolo",
+        "lulo"
+      ],
+      "ang",
+      "mga",
+      [
+        "tola",
+        "tula"
+      ],
+      "sa",
+      "kanyang",
+      "apo"
+    ]
+  },
+  {
+    "sentence_id": 462,
+    "ground_truth": "Itatapon na lamang at tatapakan ng mga tao",
+    "ocr_candidates": [
+      "itatapon",
+      "na",
+      "lamang",
+      "at",
+      "tatapakan",
+      "ng",
+      "mga",
+      [
+        "tao",
+        "tau"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 463,
+    "ground_truth": "Pagdaan niya, yumuyuko ang mga tao sa magalang na pagbati",
+    "ocr_candidates": [
+      "pagdaan",
+      "niya,",
+      "yumuyuko",
+      "ang",
+      "mga",
+      [
+        "tao",
+        "tau"
+      ],
+      "sa",
+      "magalang",
+      "na",
+      "pagbati"
+    ]
+  },
+  {
+    "sentence_id": 464,
+    "ground_truth": "Niyakap ni Malaya ito ngunit pataksil na sinibat ng katunggali",
+    "ocr_candidates": [
+      "niyakap",
+      [
+        "ne",
+        "ni"
+      ],
+      "malaya",
+      [
+        "eto",
+        "ito"
+      ],
+      "ngunit",
+      "pataksil",
+      "na",
+      "sinibat",
+      "ng",
+      "katunggali"
+    ]
+  },
+  {
+    "sentence_id": 465,
+    "ground_truth": "Natira ang katiwasayan ng punongkahoy sa gitna ng bawat palapag ng gusali",
+    "ocr_candidates": [
+      "natira",
+      "ang",
+      "katiwasayan",
+      "ng",
+      [
+        "punongkahoy",
+        "punungkahoy"
+      ],
+      "sa",
+      "gitna",
+      "ng",
+      "bawat",
+      "palapag",
+      "ng",
+      "gusali"
+    ]
+  },
+  {
+    "sentence_id": 466,
+    "ground_truth": "Isulat natin ang tungkol sa kanila",
+    "ocr_candidates": [
+      "isulat",
+      [
+        "naten",
+        "natin"
+      ],
+      "ang",
+      "tungkol",
+      "sa",
+      [
+        "kanela",
+        "kanila"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 467,
+    "ground_truth": "Pinanghinayangan ko ang maraming oras na ginugol ko sa pagdarasal",
+    "ocr_candidates": [
+      "pinanghinayangan",
+      "ko",
+      "ang",
+      [
+        "madaming",
+        "maraming"
+      ],
+      "oras",
+      "na",
+      "ginugol",
+      "ko",
+      "sa",
+      "pagdarasal"
+    ]
+  },
+  {
+    "sentence_id": 468,
+    "ground_truth": "Narinig ko mula roon ang sigaw ni Duerme",
+    "ocr_candidates": [
+      [
+        "nadinig",
+        "narinig"
+      ],
+      "ko",
+      "mula",
+      [
+        "doon",
+        "duon",
+        "roon",
+        "ruon"
+      ],
+      "ang",
+      "sigaw",
+      [
+        "ne",
+        "ni"
+      ],
+      "duerme"
+    ]
+  },
+  {
+    "sentence_id": 469,
+    "ground_truth": "Nang buksan niya iyon, laking gulat niya sa nakita",
+    "ocr_candidates": [
+      "nang",
+      "buksan",
+      "niya",
+      "iyon,",
+      "laking",
+      "gulat",
+      "niya",
+      "sa",
+      "nakita"
+    ]
+  },
+  {
+    "sentence_id": 470,
+    "ground_truth": "Kahit minsan kasi, di ko pa narinig na pinuri niya ako",
+    "ocr_candidates": [
+      "kahit",
+      "minsan",
+      "kasi,",
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "ko",
+      "pa",
+      [
+        "nadinig",
+        "narinig"
+      ],
+      "na",
+      "pinuri",
+      "niya",
+      "ako"
+    ]
+  },
+  {
+    "sentence_id": 471,
+    "ground_truth": "Tuluy tuloy pa ito, hanggang sa marating niya ang tuktok ng gusali",
+    "ocr_candidates": [
+      "tuloy",
+      "tuloy",
+      "pa",
+      "ito,",
+      "hanggang",
+      "sa",
+      "marating",
+      "niya",
+      "ang",
+      "tuktok",
+      "ng",
+      "gusali"
+    ]
+  },
+  {
+    "sentence_id": 472,
+    "ground_truth": "Mga totoong kotse, matutuling dyip, at mga dambuhalang trak ang aking laruan",
+    "ocr_candidates": [
+      "mga",
+      [
+        "totoong",
+        "tutoong"
+      ],
+      "kotse,",
+      "matutuling",
+      "dyip,",
+      "at",
+      "mga",
+      "dambuhalang",
+      "trak",
+      "ang",
+      "aking",
+      "laruan"
+    ]
+  },
+  {
+    "sentence_id": 473,
+    "ground_truth": "Kapuso ka ba o Kapamilya",
+    "ocr_candidates": [
+      "kapuso",
+      "ka",
+      "ba",
+      [
+        "o",
+        "u"
+      ],
+      "kapamilya"
+    ]
+  },
+  {
+    "sentence_id": 474,
+    "ground_truth": "Walang naglalakas luob na kumausap, sumunod o magmanman man lamang sa kanya",
+    "ocr_candidates": [
+      "walang",
+      "naglalakas",
+      "loob",
+      "na",
+      "kumausap,",
+      "sumunod",
+      [
+        "o",
+        "u"
+      ],
+      "magmanman",
+      "man",
+      "lamang",
+      "sa",
+      "kanya"
+    ]
+  },
+  {
+    "sentence_id": 475,
+    "ground_truth": "Napakabilis ng loading rate nito, higit pa sa normal",
+    "ocr_candidates": [
+      "napakabilis",
+      "ng",
+      "loading",
+      [
+        "dati",
+        "rati"
+      ],
+      "nito,",
+      "higit",
+      "pa",
+      "sa",
+      "normal"
+    ]
+  },
+  {
+    "sentence_id": 476,
+    "ground_truth": "Isinusumpa kong magiging maasim ang bunga ng punong iyan",
+    "ocr_candidates": [
+      "isinusumpa",
+      [
+        "kong",
+        "kung"
+      ],
+      "magiging",
+      "maasim",
+      "ang",
+      "bunga",
+      "ng",
+      "punong",
+      "iyan"
+    ]
+  },
+  {
+    "sentence_id": 477,
+    "ground_truth": "Masuwerte sa amin ni Kuya ang asul na kariton",
+    "ocr_candidates": [
+      "masuwerte",
+      "sa",
+      [
+        "amen",
+        "amin"
+      ],
+      [
+        "ne",
+        "ni"
+      ],
+      "kuya",
+      "ang",
+      [
+        "asol",
+        "asul"
+      ],
+      "na",
+      "kariton"
+    ]
+  },
+  {
+    "sentence_id": 478,
+    "ground_truth": "Gusto kong ilawan nila ang ating bahay",
+    "ocr_candidates": [
+      "gusto",
+      [
+        "kong",
+        "kung"
+      ],
+      "ilawan",
+      "nila",
+      "ang",
+      "ating",
+      "bahay"
+    ]
+  },
+  {
+    "sentence_id": 479,
+    "ground_truth": "Sa isang kolehiyo sa Maynila nag aaral noon si Ate",
+    "ocr_candidates": [
+      "sa",
+      "isang",
+      "kolehiyo",
+      "sa",
+      "maynila",
+      "nag",
+      "aaral",
+      [
+        "noon",
+        "nuon"
+      ],
+      "si",
+      [
+        "ate",
+        "ati"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 480,
+    "ground_truth": "Ipinalipat niya ang kawayan sa ibang lugar",
+    "ocr_candidates": [
+      "ipinalipat",
+      "niya",
+      "ang",
+      "kawayan",
+      "sa",
+      "ibang",
+      [
+        "lugad",
+        "lugar"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 481,
+    "ground_truth": "Pinupunan ng ilustrasyon ang mga hindi nila mabasa/maunawaan sa teksto ng kwento",
+    "ocr_candidates": [
+      "pinupunan",
+      "ng",
+      "ilustrasyon",
+      "ang",
+      "mga",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "nila",
+      "mabasa/maunawaan",
+      "sa",
+      "teksto",
+      "ng",
+      "kwento"
+    ]
+  },
+  {
+    "sentence_id": 482,
+    "ground_truth": "Kapag nangyari ito, nauuwi sa digmaan ang mga barangay",
+    "ocr_candidates": [
+      "kapag",
+      "nangyari",
+      "ito,",
+      "nauuwi",
+      "sa",
+      "digmaan",
+      "ang",
+      "mga",
+      "barangay"
+    ]
+  },
+  {
+    "sentence_id": 483,
+    "ground_truth": "Isang halimbawa nito ay ang isang billboard ng isang kilalang toothpaste",
+    "ocr_candidates": [
+      "isang",
+      "halimbawa",
+      [
+        "neto",
+        "nito"
+      ],
+      "ay",
+      "ang",
+      "isang",
+      "billboard",
+      "ng",
+      "isang",
+      "kilalang",
+      "toothpaste"
+    ]
+  },
+  {
+    "sentence_id": 484,
+    "ground_truth": "Bagkus, nararapat na maliwanagan ang Dimensyon ng Kaapihang ito",
+    "ocr_candidates": [
+      "bagkus,",
+      "nararapat",
+      "na",
+      "maliwanagan",
+      "ang",
+      "dimensyon",
+      "ng",
+      "kaapihang",
+      [
+        "eto",
+        "ito"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 485,
+    "ground_truth": "Noon ko lang nakitang naging malungkot si Kuya",
+    "ocr_candidates": [
+      [
+        "noon",
+        "nuon"
+      ],
+      "ko",
+      "lang",
+      "nakitang",
+      "naging",
+      "malungkot",
+      "si",
+      "kuya"
+    ]
+  },
+  {
+    "sentence_id": 486,
+    "ground_truth": "Pagsara ng bintana, makakahinga na uli nang maluwag ang lahat ng palito",
+    "ocr_candidates": [
+      "pagsara",
+      "ng",
+      "bintana,",
+      "makakahinga",
+      "na",
+      [
+        "ule",
+        "uli"
+      ],
+      "nang",
+      "maluwag",
+      "ang",
+      "lahat",
+      "ng",
+      "palito"
+    ]
+  },
+  {
+    "sentence_id": 487,
+    "ground_truth": "Mga buto lang iyan na pinagkaguluhan at pinagkatuwaan lang nilang paghati hatian",
+    "ocr_candidates": [
+      "mga",
+      [
+        "boto",
+        "buto"
+      ],
+      "lang",
+      "iyan",
+      "na",
+      "pinagkaguluhan",
+      "at",
+      "pinagkatuwaan",
+      "lang",
+      "nilang",
+      "paghati",
+      "hatian"
+    ]
+  },
+  {
+    "sentence_id": 488,
+    "ground_truth": "Iilan lang ang nagkakaroon ng interes dito sa gitna ng lumalalang krisis",
+    "ocr_candidates": [
+      "iilan",
+      "lang",
+      "ang",
+      "nagkakaroon",
+      "ng",
+      "interes",
+      [
+        "dito",
+        "reto",
+        "rito"
+      ],
+      "sa",
+      "gitna",
+      "ng",
+      "lumalalang",
+      "krisis"
+    ]
+  },
+  {
+    "sentence_id": 489,
+    "ground_truth": "At kung inaatake si Maryben, tanging mga kapitbahay ang nilalapitan ni Marita",
+    "ocr_candidates": [
+      "at",
+      [
+        "kong",
+        "kung"
+      ],
+      "inaatake",
+      "si",
+      "maryben,",
+      "tanging",
+      "mga",
+      "kapitbahay",
+      "ang",
+      "nilalapitan",
+      [
+        "ne",
+        "ni"
+      ],
+      "marita"
+    ]
+  },
+  {
+    "sentence_id": 490,
+    "ground_truth": "Nainis pa ako kay Inay dahil napilitan akong sumagot at kausapin siya",
+    "ocr_candidates": [
+      "nainis",
+      "pa",
+      "ako",
+      "kay",
+      "inay",
+      [
+        "dahil",
+        "rahil"
+      ],
+      "napilitan",
+      "akong",
+      "sumagot",
+      "at",
+      "kausapin",
+      "siya"
+    ]
+  },
+  {
+    "sentence_id": 491,
+    "ground_truth": "Tumingin sa direksyon ni Inay ang mga katumpok nito sa mesa",
+    "ocr_candidates": [
+      "tumingin",
+      "sa",
+      "direksyon",
+      [
+        "ne",
+        "ni"
+      ],
+      "inay",
+      "ang",
+      "mga",
+      "katumpok",
+      [
+        "neto",
+        "nito"
+      ],
+      "sa",
+      [
+        "mesa",
+        "misa"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 492,
+    "ground_truth": "Isang software itong hindi na maaaring i abort pa",
+    "ocr_candidates": [
+      "isang",
+      "software",
+      "itong",
+      [
+        "hinde",
+        "hindi"
+      ],
+      "na",
+      "maaaring",
+      [
+        "e",
+        "i"
+      ],
+      "abort",
+      "pa"
+    ]
+  },
+  {
+    "sentence_id": 493,
+    "ground_truth": "Nakapangkat ang mga diyos at engkantada",
+    "ocr_candidates": [
+      "nakapangkat",
+      "ang",
+      "mga",
+      [
+        "diyos",
+        "diyus"
+      ],
+      "at",
+      "engkantada"
+    ]
+  },
+  {
+    "sentence_id": 494,
+    "ground_truth": "At di mo pansin ang troso sa iyong mata",
+    "ocr_candidates": [
+      "at",
+      [
+        "de",
+        "di",
+        "re",
+        "ri"
+      ],
+      "mo",
+      "pansin",
+      "ang",
+      "troso",
+      "sa",
+      [
+        "iyong",
+        "iyung"
+      ],
+      "mata"
+    ]
+  },
+  {
+    "sentence_id": 495,
+    "ground_truth": "Natigilan ang lalaki, lalo na nang lumabas ang isang magandang dalaga",
+    "ocr_candidates": [
+      "natigilan",
+      "ang",
+      "lalaki,",
+      [
+        "lalo",
+        "lalu"
+      ],
+      "na",
+      "nang",
+      "lumabas",
+      "ang",
+      "isang",
+      "magandang",
+      "dalaga"
+    ]
+  },
+  {
+    "sentence_id": 496,
+    "ground_truth": "Tinatakam ang mga ito ng kanyang sariling kalamnan",
+    "ocr_candidates": [
+      "tinatakam",
+      "ang",
+      "mga",
+      [
+        "eto",
+        "ito"
+      ],
+      "ng",
+      "kanyang",
+      "sariling",
+      "kalamnan"
+    ]
+  },
+  {
+    "sentence_id": 497,
+    "ground_truth": "Naiidlip na ang mga tao",
+    "ocr_candidates": [
+      "naiidlip",
+      "na",
+      "ang",
+      "mga",
+      [
+        "tao",
+        "tau"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 498,
+    "ground_truth": "Magandang maganda noon ang umaga",
+    "ocr_candidates": [
+      "magandang",
+      "maganda",
+      [
+        "noon",
+        "nuon"
+      ],
+      "ang",
+      "umaga"
+    ]
+  },
+  {
+    "sentence_id": 499,
+    "ground_truth": "Anumang gawin nating pag iwas, nandoon pa rin sila",
+    "ocr_candidates": [
+      [
+        "anomang",
+        "anumang"
+      ],
+      "gawin",
+      "nating",
+      "pag",
+      "iwas,",
+      [
+        "nandoon",
+        "nanduon"
+      ],
+      "pa",
+      [
+        "din",
+        "rin"
+      ],
+      [
+        "sela",
+        "sila"
+      ]
+    ]
+  },
+  {
+    "sentence_id": 500,
+    "ground_truth": "Walang bakas ng anumang sinag ng araw ang bintanang kapis",
+    "ocr_candidates": [
+      "walang",
+      "bakas",
+      "ng",
+      [
+        "anomang",
+        "anumang"
+      ],
+      "sinag",
+      "ng",
+      "araw",
+      "ang",
+      "bintanang",
+      "kapis"
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+# Pair 04: higante, higanti
+# higante = giant (large creature)
+# higanti = revenge, vengeance
+# Target: 100 sentences (50 higante + 50 higanti)
+
+### HIGANTE (giant) - 50 sentences ###
+# Add sentences here...
+
+### HIGANTI (revenge) - 50 sentences ###
+# Add sentences here...

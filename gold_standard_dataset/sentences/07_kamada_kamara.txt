@@ -1,0 +1,10 @@
+# Pair 07: kamada, kamara
+# kamada = stack, pile (of items)
+# kamara = camera / chamber (legislative)
+# Target: 100 sentences (50 kamada + 50 kamara)
+
+### KAMADA (stack/pile) - 50 sentences ###
+# Add sentences here...
+
+### KAMARA (camera/chamber) - 50 sentences ###
+# Add sentences here...

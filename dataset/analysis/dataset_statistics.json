@@ -1,0 +1,43 @@
+{
+  "total_sentences": 1000,
+  "by_type": {
+    "E/I": 375,
+    "O/U": 375,
+    "D/R": 150,
+    "COMBINED": 100
+  },
+  "by_density": {
+    "medium": 290,
+    "low": 699,
+    "high": 11
+  },
+  "by_difficulty": {
+    "hard": 820,
+    "medium": 180
+  },
+  "by_source": {
+    "Literary": 885,
+    "Religious": 115
+  },
+  "word_count_stats": {
+    "min": 5,
+    "max": 10,
+    "avg": 7.868
+  },
+  "total_ambiguous_positions": 1374,
+  "by_type_pct": {
+    "E/I": 37.5,
+    "O/U": 37.5,
+    "D/R": 15.0,
+    "COMBINED": 10.0
+  },
+  "by_density_pct": {
+    "medium": 28.999999999999996,
+    "low": 69.89999999999999,
+    "high": 1.0999999999999999
+  },
+  "by_difficulty_pct": {
+    "hard": 82.0,
+    "medium": 18.0
+  }
+}

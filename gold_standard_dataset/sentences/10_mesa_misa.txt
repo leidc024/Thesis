@@ -1,0 +1,10 @@
+# Pair 10: mesa, misa
+# mesa = table (furniture)
+# misa = mass (religious service)
+# Target: 100 sentences (50 mesa + 50 misa)
+
+### MESA (table) - 50 sentences ###
+# Add sentences here...
+
+### MISA (mass) - 50 sentences ###
+# Add sentences here...

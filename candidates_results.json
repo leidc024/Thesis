@@ -1,0 +1,95 @@
+[
+  {
+    "image": "sentence_1.png",
+    "baybayin_text": "ᜊᜏᜆ᜔   ᜁᜐ   ᜀᜌ᜔   ᜋᜌ᜔   ᜊᜓᜆᜓ   \nᜐ   ᜑᜎᜎᜈ᜔",
+    "ground_truth": "Bawat isa ay may boto sa halalan",
+    "ocr_candidates": [
+      "bawat",
+      "isa",
+      "ay",
+      "may",
+      [
+        "boto",
+        "buto"
+      ],
+      "sa",
+      "halalan"
+    ]
+  },
+  {
+    "image": "sentence_2.png",
+    "baybayin_text": "ᜁᜆᜓᜇᜓ   \nᜋᜓ   \nᜐ   ᜃᜈ᜔ᜌ   ᜃᜓᜅ᜔   ᜉᜀᜈᜓ   ᜋᜄ᜔ᜎᜓᜆᜓ",
+    "ground_truth": "ituro mo sa kanya kung paano magluto",
+    "ocr_candidates": [
+      [
+        "itodo",
+        "ituro"
+      ],
+      "mo",
+      "sa",
+      "kanya",
+      [
+        "kong",
+        "kung"
+      ],
+      "paano",
+      "magluto"
+    ]
+  },
+  {
+    "image": "sentence_3.png",
+    "baybayin_text": "ᜈᜄ᜔ᜑᜈ᜔ᜇᜓᜄ᜔   ᜀᜅ᜔   ᜋ᜔ᜄ   ᜑᜒᜄᜈ᜔ᜆᜒ   \nᜅ᜔   ᜃᜓᜇᜓᜈᜅ᜔   ᜄᜏ   \nᜐ   ᜇᜋ᜔ᜊᜓᜑᜎᜅ᜔   ᜋ᜔ᜄ   ᜊᜆᜓ",
+    "ground_truth": "naghandog ang mga higante ng koronang gawa sa dambuhalang mga bato",
+    "ocr_candidates": [
+      "naghandog",
+      "ang",
+      "mga",
+      [
+        "higante",
+        "higanti"
+      ],
+      "ng",
+      "koronang",
+      "gawa",
+      "sa",
+      "dambuhalang",
+      "mga",
+      "bato"
+    ]
+  },
+  {
+    "image": "sentence_4.png",
+    "baybayin_text": "ᜊᜓᜆᜒ   ᜐᜈ   ᜃᜓᜅ᜔   ᜆᜓᜇᜓ   ᜈᜎᜅ᜔   \nᜐ   ᜃᜋ᜔ᜉᜈ᜔ᜌ   ᜀᜆ᜔   ᜏᜎᜅ᜔   ᜊᜒᜈᜌᜇᜅ᜔   ᜊᜓᜆᜓ   ᜅᜌᜓᜅ᜔   ᜑᜎᜎᜈ᜔   \nᜐ   ᜊᜇᜅᜌ᜔",
+    "ground_truth": "buti sana kung todo nalang sa kampanya at walang binayarang boto ngayong halalan sa barangay",
+    "ocr_candidates": [
+      [
+        "bote",
+        "buti"
+      ],
+      "sana",
+      [
+        "kong",
+        "kung"
+      ],
+      [
+        "todo",
+        "toro",
+        "turo"
+      ],
+      "nalang",
+      "sa",
+      "kampanya",
+      "at",
+      "walang",
+      "binayarang",
+      [
+        "boto",
+        "buto"
+      ],
+      "ngayong",
+      "halalan",
+      "sa",
+      "barangay"
+    ]
+  }
+]

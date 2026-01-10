@@ -1,0 +1,83 @@
+{
+  "validation_date": "2025-12-02",
+  "tests": [
+    {
+      "test": "Dataset Size",
+      "passed": true,
+      "value": 1000,
+      "target": "500-1000",
+      "message": "Dataset has 1000 sentences ✓"
+    },
+    {
+      "test": "No Duplicates",
+      "passed": false,
+      "value": 19,
+      "target": "0",
+      "message": "Found 19 duplicate sentences ✗",
+      "details": [
+        [
+          172,
+          "Ginamit ang mga aklat na ito bilang mga propaganda"
+        ],
+        [
+          175,
+          "Ngunit kung mamatay ito, nagdudulot ito ng maraming bunga"
+        ],
+        [
+          249,
+          "Muli kong natawag ang pangalan ni Mama Mary"
+        ],
+        [
+          481,
+          "Mayroon itong sinusundang daloy o salaysay"
+        ],
+        [
+          495,
+          "Lalo namang nagselos at nainggit si Larisa kay Mangita"
+        ]
+      ]
+    },
+    {
+      "test": "Sentence Length",
+      "passed": true,
+      "min": 5,
+      "max": 10,
+      "average": "7.9",
+      "target": "5-20 words",
+      "message": "Length range: 5-10 words (avg: 7.9) ✓"
+    },
+    {
+      "test": "Corpus Word Validation",
+      "passed": true,
+      "value": 0,
+      "total_words": 0,
+      "invalid_rate": "0.00%",
+      "target": "100% valid",
+      "message": "0/0 words not in corpus (0.00%) ✓",
+      "details": null
+    },
+    {
+      "test": "Ambiguous Pair Coverage",
+      "passed": true,
+      "total_unique_pairs": 0,
+      "under_represented": 0,
+      "min_examples_required": 3,
+      "message": "0 pairs with <3 examples ✓",
+      "details": null
+    }
+  ],
+  "statistics": {
+    "total_sentences": 1000,
+    "total_words": 7869,
+    "unique_words": 2357,
+    "total_ambiguous_positions": 0,
+    "type_token_ratio": 0.2995298004829076,
+    "ambiguity_density": 0.0
+  },
+  "summary": {
+    "total_tests": 5,
+    "passed": 4,
+    "failed": 1,
+    "skipped": 0
+  }
+}

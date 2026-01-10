@@ -1,0 +1,10 @@
+# Pair 08: kompas, kumpas
+# kompas = compass (navigation tool)
+# kumpas = wave, gesture (hand motion)
+# Target: 100 sentences (50 kompas + 50 kumpas)
+
+### KOMPAS (compass) - 50 sentences ###
+# Add sentences here...
+
+### KUMPAS (wave/gesture) - 50 sentences ###
+# Add sentences here...

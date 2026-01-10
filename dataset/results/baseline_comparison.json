@@ -1,0 +1,14 @@
+{
+  "mababay_default": {
+    "ambiguous_accuracy": 0.3829787234042553,
+    "total_accuracy": 0.8901515151515151,
+    "correct": 18,
+    "total": 47
+  },
+  "embedding_only": {
+    "ambiguous_accuracy": 0.6595744680851063,
+    "total_accuracy": 0.9393939393939394,
+    "correct": 31,
+    "total": 47
+  }
+}

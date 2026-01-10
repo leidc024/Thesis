@@ -1,0 +1,10 @@
+# Pair 06: itodo, ituro
+# itodo = to go all out, do fully
+# ituro = to point, to teach
+# Target: 100 sentences (50 itodo + 50 ituro)
+
+### ITODO (go all out) - 50 sentences ###
+# Add sentences here...
+
+### ITURO (point/teach) - 50 sentences ###
+# Add sentences here...

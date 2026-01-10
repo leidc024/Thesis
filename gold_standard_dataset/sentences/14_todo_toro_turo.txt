@@ -1,0 +1,14 @@
+# Pair 14: todo, toro, turo
+# todo = all out, full force
+# toro = bull
+# turo = teaching / to point
+# Target: 150 sentences (50 todo + 50 toro + 50 turo)
+
+### TODO (all out/full force) - 50 sentences ###
+# Add sentences here...
+
+### TORO (bull) - 50 sentences ###
+# Add sentences here...
+
+### TURO (teaching/point) - 50 sentences ###
+# Add sentences here...

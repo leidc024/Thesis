@@ -1,0 +1,37 @@
+{
+  "config": {
+    "test_sentences": 500,
+    "weights": {
+      "semantic": 0.3,
+      "frequency": 0.4,
+      "cooccurrence": 0.2,
+      "morphology": 0.1
+    }
+  },
+  "results": {
+    "mabaybay_default": {
+      "total_words": 4499,
+      "correct_words": 3991,
+      "total_accuracy": 0.887086019115359,
+      "total_ambiguous": 757,
+      "correct_ambiguous": 266,
+      "ambiguous_accuracy": 0.3513870541611625
+    },
+    "embedding_only": {
+      "total_words": 4499,
+      "correct_words": 4203,
+      "total_accuracy": 0.9342076016892643,
+      "total_ambiguous": 757,
+      "correct_ambiguous": 478,
+      "ambiguous_accuracy": 0.631439894319683
+    },
+    "graph_based": {
+      "total_words": 4499,
+      "correct_words": 4427,
+      "total_accuracy": 0.9839964436541454,
+      "total_ambiguous": 757,
+      "correct_ambiguous": 702,
+      "ambiguous_accuracy": 0.9273447820343461
+    }
+  }
+}

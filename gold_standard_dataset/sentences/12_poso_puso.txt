@@ -1,0 +1,10 @@
+# Pair 12: poso, puso
+# poso = well (water source)
+# puso = heart / banana blossom
+# Target: 100 sentences (50 poso + 50 puso)
+
+### POSO (well) - 50 sentences ###
+# Add sentences here...
+
+### PUSO (heart) - 50 sentences ###
+# Add sentences here...

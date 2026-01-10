@@ -1,0 +1,33 @@
+{
+  "ambiguous_pair": "bote, buti",
+  "baybayin": "ᜊᜓᜆᜒ",
+  "type": "COMBINED (O/U + E/I)",
+  "test_sentences": 100,
+  "comparison": {
+    "baseline": {
+      "name": "MaBaybay Default (First Candidate)",
+      "strategy": "Always pick first candidate from transliteration",
+      "accuracy": 41.0,
+      "correct": 41,
+      "bote_accuracy": "41/50",
+      "buti_accuracy": "0/50"
+    },
+    "graph_based": {
+      "name": "Graph-based Disambiguation",
+      "strategy": "Context-aware scoring using semantic, frequency, co-occurrence, morphology",
+      "accuracy": 49.43820224719101,
+      "correct": 44,
+      "bote_accuracy": "35/50",
+      "buti_accuracy": "9/50"
+    },
+    "improvement": 8.438202247191008
+  },
+  "metrics": {
+    "total_words": 797,
+    "correct_words": 752,
+    "total_accuracy": 0.9435382685069009,
+    "total_ambiguous": 89,
+    "correct_ambiguous": 44,
+    "ambiguous_accuracy": 0.4943820224719101
+  }
+}

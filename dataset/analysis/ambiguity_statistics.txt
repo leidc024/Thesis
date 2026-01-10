@@ -1,0 +1,53 @@
+======================================================================
+BAYBAYIN AMBIGUITY ANALYSIS STATISTICS
+======================================================================
+
+Total ambiguous Baybayin patterns: 999
+Total unique ambiguous words: 2051
+Total occurrences in corpus: 4744
+
+BREAKDOWN BY AMBIGUITY TYPE:
+----------------------------------------
+  E/I         :   384 patterns
+  O/U         :   380 patterns
+  D/R         :   160 patterns
+  COMBINED    :    75 patterns
+
+BREAKDOWN BY UNIQUE WORD COUNT:
+----------------------------------------
+  2 unique words:   952 patterns
+  3 unique words:    41 patterns
+  4 unique words:     6 patterns
+
+TOP 10 LARGEST AMBIGUOUS GROUPS (by corpus occurrences):
+----------------------------------------
+
+1. 42 occurrences, 2 unique words sharing Baybayin: ᜎᜃᜒ
+   Unique words: lake, laki
+
+2. 40 occurrences, 2 unique words sharing Baybayin: ᜊᜓᜆᜒ
+   Unique words: bote, buti
+
+3. 38 occurrences, 3 unique words sharing Baybayin: ᜐᜒᜇ
+   Unique words: seda, sera, sira
+
+4. 38 occurrences, 3 unique words sharing Baybayin: ᜆᜓᜇᜓ
+   Unique words: todo, toro, turo
+
+5. 36 occurrences, 2 unique words sharing Baybayin: ᜇᜀᜈ᜔
+   Unique words: daan, raan
+
+6. 35 occurrences, 2 unique words sharing Baybayin: ᜇᜋᜒ
+   Unique words: dami, rami
+
+7. 33 occurrences, 2 unique words sharing Baybayin: ᜐᜓᜈᜓᜇ᜔
+   Unique words: sunod, sunud
+
+8. 32 occurrences, 2 unique words sharing Baybayin: ᜐᜓᜎᜓ
+   Unique words: solo, sulo
+
+9. 31 occurrences, 4 unique words sharing Baybayin: ᜇᜓᜂᜈ᜔
+   Unique words: doon, duon, roon, ruon
+
+10. 29 occurrences, 2 unique words sharing Baybayin: ᜐᜃᜒᜆ᜔
+   Unique words: saket, sakit

@@ -1,0 +1,10 @@
+# Pair 13: tela, tila
+# tela = cloth, fabric
+# tila = seems like, as if
+# Target: 100 sentences (50 tela + 50 tila)
+
+### TELA (cloth/fabric) - 50 sentences ###
+# Add sentences here...
+
+### TILA (seems like) - 50 sentences ###
+# Add sentences here...

@@ -1,0 +1,10 @@
+# Pair 15: toyo, tuyo
+# toyo = soy sauce
+# tuyo = dried fish / dry
+# Target: 100 sentences (50 toyo + 50 tuyo)
+
+### TOYO (soy sauce) - 50 sentences ###
+# Add sentences here...
+
+### TUYO (dried fish/dry) - 50 sentences ###
+# Add sentences here...

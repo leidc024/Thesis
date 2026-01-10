@@ -1,0 +1,10 @@
+# Pair 01: asero, asido
+# asero = steel (metal)
+# asido = acid (chemical)
+# Target: 100 sentences (50 asero + 50 asido)
+
+### ASERO (steel) - 50 sentences ###
+# Add sentences here...
+
+### ASIDO (acid) - 50 sentences ###
+# Add sentences here...

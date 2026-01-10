@@ -1,0 +1,10 @@
+# Pair 11: polo, pulo
+# polo = polo shirt
+# pulo = island
+# Target: 100 sentences (50 polo + 50 pulo)
+
+### POLO (polo shirt) - 50 sentences ###
+# Add sentences here...
+
+### PULO (island) - 50 sentences ###
+# Add sentences here...

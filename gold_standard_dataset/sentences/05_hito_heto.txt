@@ -1,0 +1,10 @@
+# Pair 05: hito, heto
+# hito = catfish (fish species)
+# heto = here it is / here
+# Target: 100 sentences (50 hito + 50 heto)
+
+### HITO (catfish) - 50 sentences ###
+# Add sentences here...
+
+### HETO (here it is) - 50 sentences ###
+# Add sentences here...
