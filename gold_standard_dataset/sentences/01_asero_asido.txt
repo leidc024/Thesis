@@ -1,10 +1,100 @@
-# Pair 01: asero, asido
-# asero = steel (metal)
-# asido = acid (chemical)
-# Target: 100 sentences (50 asero + 50 asido)
-
-### ASERO (steel) - 50 sentences ###
-# Add sentences here...
-
-### ASIDO (acid) - 50 sentences ###
-# Add sentences here...
+Ang tulay ay gawa sa matibay na asero.
+Ang asido ay nakakapasò sa balat.
+Gusto ko ng kutsilyong gawa sa hindi kinakalawang na asero.
+Kailangan ng proteksiyon kapag humahawak ng malakas na asido.
+Maraming gusali sa Maynila ang may balangkas na asero.
+Ang lemon ay mayaman sa sitriko asido.
+Ang mga rehas ng bintana ay gawa sa solidong asero.
+Ang mga baterya ng kotse ay may asido.
+Mas matibay ang sasakyan kung gawa sa asero ang katawan nito.
+Ang biktima ay binuhusan ng asido sa mukha.
+Ginagamit ang asero sa paggawa ng riles ng tren.
+Maaari mong linisin ang kalawang gamit ang mahinang asido.
+Mabigat ang pintuan dahil gawa ito sa purong asero.
+Ang asido sa tiyan ay tumutulong sa pagtunaw ng pagkain.
+Ang mga kagamitan sa pagluluto ay madalas gawa sa asero.
+Huwag lunukin ang asido dahil delikado ito.
+Ang matulis na talim ay gawa sa pinatigas na asero.
+Ang suka ay isang uri ng asido.
+Kailangan ng asero para sa bagong construction.
+Iningatan niya ang bote ng asido sa ligtas na lugar.
+Binaluktot niya ang manipis na asero gamit ang kanyang kamay.
+Ang asido ay may mababang pH level.
+Ang mga tubo ng tubig ay dating gawa sa asero.
+Mayroon kaming solusyon na asido para sa paglilinis ng tiles.
+Nagtatago kami ng mga mahahalagang bagay sa cabinet na gawa sa asero.
+Ang pag-ulan ng asido ay nakakasira sa mga halaman.
+Ang barko ay may matibay na balat na asero.
+Ang mga prutas ay karaniwang may natural na asido.
+Mahalaga ang asero sa industriya ng paggawa ng kotse.
+Ingatan ang paghawak ng asido, lalo na kung puro ito.
+Ang mga bolts at nuts ay karaniwang gawa sa asero.
+Nakita ng siyentista ang reaksyon ng asido sa metal.
+Ang asero ay isang alloy ng bakal at carbon.
+Ang phosphoric asido ay karaniwang sangkap sa softdrinks.
+Ginagamit ang asero upang gawing mas matibay ang konkretong pader.
+Ang asido ay dapat itago na malayo sa mga bata.
+Ang mga muwebles sa labas ay dapat gawa sa hindi kinakalawang na asero.
+Nag-evaporate ang asido nang mabilis sa mainit na araw.
+Gumagamit ng asero para makabuo ng isang bahay.
+Ang mga kemikal na asido ay ginagamit sa industriya.
+Ang mga kable ng tulay ay gawa sa matibay na asero.
+Ang lab tests ay gumagamit ng iba't ibang uri ng asido.
+Binuo ang skeleton ng eroplano mula sa magaan na asero.
+Ang asido ay maaaring magdulot ng matinding iritasyon sa mata.
+Ang seguridad ng bangko ay gumagamit ng pinto na asero.
+Ginagamit ng dentista ang asido para sa ilang proseso.
+Ang mga makina ay binuo mula sa iba't ibang piyesa ng asero.
+Ang mga baterya ay naglalaman ng sulfuric asido.
+Ang mga baril ay gawa sa matitibay na asero.
+Ang asido ay maaaring matunaw ang ilang uri ng plastik.
+Ginagamit ang asero sa pagtatayo ng matatayog na gusali.
+Ang mga rehas na gawa sa asero ay mahirap sirain.
+Kailangan ng matibay na asero para sa tulay.
+Ang kutsilyo ng chef ay gawa sa de-kalidad na asero.
+Mahalaga ang asero sa modernong industriya.
+Maraming parte ng sasakyan ang yari sa matibay na asero.
+Gumamit sila ng makinang na asero para sa lababo sa kusina.
+Ang mga bubong ng pabrika ay kadalasang gawa sa asero.
+Pinatigas ang asero para maging mas matibay.
+Susi ang asero sa paggawa ng makinarya.
+Ang balangkas ng barko ay yari sa makapal na asero.
+Hindi agad kinakalawang ang asero na ito.
+Nagbebenta sila ng iba't ibang uri ng asero sa tindahan ng bakal.
+Ginamit ang matibay na asero para sa mga riles ng tren.
+Ang mga pinto ng vault ay gawa sa asero upang mapanatili ang seguridad.
+Mula sa asero ang mga ginagamit na turnilyo sa pagkakabit.
+Naging mas matibay ang sandata dahil sa paggamit ng purong asero.
+Ang modernong iskultura ay madalas yari sa pinakintab na asero.
+Ang bakal at asero ay mahahalagang metal sa konstruksyon.
+Ang mga kutsara't tinidor sa hapag ay gawa sa asero.
+Ang mga tubo ng tubig sa ilalim ng lupa ay kailangan ng asero para hindi masira.
+Gumagawa sila ng malalaking sheet ng asero sa pabrika.
+Ang gulong ng sasakyan ay may rim na gawa sa matigas na asero.
+Ang mga makina sa pabrika ay binuo gamit ang de-kalidad na asero.
+Tinitiyak ng mga inhinyero ang tibay ng asero sa proyekto ng konstruksyon.
+Bumili siya ng asido para linisin ang baradong tubo.
+Maging maingat sa paghawak ng asido dahil nakakasunog ito.
+Sinusukat ng siyentista ang pH level ng asido sa solusyon.
+Ang asido ay mabilis na nagpapalabas ng bula kapag hinalo.
+Mayroong asido sa loob ng baterya ng kotse na nagbibigay kuryente.
+Nakakatunaw ng metal ang malakas na asido.
+Kailangan ng proteksiyon sa mata kapag gumagamit ng asido sa laboratoryo.
+Iwasan ang direktang kontak sa balat ng asido upang maiwasan ang pinsala.
+Ang asido na ito ay lubhang delikado at dapat itago nang maingat.
+Tinunaw ng asido ang kalawang sa bakal, iniwan itong malinis.
+Hindi dapat iwanan ang asido nang nakabukas ang lalagyan nito.
+Nag-eksperimento sila sa reaksiyon ng asido at base upang maunawaan ang kemika.
+Ang asido ay ginagamit sa industriya ng kemistri upang iproseso ang mga kemikal.
+Ang tulo ng asido ay kailangang linisin agad ng mga espesyalista.
+Ang laboratoryo ay may iba't ibang uri ng asido na nakalagay sa mga botelya.
+May matapang na amoy ang asido kapag bukas ang lalagyan nito.
+Ang paghalo ng asido sa tubig ay dapat gawin nang dahan-dahan.
+Nagdulot ng pagkasira sa semento ang tumagas na asido sa sahig.
+Ang kaligtasan sa paghawak ng asido ay itinuturo sa lahat ng kemikal.
+Gumamit siya ng guwantes at mask habang nagbubuhos ng asido.
+Ang asido ay isang uri ng kemikal na may mababang pH.
+Ang botelya ng asido ay may label na babala sa panganib.
+Tinatasa ng chemical engineer ang konsentrasyon ng asido bago gamitin.
+Ang asido ay kayang buksan ang mga baradong alulod nang mabilis.
+Maingat nilang inilipat ang asido sa mas maliit na lalagyan.

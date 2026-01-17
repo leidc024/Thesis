@@ -7,27 +7,27 @@
     "baseline": {
       "name": "MaBaybay Default (First Candidate)",
       "strategy": "Always pick first candidate from transliteration",
-      "accuracy": 41.0,
-      "correct": 41,
-      "bote_accuracy": "41/50",
+      "accuracy": 50.0,
+      "correct": 50,
+      "bote_accuracy": "50/50",
       "buti_accuracy": "0/50"
     },
-    "graph_based": {
-      "name": "Graph-based Disambiguation",
-      "strategy": "Context-aware scoring using semantic, frequency, co-occurrence, morphology",
-      "accuracy": 49.43820224719101,
-      "correct": 44,
-      "bote_accuracy": "35/50",
-      "buti_accuracy": "9/50"
+    "context_aware": {
+      "name": "Context-Aware Baybayin Transliteration",
+      "strategy": "Multi-feature approach using RoBERTa-Tagalog, frequency, co-occurrence, morphology",
+      "accuracy": 81.0,
+      "correct": 81,
+      "bote_accuracy": "31/50",
+      "buti_accuracy": "50/50"
     },
-    "improvement": 8.438202247191008
+    "improvement": 31.0
   },
   "metrics": {
-    "total_words": 797,
-    "correct_words": 752,
-    "total_accuracy": 0.9435382685069009,
-    "total_ambiguous": 89,
-    "correct_ambiguous": 44,
-    "ambiguous_accuracy": 0.4943820224719101
+    "total_words": 848,
+    "correct_words": 829,
+    "total_accuracy": 0.9775943396226415,
+    "total_ambiguous": 100,
+    "correct_ambiguous": 81,
+    "ambiguous_accuracy": 0.81
   }
 }

@@ -16,6 +16,7 @@ Architecture:
 
 import torch
 import numpy as np
+import re
 from typing import List, Dict, Tuple, Optional, Union
 from transformers import AutoTokenizer, AutoModel
 from sklearn.metrics.pairwise import cosine_similarity
@@ -28,16 +29,17 @@ from .morphology import MorphologicalAnalyzer
 # Default configuration
 DEFAULT_MODEL = "jcblaise/roberta-tagalog-base"
 DEFAULT_WEIGHTS = {
-    'semantic': 0.3,      # RoBERTa contextual similarity
-    'frequency': 0.4,     # Corpus word frequency
-    'cooccurrence': 0.2,  # Bigram probability
-    'morphology': 0.1     # Filipino morphological patterns
+    'semantic': 0.5,      # RoBERTa contextual similarity (increased - best at context)
+    'frequency': 0.2,     # Corpus word frequency (decreased - reduce bias)
+    'cooccurrence': 0.3,  # Bigram probability (increased - helps with context)
+    'morphology': 0.0     # Filipino morphological patterns (minimal impact)
 }
 
 # Text corpora paths
 DEFAULT_CORPORA = [
     "Tagalog_Literary_Text.txt",
-    "Tagalog_Religious_Text.txt"
+    "Tagalog_Religious_Text.txt",
+    "Tagalog_Balita_Texts_Balanced.txt"
 ]
 
 
@@ -271,7 +273,8 @@ class BaybayinDisambiguator:
     def evaluate(
         self,
         test_data: List[Dict],
-        show_progress: bool = True
+        show_progress: bool = True,
+        use_ground_truth_context: bool = False  # Set to False for realistic evaluation
     ) -> Tuple[Dict, List]:
         """
         Evaluate model on test dataset.
@@ -279,6 +282,8 @@ class BaybayinDisambiguator:
         Args:
             test_data: List of dicts with 'ground_truth' and 'ocr_candidates'
             show_progress: Show tqdm progress bar
+            use_ground_truth_context: If True, use ground truth for context (unrealistic).
+                                      If False, use only unambiguous words (realistic).
             
         Returns:
             Tuple of (metrics_dict, detailed_results)
@@ -296,14 +301,22 @@ class BaybayinDisambiguator:
             candidates = entry['ocr_candidates']
             gt_words = gt.lower().split()
             
-            predicted, debug = self.disambiguate(candidates, gt)
+            # Only pass ground truth if explicitly requested (not realistic)
+            if use_ground_truth_context:
+                predicted, debug = self.disambiguate(candidates, gt)
+            else:
+                # Realistic evaluation: no ground truth, just like real MaBaybay usage
+                predicted, debug = self.disambiguate(candidates)
             
             for i, (pred, gt_word) in enumerate(zip(predicted, gt_words)):
                 if i >= len(candidates):
                     break
                 
                 is_ambiguous = isinstance(candidates[i], list)
-                is_correct = pred.lower() == gt_word.lower()
+                # Strip punctuation for fair comparison
+                pred_clean = re.sub(r'[^\w]', '', pred.lower())
+                gt_clean = re.sub(r'[^\w]', '', gt_word.lower())
+                is_correct = pred_clean == gt_clean
                 
                 total_words += 1
                 if is_correct:

@@ -15,7 +15,11 @@ FONT_PATH = "tagalog stylized.ttf"  # Using Tagalog Stylized font
 FONT_SIZE = 150
 FONT_WEIGHT = "normal"  # Options: "normal", "bold", "bolder"
 LINE_HEIGHT = 1.2  # Adjust vertical spacing between rows (1.0 = tight, 1.5 = normal, 2.0 = double)
-WORDS_PER_ROW = 3  # Maximum words per row before inserting a line break
+WORDS_PER_ROW = 3.0  # Maximum words per row before inserting a line break
+
+# 2.5. Word spacing settings for better OCR recognition
+NORMAL_WORD_SPACING = 1.0  # Normal space between words (1.0 = default)
+EXTRA_WORD_SPACING = 3.0  # Extra space when transitioning between 1-char and 2-char words
 
 # 3. Set image quality settings for OCR
 IMAGE_PADDING = 30  # Padding around text in pixels (top, left, right)
@@ -126,17 +130,66 @@ def latin_to_baybayin_tagalog_stylized(text):
         
         return ''.join(result)
     
+    def count_baybayin_chars(baybayin_word):
+        """Count the number of actual Baybayin characters (excluding kudlit markers)."""
+        # Remove kudlit markers (+, i, u) to count base characters
+        clean = baybayin_word.replace('+', '').replace('i', '').replace('u', '')
+        return len(clean)
+    
     # Process each word
     words = text.split(' ')
     processed_words = [process_word(word) for word in words]
     
-    # Group words into rows of WORDS_PER_ROW
-    rows = []
-    for i in range(0, len(processed_words), WORDS_PER_ROW):
-        row_words = processed_words[i:i + WORDS_PER_ROW]
-        rows.append(' '.join(row_words))  # Multiple spaces between words
+    # Build the final string with smart spacing
+    result_parts = []
+    for i, baybayin_word in enumerate(processed_words):
+        result_parts.append(baybayin_word)
+        
+        if i < len(processed_words) - 1:  # Not the last word
+            current_char_count = count_baybayin_chars(baybayin_word)
+            next_char_count = count_baybayin_chars(processed_words[i + 1])
+            
+            # Add extra spacing only when transitioning from 1-char to 2-char words
+            if current_char_count == 1 and next_char_count == 2:
+                result_parts.append(' ' * int(EXTRA_WORD_SPACING))
+            else:
+                # Normal spacing (including 2-char to 1-char transitions)
+                result_parts.append(' ' * int(NORMAL_WORD_SPACING))
     
-    return '\n'.join(rows)  # Join rows with newlines
+    processed_line = ''.join(result_parts)
+    
+    # Group into rows if needed
+    if WORDS_PER_ROW and len(processed_words) > WORDS_PER_ROW:
+        rows = []
+        row_parts = []
+        char_count = 0
+        
+        for i, baybayin_word in enumerate(processed_words):
+            row_parts.append(baybayin_word)
+            char_count += 1
+            
+            # Add spacing logic between words in the same row
+            if i < len(processed_words) - 1:
+                if char_count >= WORDS_PER_ROW:
+                    rows.append(''.join(row_parts))
+                    row_parts = []
+                    char_count = 0
+                else:
+                    current_char_count = count_baybayin_chars(baybayin_word)
+                    next_char_count = count_baybayin_chars(processed_words[i + 1])
+                    
+                    if (current_char_count == 1 and next_char_count == 2) or \
+                       (current_char_count == 2 and next_char_count == 1):
+                        row_parts.append(' ' * int(EXTRA_WORD_SPACING))
+                    else:
+                        row_parts.append(' ' * int(NORMAL_WORD_SPACING))
+        
+        if row_parts:
+            rows.append(''.join(row_parts))
+        
+        return '\n'.join(rows)
+    else:
+        return processed_line
 
 
 def latin_to_baybayin_unicode(text):
@@ -310,6 +363,7 @@ def generate_images():
                             background-color: white;
                             display: inline-block;
                             text-rendering: optimizeLegibility;
+                            letter-spacing: 2px;  /* Slight letter spacing for clarity */
                         }}
                     </style>
                 </head>

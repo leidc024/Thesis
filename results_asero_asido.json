@@ -1,0 +1,33 @@
+{
+  "ambiguous_pair": "asero, asido",
+  "baybayin": "ᜀᜐᜒᜇᜓ",
+  "type": "E/I + O/U",
+  "test_sentences": 100,
+  "comparison": {
+    "baseline": {
+      "name": "MaBaybay Default (First Candidate)",
+      "strategy": "Always pick first candidate from transliteration",
+      "accuracy": 50.0,
+      "correct": 50,
+      "asero_accuracy": "50/50",
+      "asido_accuracy": "0/50"
+    },
+    "context_aware": {
+      "name": "Context-Aware Baybayin Transliteration",
+      "strategy": "Multi-feature approach using RoBERTa-Tagalog, frequency, co-occurrence, morphology",
+      "accuracy": 69.84126984126983,
+      "correct": 44,
+      "asero_accuracy": "31/50",
+      "asido_accuracy": "50/50"
+    },
+    "improvement": 19.841269841269835
+  },
+  "metrics": {
+    "total_words": 986,
+    "correct_words": 967,
+    "total_accuracy": 0.9807302231237323,
+    "total_ambiguous": 63,
+    "correct_ambiguous": 44,
+    "ambiguous_accuracy": 0.6984126984126984
+  }
+}
