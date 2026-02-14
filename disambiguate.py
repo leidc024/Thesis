@@ -77,9 +77,9 @@ def disambiguate(candidates_json: str) -> str:
         # Initialize model with absolute paths to corpus files
         model = BaybayinDisambiguator(
             corpus_files=[
-                str(script_dir / "Tagalog_Literary_Text.txt"),
-                str(script_dir / "Tagalog_Religious_Text.txt"),
-                str(script_dir / "Tagalog_Balita_Texts_Balanced.txt")
+                str(script_dir / "corpus" / "Tagalog_Literary_Text.txt"),
+                str(script_dir / "corpus" / "Tagalog_Religious_Text.txt"),
+                str(script_dir / "corpus" / "Tagalog_Balita_Texts_Balanced.txt")
             ],
             weights=weights
         )

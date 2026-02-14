@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# IDE
+.vscode/
+*.swp
+*.swo
+
+# Generated images (large binary files)
+archive/generated_output/tagalog_stylized_output/
+archive/generated_output/try_new_font/
+archive/generated_output/Baybayin_sample_images/
+archive/baybayin_dataset_images/
+
+# Model cache
+*.pt
+*.bin
+
+# OS files
+Thumbs.db
+.DS_Store

@@ -274,7 +274,7 @@
 │                                                                             │
 │   │ #  │ Pair                │ Words │ Sentences │ Status      │           │
 │   │────│─────────────────────│───────│───────────│─────────────│           │
-│   │ 1  │ asero, asido        │   2   │    100    │ ⬜ Pending  │           │
+│   │ 1  │ asido, asero        │   2   │    100    │ ⬜ Pending  │           │
 │   │ 2  │ bote, buti          │   2   │    100    │ ✅ COMPLETE │           │
 │   │ 3  │ boto, buto          │   2   │    100    │ ⬜ Pending  │           │
 │   │ 4  │ higante, higanti    │   2   │    100    │ ⬜ Pending  │           │
@@ -372,40 +372,54 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Thesis/
+├── README.md                            # Project readme
+├── WORKFLOW.txt                         # This file
+├── .gitignore                           # Git ignore rules
+│
 ├── src/                                 # Core disambiguation model
+│   ├── __init__.py
 │   ├── disambiguator.py                 #   Main model (RoBERTa + features)
 │   ├── corpus.py                        #   Corpus statistics
 │   ├── morphology.py                    #   Filipino morphological analyzer
 │   └── baselines.py                     #   Baseline implementations
 │
+├── corpus/                              # Text corpora for statistics
+│   ├── Tagalog_Literary_Text.txt        #   Literary corpus (~203k words)
+│   ├── Tagalog_Religious_Text.txt       #   Religious corpus (~87k words)
+│   ├── Tagalog_Balita_Texts_Balanced.txt#   News corpus (balanced)
+│   ├── Tagalog_Balita_Text.json         #   News source data
+│   └── tagalog_dict.txt                 #   Filipino dictionary
+│
 ├── gold_standard_dataset/               # ⭐ Manual sentence dataset
 │   ├── README.md                        #   Dataset documentation
-│   ├── sentences/                       #   Individual pair files
+│   ├── tracking.md                      #   Progress tracking
+│   ├── sentences/                       #   Individual pair files (15 total)
 │   │   ├── 01_asero_asido.txt
-│   │   ├── 02_bote_buti.txt            #   ✅ Complete (100 sentences)
-│   │   ├── 03_boto_buto.txt
-│   │   ├── ... (15 files total)
-│   │   └── 15_toyo_tuyo.txt
-│   └── combined/                        #   All sentences combined
-│       └── all_sentences.txt
+│   │   ├── 02_bote_buti.txt
+│   │   └── ...
+│   ├── combined/                        #   All sentences combined
+│   └── results/                         #   Evaluation results
 │
-├── MaBaybay-OCR/                        # Modified MaBaybay OCR
+├── tests/                               # Per-pair test scripts
+│   ├── test_asero_asido.py
+│   ├── test_bote_buti.py
+│   └── test_boto_buto.py
+│
+├── disambiguate.py                      # Entry point for MATLAB integration
+├── evaluate.py                          # Main evaluation script
+│
+├── MaBaybay-OCR/                        # Modified MaBaybay OCR system
 │   └── Algorithms/
 │       ├── Baybayintransliterations.m   #   Modified to call disambiguator
 │       └── disambiguate_candidates.m    #   MATLAB-Python bridge
 │
-├── archive/                             # Old/unused files
-│   ├── old_scripts/                     #   Previous extraction scripts
-│   └── old_docs/                        #   Previous documentation
-│
-├── Tagalog_Literary_Text.txt            # Corpus for frequency statistics
-├── Tagalog_Religious_Text.txt           # Corpus for frequency statistics
-│
-├── disambiguate.py                      # Entry point for MATLAB integration
-├── evaluate.py                          # Evaluation script
-├── test_bote_buti.py                    # Test script for single pair
-│
-└── WORKFLOW.txt                         # This file
+└── archive/                             # Archived/old files
+    ├── old_scripts/                     #   Previous extraction scripts
+    ├── old_docs/                        #   Previous documentation
+    ├── old_dataset/                     #   Old dataset/ and scripts/ folders
+    ├── utility_scripts/                 #   One-off debug/analysis scripts
+    ├── image_generation/                #   Baybayin image gen scripts + fonts
+    └── generated_output/                #   Result JSONs, generated images
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -413,7 +427,7 @@ Thesis/
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 # Test single pair (after adding sentences):
-python test_bote_buti.py
+python tests/test_bote_buti.py
 
 # Run full evaluation (after all sentences complete):
 python evaluate.py

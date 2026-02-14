@@ -28,13 +28,13 @@ from src.disambiguator import BaybayinDisambiguator
 from src.baselines import MaBaybayDefault, EmbeddingOnly
 
 # Configuration
-TEST_SENTENCES_FILE = "dataset/processed/test_sentences_500.txt"
-TEST_CANDIDATES_FILE = "dataset/processed/candidates_results_v2.json"
+TEST_SENTENCES_FILE = "archive/old_dataset/dataset/processed/test_sentences_500.txt"
+TEST_CANDIDATES_FILE = "archive/old_dataset/dataset/processed/candidates_results_v2.json"
 CORPUS_FILES = [
-    "Tagalog_Literary_Text.txt",
-    "Tagalog_Religious_Text.txt"
+    "corpus/Tagalog_Literary_Text.txt",
+    "corpus/Tagalog_Religious_Text.txt"
 ]
-OUTPUT_DIR = Path("dataset/results")
+OUTPUT_DIR = Path("gold_standard_dataset/results")
 
 
 def load_test_data():

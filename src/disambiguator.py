@@ -37,9 +37,9 @@ DEFAULT_WEIGHTS = {
 
 # Text corpora paths
 DEFAULT_CORPORA = [
-    "Tagalog_Literary_Text.txt",
-    "Tagalog_Religious_Text.txt",
-    "Tagalog_Balita_Texts_Balanced.txt"
+    "corpus/Tagalog_Literary_Text.txt",
+    "corpus/Tagalog_Religious_Text.txt",
+    "corpus/Tagalog_Balita_Texts_Balanced.txt"
 ]
 
 
