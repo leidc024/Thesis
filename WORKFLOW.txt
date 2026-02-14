@@ -1,6 +1,6 @@
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║         BAYBAYIN DISAMBIGUATION SYSTEM - UPDATED WORKFLOW                     ║
-║                    Gold Standard Dataset + Graph Solution                     ║
+║              Gold Standard Dataset + Multi-Feature Scoring                    ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 
 
@@ -22,8 +22,9 @@
 │ WHAT WAS IMPLEMENTED                                                        │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
-│ A graph-based multi-feature scoring system that selects the most likely    │
-│ word from ambiguous Baybayin transliteration candidates.                   │
+│ A context-aware multi-feature scoring system that selects the most likely  │
+│ word from ambiguous Baybayin transliteration candidates using weighted      │
+│ linear combination of semantic, statistical, and linguistic features.      │
 │                                                                             │
 │ HOW IT WORKS:                                                               │
 │                                                                             │

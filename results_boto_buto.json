@@ -15,19 +15,19 @@
     "context_aware": {
       "name": "Context-Aware Baybayin Transliteration",
       "strategy": "Multi-feature approach using RoBERTa-Tagalog, frequency, co-occurrence, morphology",
-      "accuracy": 81.60919540229885,
-      "correct": 71,
-      "boto_accuracy": "50/50",
-      "buto_accuracy": "34/50"
+      "accuracy": 49.42528735632184,
+      "correct": 43,
+      "boto_accuracy": "6/50",
+      "buto_accuracy": "50/50"
     },
-    "improvement": 31.60919540229885
+    "improvement": -0.5747126436781613
   },
   "metrics": {
     "total_words": 844,
-    "correct_words": 828,
-    "total_accuracy": 0.981042654028436,
+    "correct_words": 800,
+    "total_accuracy": 0.9478672985781991,
     "total_ambiguous": 87,
-    "correct_ambiguous": 71,
-    "ambiguous_accuracy": 0.8160919540229885
+    "correct_ambiguous": 43,
+    "ambiguous_accuracy": 0.4942528735632184
   }
 }

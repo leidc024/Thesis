@@ -98,14 +98,15 @@ for sent in bote_sentences:
     candidates = []
     
     for word in words:
-        # Strip punctuation for comparison
+        # IMPORTANT: Normalize to match MaBaybay format (lowercase, no punctuation)
         clean_word = re.sub(r'[^\w]', '', word.lower())
+        
         if clean_word == "bote":
-            # Ambiguous position - both candidates
+            # Ambiguous position - both candidates (lowercase)
             candidates.append(["bote", "buti"])
         else:
-            # Unambiguous word
-            candidates.append(word)
+            # Unambiguous word (normalized: lowercase, no punctuation)
+            candidates.append(clean_word)
     
     test_data.append({
         'ground_truth': sent,
@@ -118,14 +119,15 @@ for sent in buti_sentences:
     candidates = []
     
     for word in words:
-        # Strip punctuation for comparison
+        # IMPORTANT: Normalize to match MaBaybay format (lowercase, no punctuation)
         clean_word = re.sub(r'[^\w]', '', word.lower())
+        
         if clean_word == "buti":
-            # Ambiguous position - both candidates
+            # Ambiguous position - both candidates (lowercase)
             candidates.append(["bote", "buti"])
         else:
-            # Unambiguous word
-            candidates.append(word)
+            # Unambiguous word (normalized: lowercase, no punctuation)
+            candidates.append(clean_word)
     
     test_data.append({
         'ground_truth': sent,
@@ -177,7 +179,6 @@ model = BaybayinDisambiguator(
         "Tagalog_Literary_Text.txt",
         "Tagalog_Religious_Text.txt",
         "Tagalog_Balita_Texts_Balanced.txt"
-        
     ],
     exclude_sentences=all_test_sentences  # Clean evaluation - no data leakage
 )

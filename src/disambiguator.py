@@ -29,10 +29,10 @@ from .morphology import MorphologicalAnalyzer
 # Default configuration
 DEFAULT_MODEL = "jcblaise/roberta-tagalog-base"
 DEFAULT_WEIGHTS = {
-    'semantic': 0.5,      # RoBERTa contextual similarity (increased - best at context)
-    'frequency': 0.2,     # Corpus word frequency (decreased - reduce bias)
-    'cooccurrence': 0.3,  # Bigram probability (increased - helps with context)
-    'morphology': 0.0     # Filipino morphological patterns (minimal impact)
+    'semantic': 0.4,      # RoBERTa contextual similarity (increased - best at context)
+    'frequency': 0.3,     # Corpus word frequency (decreased - reduce bias)
+    'cooccurrence': 0.2,  # Bigram probability (increased - helps with context)
+    'morphology': 0.1     # Filipino morphological patterns (minimal impact)
 }
 
 # Text corpora paths

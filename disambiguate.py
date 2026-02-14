@@ -65,8 +65,8 @@ def disambiguate(candidates_json: str) -> str:
         if num_words == 1 or num_ambiguous == num_words:
             # Single word: rely primarily on frequency (real words beat non-words)
             weights = {
-                'semantic': 0.1,      # Reduce - no useful context
-                'frequency': 0.6,     # Increase - prefer corpus words
+                'semantic': 0.0,      # Reduce - no useful context
+                'frequency': 0.7,     # Increase - prefer corpus words
                 'cooccurrence': 0.0,  # No adjacent words
                 'morphology': 0.3     # Morphological patterns help
             }
@@ -78,7 +78,8 @@ def disambiguate(candidates_json: str) -> str:
         model = BaybayinDisambiguator(
             corpus_files=[
                 str(script_dir / "Tagalog_Literary_Text.txt"),
-                str(script_dir / "Tagalog_Religious_Text.txt")
+                str(script_dir / "Tagalog_Religious_Text.txt"),
+                str(script_dir / "Tagalog_Balita_Texts_Balanced.txt")
             ],
             weights=weights
         )
