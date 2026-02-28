@@ -12,22 +12,38 @@
       "bote_accuracy": "50/50",
       "buti_accuracy": "0/50"
     },
-    "context_aware": {
-      "name": "Context-Aware Baybayin Transliteration",
-      "strategy": "Multi-feature approach using RoBERTa-Tagalog, frequency, co-occurrence, morphology",
+    "cosine_only": {
+      "name": "Pure Cosine Similarity (Semantic Only)",
+      "strategy": "100% cosine similarity of mean-pooled RoBERTa embeddings, no other features",
+      "accuracy": 64.0,
+      "correct": 64,
+      "bote_accuracy": "14/50",
+      "buti_accuracy": "50/50"
+    },
+    "cosine_multi": {
+      "name": "Cosine Similarity + Multi-Feature (Old Method)",
+      "strategy": "Cosine similarity semantic + frequency + cooccurrence + morphology",
       "accuracy": 86.0,
       "correct": 86,
       "bote_accuracy": "36/50",
       "buti_accuracy": "50/50"
     },
-    "improvement": 36.0
+    "mlm_multi": {
+      "name": "MLM PLL + Multi-Feature (Current)",
+      "strategy": "MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology",
+      "accuracy": 100.0,
+      "correct": 100,
+      "bote_accuracy": "50/50",
+      "buti_accuracy": "50/50"
+    },
+    "improvement_over_baseline": 50.0
   },
   "metrics": {
     "total_words": 869,
-    "correct_words": 855,
-    "total_accuracy": 0.9838895281933256,
+    "correct_words": 869,
+    "total_accuracy": 1.0,
     "total_ambiguous": 100,
-    "correct_ambiguous": 86,
-    "ambiguous_accuracy": 0.86
+    "correct_ambiguous": 100,
+    "ambiguous_accuracy": 1.0
   }
 }

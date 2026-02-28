@@ -24,7 +24,7 @@ def get_clean_words(sentence):
     return words
 
 # Read the sentences from gold standard dataset
-SENTENCE_FILE = "gold_standard_dataset/sentences/03_boto_buto.txt"
+SENTENCE_FILE = "gold_standard_dataset/sentences/04_boto_buto.txt"
 
 def parse_sentence_file(filepath):
     """Parse sentence file - sentences with boto vs buto are mixed throughout"""
@@ -177,10 +177,10 @@ print(f"Buto accuracy: {baseline_correct_buto}/50 = {baseline_correct_buto/50:.2
 print(f"Overall baseline accuracy: {baseline_correct_total}/100 = {baseline_accuracy:.2f}%")
 
 # ============================================================================
-# CONTEXT-AWARE DISAMBIGUATION
+# INITIALIZE MODEL (shared across all methods)
 # ============================================================================
 print("\n" + "="*70)
-print("CONTEXT-AWARE DISAMBIGUATION MODEL")
+print("INITIALIZING MODEL")
 print("="*70)
 
 all_test_sentences = [item['ground_truth'] for item in test_data]
@@ -193,10 +193,66 @@ model = BaybayinDisambiguator(
     exclude_sentences=all_test_sentences  # Clean evaluation - no data leakage
 )
 
-# Run evaluation
-print("\nRunning disambiguation on test sentences...")
+# ============================================================================
+# METHOD 1: Pure Cosine Similarity (Semantic Only, No Other Features)
+# ============================================================================
+print("\n" + "="*70)
+print("METHOD 1: PURE COSINE SIMILARITY (Semantic Only)")
+print("="*70)
 
-metrics, results = model.evaluate(test_data, show_progress=True)
+cosine_only_weights = {
+    'semantic': 1.0,
+    'frequency': 0.0,
+    'cooccurrence': 0.0,
+    'morphology': 0.0
+}
+print(f"\nWeights: {cosine_only_weights}")
+print("Semantic scoring: Cosine similarity of mean-pooled RoBERTa embeddings")
+print("Running evaluation...")
+
+cosine_only_metrics, cosine_only_results = model.evaluate(
+    test_data, show_progress=True, use_mlm=False, weights_override=cosine_only_weights
+)
+cosine_only_accuracy = cosine_only_metrics['ambiguous_accuracy'] * 100
+print(f"★ Pure Cosine Similarity accuracy: {cosine_only_accuracy:.2f}%")
+
+# ============================================================================
+# METHOD 2: Cosine Similarity + Multi-Feature (Old Method)
+# ============================================================================
+print("\n" + "="*70)
+print("METHOD 2: COSINE SIMILARITY + MULTI-FEATURE (Old Method)")
+print("="*70)
+
+print(f"\nWeights: semantic=0.4, frequency=0.3, cooccurrence=0.2, morphology=0.1")
+print("Semantic scoring: Cosine similarity of mean-pooled RoBERTa embeddings")
+print("Running evaluation...")
+
+cosine_multi_metrics, cosine_multi_results = model.evaluate(
+    test_data, show_progress=True, use_mlm=False
+)
+cosine_multi_accuracy = cosine_multi_metrics['ambiguous_accuracy'] * 100
+print(f"★ Cosine Multi-Feature accuracy: {cosine_multi_accuracy:.2f}%")
+
+# ============================================================================
+# METHOD 3: MLM Pseudo-Log-Likelihood + Multi-Feature (Current Best)
+# ============================================================================
+print("\n" + "="*70)
+print("METHOD 3: MLM PSEUDO-LOG-LIKELIHOOD + MULTI-FEATURE (Current)")
+print("="*70)
+
+print(f"\nWeights: semantic=0.4, frequency=0.3, cooccurrence=0.2, morphology=0.1")
+print("Semantic scoring: MLM PLL (Masked Language Model Pseudo-Log-Likelihood)")
+print("Running evaluation...")
+
+mlm_metrics, mlm_results = model.evaluate(
+    test_data, show_progress=True, use_mlm=True
+)
+mlm_accuracy = mlm_metrics['ambiguous_accuracy'] * 100
+print(f"★ MLM Multi-Feature accuracy: {mlm_accuracy:.2f}%")
+
+# Use MLM results (best method) for detailed predictions display
+metrics = mlm_metrics
+results = mlm_results
 
 # Display results
 print("\n" + "="*70)
@@ -269,25 +325,21 @@ if incorrect_buto_examples:
         print(f"\n{idx}. ✗ Ground Truth: {gt}")
         print(f"      Predicted:    {pred}")
 
-# Breakdown by word type (exact word match only, ignoring punctuation)
+# Breakdown by word type for MLM method (used in detailed display above)
 boto_correct = 0
 buto_correct = 0
-
-for test_item, result_item in zip(test_data, results):
+for test_item, result_item in zip(test_data, mlm_results):
     gt_words = get_clean_words(test_item['ground_truth'])
     pred_words = get_clean_words(result_item['predicted'])
-    
-    # Check if this is a boto sentence (exact word)
     if "boto" in gt_words:
         if "boto" in pred_words:
             boto_correct += 1
-    # Check if this is a buto sentence (exact word)
     elif "buto" in gt_words:
         if "buto" in pred_words:
             buto_correct += 1
 
 print("\n" + "="*70)
-print("BREAKDOWN BY WORD")
+print("BREAKDOWN BY WORD (MLM Method)")
 print("="*70)
 print(f"\nBoto accuracy: {boto_correct}/50 = {boto_correct/50:.2%}")
 print(f"Buto accuracy: {buto_correct}/50 = {buto_correct/50:.2%}")
@@ -299,27 +351,48 @@ print("\n" + "="*70)
 print("📊 COMPARISON SUMMARY")
 print("="*70)
 
-context_accuracy = metrics['ambiguous_accuracy'] * 100
+context_accuracy = mlm_accuracy
 improvement = context_accuracy - baseline_accuracy
+cosine_only_imp = cosine_only_accuracy - baseline_accuracy
+cosine_multi_imp = cosine_multi_accuracy - baseline_accuracy
+
+# Count per-word accuracy for each method
+def count_word_accuracy(result_list, word1, word2):
+    w1_correct = 0
+    w2_correct = 0
+    for test_item, result_item in zip(test_data, result_list):
+        gt_words = get_clean_words(test_item['ground_truth'])
+        pred_words = get_clean_words(result_item['predicted'])
+        if word1 in gt_words:
+            if word1 in pred_words:
+                w1_correct += 1
+        elif word2 in gt_words:
+            if word2 in pred_words:
+                w2_correct += 1
+    return w1_correct, w2_correct
+
+cosine_only_boto, cosine_only_buto = count_word_accuracy(cosine_only_results, "boto", "buto")
+cosine_multi_boto, cosine_multi_buto = count_word_accuracy(cosine_multi_results, "boto", "buto")
+mlm_boto, mlm_buto = count_word_accuracy(mlm_results, "boto", "buto")
 
 print(f"""
-┌────────────────────────────────────────────────────────────────────┐
-│                    DISAMBIGUATION RESULTS                          │
-├─────────────────────────┬──────────────────┬───────────────────────┤
-│        Method           │    Accuracy      │       Details         │
-├─────────────────────────┼──────────────────┼───────────────────────┤
-│ MaBaybay Default        │    {baseline_accuracy:6.2f}%       │ Always picks 'boto'   │
-│ (First Candidate)       │                  │ (first candidate)     │
-├─────────────────────────┼──────────────────┼───────────────────────┤
-│ Context-Aware           │    {context_accuracy:6.2f}%       │ Uses RoBERTa-Tagalog  │
-│ Disambiguation          │                  │ and context features  │
-├─────────────────────────┼──────────────────┼───────────────────────┤
-│ ★ Improvement           │   +{improvement:6.2f}%       │                       │
-└─────────────────────────┴──────────────────┴───────────────────────┘
-
-Breakdown by Word:
-  • Boto sentences: Disambiguation={boto_correct}/50 vs Baseline={baseline_correct_boto}/50
-  • Buto sentences: Disambiguation={buto_correct}/50 vs Baseline={baseline_correct_buto}/50
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                       DISAMBIGUATION RESULTS                             │
+├──────────────────────────────┬──────────────┬────────────┬───────────────┤
+│        Method                │   Accuracy   │ Boto (50)  │  Buto (50)    │
+├──────────────────────────────┼──────────────┼────────────┼───────────────┤
+│ MaBaybay Default             │   {baseline_accuracy:6.2f}%    │   {baseline_correct_boto:2d}/50    │    {baseline_correct_buto:2d}/50     │
+│ (First Candidate)            │              │            │               │
+├──────────────────────────────┼──────────────┼────────────┼───────────────┤
+│ Pure Cosine Similarity       │   {cosine_only_accuracy:6.2f}%    │   {cosine_only_boto:2d}/50    │    {cosine_only_buto:2d}/50     │
+│ (Semantic Only)              │ ({cosine_only_imp:+6.2f}%)  │            │               │
+├──────────────────────────────┼──────────────┼────────────┼───────────────┤
+│ Cosine Sim + Multi-Feature   │   {cosine_multi_accuracy:6.2f}%    │   {cosine_multi_boto:2d}/50    │    {cosine_multi_buto:2d}/50     │
+│ (Old Method)                 │ ({cosine_multi_imp:+6.2f}%)  │            │               │
+├──────────────────────────────┼──────────────┼────────────┼───────────────┤
+│ ★ MLM PLL + Multi-Feature    │   {context_accuracy:6.2f}%    │   {mlm_boto:2d}/50    │    {mlm_buto:2d}/50     │
+│   (Current Method)           │ ({improvement:+6.2f}%)  │            │               │
+└──────────────────────────────┴──────────────┴────────────┴───────────────┘
 
 Note: MaBaybay default always returns first candidate from transliteration.
       For 'ᜊᜓᜆᜓ', candidates are ["boto", "buto"], so baseline always picks "boto".
@@ -340,15 +413,31 @@ output = {
             'boto_accuracy': f"{baseline_correct_boto}/50",
             'buto_accuracy': f"{baseline_correct_buto}/50"
         },
-        'context_aware': {
-            'name': 'Context-Aware Baybayin Transliteration',
-            'strategy': 'Multi-feature approach using RoBERTa-Tagalog, frequency, co-occurrence, morphology',
+        'cosine_only': {
+            'name': 'Pure Cosine Similarity (Semantic Only)',
+            'strategy': '100% cosine similarity of mean-pooled RoBERTa embeddings, no other features',
+            'accuracy': cosine_only_accuracy,
+            'correct': cosine_only_metrics['correct_ambiguous'],
+            'boto_accuracy': f"{cosine_only_boto}/50",
+            'buto_accuracy': f"{cosine_only_buto}/50"
+        },
+        'cosine_multi': {
+            'name': 'Cosine Similarity + Multi-Feature (Old Method)',
+            'strategy': 'Cosine similarity semantic + frequency + cooccurrence + morphology',
+            'accuracy': cosine_multi_accuracy,
+            'correct': cosine_multi_metrics['correct_ambiguous'],
+            'boto_accuracy': f"{cosine_multi_boto}/50",
+            'buto_accuracy': f"{cosine_multi_buto}/50"
+        },
+        'mlm_multi': {
+            'name': 'MLM PLL + Multi-Feature (Current)',
+            'strategy': 'MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology',
             'accuracy': context_accuracy,
             'correct': metrics['correct_ambiguous'],
-            'boto_accuracy': f"{boto_correct}/50",
-            'buto_accuracy': f"{buto_correct}/50"
+            'boto_accuracy': f"{mlm_boto}/50",
+            'buto_accuracy': f"{mlm_buto}/50"
         },
-        'improvement': improvement
+        'improvement_over_baseline': improvement
     },
     'metrics': metrics
 }
@@ -357,5 +446,5 @@ os.makedirs("gold_standard_dataset/results", exist_ok=True)
 with open("gold_standard_dataset/results/results_boto_buto.json", "w", encoding="utf-8") as f:
     json.dump(output, f, indent=2, ensure_ascii=False)
 
-print(f"\n✓ Detailed results saved to: gold_standard_dataset/results/results_boto_buto.json")
+print(f"✓ Detailed results saved to: gold_standard_dataset/results/results_boto_buto.json")
 print("="*70)

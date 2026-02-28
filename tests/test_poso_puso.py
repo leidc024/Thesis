@@ -1,5 +1,5 @@
 """
-Test disambiguator on bote/buti ambiguous pair
+Test disambiguator on poso/puso ambiguous pair
 Compares Context-Aware Baybayin Transliteration vs MaBaybay Default (First Candidate)
 Testing with 100 sentences (50 each)
 """
@@ -24,12 +24,12 @@ def get_clean_words(sentence):
     return words
 
 # Read the sentences from gold standard dataset
-SENTENCE_FILE = "gold_standard_dataset/sentences/03_bote_buti.txt"
+SENTENCE_FILE = "gold_standard_dataset/sentences/12_poso_puso.txt"
 
 def parse_sentence_file(filepath):
-    """Parse sentence file - sentences with bote vs buti are mixed throughout"""
-    bote_sentences = []
-    buti_sentences = []
+    """Parse sentence file - sentences with poso vs puso are mixed throughout"""
+    poso_sentences = []
+    puso_sentences = []
     
     with open(filepath, "r", encoding="utf-8") as f:
         lines = [line.strip() for line in f if line.strip()]  # Remove empty lines
@@ -37,73 +37,73 @@ def parse_sentence_file(filepath):
     # Separate based on exact word match only (case-insensitive, ignore punctuation)
     for line in lines:
         words = get_clean_words(line)
-        if "bote" in words:
-            bote_sentences.append(line)
-        elif "buti" in words:
-            buti_sentences.append(line)
+        if "poso" in words:
+            poso_sentences.append(line)
+        elif "puso" in words:
+            puso_sentences.append(line)
     
-    return bote_sentences, buti_sentences
+    return poso_sentences, puso_sentences
 
-bote_sentences, buti_sentences = parse_sentence_file(SENTENCE_FILE)
+poso_sentences, puso_sentences = parse_sentence_file(SENTENCE_FILE)
 
 print(f"="*70)
-print("BOTE/BUTI DISAMBIGUATION TEST")
+print("POSO/PUSO DISAMBIGUATION TEST")
 print("Comparing: Context-Aware Disambiguation vs MaBaybay Default (First Candidate)")
 print(f"="*70)
 print(f"\nLoaded from: {SENTENCE_FILE}")
 
-print(f"\nBote sentences: {len(bote_sentences)}")
-print(f"Buti sentences: {len(buti_sentences)}")
+print(f"\nPoso sentences: {len(poso_sentences)}")
+print(f"Puso sentences: {len(puso_sentences)}")
 
 # Debug: Check which sentences contain target words
 print("\n" + "="*50)
 print("DEBUGGING: Checking for target words")
 print("="*50)
 
-bote_with_target = []
-bote_without_target = []
-buti_with_target = []
-buti_without_target = []
+poso_with_target = []
+poso_without_target = []
+puso_with_target = []
+puso_without_target = []
 
-for i, sent in enumerate(bote_sentences, 1):
+for i, sent in enumerate(poso_sentences, 1):
     words = get_clean_words(sent)
-    if "bote" in words:
-        bote_with_target.append((i, sent))
+    if "poso" in words:
+        poso_with_target.append((i, sent))
     else:
-        bote_without_target.append((i, sent))
+        poso_without_target.append((i, sent))
 
-for i, sent in enumerate(buti_sentences, 1):
+for i, sent in enumerate(puso_sentences, 1):
     words = get_clean_words(sent)
-    if "buti" in words:
-        buti_with_target.append((i+len(bote_sentences), sent))
+    if "puso" in words:
+        puso_with_target.append((i+len(poso_sentences), sent))
     else:
-        buti_without_target.append((i+len(bote_sentences), sent))
+        puso_without_target.append((i+len(poso_sentences), sent))
 
-print(f"\nBOTE sentences with 'bote': {len(bote_with_target)}/{len(bote_sentences)}")
-print(f"BUTI sentences with 'buti': {len(buti_with_target)}/{len(buti_sentences)}")
+print(f"\nPOSO sentences with 'poso': {len(poso_with_target)}/{len(poso_sentences)}")
+print(f"PUSO sentences with 'puso': {len(puso_with_target)}/{len(puso_sentences)}")
 
-if bote_without_target:
-    print(f"\n⚠️  BOTE sentences WITHOUT 'bote' word ({len(bote_without_target)}):")
-    for line_num, sent in bote_without_target[:5]:  # Show first 5
+if poso_without_target:
+    print(f"\n⚠️  POSO sentences WITHOUT 'poso' word ({len(poso_without_target)}):")
+    for line_num, sent in poso_without_target[:5]:  # Show first 5
         print(f"  Line {line_num}: {sent}")
-    if len(bote_without_target) > 5:
-        print(f"  ... and {len(bote_without_target) - 5} more")
+    if len(poso_without_target) > 5:
+        print(f"  ... and {len(poso_without_target) - 5} more")
 
-if buti_without_target:
-    print(f"\n⚠️  BUTI sentences WITHOUT 'buti' word ({len(buti_without_target)}):")
-    for line_num, sent in buti_without_target[:5]:  # Show first 5
+if puso_without_target:
+    print(f"\n⚠️  PUSO sentences WITHOUT 'puso' word ({len(puso_without_target)}):")
+    for line_num, sent in puso_without_target[:5]:  # Show first 5
         print(f"  Line {line_num}: {sent}")
-    if len(buti_without_target) > 5:
-        print(f"  ... and {len(buti_without_target) - 5} more")
+    if len(puso_without_target) > 5:
+        print(f"  ... and {len(puso_without_target) - 5} more")
 
 # Create test data with OCR candidates
-# For bote/buti, both map to Baybayin ᜊᜓᜆᜒ
-# MaBaybay default order: ["bote", "buti"] (bote is first candidate)
+# For poso/puso, both map to Baybayin ᜉᜓᜐᜓ
+# MaBaybay default order: ["poso", "puso"] (poso is first candidate)
 # NOTE: MaBaybay sends ALL words as lowercase, no punctuation (from dictionary lookup)
 test_data = []
 
-# Add bote sentences (ground truth = bote)
-for sent in bote_sentences:
+# Add poso sentences (ground truth = poso)
+for sent in poso_sentences:
     words = sent.split()
     candidates = []
     
@@ -111,9 +111,9 @@ for sent in bote_sentences:
         # Simulate MaBaybay output: lowercase, no punctuation (dictionary words)
         clean_word = re.sub(r'[^\w]', '', word.lower())
         
-        if clean_word == "bote":
-            # Ambiguous position - both candidates
-            candidates.append(["bote", "buti"])
+        if clean_word == "poso":
+            # Ambiguous position - both candidates (MaBaybay order: poso first)
+            candidates.append(["poso", "puso"])
         else:
             # Unambiguous word (lowercase, no punctuation - same as MaBaybay)
             candidates.append(clean_word)
@@ -123,8 +123,8 @@ for sent in bote_sentences:
         'ocr_candidates': candidates
     })
 
-# Add buti sentences (ground truth = buti)
-for sent in buti_sentences:
+# Add puso sentences (ground truth = puso)
+for sent in puso_sentences:
     words = sent.split()
     candidates = []
     
@@ -132,9 +132,9 @@ for sent in buti_sentences:
         # Simulate MaBaybay output: lowercase, no punctuation (dictionary words)
         clean_word = re.sub(r'[^\w]', '', word.lower())
         
-        if clean_word == "buti":
-            # Ambiguous position - both candidates
-            candidates.append(["bote", "buti"])
+        if clean_word == "puso":
+            # Ambiguous position - both candidates (MaBaybay order: poso first)
+            candidates.append(["poso", "puso"])
         else:
             # Unambiguous word (lowercase, no punctuation - same as MaBaybay)
             candidates.append(clean_word)
@@ -153,27 +153,27 @@ print("\n" + "="*70)
 print("BASELINE: MaBaybay Default (Always Pick First Candidate)")
 print("="*70)
 
-# First candidate is always "bote" in MaBaybay's transliteration output
+# First candidate is always "poso" in MaBaybay's transliteration output
 baseline_correct_total = 0
-baseline_correct_bote = 0
-baseline_correct_buti = 0
+baseline_correct_poso = 0
+baseline_correct_puso = 0
 
 for test_item in test_data:
     gt = test_item['ground_truth']
     gt_words = get_clean_words(gt)
     
-    # Check if sentence contains target words
-    if "bote" in gt_words:
+    # Baseline always picks "poso" (first candidate in MaBaybay order)
+    if "poso" in gt_words:
         baseline_correct_total += 1
-        baseline_correct_bote += 1
-    # If ground truth is "buti", baseline gets it wrong (picks "bote")
-    # So baseline_correct_buti stays 0
+        baseline_correct_poso += 1
+    # If ground truth is "puso", baseline gets it wrong (picks "poso")
+    # So baseline_correct_puso stays 0
 
 baseline_accuracy = baseline_correct_total / 100 * 100  # 100 total sentences
 
-print(f"\nBaseline Strategy: Always select 'bote' (first candidate)")
-print(f"Bote accuracy: {baseline_correct_bote}/50 = {baseline_correct_bote/50:.2%}")
-print(f"Buti accuracy: {baseline_correct_buti}/50 = {baseline_correct_buti/50:.2%}")
+print(f"\nBaseline Strategy: Always select 'poso' (first candidate)")
+print(f"Poso accuracy: {baseline_correct_poso}/50 = {baseline_correct_poso/50:.2%}")
+print(f"Puso accuracy: {baseline_correct_puso}/50 = {baseline_correct_puso/50:.2%}")
 print(f"Overall baseline accuracy: {baseline_correct_total}/100 = {baseline_accuracy:.2f}%")
 
 # ============================================================================
@@ -259,7 +259,7 @@ print("\n" + "="*70)
 print("CONTEXT-AWARE DISAMBIGUATION RESULTS")
 print("="*70)
 
-print(f"\nAmbiguous words (bote/buti): {metrics['total_ambiguous']}")
+print(f"\nAmbiguous words (poso/puso): {metrics['total_ambiguous']}")
 print(f"Correct disambiguations: {metrics['correct_ambiguous']}")
 print(f"★ Context-aware accuracy: {metrics['ambiguous_accuracy']:.2%} ★")
 
@@ -269,10 +269,10 @@ print("DETAILED PREDICTIONS - ALL RESULTS")
 print("="*70)
 
 # Collect ALL examples, categorized
-correct_bote_examples = []
-incorrect_bote_examples = []
-correct_buti_examples = []
-incorrect_buti_examples = []
+correct_poso_examples = []
+incorrect_poso_examples = []
+correct_puso_examples = []
+incorrect_puso_examples = []
 
 for i, (test_item, result_item) in enumerate(zip(test_data, results)):
     gt = test_item['ground_truth']
@@ -281,68 +281,68 @@ for i, (test_item, result_item) in enumerate(zip(test_data, results)):
     gt_words = get_clean_words(gt)
     pred_words = get_clean_words(pred)
     
-    # Check if this is a bote or buti sentence
-    if "bote" in gt_words:
-        if "bote" in pred_words:
-            correct_bote_examples.append((i+1, gt, pred))
+    # Check if this is a poso or puso sentence
+    if "poso" in gt_words:
+        if "poso" in pred_words:
+            correct_poso_examples.append((i+1, gt, pred))
         else:
-            incorrect_bote_examples.append((i+1, gt, pred))
-    elif "buti" in gt_words:
-        if "buti" in pred_words:
-            correct_buti_examples.append((i+1, gt, pred))
+            incorrect_poso_examples.append((i+1, gt, pred))
+    elif "puso" in gt_words:
+        if "puso" in pred_words:
+            correct_puso_examples.append((i+1, gt, pred))
         else:
-            incorrect_buti_examples.append((i+1, gt, pred))
+            incorrect_puso_examples.append((i+1, gt, pred))
 
-# Display BOTE results
+# Display POSO results
 print(f"\n{'='*70}")
-print(f"BOTE SENTENCES: {len(correct_bote_examples)}/50 CORRECT")
+print(f"POSO SENTENCES: {len(correct_poso_examples)}/50 CORRECT")
 print(f"{'='*70}")
 
-if correct_bote_examples:
-    print(f"\n✓ CORRECT BOTE PREDICTIONS ({len(correct_bote_examples)}):")
-    for idx, gt, pred in correct_bote_examples:
+if correct_poso_examples:
+    print(f"\n✓ CORRECT POSO PREDICTIONS ({len(correct_poso_examples)}):")
+    for idx, gt, pred in correct_poso_examples:
         print(f"\n{idx}. ✓ {gt}")
 
-if incorrect_bote_examples:
-    print(f"\n✗ INCORRECT BOTE PREDICTIONS ({len(incorrect_bote_examples)}):")
-    for idx, gt, pred in incorrect_bote_examples:
+if incorrect_poso_examples:
+    print(f"\n✗ INCORRECT POSO PREDICTIONS ({len(incorrect_poso_examples)}):")
+    for idx, gt, pred in incorrect_poso_examples:
         print(f"\n{idx}. ✗ Ground Truth: {gt}")
         print(f"      Predicted:    {pred}")
 
-# Display BUTI results
+# Display PUSO results
 print(f"\n{'='*70}")
-print(f"BUTI SENTENCES: {len(correct_buti_examples)}/50 CORRECT")
+print(f"PUSO SENTENCES: {len(correct_puso_examples)}/50 CORRECT")
 print(f"{'='*70}")
 
-if correct_buti_examples:
-    print(f"\n✓ CORRECT BUTI PREDICTIONS ({len(correct_buti_examples)}):")
-    for idx, gt, pred in correct_buti_examples:
+if correct_puso_examples:
+    print(f"\n✓ CORRECT PUSO PREDICTIONS ({len(correct_puso_examples)}):")
+    for idx, gt, pred in correct_puso_examples:
         print(f"\n{idx}. ✓ {gt}")
 
-if incorrect_buti_examples:
-    print(f"\n✗ INCORRECT BUTI PREDICTIONS ({len(incorrect_buti_examples)}):")
-    for idx, gt, pred in incorrect_buti_examples:
+if incorrect_puso_examples:
+    print(f"\n✗ INCORRECT PUSO PREDICTIONS ({len(incorrect_puso_examples)}):")
+    for idx, gt, pred in incorrect_puso_examples:
         print(f"\n{idx}. ✗ Ground Truth: {gt}")
         print(f"      Predicted:    {pred}")
 
 # Breakdown by word type for MLM method (used in detailed display above)
-bote_correct = 0
-buti_correct = 0
+poso_correct = 0
+puso_correct = 0
 for test_item, result_item in zip(test_data, mlm_results):
     gt_words = get_clean_words(test_item['ground_truth'])
     pred_words = get_clean_words(result_item['predicted'])
-    if "bote" in gt_words:
-        if "bote" in pred_words:
-            bote_correct += 1
-    elif "buti" in gt_words:
-        if "buti" in pred_words:
-            buti_correct += 1
+    if "poso" in gt_words:
+        if "poso" in pred_words:
+            poso_correct += 1
+    elif "puso" in gt_words:
+        if "puso" in pred_words:
+            puso_correct += 1
 
 print("\n" + "="*70)
 print("BREAKDOWN BY WORD (MLM Method)")
 print("="*70)
-print(f"\nBote accuracy: {bote_correct}/50 = {bote_correct/50:.2%}")
-print(f"Buti accuracy: {buti_correct}/50 = {buti_correct/50:.2%}")
+print(f"\nPoso accuracy: {poso_correct}/50 = {poso_correct/50:.2%}")
+print(f"Puso accuracy: {puso_correct}/50 = {puso_correct/50:.2%}")
 
 # ============================================================================
 # COMPARISON SUMMARY
@@ -371,38 +371,38 @@ def count_word_accuracy(result_list, word1, word2):
                 w2_correct += 1
     return w1_correct, w2_correct
 
-cosine_only_bote, cosine_only_buti = count_word_accuracy(cosine_only_results, "bote", "buti")
-cosine_multi_bote, cosine_multi_buti = count_word_accuracy(cosine_multi_results, "bote", "buti")
-mlm_bote, mlm_buti = count_word_accuracy(mlm_results, "bote", "buti")
+cosine_only_poso, cosine_only_puso = count_word_accuracy(cosine_only_results, "poso", "puso")
+cosine_multi_poso, cosine_multi_puso = count_word_accuracy(cosine_multi_results, "poso", "puso")
+mlm_poso, mlm_puso = count_word_accuracy(mlm_results, "poso", "puso")
 
 print(f"""
-┌──────────────────────────────────────────────────────────────────────────┐
+┌──────────────────────────────────────────────────────────────────────────────┐
 │                       DISAMBIGUATION RESULTS                             │
 ├──────────────────────────────┬──────────────┬────────────┬───────────────┤
-│        Method                │   Accuracy   │ Bote (50)  │  Buti (50)    │
+│        Method                │   Accuracy   │ Poso (50)  │  Puso (50)    │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ MaBaybay Default             │   {baseline_accuracy:6.2f}%    │   {baseline_correct_bote:2d}/50    │    {baseline_correct_buti:2d}/50     │
+│ MaBaybay Default             │   {baseline_accuracy:6.2f}%    │   {baseline_correct_poso:2d}/50    │    {baseline_correct_puso:2d}/50     │
 │ (First Candidate)            │              │            │               │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ Pure Cosine Similarity       │   {cosine_only_accuracy:6.2f}%    │   {cosine_only_bote:2d}/50    │    {cosine_only_buti:2d}/50     │
+│ Pure Cosine Similarity       │   {cosine_only_accuracy:6.2f}%    │   {cosine_only_poso:2d}/50    │    {cosine_only_puso:2d}/50     │
 │ (Semantic Only)              │ ({cosine_only_imp:+6.2f}%)  │            │               │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ Cosine Sim + Multi-Feature   │   {cosine_multi_accuracy:6.2f}%    │   {cosine_multi_bote:2d}/50    │    {cosine_multi_buti:2d}/50     │
+│ Cosine Sim + Multi-Feature   │   {cosine_multi_accuracy:6.2f}%    │   {cosine_multi_poso:2d}/50    │    {cosine_multi_puso:2d}/50     │
 │ (Old Method)                 │ ({cosine_multi_imp:+6.2f}%)  │            │               │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ ★ MLM PLL + Multi-Feature    │   {context_accuracy:6.2f}%    │   {mlm_bote:2d}/50    │    {mlm_buti:2d}/50     │
+│ ★ MLM PLL + Multi-Feature    │   {context_accuracy:6.2f}%    │   {mlm_poso:2d}/50    │    {mlm_puso:2d}/50     │
 │   (Current Method)           │ ({improvement:+6.2f}%)  │            │               │
 └──────────────────────────────┴──────────────┴────────────┴───────────────┘
 
 Note: MaBaybay default always returns first candidate from transliteration.
-      For 'ᜊᜓᜆᜒ', candidates are ["bote", "buti"], so baseline always picks "bote".
+      For 'ᜉᜓᜐᜓ', candidates are ["poso", "puso"], so baseline always picks "poso".
 """)
 
 # Save detailed results
 output = {
-    'ambiguous_pair': 'bote, buti',
-    'baybayin': 'ᜊᜓᜆᜒ',
-    'type': 'COMBINED (O/U + E/I)',
+    'ambiguous_pair': 'poso, puso',
+    'baybayin': 'ᜉᜓᜐᜓ',
+    'type': 'O/U',
     'test_sentences': len(test_data),
     'comparison': {
         'baseline': {
@@ -410,32 +410,32 @@ output = {
             'strategy': 'Always pick first candidate from transliteration',
             'accuracy': baseline_accuracy,
             'correct': baseline_correct_total,
-            'bote_accuracy': f"{baseline_correct_bote}/50",
-            'buti_accuracy': f"{baseline_correct_buti}/50"
+            'poso_accuracy': f"{baseline_correct_poso}/50",
+            'puso_accuracy': f"{baseline_correct_puso}/50"
         },
         'cosine_only': {
             'name': 'Pure Cosine Similarity (Semantic Only)',
             'strategy': '100% cosine similarity of mean-pooled RoBERTa embeddings, no other features',
             'accuracy': cosine_only_accuracy,
             'correct': cosine_only_metrics['correct_ambiguous'],
-            'bote_accuracy': f"{cosine_only_bote}/50",
-            'buti_accuracy': f"{cosine_only_buti}/50"
+            'poso_accuracy': f"{cosine_only_poso}/50",
+            'puso_accuracy': f"{cosine_only_puso}/50"
         },
         'cosine_multi': {
             'name': 'Cosine Similarity + Multi-Feature (Old Method)',
             'strategy': 'Cosine similarity semantic + frequency + cooccurrence + morphology',
             'accuracy': cosine_multi_accuracy,
             'correct': cosine_multi_metrics['correct_ambiguous'],
-            'bote_accuracy': f"{cosine_multi_bote}/50",
-            'buti_accuracy': f"{cosine_multi_buti}/50"
+            'poso_accuracy': f"{cosine_multi_poso}/50",
+            'puso_accuracy': f"{cosine_multi_puso}/50"
         },
         'mlm_multi': {
             'name': 'MLM PLL + Multi-Feature (Current)',
             'strategy': 'MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology',
             'accuracy': context_accuracy,
             'correct': metrics['correct_ambiguous'],
-            'bote_accuracy': f"{mlm_bote}/50",
-            'buti_accuracy': f"{mlm_buti}/50"
+            'poso_accuracy': f"{mlm_poso}/50",
+            'puso_accuracy': f"{mlm_puso}/50"
         },
         'improvement_over_baseline': improvement
     },
@@ -443,8 +443,8 @@ output = {
 }
 
 os.makedirs("gold_standard_dataset/results", exist_ok=True)
-with open("gold_standard_dataset/results/results_bote_buti.json", "w", encoding="utf-8") as f:
+with open("gold_standard_dataset/results/results_poso_puso.json", "w", encoding="utf-8") as f:
     json.dump(output, f, indent=2, ensure_ascii=False)
 
-print(f"✓ Detailed results saved to: gold_standard_dataset/results/results_bote_buti.json")
+print(f"✓ Detailed results saved to: gold_standard_dataset/results/results_poso_puso.json")
 print("="*70)

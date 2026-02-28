@@ -10,7 +10,7 @@
 
   [✅] PHASE 1: Disambiguation Model        - COMPLETE
   [✅] PHASE 2: MaBaybay Integration        - COMPLETE  
-  [⏳] PHASE 3: Gold Standard Dataset       - IN PROGRESS (1/15 pairs done)
+  [⏳] PHASE 3: Gold Standard Dataset       - IN PROGRESS (3/15 pairs tested)
   [⬜] PHASE 4: Final Evaluation            - PENDING
 
 
@@ -34,17 +34,20 @@
 │                                                                             │
 │ THE FOUR FEATURES:                                                          │
 │                                                                             │
-│ 1. SEMANTIC SIMILARITY (Weight: 0.3)                                       │
-│    • Uses pre-trained RoBERTa model (jcblaise/roberta-tagalog-base)        │
-│    • Computes embeddings for each candidate word                           │
-│    • Compares with context embedding (surrounding unambiguous words)       │
-│    • Words that fit semantically with context get higher scores            │
+│ 1. SEMANTIC CONTEXT (Weight: 0.4) ← HIGHEST WEIGHT                          │
+│    • Uses pre-trained RoBERTa MLM (jcblaise/roberta-tagalog-base)          │
+│    • Pseudo-Log-Likelihood (PLL) scoring: masks each candidate's tokens    │
+│      one at a time and measures how well the model predicts them           │
+│    • Normalized via softmax within candidate set to get [0,1] scores       │
+│    • Much stronger signal than cosine similarity of mean-pooled embeddings │
+│    • Based on Salazar et al. (2020) "Masked Language Model Scoring"        │
 │    • Example: "buti" scores higher in "___na lang at dumating ka"          │
 │                                                                             │
-│ 2. CORPUS FREQUENCY (Weight: 0.4) ← HIGHEST WEIGHT                         │
+│ 2. CORPUS FREQUENCY (Weight: 0.3)                                          │
 │    • Counts word occurrences in Filipino text corpora                      │
 │    • Uses Tagalog_Literary_Text.txt (~203k words)                          │
 │    • Uses Tagalog_Religious_Text.txt (~87k words)                          │
+│    • Uses Tagalog_Balita_Texts_Balanced.txt (~299k words)                  │
 │    • Log-normalized to prevent common words from dominating                │
 │    • Real Filipino words beat rare/non-words                               │
 │                                                                             │
@@ -61,7 +64,7 @@
 │    • Properly formed Filipino words score higher                           │
 │                                                                             │
 │ FINAL SCORING FORMULA:                                                      │
-│ score = 0.3×semantic + 0.4×frequency + 0.2×cooccur + 0.1×morphology        │
+│ score = 0.4×semantic + 0.3×frequency + 0.2×cooccur + 0.1×morphology        │
 │                                                                             │
 │ FILES CREATED:                                                              │
 │ • src/disambiguator.py  - Main disambiguation logic                        │
@@ -85,9 +88,9 @@
 │          ▼                        ▼                        ▼                │
 │  ┌───────────────┐      ┌───────────────┐      ┌───────────────┐           │
 │  │   SEMANTIC    │      │   FREQUENCY   │      │ CO-OCCURRENCE │           │
-│  │   SIMILARITY  │      │    SCORE      │      │   (BIGRAM)    │           │
+│  │  CONTEXT/PLL  │      │    SCORE      │      │   (BIGRAM)    │           │
 │  │   RoBERTa     │      │   Corpus      │      │   P(word|     │           │
-│  │  Weight: 0.3  │      │  Weight: 0.4  │      │  Weight: 0.2  │           │
+│  │  Weight: 0.4  │      │  Weight: 0.3  │      │  Weight: 0.2  │           │
 │  └───────┬───────┘      └───────┬───────┘      └───────┬───────┘           │
 │          │                      │                      │                    │
 │          │              ┌───────────────┐              │                    │

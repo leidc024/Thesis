@@ -1,0 +1,49 @@
+{
+  "ambiguous_pair": "polo, pulo",
+  "baybayin": "ᜉᜓᜎᜓ",
+  "type": "O/U",
+  "test_sentences": 99,
+  "comparison": {
+    "baseline": {
+      "name": "MaBaybay Default (First Candidate)",
+      "strategy": "Always pick first candidate from transliteration",
+      "accuracy": 49.0,
+      "correct": 49,
+      "polo_accuracy": "49/50",
+      "pulo_accuracy": "0/50"
+    },
+    "cosine_only": {
+      "name": "Pure Cosine Similarity (Semantic Only)",
+      "strategy": "100% cosine similarity of mean-pooled RoBERTa embeddings, no other features",
+      "accuracy": 72.16494845360825,
+      "correct": 70,
+      "polo_accuracy": "40/50",
+      "pulo_accuracy": "30/50"
+    },
+    "cosine_multi": {
+      "name": "Cosine Similarity + Multi-Feature (Old Method)",
+      "strategy": "Cosine similarity semantic + frequency + cooccurrence + morphology",
+      "accuracy": 49.48453608247423,
+      "correct": 48,
+      "polo_accuracy": "47/50",
+      "pulo_accuracy": "1/50"
+    },
+    "mlm_multi": {
+      "name": "MLM PLL + Multi-Feature (Current)",
+      "strategy": "MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology",
+      "accuracy": 59.79381443298969,
+      "correct": 58,
+      "polo_accuracy": "47/50",
+      "pulo_accuracy": "11/50"
+    },
+    "improvement_over_baseline": 10.793814432989691
+  },
+  "metrics": {
+    "total_words": 680,
+    "correct_words": 641,
+    "total_accuracy": 0.9426470588235294,
+    "total_ambiguous": 97,
+    "correct_ambiguous": 58,
+    "ambiguous_accuracy": 0.5979381443298969
+  }
+}

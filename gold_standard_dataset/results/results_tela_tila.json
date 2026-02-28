@@ -1,7 +1,7 @@
 {
-  "ambiguous_pair": "boto, buto",
-  "baybayin": "ᜊᜓᜆᜓ",
-  "type": "O/U",
+  "ambiguous_pair": "tela, tila",
+  "baybayin": "ᜆᜒᜎ",
+  "type": "E/I",
   "test_sentences": 100,
   "comparison": {
     "baseline": {
@@ -9,39 +9,39 @@
       "strategy": "Always pick first candidate from transliteration",
       "accuracy": 50.0,
       "correct": 50,
-      "boto_accuracy": "50/50",
-      "buto_accuracy": "0/50"
+      "tela_accuracy": "50/50",
+      "tila_accuracy": "0/50"
     },
     "cosine_only": {
       "name": "Pure Cosine Similarity (Semantic Only)",
       "strategy": "100% cosine similarity of mean-pooled RoBERTa embeddings, no other features",
-      "accuracy": 83.0,
-      "correct": 83,
-      "boto_accuracy": "49/50",
-      "buto_accuracy": "34/50"
+      "accuracy": 45.0,
+      "correct": 45,
+      "tela_accuracy": "24/50",
+      "tila_accuracy": "21/50"
     },
     "cosine_multi": {
       "name": "Cosine Similarity + Multi-Feature (Old Method)",
       "strategy": "Cosine similarity semantic + frequency + cooccurrence + morphology",
-      "accuracy": 74.0,
-      "correct": 74,
-      "boto_accuracy": "50/50",
-      "buto_accuracy": "24/50"
+      "accuracy": 50.0,
+      "correct": 50,
+      "tela_accuracy": "0/50",
+      "tila_accuracy": "50/50"
     },
     "mlm_multi": {
       "name": "MLM PLL + Multi-Feature (Current)",
       "strategy": "MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology",
       "accuracy": 99.0,
       "correct": 99,
-      "boto_accuracy": "49/50",
-      "buto_accuracy": "50/50"
+      "tela_accuracy": "49/50",
+      "tila_accuracy": "50/50"
     },
     "improvement_over_baseline": 49.0
   },
   "metrics": {
-    "total_words": 844,
-    "correct_words": 843,
-    "total_accuracy": 0.9988151658767772,
+    "total_words": 760,
+    "correct_words": 759,
+    "total_accuracy": 0.9986842105263158,
     "total_ambiguous": 100,
     "correct_ambiguous": 99,
     "ambiguous_accuracy": 0.99

@@ -1,9 +1,9 @@
 """
 Baybayin Disambiguation Model
-Context-aware transliteration disambiguation using RoBERTa embeddings and linguistic features.
+Context-aware transliteration disambiguation using RoBERTa MLM scoring and linguistic features.
 
-This module implements a graph-based approach combining:
-1. Semantic similarity (RoBERTa embeddings)
+This module implements a multi-feature approach combining:
+1. Semantic context (RoBERTa Masked Language Model pseudo-log-likelihood)
 2. Corpus frequency statistics
 3. Co-occurrence (bigram) probabilities  
 4. Morphological analysis
@@ -12,13 +12,19 @@ Architecture:
 - Input: OCR candidates (ambiguous positions have multiple options)
 - Process: Score each candidate using weighted multi-feature approach
 - Output: Disambiguated sentence with best candidates selected
+
+Key innovation: Uses Pseudo-Log-Likelihood (PLL) scoring from the MLM head
+instead of cosine similarity of mean-pooled embeddings. PLL directly measures
+how well each candidate fits the sentence context, providing much stronger
+semantic signal especially for rare words.
 """
 
+import math
 import torch
 import numpy as np
 import re
 from typing import List, Dict, Tuple, Optional, Union
-from transformers import AutoTokenizer, AutoModel
+from transformers import AutoTokenizer, AutoModelForMaskedLM
 from sklearn.metrics.pairwise import cosine_similarity
 from tqdm import tqdm
 
@@ -88,13 +94,13 @@ class BaybayinDisambiguator:
         print("BAYBAYIN DISAMBIGUATOR - Initialization")
         print("=" * 60)
         
-        # Load RoBERTa model
-        print(f"\n[1/3] Loading RoBERTa: {model_name}")
+        # Load RoBERTa model (MLM head for pseudo-log-likelihood scoring)
+        print(f"\n[1/3] Loading RoBERTa MLM: {model_name}")
         print(f"      Device: {self.device}")
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model = AutoModel.from_pretrained(model_name).to(self.device)
+        self.model = AutoModelForMaskedLM.from_pretrained(model_name).to(self.device)
         self.model.eval()
-        print("      [OK] Model loaded")
+        print("      [OK] Model loaded (with MLM head for PLL scoring)")
         
         # Load corpus statistics
         print(f"\n[2/3] Loading corpus statistics...")
@@ -114,6 +120,7 @@ class BaybayinDisambiguator:
     def get_embedding(self, text: str) -> np.ndarray:
         """
         Get mean-pooled RoBERTa embedding for text.
+        Uses hidden states from the MLM model's base encoder.
         
         Args:
             text: Input text string
@@ -130,8 +137,9 @@ class BaybayinDisambiguator:
                 max_length=128
             ).to(self.device)
             
-            outputs = self.model(**inputs)
-            embeddings = outputs.last_hidden_state
+            # Use output_hidden_states to get base model embeddings from MLM model
+            outputs = self.model(**inputs, output_hidden_states=True)
+            embeddings = outputs.hidden_states[-1]  # Last layer hidden states
             
             # Mean pooling with attention mask
             mask = inputs['attention_mask'].unsqueeze(-1)
@@ -142,21 +150,157 @@ class BaybayinDisambiguator:
             
             return mean_emb.cpu().numpy().flatten()
     
+    def _find_subtoken_positions(
+        self,
+        token_ids: torch.Tensor,
+        subtoken_ids: List[int]
+    ) -> List[int]:
+        """
+        Find positions of a subtoken sequence within a full token sequence.
+        
+        Args:
+            token_ids: Full tokenized sentence (tensor)
+            subtoken_ids: Subtoken IDs of the candidate word
+            
+        Returns:
+            List of positions where the subtoken sequence starts, or empty list
+        """
+        seq = token_ids.tolist()
+        sub = subtoken_ids
+        n = len(sub)
+        
+        for i in range(len(seq) - n + 1):
+            if seq[i:i+n] == sub:
+                return list(range(i, i + n))
+        
+        return []
+    
+    def _get_candidate_pll(
+        self,
+        sentence_words: List[str],
+        position: int,
+        candidate: str
+    ) -> float:
+        """
+        Compute Pseudo-Log-Likelihood (PLL) score for a candidate word.
+        
+        PLL measures how well a word fits in context by masking each of its
+        subtokens one at a time and summing the log-probabilities.
+        Higher PLL = more natural/probable word in that context.
+        
+        Reference: Salazar et al. (2020) "Masked Language Model Scoring"
+        
+        Args:
+            sentence_words: List of words in the sentence
+            position: Index of the ambiguous word position
+            candidate: Candidate word to score
+            
+        Returns:
+            PLL score (negative float, higher = better fit)
+        """
+        # Build sentence with candidate inserted
+        words = list(sentence_words)
+        words[position] = candidate
+        full_sentence = ' '.join(words)
+        
+        # Tokenize the full sentence
+        encoding = self.tokenizer(
+            full_sentence,
+            return_tensors='pt',
+            truncation=True,
+            max_length=128
+        )
+        token_ids = encoding['input_ids'][0].clone().to(self.device)
+        attention_mask = encoding['attention_mask'][0].to(self.device)
+        
+        # Find candidate's subtoken positions
+        cand_tokens = self.tokenizer.encode(' ' + candidate, add_special_tokens=False)
+        cand_positions = self._find_subtoken_positions(token_ids.cpu(), cand_tokens)
+        
+        if not cand_positions:
+            # Try without space prefix (for sentence-initial words)
+            cand_tokens = self.tokenizer.encode(candidate, add_special_tokens=False)
+            cand_positions = self._find_subtoken_positions(token_ids.cpu(), cand_tokens)
+        
+        if not cand_positions:
+            return -100.0  # Very low score for unfound words
+        
+        # Compute PLL: mask each subtoken one at a time, sum log-probs
+        total_log_prob = 0.0
+        
+        for pos in cand_positions:
+            masked = token_ids.clone()
+            original_token = masked[pos].item()
+            masked[pos] = self.tokenizer.mask_token_id
+            
+            with torch.no_grad():
+                outputs = self.model(
+                    masked.unsqueeze(0),
+                    attention_mask=attention_mask.unsqueeze(0)
+                )
+                logits = outputs.logits[0, pos]
+                log_probs = torch.log_softmax(logits, dim=-1)
+                total_log_prob += log_probs[original_token].item()
+        
+        return total_log_prob
+    
+    def _get_mlm_scores(
+        self,
+        sentence_words: List[str],
+        position: int,
+        candidates: List[str]
+    ) -> Dict[str, float]:
+        """
+        Compute normalized MLM scores for all candidates at an ambiguous position.
+        
+        Uses PLL for each candidate, then normalizes via softmax to get
+        probability-like scores that sum to 1 within the candidate set.
+        
+        Args:
+            sentence_words: List of words (with None at ambiguous positions)
+            position: Index of the current ambiguous position
+            candidates: List of candidate words
+            
+        Returns:
+            Dict mapping each candidate to its normalized MLM score [0, 1]
+        """
+        pll_scores = {}
+        for candidate in candidates:
+            pll_scores[candidate] = self._get_candidate_pll(
+                sentence_words, position, candidate
+            )
+        
+        # Normalize via softmax (converts log-likelihoods to probabilities)
+        max_pll = max(pll_scores.values())
+        exp_scores = {
+            c: math.exp(s - max_pll) 
+            for c, s in pll_scores.items()
+        }
+        total = sum(exp_scores.values())
+        
+        if total > 0:
+            return {c: exp_scores[c] / total for c in candidates}
+        else:
+            # Fallback: equal scores
+            return {c: 1.0 / len(candidates) for c in candidates}
+    
     def score_candidate(
         self,
         candidate: str,
         context_embedding: np.ndarray,
         prev_word: Optional[str] = None,
-        next_word: Optional[str] = None
+        next_word: Optional[str] = None,
+        mlm_score: Optional[float] = None
     ) -> Dict[str, float]:
         """
         Compute multi-feature score for a candidate word.
         
         Args:
             candidate: Candidate word to score
-            context_embedding: Embedding of sentence context
+            context_embedding: Embedding of sentence context (fallback for semantic)
             prev_word: Previous word in sentence (for bigram)
             next_word: Next word in sentence (for bigram)
+            mlm_score: Pre-computed MLM score from PLL (if available)
             
         Returns:
             Dict with individual feature scores and combined score
@@ -164,12 +308,17 @@ class BaybayinDisambiguator:
         scores = {}
         
         # 1. Semantic similarity with context
-        cand_emb = self.get_embedding(candidate)
-        semantic_sim = cosine_similarity(
-            cand_emb.reshape(1, -1),
-            context_embedding.reshape(1, -1)
-        )[0, 0]
-        scores['semantic'] = max(0.0, float(semantic_sim))
+        if mlm_score is not None:
+            # Use MLM-based PLL score (much stronger signal than cosine similarity)
+            scores['semantic'] = mlm_score
+        else:
+            # Fallback to cosine similarity of mean-pooled embeddings
+            cand_emb = self.get_embedding(candidate)
+            semantic_sim = cosine_similarity(
+                cand_emb.reshape(1, -1),
+                context_embedding.reshape(1, -1)
+            )[0, 0]
+            scores['semantic'] = max(0.0, float(semantic_sim))
         
         # 2. Corpus frequency
         scores['frequency'] = self.corpus.get_frequency_score(candidate)
@@ -198,7 +347,8 @@ class BaybayinDisambiguator:
     def disambiguate(
         self,
         ocr_candidates: List[Union[str, List[str]]],
-        ground_truth: str = None
+        ground_truth: str = None,
+        use_mlm: bool = True
     ) -> Tuple[List[str], Dict]:
         """
         Disambiguate a sentence given OCR candidates.
@@ -208,6 +358,8 @@ class BaybayinDisambiguator:
                 - str: unambiguous word
                 - List[str]: ambiguous candidates to choose from
             ground_truth: Optional ground truth for context (used in evaluation)
+            use_mlm: If True, use MLM PLL scoring for semantic feature.
+                     If False, use cosine similarity of mean-pooled embeddings.
             
         Returns:
             Tuple of (disambiguated_words, debug_info)
@@ -233,6 +385,15 @@ class BaybayinDisambiguator:
         
         context_embedding = self.get_embedding(context)
         
+        # Build sentence word list for MLM scoring
+        # Unambiguous words stay as-is; ambiguous positions are placeholders
+        sentence_words = []
+        for c in ocr_candidates:
+            if isinstance(c, str):
+                sentence_words.append(c)
+            else:
+                sentence_words.append(None)  # Placeholder for ambiguous position
+        
         # Track resolved words for co-occurrence
         resolved = [
             None if isinstance(c, list) else c 
@@ -252,11 +413,36 @@ class BaybayinDisambiguator:
                         next_word = ocr_candidates[j]
                         break
                 
-                # Score all candidates
-                scores = {
-                    c: self.score_candidate(c, context_embedding, prev_word, next_word)
-                    for c in item
-                }
+                if use_mlm:
+                    # Build MLM sentence: fill in resolved words for other ambiguous positions
+                    mlm_words = list(sentence_words)
+                    for i in range(len(mlm_words)):
+                        if mlm_words[i] is None and i != pos:
+                            # Use resolved word if available, else first candidate
+                            if resolved[i]:
+                                mlm_words[i] = resolved[i]
+                            elif isinstance(ocr_candidates[i], list):
+                                mlm_words[i] = ocr_candidates[i][0]
+                    
+                    # Get MLM scores for all candidates (single set of forward passes)
+                    mlm_scores = self._get_mlm_scores(mlm_words, pos, item)
+                    
+                    # Score all candidates with MLM-enhanced semantic feature
+                    scores = {
+                        c: self.score_candidate(
+                            c, context_embedding, prev_word, next_word,
+                            mlm_score=mlm_scores[c]
+                        )
+                        for c in item
+                    }
+                else:
+                    # Use cosine similarity for semantic scoring (no MLM)
+                    scores = {
+                        c: self.score_candidate(
+                            c, context_embedding, prev_word, next_word
+                        )
+                        for c in item
+                    }
                 
                 # Select best candidate
                 best = max(scores.keys(), key=lambda c: scores[c]['combined'])
@@ -274,7 +460,9 @@ class BaybayinDisambiguator:
         self,
         test_data: List[Dict],
         show_progress: bool = True,
-        use_ground_truth_context: bool = False  # Set to False for realistic evaluation
+        use_ground_truth_context: bool = False,  # Set to False for realistic evaluation
+        use_mlm: bool = True,
+        weights_override: Dict[str, float] = None
     ) -> Tuple[Dict, List]:
         """
         Evaluate model on test dataset.
@@ -284,10 +472,18 @@ class BaybayinDisambiguator:
             show_progress: Show tqdm progress bar
             use_ground_truth_context: If True, use ground truth for context (unrealistic).
                                       If False, use only unambiguous words (realistic).
+            use_mlm: If True, use MLM PLL for semantic. If False, use cosine similarity.
+            weights_override: Temporary weight dict to use instead of self.weights.
             
         Returns:
             Tuple of (metrics_dict, detailed_results)
         """
+        # Temporarily override weights if provided
+        original_weights = None
+        if weights_override is not None:
+            original_weights = self.weights.copy()
+            self.weights = weights_override
+        
         total_words = 0
         correct_words = 0
         total_ambiguous = 0
@@ -303,10 +499,10 @@ class BaybayinDisambiguator:
             
             # Only pass ground truth if explicitly requested (not realistic)
             if use_ground_truth_context:
-                predicted, debug = self.disambiguate(candidates, gt)
+                predicted, debug = self.disambiguate(candidates, gt, use_mlm=use_mlm)
             else:
                 # Realistic evaluation: no ground truth, just like real MaBaybay usage
-                predicted, debug = self.disambiguate(candidates)
+                predicted, debug = self.disambiguate(candidates, use_mlm=use_mlm)
             
             for i, (pred, gt_word) in enumerate(zip(predicted, gt_words)):
                 if i >= len(candidates):
@@ -332,6 +528,10 @@ class BaybayinDisambiguator:
                 'predicted': ' '.join(predicted),
                 'debug': debug
             })
+        
+        # Restore original weights if they were overridden
+        if original_weights is not None:
+            self.weights = original_weights
         
         metrics = {
             'total_words': total_words,

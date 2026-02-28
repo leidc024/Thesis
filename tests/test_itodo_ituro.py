@@ -1,5 +1,5 @@
 """
-Test disambiguator on bote/buti ambiguous pair
+Test disambiguator on itodo/ituro ambiguous pair
 Compares Context-Aware Baybayin Transliteration vs MaBaybay Default (First Candidate)
 Testing with 100 sentences (50 each)
 """
@@ -24,12 +24,12 @@ def get_clean_words(sentence):
     return words
 
 # Read the sentences from gold standard dataset
-SENTENCE_FILE = "gold_standard_dataset/sentences/03_bote_buti.txt"
+SENTENCE_FILE = "gold_standard_dataset/sentences/07_itodo_ituro.txt"
 
 def parse_sentence_file(filepath):
-    """Parse sentence file - sentences with bote vs buti are mixed throughout"""
-    bote_sentences = []
-    buti_sentences = []
+    """Parse sentence file - sentences with itodo vs ituro are mixed throughout"""
+    itodo_sentences = []
+    ituro_sentences = []
     
     with open(filepath, "r", encoding="utf-8") as f:
         lines = [line.strip() for line in f if line.strip()]  # Remove empty lines
@@ -37,73 +37,73 @@ def parse_sentence_file(filepath):
     # Separate based on exact word match only (case-insensitive, ignore punctuation)
     for line in lines:
         words = get_clean_words(line)
-        if "bote" in words:
-            bote_sentences.append(line)
-        elif "buti" in words:
-            buti_sentences.append(line)
+        if "itodo" in words:
+            itodo_sentences.append(line)
+        elif "ituro" in words:
+            ituro_sentences.append(line)
     
-    return bote_sentences, buti_sentences
+    return itodo_sentences, ituro_sentences
 
-bote_sentences, buti_sentences = parse_sentence_file(SENTENCE_FILE)
+itodo_sentences, ituro_sentences = parse_sentence_file(SENTENCE_FILE)
 
 print(f"="*70)
-print("BOTE/BUTI DISAMBIGUATION TEST")
+print("ITODO/ITURO DISAMBIGUATION TEST")
 print("Comparing: Context-Aware Disambiguation vs MaBaybay Default (First Candidate)")
 print(f"="*70)
 print(f"\nLoaded from: {SENTENCE_FILE}")
 
-print(f"\nBote sentences: {len(bote_sentences)}")
-print(f"Buti sentences: {len(buti_sentences)}")
+print(f"\nItodo sentences: {len(itodo_sentences)}")
+print(f"Ituro sentences: {len(ituro_sentences)}")
 
 # Debug: Check which sentences contain target words
 print("\n" + "="*50)
 print("DEBUGGING: Checking for target words")
 print("="*50)
 
-bote_with_target = []
-bote_without_target = []
-buti_with_target = []
-buti_without_target = []
+itodo_with_target = []
+itodo_without_target = []
+ituro_with_target = []
+ituro_without_target = []
 
-for i, sent in enumerate(bote_sentences, 1):
+for i, sent in enumerate(itodo_sentences, 1):
     words = get_clean_words(sent)
-    if "bote" in words:
-        bote_with_target.append((i, sent))
+    if "itodo" in words:
+        itodo_with_target.append((i, sent))
     else:
-        bote_without_target.append((i, sent))
+        itodo_without_target.append((i, sent))
 
-for i, sent in enumerate(buti_sentences, 1):
+for i, sent in enumerate(ituro_sentences, 1):
     words = get_clean_words(sent)
-    if "buti" in words:
-        buti_with_target.append((i+len(bote_sentences), sent))
+    if "ituro" in words:
+        ituro_with_target.append((i+len(itodo_sentences), sent))
     else:
-        buti_without_target.append((i+len(bote_sentences), sent))
+        ituro_without_target.append((i+len(itodo_sentences), sent))
 
-print(f"\nBOTE sentences with 'bote': {len(bote_with_target)}/{len(bote_sentences)}")
-print(f"BUTI sentences with 'buti': {len(buti_with_target)}/{len(buti_sentences)}")
+print(f"\nITODO sentences with 'itodo': {len(itodo_with_target)}/{len(itodo_sentences)}")
+print(f"ITURO sentences with 'ituro': {len(ituro_with_target)}/{len(ituro_sentences)}")
 
-if bote_without_target:
-    print(f"\n⚠️  BOTE sentences WITHOUT 'bote' word ({len(bote_without_target)}):")
-    for line_num, sent in bote_without_target[:5]:  # Show first 5
+if itodo_without_target:
+    print(f"\n⚠️  ITODO sentences WITHOUT 'itodo' word ({len(itodo_without_target)}):")
+    for line_num, sent in itodo_without_target[:5]:  # Show first 5
         print(f"  Line {line_num}: {sent}")
-    if len(bote_without_target) > 5:
-        print(f"  ... and {len(bote_without_target) - 5} more")
+    if len(itodo_without_target) > 5:
+        print(f"  ... and {len(itodo_without_target) - 5} more")
 
-if buti_without_target:
-    print(f"\n⚠️  BUTI sentences WITHOUT 'buti' word ({len(buti_without_target)}):")
-    for line_num, sent in buti_without_target[:5]:  # Show first 5
+if ituro_without_target:
+    print(f"\n⚠️  ITURO sentences WITHOUT 'ituro' word ({len(ituro_without_target)}):")
+    for line_num, sent in ituro_without_target[:5]:  # Show first 5
         print(f"  Line {line_num}: {sent}")
-    if len(buti_without_target) > 5:
-        print(f"  ... and {len(buti_without_target) - 5} more")
+    if len(ituro_without_target) > 5:
+        print(f"  ... and {len(ituro_without_target) - 5} more")
 
 # Create test data with OCR candidates
-# For bote/buti, both map to Baybayin ᜊᜓᜆᜒ
-# MaBaybay default order: ["bote", "buti"] (bote is first candidate)
+# For itodo/ituro, both map to Baybayin ᜁᜆᜓᜇᜓ
+# MaBaybay default order: ["itodo", "ituro"] (itodo is first candidate)
 # NOTE: MaBaybay sends ALL words as lowercase, no punctuation (from dictionary lookup)
 test_data = []
 
-# Add bote sentences (ground truth = bote)
-for sent in bote_sentences:
+# Add itodo sentences (ground truth = itodo)
+for sent in itodo_sentences:
     words = sent.split()
     candidates = []
     
@@ -111,9 +111,9 @@ for sent in bote_sentences:
         # Simulate MaBaybay output: lowercase, no punctuation (dictionary words)
         clean_word = re.sub(r'[^\w]', '', word.lower())
         
-        if clean_word == "bote":
-            # Ambiguous position - both candidates
-            candidates.append(["bote", "buti"])
+        if clean_word == "itodo":
+            # Ambiguous position - both candidates (MaBaybay order: itodo first)
+            candidates.append(["itodo", "ituro"])
         else:
             # Unambiguous word (lowercase, no punctuation - same as MaBaybay)
             candidates.append(clean_word)
@@ -123,8 +123,8 @@ for sent in bote_sentences:
         'ocr_candidates': candidates
     })
 
-# Add buti sentences (ground truth = buti)
-for sent in buti_sentences:
+# Add ituro sentences (ground truth = ituro)
+for sent in ituro_sentences:
     words = sent.split()
     candidates = []
     
@@ -132,9 +132,9 @@ for sent in buti_sentences:
         # Simulate MaBaybay output: lowercase, no punctuation (dictionary words)
         clean_word = re.sub(r'[^\w]', '', word.lower())
         
-        if clean_word == "buti":
-            # Ambiguous position - both candidates
-            candidates.append(["bote", "buti"])
+        if clean_word == "ituro":
+            # Ambiguous position - both candidates (MaBaybay order: itodo first)
+            candidates.append(["itodo", "ituro"])
         else:
             # Unambiguous word (lowercase, no punctuation - same as MaBaybay)
             candidates.append(clean_word)
@@ -153,27 +153,27 @@ print("\n" + "="*70)
 print("BASELINE: MaBaybay Default (Always Pick First Candidate)")
 print("="*70)
 
-# First candidate is always "bote" in MaBaybay's transliteration output
+# First candidate is always "itodo" in MaBaybay's transliteration output
 baseline_correct_total = 0
-baseline_correct_bote = 0
-baseline_correct_buti = 0
+baseline_correct_itodo = 0
+baseline_correct_ituro = 0
 
 for test_item in test_data:
     gt = test_item['ground_truth']
     gt_words = get_clean_words(gt)
     
-    # Check if sentence contains target words
-    if "bote" in gt_words:
+    # Baseline always picks "itodo" (first candidate in MaBaybay order)
+    if "itodo" in gt_words:
         baseline_correct_total += 1
-        baseline_correct_bote += 1
-    # If ground truth is "buti", baseline gets it wrong (picks "bote")
-    # So baseline_correct_buti stays 0
+        baseline_correct_itodo += 1
+    # If ground truth is "ituro", baseline gets it wrong (picks "itodo")
+    # So baseline_correct_ituro stays 0
 
 baseline_accuracy = baseline_correct_total / 100 * 100  # 100 total sentences
 
-print(f"\nBaseline Strategy: Always select 'bote' (first candidate)")
-print(f"Bote accuracy: {baseline_correct_bote}/50 = {baseline_correct_bote/50:.2%}")
-print(f"Buti accuracy: {baseline_correct_buti}/50 = {baseline_correct_buti/50:.2%}")
+print(f"\nBaseline Strategy: Always select 'itodo' (first candidate)")
+print(f"Itodo accuracy: {baseline_correct_itodo}/50 = {baseline_correct_itodo/50:.2%}")
+print(f"Ituro accuracy: {baseline_correct_ituro}/50 = {baseline_correct_ituro/50:.2%}")
 print(f"Overall baseline accuracy: {baseline_correct_total}/100 = {baseline_accuracy:.2f}%")
 
 # ============================================================================
@@ -259,7 +259,7 @@ print("\n" + "="*70)
 print("CONTEXT-AWARE DISAMBIGUATION RESULTS")
 print("="*70)
 
-print(f"\nAmbiguous words (bote/buti): {metrics['total_ambiguous']}")
+print(f"\nAmbiguous words (itodo/ituro): {metrics['total_ambiguous']}")
 print(f"Correct disambiguations: {metrics['correct_ambiguous']}")
 print(f"★ Context-aware accuracy: {metrics['ambiguous_accuracy']:.2%} ★")
 
@@ -269,10 +269,10 @@ print("DETAILED PREDICTIONS - ALL RESULTS")
 print("="*70)
 
 # Collect ALL examples, categorized
-correct_bote_examples = []
-incorrect_bote_examples = []
-correct_buti_examples = []
-incorrect_buti_examples = []
+correct_itodo_examples = []
+incorrect_itodo_examples = []
+correct_ituro_examples = []
+incorrect_ituro_examples = []
 
 for i, (test_item, result_item) in enumerate(zip(test_data, results)):
     gt = test_item['ground_truth']
@@ -281,68 +281,68 @@ for i, (test_item, result_item) in enumerate(zip(test_data, results)):
     gt_words = get_clean_words(gt)
     pred_words = get_clean_words(pred)
     
-    # Check if this is a bote or buti sentence
-    if "bote" in gt_words:
-        if "bote" in pred_words:
-            correct_bote_examples.append((i+1, gt, pred))
+    # Check if this is an itodo or ituro sentence
+    if "itodo" in gt_words:
+        if "itodo" in pred_words:
+            correct_itodo_examples.append((i+1, gt, pred))
         else:
-            incorrect_bote_examples.append((i+1, gt, pred))
-    elif "buti" in gt_words:
-        if "buti" in pred_words:
-            correct_buti_examples.append((i+1, gt, pred))
+            incorrect_itodo_examples.append((i+1, gt, pred))
+    elif "ituro" in gt_words:
+        if "ituro" in pred_words:
+            correct_ituro_examples.append((i+1, gt, pred))
         else:
-            incorrect_buti_examples.append((i+1, gt, pred))
+            incorrect_ituro_examples.append((i+1, gt, pred))
 
-# Display BOTE results
+# Display ITODO results
 print(f"\n{'='*70}")
-print(f"BOTE SENTENCES: {len(correct_bote_examples)}/50 CORRECT")
+print(f"ITODO SENTENCES: {len(correct_itodo_examples)}/50 CORRECT")
 print(f"{'='*70}")
 
-if correct_bote_examples:
-    print(f"\n✓ CORRECT BOTE PREDICTIONS ({len(correct_bote_examples)}):")
-    for idx, gt, pred in correct_bote_examples:
+if correct_itodo_examples:
+    print(f"\n✓ CORRECT ITODO PREDICTIONS ({len(correct_itodo_examples)}):")
+    for idx, gt, pred in correct_itodo_examples:
         print(f"\n{idx}. ✓ {gt}")
 
-if incorrect_bote_examples:
-    print(f"\n✗ INCORRECT BOTE PREDICTIONS ({len(incorrect_bote_examples)}):")
-    for idx, gt, pred in incorrect_bote_examples:
+if incorrect_itodo_examples:
+    print(f"\n✗ INCORRECT ITODO PREDICTIONS ({len(incorrect_itodo_examples)}):")
+    for idx, gt, pred in incorrect_itodo_examples:
         print(f"\n{idx}. ✗ Ground Truth: {gt}")
         print(f"      Predicted:    {pred}")
 
-# Display BUTI results
+# Display ITURO results
 print(f"\n{'='*70}")
-print(f"BUTI SENTENCES: {len(correct_buti_examples)}/50 CORRECT")
+print(f"ITURO SENTENCES: {len(correct_ituro_examples)}/50 CORRECT")
 print(f"{'='*70}")
 
-if correct_buti_examples:
-    print(f"\n✓ CORRECT BUTI PREDICTIONS ({len(correct_buti_examples)}):")
-    for idx, gt, pred in correct_buti_examples:
+if correct_ituro_examples:
+    print(f"\n✓ CORRECT ITURO PREDICTIONS ({len(correct_ituro_examples)}):")
+    for idx, gt, pred in correct_ituro_examples:
         print(f"\n{idx}. ✓ {gt}")
 
-if incorrect_buti_examples:
-    print(f"\n✗ INCORRECT BUTI PREDICTIONS ({len(incorrect_buti_examples)}):")
-    for idx, gt, pred in incorrect_buti_examples:
+if incorrect_ituro_examples:
+    print(f"\n✗ INCORRECT ITURO PREDICTIONS ({len(incorrect_ituro_examples)}):")
+    for idx, gt, pred in incorrect_ituro_examples:
         print(f"\n{idx}. ✗ Ground Truth: {gt}")
         print(f"      Predicted:    {pred}")
 
 # Breakdown by word type for MLM method (used in detailed display above)
-bote_correct = 0
-buti_correct = 0
+itodo_correct = 0
+ituro_correct = 0
 for test_item, result_item in zip(test_data, mlm_results):
     gt_words = get_clean_words(test_item['ground_truth'])
     pred_words = get_clean_words(result_item['predicted'])
-    if "bote" in gt_words:
-        if "bote" in pred_words:
-            bote_correct += 1
-    elif "buti" in gt_words:
-        if "buti" in pred_words:
-            buti_correct += 1
+    if "itodo" in gt_words:
+        if "itodo" in pred_words:
+            itodo_correct += 1
+    elif "ituro" in gt_words:
+        if "ituro" in pred_words:
+            ituro_correct += 1
 
 print("\n" + "="*70)
 print("BREAKDOWN BY WORD (MLM Method)")
 print("="*70)
-print(f"\nBote accuracy: {bote_correct}/50 = {bote_correct/50:.2%}")
-print(f"Buti accuracy: {buti_correct}/50 = {buti_correct/50:.2%}")
+print(f"\nItodo accuracy: {itodo_correct}/50 = {itodo_correct/50:.2%}")
+print(f"Ituro accuracy: {ituro_correct}/50 = {ituro_correct/50:.2%}")
 
 # ============================================================================
 # COMPARISON SUMMARY
@@ -371,38 +371,38 @@ def count_word_accuracy(result_list, word1, word2):
                 w2_correct += 1
     return w1_correct, w2_correct
 
-cosine_only_bote, cosine_only_buti = count_word_accuracy(cosine_only_results, "bote", "buti")
-cosine_multi_bote, cosine_multi_buti = count_word_accuracy(cosine_multi_results, "bote", "buti")
-mlm_bote, mlm_buti = count_word_accuracy(mlm_results, "bote", "buti")
+cosine_only_itodo, cosine_only_ituro = count_word_accuracy(cosine_only_results, "itodo", "ituro")
+cosine_multi_itodo, cosine_multi_ituro = count_word_accuracy(cosine_multi_results, "itodo", "ituro")
+mlm_itodo, mlm_ituro = count_word_accuracy(mlm_results, "itodo", "ituro")
 
 print(f"""
-┌──────────────────────────────────────────────────────────────────────────┐
+┌──────────────────────────────────────────────────────────────────────────────┐
 │                       DISAMBIGUATION RESULTS                             │
 ├──────────────────────────────┬──────────────┬────────────┬───────────────┤
-│        Method                │   Accuracy   │ Bote (50)  │  Buti (50)    │
+│        Method                │   Accuracy   │ Itodo (50) │  Ituro (50)   │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ MaBaybay Default             │   {baseline_accuracy:6.2f}%    │   {baseline_correct_bote:2d}/50    │    {baseline_correct_buti:2d}/50     │
+│ MaBaybay Default             │   {baseline_accuracy:6.2f}%    │   {baseline_correct_itodo:2d}/50    │    {baseline_correct_ituro:2d}/50     │
 │ (First Candidate)            │              │            │               │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ Pure Cosine Similarity       │   {cosine_only_accuracy:6.2f}%    │   {cosine_only_bote:2d}/50    │    {cosine_only_buti:2d}/50     │
+│ Pure Cosine Similarity       │   {cosine_only_accuracy:6.2f}%    │   {cosine_only_itodo:2d}/50    │    {cosine_only_ituro:2d}/50     │
 │ (Semantic Only)              │ ({cosine_only_imp:+6.2f}%)  │            │               │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ Cosine Sim + Multi-Feature   │   {cosine_multi_accuracy:6.2f}%    │   {cosine_multi_bote:2d}/50    │    {cosine_multi_buti:2d}/50     │
+│ Cosine Sim + Multi-Feature   │   {cosine_multi_accuracy:6.2f}%    │   {cosine_multi_itodo:2d}/50    │    {cosine_multi_ituro:2d}/50     │
 │ (Old Method)                 │ ({cosine_multi_imp:+6.2f}%)  │            │               │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ ★ MLM PLL + Multi-Feature    │   {context_accuracy:6.2f}%    │   {mlm_bote:2d}/50    │    {mlm_buti:2d}/50     │
+│ ★ MLM PLL + Multi-Feature    │   {context_accuracy:6.2f}%    │   {mlm_itodo:2d}/50    │    {mlm_ituro:2d}/50     │
 │   (Current Method)           │ ({improvement:+6.2f}%)  │            │               │
 └──────────────────────────────┴──────────────┴────────────┴───────────────┘
 
 Note: MaBaybay default always returns first candidate from transliteration.
-      For 'ᜊᜓᜆᜒ', candidates are ["bote", "buti"], so baseline always picks "bote".
+      For 'ᜁᜆᜓᜇᜓ', candidates are ["itodo", "ituro"], so baseline always picks "itodo".
 """)
 
 # Save detailed results
 output = {
-    'ambiguous_pair': 'bote, buti',
-    'baybayin': 'ᜊᜓᜆᜒ',
-    'type': 'COMBINED (O/U + E/I)',
+    'ambiguous_pair': 'itodo, ituro',
+    'baybayin': 'ᜁᜆᜓᜇᜓ',
+    'type': 'D/R',
     'test_sentences': len(test_data),
     'comparison': {
         'baseline': {
@@ -410,32 +410,32 @@ output = {
             'strategy': 'Always pick first candidate from transliteration',
             'accuracy': baseline_accuracy,
             'correct': baseline_correct_total,
-            'bote_accuracy': f"{baseline_correct_bote}/50",
-            'buti_accuracy': f"{baseline_correct_buti}/50"
+            'itodo_accuracy': f"{baseline_correct_itodo}/50",
+            'ituro_accuracy': f"{baseline_correct_ituro}/50"
         },
         'cosine_only': {
             'name': 'Pure Cosine Similarity (Semantic Only)',
             'strategy': '100% cosine similarity of mean-pooled RoBERTa embeddings, no other features',
             'accuracy': cosine_only_accuracy,
             'correct': cosine_only_metrics['correct_ambiguous'],
-            'bote_accuracy': f"{cosine_only_bote}/50",
-            'buti_accuracy': f"{cosine_only_buti}/50"
+            'itodo_accuracy': f"{cosine_only_itodo}/50",
+            'ituro_accuracy': f"{cosine_only_ituro}/50"
         },
         'cosine_multi': {
             'name': 'Cosine Similarity + Multi-Feature (Old Method)',
             'strategy': 'Cosine similarity semantic + frequency + cooccurrence + morphology',
             'accuracy': cosine_multi_accuracy,
             'correct': cosine_multi_metrics['correct_ambiguous'],
-            'bote_accuracy': f"{cosine_multi_bote}/50",
-            'buti_accuracy': f"{cosine_multi_buti}/50"
+            'itodo_accuracy': f"{cosine_multi_itodo}/50",
+            'ituro_accuracy': f"{cosine_multi_ituro}/50"
         },
         'mlm_multi': {
             'name': 'MLM PLL + Multi-Feature (Current)',
             'strategy': 'MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology',
             'accuracy': context_accuracy,
             'correct': metrics['correct_ambiguous'],
-            'bote_accuracy': f"{mlm_bote}/50",
-            'buti_accuracy': f"{mlm_buti}/50"
+            'itodo_accuracy': f"{mlm_itodo}/50",
+            'ituro_accuracy': f"{mlm_ituro}/50"
         },
         'improvement_over_baseline': improvement
     },
@@ -443,8 +443,8 @@ output = {
 }
 
 os.makedirs("gold_standard_dataset/results", exist_ok=True)
-with open("gold_standard_dataset/results/results_bote_buti.json", "w", encoding="utf-8") as f:
+with open("gold_standard_dataset/results/results_itodo_ituro.json", "w", encoding="utf-8") as f:
     json.dump(output, f, indent=2, ensure_ascii=False)
 
-print(f"✓ Detailed results saved to: gold_standard_dataset/results/results_bote_buti.json")
+print(f"✓ Detailed results saved to: gold_standard_dataset/results/results_itodo_ituro.json")
 print("="*70)
