@@ -2,28 +2,28 @@
   "ambiguous_pair": "itodo, ituro",
   "baybayin": "ᜁᜆᜓᜇᜓ",
   "type": "D/R",
-  "test_sentences": 100,
+  "test_sentences": 99,
   "comparison": {
     "baseline": {
       "name": "MaBaybay Default (First Candidate)",
       "strategy": "Always pick first candidate from transliteration",
-      "accuracy": 50.0,
-      "correct": 50,
-      "itodo_accuracy": "50/50",
+      "accuracy": 49.0,
+      "correct": 49,
+      "itodo_accuracy": "49/50",
       "ituro_accuracy": "0/50"
     },
     "cosine_only": {
       "name": "Pure Cosine Similarity (Semantic Only)",
       "strategy": "100% cosine similarity of mean-pooled RoBERTa embeddings, no other features",
-      "accuracy": 55.00000000000001,
-      "correct": 55,
-      "itodo_accuracy": "8/50",
+      "accuracy": 56.56565656565656,
+      "correct": 56,
+      "itodo_accuracy": "9/50",
       "ituro_accuracy": "47/50"
     },
     "cosine_multi": {
       "name": "Cosine Similarity + Multi-Feature (Old Method)",
       "strategy": "Cosine similarity semantic + frequency + cooccurrence + morphology",
-      "accuracy": 50.0,
+      "accuracy": 50.505050505050505,
       "correct": 50,
       "itodo_accuracy": "0/50",
       "ituro_accuracy": "50/50"
@@ -31,19 +31,19 @@
     "mlm_multi": {
       "name": "MLM PLL + Multi-Feature (Current)",
       "strategy": "MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology",
-      "accuracy": 56.00000000000001,
+      "accuracy": 56.56565656565656,
       "correct": 56,
       "itodo_accuracy": "6/50",
       "ituro_accuracy": "50/50"
     },
-    "improvement_over_baseline": 6.000000000000007
+    "improvement_over_baseline": 7.56565656565656
   },
   "metrics": {
-    "total_words": 895,
-    "correct_words": 851,
-    "total_accuracy": 0.9508379888268157,
-    "total_ambiguous": 100,
+    "total_words": 904,
+    "correct_words": 861,
+    "total_accuracy": 0.952433628318584,
+    "total_ambiguous": 99,
     "correct_ambiguous": 56,
-    "ambiguous_accuracy": 0.56
+    "ambiguous_accuracy": 0.5656565656565656
   }
 }

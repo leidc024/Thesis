@@ -31,19 +31,19 @@
     "mlm_multi": {
       "name": "MLM PLL + Multi-Feature (Current)",
       "strategy": "MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology",
-      "accuracy": 99.0,
-      "correct": 99,
-      "boto_accuracy": "49/50",
+      "accuracy": 100.0,
+      "correct": 100,
+      "boto_accuracy": "50/50",
       "buto_accuracy": "50/50"
     },
-    "improvement_over_baseline": 49.0
+    "improvement_over_baseline": 50.0
   },
   "metrics": {
-    "total_words": 844,
-    "correct_words": 843,
-    "total_accuracy": 0.9988151658767772,
+    "total_words": 846,
+    "correct_words": 846,
+    "total_accuracy": 1.0,
     "total_ambiguous": 100,
-    "correct_ambiguous": 99,
-    "ambiguous_accuracy": 0.99
+    "correct_ambiguous": 100,
+    "ambiguous_accuracy": 1.0
   }
 }

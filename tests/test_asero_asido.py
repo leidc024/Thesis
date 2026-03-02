@@ -98,7 +98,7 @@ if asido_without_target:
 
 # Create test data with OCR candidates
 # For asero/asido, both map to Baybayin ᜀᜐᜒᜇᜓ
-# MaBaybay default order: ["asido", "asero"] (asido is first candidate)
+# MaBaybay default order: ["asero", "asido"] (asero is first candidate)
 # NOTE: MaBaybay sends ALL words as lowercase, no punctuation (from dictionary lookup)
 test_data = []
 
@@ -112,8 +112,8 @@ for sent in asero_sentences:
         clean_word = re.sub(r'[^\w]', '', word.lower())
         
         if clean_word == "asero":
-            # Ambiguous position - both candidates (MaBaybay order: asido first)
-            candidates.append(["asido", "asero"])
+            # Ambiguous position - both candidates (MaBaybay order: asero first)
+            candidates.append(["asero", "asido"])
         else:
             # Unambiguous word (lowercase, no punctuation - same as MaBaybay)
             candidates.append(clean_word)
@@ -133,8 +133,8 @@ for sent in asido_sentences:
         clean_word = re.sub(r'[^\w]', '', word.lower())
         
         if clean_word == "asido":
-            # Ambiguous position - both candidates (MaBaybay order: asido first)
-            candidates.append(["asido", "asero"])
+            # Ambiguous position - both candidates (MaBaybay order: asero first)
+            candidates.append(["asero", "asido"])
         else:
             # Unambiguous word (lowercase, no punctuation - same as MaBaybay)
             candidates.append(clean_word)
@@ -153,7 +153,7 @@ print("\n" + "="*70)
 print("BASELINE: MaBaybay Default (Always Pick First Candidate)")
 print("="*70)
 
-# First candidate is always "asido" in MaBaybay's transliteration output
+# First candidate is always "asero" in MaBaybay's transliteration output
 baseline_correct_total = 0
 baseline_correct_asero = 0
 baseline_correct_asido = 0
@@ -162,16 +162,16 @@ for test_item in test_data:
     gt = test_item['ground_truth']
     gt_words = get_clean_words(gt)
     
-    # Baseline always picks "asido" (first candidate in MaBaybay order)
-    if "asido" in gt_words:
+    # Baseline always picks "asero" (first candidate in MaBaybay order)
+    if "asero" in gt_words:
         baseline_correct_total += 1
-        baseline_correct_asido += 1
-    # If ground truth is "asero", baseline gets it wrong (picks "asido")
-    # So baseline_correct_asero stays 0
+        baseline_correct_asero += 1
+    # If ground truth is "asido", baseline gets it wrong (picks "asero")
+    # So baseline_correct_asido stays 0
 
 baseline_accuracy = baseline_correct_total / 100 * 100  # 100 total sentences
 
-print(f"\nBaseline Strategy: Always select 'asido' (first candidate)")
+print(f"\nBaseline Strategy: Always select 'asero' (first candidate)")
 print(f"Asero accuracy: {baseline_correct_asero}/50 = {baseline_correct_asero/50:.2%}")
 print(f"Asido accuracy: {baseline_correct_asido}/50 = {baseline_correct_asido/50:.2%}")
 print(f"Overall baseline accuracy: {baseline_correct_total}/100 = {baseline_accuracy:.2f}%")
@@ -395,7 +395,7 @@ print(f"""
 └──────────────────────────────┴──────────────┴────────────┴───────────────┘
 
 Note: MaBaybay default always returns first candidate from transliteration.
-      For 'ᜀᜐᜒᜇᜓ', candidates are ["asido", "asero"], so baseline always picks "asido".
+      For 'ᜀᜐᜒᜇᜓ', candidates are ["asero", "asido"], so baseline always picks "asero".
 """)
 
 # Save detailed results

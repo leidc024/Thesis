@@ -17,33 +17,33 @@
       "strategy": "100% cosine similarity of mean-pooled RoBERTa embeddings, no other features",
       "accuracy": 53.0,
       "correct": 53,
-      "mesa_accuracy": "7/50",
-      "misa_accuracy": "46/50"
+      "mesa_accuracy": "6/50",
+      "misa_accuracy": "47/50"
     },
     "cosine_multi": {
       "name": "Cosine Similarity + Multi-Feature (Old Method)",
       "strategy": "Cosine similarity semantic + frequency + cooccurrence + morphology",
       "accuracy": 52.0,
       "correct": 52,
-      "mesa_accuracy": "7/50",
-      "misa_accuracy": "45/50"
+      "mesa_accuracy": "6/50",
+      "misa_accuracy": "46/50"
     },
     "mlm_multi": {
       "name": "MLM PLL + Multi-Feature (Current)",
       "strategy": "MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology",
-      "accuracy": 95.0,
-      "correct": 95,
-      "mesa_accuracy": "48/50",
-      "misa_accuracy": "47/50"
+      "accuracy": 100.0,
+      "correct": 100,
+      "mesa_accuracy": "50/50",
+      "misa_accuracy": "50/50"
     },
-    "improvement_over_baseline": 45.0
+    "improvement_over_baseline": 50.0
   },
   "metrics": {
-    "total_words": 762,
-    "correct_words": 757,
-    "total_accuracy": 0.9934383202099738,
+    "total_words": 775,
+    "correct_words": 775,
+    "total_accuracy": 1.0,
     "total_ambiguous": 100,
-    "correct_ambiguous": 95,
-    "ambiguous_accuracy": 0.95
+    "correct_ambiguous": 100,
+    "ambiguous_accuracy": 1.0
   }
 }

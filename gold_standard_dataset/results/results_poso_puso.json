@@ -15,9 +15,9 @@
     "cosine_only": {
       "name": "Pure Cosine Similarity (Semantic Only)",
       "strategy": "100% cosine similarity of mean-pooled RoBERTa embeddings, no other features",
-      "accuracy": 47.0,
-      "correct": 47,
-      "poso_accuracy": "42/50",
+      "accuracy": 49.0,
+      "correct": 49,
+      "poso_accuracy": "44/50",
       "puso_accuracy": "5/50"
     },
     "cosine_multi": {
@@ -31,19 +31,19 @@
     "mlm_multi": {
       "name": "MLM PLL + Multi-Feature (Current)",
       "strategy": "MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology",
-      "accuracy": 88.0,
-      "correct": 88,
-      "poso_accuracy": "45/50",
-      "puso_accuracy": "43/50"
+      "accuracy": 92.0,
+      "correct": 92,
+      "poso_accuracy": "46/50",
+      "puso_accuracy": "46/50"
     },
-    "improvement_over_baseline": 38.0
+    "improvement_over_baseline": 42.0
   },
   "metrics": {
-    "total_words": 834,
-    "correct_words": 822,
-    "total_accuracy": 0.9856115107913669,
+    "total_words": 850,
+    "correct_words": 842,
+    "total_accuracy": 0.9905882352941177,
     "total_ambiguous": 100,
-    "correct_ambiguous": 88,
-    "ambiguous_accuracy": 0.88
+    "correct_ambiguous": 92,
+    "ambiguous_accuracy": 0.92
   }
 }
