@@ -20,11 +20,13 @@ WORDS_PER_ROW = 3.0  # Maximum words per row before inserting a line break
 
 # 2.5. Word spacing settings for better OCR recognition
 NORMAL_WORD_SPACING = 1.0  # Normal space between words (1.0 = default)
-EXTRA_WORD_SPACING = 3.0  # Extra space when transitioning between 1-char and 2-char words
+EXTRA_WORD_SPACING = 2.5  # Extra space when transitioning between 1-char and 2-char words
 
 # 3. Set image quality settings for OCR
-IMAGE_PADDING = 30  # Padding around text in pixels (top, left, right)
+IMAGE_PADDING = 30  # Padding around text in pixels (left, right)
+IMAGE_PADDING_TOP = 50  # Extra padding at the top in pixels
 IMAGE_PADDING_BOTTOM = 50  # Extra padding at the bottom in pixels
+
 
 # 4. Set the names for your input file and output folders/files.
 SENTENCES_FILE = os.path.join(SCRIPT_DIR, "filipino_sentences.txt")
@@ -150,11 +152,11 @@ def latin_to_baybayin_tagalog_stylized(text):
             current_char_count = count_baybayin_chars(baybayin_word)
             next_char_count = count_baybayin_chars(processed_words[i + 1])
             
-            # Add extra spacing only when transitioning from 1-char to 2-char words
-            if current_char_count == 1 and next_char_count == 2:
+            # Add extra spacing when transitioning between different character counts
+            if (current_char_count == 1 and next_char_count == 2) or \
+               (current_char_count == 3 and next_char_count == 1):
                 result_parts.append(' ' * int(EXTRA_WORD_SPACING))
             else:
-                # Normal spacing (including 2-char to 1-char transitions)
                 result_parts.append(' ' * int(NORMAL_WORD_SPACING))
     
     processed_line = ''.join(result_parts)
@@ -180,7 +182,8 @@ def latin_to_baybayin_tagalog_stylized(text):
                     next_char_count = count_baybayin_chars(processed_words[i + 1])
                     
                     if (current_char_count == 1 and next_char_count == 2) or \
-                       (current_char_count == 2 and next_char_count == 1):
+                       (current_char_count == 2 and next_char_count == 1) or \
+                       (current_char_count == 3 and next_char_count == 1):
                         row_parts.append(' ' * int(EXTRA_WORD_SPACING))
                     else:
                         row_parts.append(' ' * int(NORMAL_WORD_SPACING))
@@ -230,15 +233,15 @@ def latin_to_baybayin_unicode(text):
                     i += 2
                     
             elif char in 'bkdghlmnprstwy':
-                # Map consonant to base character
+                # Map consonant to base character (correct Baybayin Unicode)
                 base_char = {
-                    'b': '\u1703', 'k': '\u1703', 'g': '\u1703',
-                    'd': '\u1705', 'r': '\u1705',
-                    'l': '\u1706', 'm': '\u1707',
-                    'n': '\u1708', 'p': '\u170A',
-                    's': '\u170B', 't': '\u170C',
-                    'w': '\u170D', 'y': '\u170E',
-                    'h': '\u170F'
+                    'b': '\u170A', 'k': '\u1703', 'g': '\u1704',
+                    'd': '\u1707', 'r': '\u1707',
+                    'l': '\u170E', 'm': '\u170B',
+                    'n': '\u1708', 'p': '\u1709',
+                    's': '\u1710', 't': '\u1706',
+                    'w': '\u170F', 'y': '\u170C',
+                    'h': '\u1711'
                 }.get(char, char)
                 
                 # Check for following vowel
@@ -398,10 +401,10 @@ def generate_images():
                 bbox = gray.point(lambda x: 0 if x > 250 else 255).getbbox()
                 
                 if bbox:
-                    # Add the configured padding (extra padding on bottom)
+                    # Add the configured padding (extra padding on top and bottom)
                     bbox = (
                         max(0, bbox[0] - IMAGE_PADDING),
-                        max(0, bbox[1] - IMAGE_PADDING),
+                        max(0, bbox[1] - IMAGE_PADDING_TOP),
                         min(white_bg.width, bbox[2] + IMAGE_PADDING),
                         min(white_bg.height, bbox[3] + IMAGE_PADDING_BOTTOM)  # Extra bottom padding
                     )

@@ -24,22 +24,27 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 def disambiguate(candidates_json: str) -> str:
     """Load candidates and disambiguate."""
-    # Suppress ALL stdout during model loading (MATLAB captures stdout)
-    # We use devnull to completely silence it, not stderr (which MATLAB also captures on some systems)
     import io
-    
-    # Also suppress transformers warnings
     import warnings
+    
+    # Suppress all warnings and progress bars before importing anything
     warnings.filterwarnings('ignore')
     os.environ['TRANSFORMERS_VERBOSITY'] = 'error'
     os.environ['TOKENIZERS_PARALLELISM'] = 'false'
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+    os.environ['TQDM_DISABLE'] = '1'  # Disable tqdm progress bars
+    
+    # Disable HuggingFace Hub warnings
+    os.environ['HUGGINGFACEHUB_API_TOKEN'] = ''
     
     # Get the directory where this script lives (Thesis folder)
     script_dir = Path(__file__).parent.resolve()
     
-    # Completely suppress stdout during initialization
+    # Suppress BOTH stdout and stderr during initialization
     old_stdout = sys.stdout
+    old_stderr = sys.stderr
     sys.stdout = io.StringIO()  # Capture to nowhere
+    sys.stderr = io.StringIO()  # Also capture stderr
     
     try:
         from src.disambiguator import BaybayinDisambiguator
@@ -66,9 +71,9 @@ def disambiguate(candidates_json: str) -> str:
             # Single word: rely primarily on frequency (real words beat non-words)
             weights = {
                 'semantic': 0.0,      # Reduce - no useful context
-                'frequency': 0.7,     # Increase - prefer corpus words
+                'frequency': 0.1,     # Increase - prefer corpus words
                 'cooccurrence': 0.0,  # No adjacent words
-                'morphology': 0.3     # Morphological patterns help
+                'morphology': 0.0     # Morphological patterns help
             }
         else:
             # Normal multi-word sentence: use default balanced weights
@@ -88,8 +93,9 @@ def disambiguate(candidates_json: str) -> str:
         result, _ = model.disambiguate(candidates)
         
     finally:
-        # Always restore stdout
+        # Always restore stdout and stderr
         sys.stdout = old_stdout
+        sys.stderr = old_stderr
     
     return ' '.join(result)
 

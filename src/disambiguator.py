@@ -27,6 +27,14 @@ from typing import List, Dict, Tuple, Optional, Union
 from transformers import AutoTokenizer, AutoModelForMaskedLM
 from sklearn.metrics.pairwise import cosine_similarity
 from tqdm import tqdm
+try:
+    from tqdm.auto import tqdm as tqdm_auto
+    tqdm_auto.disable = True  # Disable tqdm.auto used by transformers
+except:
+    pass
+
+# Disable tqdm by default (enable only for evaluation mode with show_progress=True)
+tqdm.disable = True
 
 from .corpus import CorpusStatistics
 from .morphology import MorphologicalAnalyzer
@@ -34,11 +42,19 @@ from .morphology import MorphologicalAnalyzer
 
 # Default configuration
 DEFAULT_MODEL = "jcblaise/roberta-tagalog-base"
+# Weights for ambiguous words: MLM-PLL only (context-aware)
 DEFAULT_WEIGHTS = {
-    'semantic': 0.4,      # RoBERTa contextual similarity (increased - best at context)
-    'frequency': 0.3,     # Corpus word frequency (decreased - reduce bias)
-    'cooccurrence': 0.2,  # Bigram probability (increased - helps with context)
-    'morphology': 0.1     # Filipino morphological patterns (minimal impact)
+    'semantic': 1.0,      # MLM PLL scoring (context-aware, the primary signal)
+    'frequency': 0.0,     # Not used for ambiguous words with context
+    'cooccurrence': 0.0,  # Not used for ambiguous words with context
+    'morphology': 0.0     # Not used for ambiguous words with context
+}
+# For unambiguous words: frequency-only scoring
+FREQUENCY_ONLY_WEIGHTS = {
+    'semantic': 0.0,
+    'frequency': 1.0,
+    'cooccurrence': 0.0,
+    'morphology': 0.0
 }
 
 # Text corpora paths
@@ -353,6 +369,10 @@ class BaybayinDisambiguator:
         """
         Disambiguate a sentence given OCR candidates.
         
+        Strategy:
+        - Ambiguous words: Use MLM-PLL scoring only (context-aware disambiguation)
+        - Unambiguous words: Use frequency scoring only (fallback for single words)
+        
         Args:
             ocr_candidates: List where each element is either:
                 - str: unambiguous word
@@ -452,6 +472,8 @@ class BaybayinDisambiguator:
                 debug['selected'][pos] = best
                 debug['scores'][pos] = {c: s['combined'] for c, s in scores.items()}
             else:
+                # For unambiguous words: use frequency score only (fallback method)
+                freq_score = self.corpus.get_frequency_score(item)
                 result.append(item)
         
         return result, debug
@@ -490,7 +512,13 @@ class BaybayinDisambiguator:
         correct_ambiguous = 0
         results = []
         
-        iterator = tqdm(test_data, desc="Evaluating") if show_progress else test_data
+        # Enable tqdm only if show_progress is True (disable globally by default for MATLAB)
+        if show_progress:
+            tqdm.disable = False
+            iterator = tqdm(test_data, desc="Evaluating")
+        else:
+            tqdm.disable = True
+            iterator = test_data
         
         for entry in iterator:
             gt = entry['ground_truth']

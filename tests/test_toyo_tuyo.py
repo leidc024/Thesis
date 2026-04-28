@@ -199,65 +199,28 @@ model = BaybayinDisambiguator(
 )
 
 # ============================================================================
-# METHOD 1: Pure Cosine Similarity (Semantic Only, No Other Features)
+# METHOD 1: Pure MLM-PLL (Semantic Only)
 # ============================================================================
-print("\n" + "="*70)
-print("METHOD 1: PURE COSINE SIMILARITY (Semantic Only)")
-print("="*70)
 
-cosine_only_weights = {
+mlm_only_weights = {
     'semantic': 1.0,
     'frequency': 0.0,
     'cooccurrence': 0.0,
     'morphology': 0.0
 }
-print(f"\nWeights: {cosine_only_weights}")
-print("Semantic scoring: Cosine similarity of mean-pooled RoBERTa embeddings")
-print("Running evaluation...")
-
-cosine_only_metrics, cosine_only_results = model.evaluate(
-    test_data, show_progress=True, use_mlm=False, weights_override=cosine_only_weights
-)
-cosine_only_accuracy = cosine_only_metrics['ambiguous_accuracy'] * 100
-print(f"★ Pure Cosine Similarity accuracy: {cosine_only_accuracy:.2f}%")
-
-# ============================================================================
-# METHOD 2: Cosine Similarity + Multi-Feature (Old Method)
-# ============================================================================
-print("\n" + "="*70)
-print("METHOD 2: COSINE SIMILARITY + MULTI-FEATURE (Old Method)")
-print("="*70)
-
-print(f"\nWeights: semantic=0.4, frequency=0.3, cooccurrence=0.2, morphology=0.1")
-print("Semantic scoring: Cosine similarity of mean-pooled RoBERTa embeddings")
-print("Running evaluation...")
-
-cosine_multi_metrics, cosine_multi_results = model.evaluate(
-    test_data, show_progress=True, use_mlm=False
-)
-cosine_multi_accuracy = cosine_multi_metrics['ambiguous_accuracy'] * 100
-print(f"★ Cosine Multi-Feature accuracy: {cosine_multi_accuracy:.2f}%")
-
-# ============================================================================
-# METHOD 3: MLM Pseudo-Log-Likelihood + Multi-Feature (Current Best)
-# ============================================================================
-print("\n" + "="*70)
-print("METHOD 3: MLM PSEUDO-LOG-LIKELIHOOD + MULTI-FEATURE (Current)")
-print("="*70)
-
-print(f"\nWeights: semantic=0.4, frequency=0.3, cooccurrence=0.2, morphology=0.1")
+print(f"\nWeights: {mlm_only_weights}")
 print("Semantic scoring: MLM PLL (Masked Language Model Pseudo-Log-Likelihood)")
 print("Running evaluation...")
 
-mlm_metrics, mlm_results = model.evaluate(
-    test_data, show_progress=True, use_mlm=True
+mlm_only_metrics, mlm_only_results = model.evaluate(
+    test_data, show_progress=True, use_mlm=True, weights_override=mlm_only_weights
 )
-mlm_accuracy = mlm_metrics['ambiguous_accuracy'] * 100
-print(f"★ MLM Multi-Feature accuracy: {mlm_accuracy:.2f}%")
+mlm_only_accuracy = mlm_only_metrics['ambiguous_accuracy'] * 100
+print(f"★ Pure MLM-PLL accuracy: {mlm_only_accuracy:.2f}%")
 
-# Use MLM results (best method) for detailed predictions display
-metrics = mlm_metrics
-results = mlm_results
+# Use MLM-PLL results for detailed predictions display
+metrics = mlm_only_metrics
+results = mlm_only_results
 
 # Display results
 print("\n" + "="*70)
@@ -369,7 +332,7 @@ if tuyo_dry_incorrect:
 # Breakdown by word type for MLM method
 toyo_correct = 0
 tuyo_correct = 0
-for test_item, result_item in zip(test_data, mlm_results):
+for test_item, result_item in zip(test_data, mlm_only_results):
     gt_words = get_clean_words(test_item['ground_truth'])
     pred_words = get_clean_words(result_item['predicted'])
     if "toyo" in gt_words:
@@ -394,10 +357,8 @@ print("\n" + "="*70)
 print("📊 COMPARISON SUMMARY")
 print("="*70)
 
-context_accuracy = mlm_accuracy
+context_accuracy = mlm_only_accuracy
 improvement = context_accuracy - baseline_accuracy
-cosine_only_imp = cosine_only_accuracy - baseline_accuracy
-cosine_multi_imp = cosine_multi_accuracy - baseline_accuracy
 
 # Count per-word accuracy for each method
 def count_word_accuracy(result_list):
@@ -419,29 +380,20 @@ cosine_multi_toyo, cosine_multi_tuyo = count_word_accuracy(cosine_multi_results)
 mlm_toyo, mlm_tuyo = count_word_accuracy(mlm_results)
 
 print(f"""
-┌──────────────────────────────────────────────────────────────────────────────────────────┐
-│                       DISAMBIGUATION RESULTS (150 sentences)                          │
-│                       toyo = soy sauce | tuyo = dried fish + dry                      │
-├──────────────────────────────┬──────────────┬─────────────┬───────────────────────────┤
-│        Method                │   Accuracy   │ Toyo ({TOYO_COUNT})   │  Tuyo ({TUYO_COUNT})               │
-├──────────────────────────────┼──────────────┼─────────────┼───────────────────────────┤
-│ MaBaybay Default             │   {baseline_accuracy:6.2f}%    │   {baseline_correct_toyo:2d}/{TOYO_COUNT}     │    {baseline_correct_tuyo:3d}/{TUYO_COUNT}               │
-│ (First Candidate)            │              │             │                           │
-├──────────────────────────────┼──────────────┼─────────────┼───────────────────────────┤
-│ Pure Cosine Similarity       │   {cosine_only_accuracy:6.2f}%    │   {cosine_only_toyo:2d}/{TOYO_COUNT}     │    {cosine_only_tuyo:3d}/{TUYO_COUNT}               │
-│ (Semantic Only)              │ ({cosine_only_imp:+6.2f}%)  │             │                           │
-├──────────────────────────────┼──────────────┼─────────────┼───────────────────────────┤
-│ Cosine Sim + Multi-Feature   │   {cosine_multi_accuracy:6.2f}%    │   {cosine_multi_toyo:2d}/{TOYO_COUNT}     │    {cosine_multi_tuyo:3d}/{TUYO_COUNT}               │
-│ (Old Method)                 │ ({cosine_multi_imp:+6.2f}%)  │             │                           │
-├──────────────────────────────┼──────────────┼─────────────┼───────────────────────────┤
-│ ★ MLM PLL + Multi-Feature    │   {context_accuracy:6.2f}%    │   {mlm_toyo:2d}/{TOYO_COUNT}     │    {mlm_tuyo:3d}/{TUYO_COUNT}               │
-│   (Current Method)           │ ({improvement:+6.2f}%)  │             │                           │
-└──────────────────────────────┴──────────────┴─────────────┴───────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                       DISAMBIGUATION RESULTS                             │
+├──────────────────────────────┬──────────────┬────────────┬───────────────┤
+│        Method                │   Accuracy   │{{{word1.capitalize()}}} (50) │ {{{word2.capitalize()}}} (50) │
+├──────────────────────────────┼──────────────┼────────────┼───────────────┤
+│ MaBaybay Default             │   {{baseline_accuracy:6.2f}}%    │   {{baseline_correct_{word1}:2d}}/50    │    {{baseline_correct_{word2}:2d}}/50     │
+│ (First Candidate)            │              │            │               │
+├──────────────────────────────┼──────────────┼────────────┼───────────────┤
+│ ★ Pure MLM-PLL               │   {{context_accuracy:6.2f}}%    │   {{mlm_{word1}:2d}}/50    │    {{mlm_{word2}:2d}}/50     │
+│   (Semantic Only)            │ ({{improvement:+6.2f}}%)  │            │               │
+└──────────────────────────────┴──────────────┴────────────┴───────────────┘
 
 Note: MaBaybay default always returns first candidate from transliteration.
-      For 'ᜆᜓᜌᜓ', candidates are ["toyo", "tuyo"], so baseline always picks "toyo".
-      Baseline accuracy is {baseline_accuracy:.2f}% ({TOYO_COUNT}/{TOTAL_SENTENCES} correct — only toyo sentences).
-      "tuyo" has two senses (dried fish + dry) but both are the same word for disambiguation.
+      Baseline always picks first candidate.
 """)
 
 # Save detailed results
@@ -478,7 +430,7 @@ output = {
             'toyo_accuracy': f"{cosine_multi_toyo}/{TOYO_COUNT}",
             'tuyo_accuracy': f"{cosine_multi_tuyo}/{TUYO_COUNT}"
         },
-        'mlm_multi': {
+        'mlm_pll': {
             'name': 'MLM PLL + Multi-Feature (Current)',
             'strategy': 'MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology',
             'accuracy': context_accuracy,
@@ -490,7 +442,7 @@ output = {
         },
         'improvement_over_baseline': improvement
     },
-    'metrics': metrics
+    'metrics': mlm_only_metrics
 }
 
 os.makedirs("gold_standard_dataset/results", exist_ok=True)

@@ -194,65 +194,31 @@ model = BaybayinDisambiguator(
 )
 
 # ============================================================================
-# METHOD 1: Pure Cosine Similarity (Semantic Only, No Other Features)
+# METHOD 1: Pure MLM-PLL (Semantic Only)
 # ============================================================================
 print("\n" + "="*70)
-print("METHOD 1: PURE COSINE SIMILARITY (Semantic Only)")
+print("METHOD 1: PURE MLM-PLL (Semantic Only)")
 print("="*70)
 
-cosine_only_weights = {
+mlm_only_weights = {
     'semantic': 1.0,
     'frequency': 0.0,
     'cooccurrence': 0.0,
     'morphology': 0.0
 }
-print(f"\nWeights: {cosine_only_weights}")
-print("Semantic scoring: Cosine similarity of mean-pooled RoBERTa embeddings")
-print("Running evaluation...")
-
-cosine_only_metrics, cosine_only_results = model.evaluate(
-    test_data, show_progress=True, use_mlm=False, weights_override=cosine_only_weights
-)
-cosine_only_accuracy = cosine_only_metrics['ambiguous_accuracy'] * 100
-print(f"★ Pure Cosine Similarity accuracy: {cosine_only_accuracy:.2f}%")
-
-# ============================================================================
-# METHOD 2: Cosine Similarity + Multi-Feature (Old Method)
-# ============================================================================
-print("\n" + "="*70)
-print("METHOD 2: COSINE SIMILARITY + MULTI-FEATURE (Old Method)")
-print("="*70)
-
-print(f"\nWeights: semantic=0.4, frequency=0.3, cooccurrence=0.2, morphology=0.1")
-print("Semantic scoring: Cosine similarity of mean-pooled RoBERTa embeddings")
-print("Running evaluation...")
-
-cosine_multi_metrics, cosine_multi_results = model.evaluate(
-    test_data, show_progress=True, use_mlm=False
-)
-cosine_multi_accuracy = cosine_multi_metrics['ambiguous_accuracy'] * 100
-print(f"★ Cosine Multi-Feature accuracy: {cosine_multi_accuracy:.2f}%")
-
-# ============================================================================
-# METHOD 3: MLM Pseudo-Log-Likelihood + Multi-Feature (Current Best)
-# ============================================================================
-print("\n" + "="*70)
-print("METHOD 3: MLM PSEUDO-LOG-LIKELIHOOD + MULTI-FEATURE (Current)")
-print("="*70)
-
-print(f"\nWeights: semantic=0.4, frequency=0.3, cooccurrence=0.2, morphology=0.1")
+print(f"\nWeights: {mlm_only_weights}")
 print("Semantic scoring: MLM PLL (Masked Language Model Pseudo-Log-Likelihood)")
 print("Running evaluation...")
 
-mlm_metrics, mlm_results = model.evaluate(
-    test_data, show_progress=True, use_mlm=True
+mlm_only_metrics, mlm_only_results = model.evaluate(
+    test_data, show_progress=True, use_mlm=True, weights_override=mlm_only_weights
 )
-mlm_accuracy = mlm_metrics['ambiguous_accuracy'] * 100
-print(f"★ MLM Multi-Feature accuracy: {mlm_accuracy:.2f}%")
+mlm_only_accuracy = mlm_only_metrics['ambiguous_accuracy'] * 100
+print(f"★ Pure MLM-PLL accuracy: {mlm_only_accuracy:.2f}%")
 
-# Use MLM results (best method) for detailed predictions display
-metrics = mlm_metrics
-results = mlm_results
+# Use MLM-PLL results for detailed predictions display
+metrics = mlm_only_metrics
+results = mlm_only_results
 
 # Display results
 print("\n" + "="*70)
@@ -328,7 +294,7 @@ if incorrect_asido_examples:
 # Breakdown by word type - computed in comparison section below
 asero_correct = 0
 asido_correct = 0
-for test_item, result_item in zip(test_data, mlm_results):
+for test_item, result_item in zip(test_data, mlm_only_results):
     gt_words = get_clean_words(test_item['ground_truth'])
     pred_words = get_clean_words(result_item['predicted'])
     if "asero" in gt_words:
@@ -351,10 +317,8 @@ print("\n" + "="*70)
 print("📊 COMPARISON SUMMARY")
 print("="*70)
 
-context_accuracy = mlm_accuracy
+context_accuracy = mlm_only_accuracy
 improvement = context_accuracy - baseline_accuracy
-cosine_only_imp = cosine_only_accuracy - baseline_accuracy
-cosine_multi_imp = cosine_multi_accuracy - baseline_accuracy
 
 # Count per-word accuracy for each method
 def count_word_accuracy(result_list, word1, word2):
@@ -371,9 +335,10 @@ def count_word_accuracy(result_list, word1, word2):
                 w2_correct += 1
     return w1_correct, w2_correct
 
-cosine_only_asero, cosine_only_asido = count_word_accuracy(cosine_only_results, "asero", "asido")
-cosine_multi_asero, cosine_multi_asido = count_word_accuracy(cosine_multi_results, "asero", "asido")
-mlm_asero, mlm_asido = count_word_accuracy(mlm_results, "asero", "asido")
+mlm_only_asero, mlm_only_asido = count_word_accuracy(mlm_only_results, "asero", "asido")
+
+mlm_only_imp = mlm_only_accuracy - baseline_accuracy
+improvement = context_accuracy - baseline_accuracy
 
 print(f"""
 ┌──────────────────────────────────────────────────────────────────────────┐
@@ -384,14 +349,8 @@ print(f"""
 │ MaBaybay Default             │   {baseline_accuracy:6.2f}%    │   {baseline_correct_asero:2d}/50    │    {baseline_correct_asido:2d}/50     │
 │ (First Candidate)            │              │            │               │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ Pure Cosine Similarity       │   {cosine_only_accuracy:6.2f}%    │   {cosine_only_asero:2d}/50    │    {cosine_only_asido:2d}/50     │
-│ (Semantic Only)              │ ({cosine_only_imp:+6.2f}%)  │            │               │
-├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ Cosine Sim + Multi-Feature   │   {cosine_multi_accuracy:6.2f}%    │   {cosine_multi_asero:2d}/50    │    {cosine_multi_asido:2d}/50     │
-│ (Old Method)                 │ ({cosine_multi_imp:+6.2f}%)  │            │               │
-├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ ★ MLM PLL + Multi-Feature    │   {context_accuracy:6.2f}%    │   {mlm_asero:2d}/50    │    {mlm_asido:2d}/50     │
-│   (Current Method)           │ ({improvement:+6.2f}%)  │            │               │
+│ ★ Pure MLM-PLL               │   {mlm_only_accuracy:6.2f}%    │   {mlm_only_asero:2d}/50    │    {mlm_only_asido:2d}/50     │
+│   (MLM Scoring Only)         │ ({mlm_only_imp:+6.2f}%)  │            │               │
 └──────────────────────────────┴──────────────┴────────────┴───────────────┘
 
 Note: MaBaybay default always returns first candidate from transliteration.
@@ -413,33 +372,17 @@ output = {
             'asero_accuracy': f"{baseline_correct_asero}/50",
             'asido_accuracy': f"{baseline_correct_asido}/50"
         },
-        'cosine_only': {
-            'name': 'Pure Cosine Similarity (Semantic Only)',
-            'strategy': '100% cosine similarity of mean-pooled RoBERTa embeddings, no other features',
-            'accuracy': cosine_only_accuracy,
-            'correct': cosine_only_metrics['correct_ambiguous'],
-            'asero_accuracy': f"{cosine_only_asero}/50",
-            'asido_accuracy': f"{cosine_only_asido}/50"
-        },
-        'cosine_multi': {
-            'name': 'Cosine Similarity + Multi-Feature (Old Method)',
-            'strategy': 'Cosine similarity semantic + frequency + cooccurrence + morphology',
-            'accuracy': cosine_multi_accuracy,
-            'correct': cosine_multi_metrics['correct_ambiguous'],
-            'asero_accuracy': f"{cosine_multi_asero}/50",
-            'asido_accuracy': f"{cosine_multi_asido}/50"
-        },
-        'mlm_multi': {
-            'name': 'MLM PLL + Multi-Feature (Current)',
-            'strategy': 'MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology',
-            'accuracy': context_accuracy,
-            'correct': metrics['correct_ambiguous'],
-            'asero_accuracy': f"{mlm_asero}/50",
-            'asido_accuracy': f"{mlm_asido}/50"
+        'mlm_pll': {
+            'name': 'Pure MLM-PLL (MLM Scoring Only)',
+            'strategy': 'MLM pseudo-log-likelihood scoring for context-aware disambiguation',
+            'accuracy': mlm_only_accuracy,
+            'correct': mlm_only_metrics['correct_ambiguous'],
+            'asero_accuracy': f"{mlm_only_asero}/50",
+            'asido_accuracy': f"{mlm_only_asido}/50"
         },
         'improvement_over_baseline': improvement
     },
-    'metrics': metrics
+    'metrics': mlm_only_metrics
 }
 
 os.makedirs("gold_standard_dataset/results", exist_ok=True)
