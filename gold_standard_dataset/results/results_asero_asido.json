@@ -15,19 +15,26 @@
     "mlm_pll": {
       "name": "Pure MLM-PLL (MLM Scoring Only)",
       "strategy": "MLM pseudo-log-likelihood scoring for context-aware disambiguation",
-      "accuracy": 62.0,
-      "correct": 62,
-      "asero_accuracy": "12/50",
+      "accuracy": 59.0,
+      "correct": 59,
+      "asero_accuracy": "9/50",
       "asido_accuracy": "50/50"
     },
-    "improvement_over_baseline": 12.0
+    "improvement_over_baseline": 9.0
   },
   "metrics": {
-    "total_words": 946,
-    "correct_words": 908,
-    "total_accuracy": 0.959830866807611,
+    "total_words": 962,
+    "correct_words": 921,
+    "total_accuracy": 0.9573804573804574,
     "total_ambiguous": 100,
-    "correct_ambiguous": 62,
-    "ambiguous_accuracy": 0.62
-  }
+    "correct_ambiguous": 59,
+    "ambiguous_accuracy": 0.59,
+    "weights": {
+      "semantic": 1.0,
+      "frequency": 0.0,
+      "cooccurrence": 0.0,
+      "morphology": 0.0
+    }
+  },
+  "timing_per_sample_ms": 248.1
 }
