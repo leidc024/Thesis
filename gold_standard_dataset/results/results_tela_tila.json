@@ -12,38 +12,22 @@
       "tela_accuracy": "50/50",
       "tila_accuracy": "0/50"
     },
-    "cosine_only": {
-      "name": "Pure Cosine Similarity (Semantic Only)",
-      "strategy": "100% cosine similarity of mean-pooled RoBERTa embeddings, no other features",
-      "accuracy": 46.0,
-      "correct": 46,
-      "tela_accuracy": "25/50",
-      "tila_accuracy": "21/50"
-    },
-    "cosine_multi": {
-      "name": "Cosine Similarity + Multi-Feature (Old Method)",
-      "strategy": "Cosine similarity semantic + frequency + cooccurrence + morphology",
-      "accuracy": 50.0,
-      "correct": 50,
-      "tela_accuracy": "0/50",
-      "tila_accuracy": "50/50"
-    },
-    "mlm_multi": {
-      "name": "MLM PLL + Multi-Feature (Current)",
-      "strategy": "MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology",
+    "mlm_pll": {
+      "name": "Pure MLM-PLL (MLM Scoring Only)",
+      "strategy": "MLM pseudo-log-likelihood scoring for context-aware disambiguation",
       "accuracy": 100.0,
-      "correct": 100,
+      "correct": 101,
       "tela_accuracy": "50/50",
       "tila_accuracy": "50/50"
     },
     "improvement_over_baseline": 50.0
   },
   "metrics": {
-    "total_words": 763,
-    "correct_words": 763,
+    "total_words": 771,
+    "correct_words": 771,
     "total_accuracy": 1.0,
-    "total_ambiguous": 100,
-    "correct_ambiguous": 100,
+    "total_ambiguous": 101,
+    "correct_ambiguous": 101,
     "ambiguous_accuracy": 1.0
   }
 }

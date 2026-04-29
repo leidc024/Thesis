@@ -334,21 +334,24 @@ def count_word_accuracy(result_list, word1, word2):
 
 mlm_higante, mlm_higanti = count_word_accuracy(mlm_only_results, "higante", "higanti")
 
+mlm_only_imp = mlm_only_accuracy - baseline_accuracy
+improvement = context_accuracy - baseline_accuracy
+
 print(f"""
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                       DISAMBIGUATION RESULTS                             │
 ├──────────────────────────────┬──────────────┬────────────┬───────────────┤
-│        Method                │   Accuracy   │{{{word1.capitalize()}}} (50) │ {{{word2.capitalize()}}} (50) │
+│        Method                │   Accuracy   │Higante(50) │ Higanti (50)  │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ MaBaybay Default             │   {{baseline_accuracy:6.2f}}%    │   {{baseline_correct_{word1}:2d}}/50    │    {{baseline_correct_{word2}:2d}}/50     │
+│ MaBaybay Default             │   {baseline_accuracy:6.2f}%    │   {baseline_correct_higante:2d}/50    │    {baseline_correct_higanti:2d}/50     │
 │ (First Candidate)            │              │            │               │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ ★ Pure MLM-PLL               │   {{context_accuracy:6.2f}}%    │   {{mlm_{word1}:2d}}/50    │    {{mlm_{word2}:2d}}/50     │
-│   (Semantic Only)            │ ({{improvement:+6.2f}}%)  │            │               │
+│ ★ Pure MLM-PLL               │   {mlm_only_accuracy:6.2f}%    │   {mlm_higante:2d}/50    │    {mlm_higanti:2d}/50     │
+│   (MLM Scoring Only)         │ ({mlm_only_imp:+6.2f}%)  │            │               │
 └──────────────────────────────┴──────────────┴────────────┴───────────────┘
 
 Note: MaBaybay default always returns first candidate from transliteration.
-      Baseline always picks first candidate.
+      For 'ᜑᜒᜄᜈ᜔ᜆᜒ', candidates are ["higante", "higanti"], so baseline always picks "higante".
 """)
 
 # Save detailed results
@@ -366,27 +369,11 @@ output = {
             'higante_accuracy': f"{baseline_correct_higante}/50",
             'higanti_accuracy': f"{baseline_correct_higanti}/50"
         },
-        'cosine_only': {
-            'name': 'Pure Cosine Similarity (Semantic Only)',
-            'strategy': '100% cosine similarity of mean-pooled RoBERTa embeddings, no other features',
-            'accuracy': cosine_only_accuracy,
-            'correct': cosine_only_metrics['correct_ambiguous'],
-            'cosine_only_higante': f"{cosine_only_higante}/50",
-            'cosine_only_higanti': f"{cosine_only_higanti}/50"
-        },
-        'cosine_multi': {
-            'name': 'Cosine Similarity + Multi-Feature (Old Method)',
-            'strategy': 'Cosine similarity semantic + frequency + cooccurrence + morphology',
-            'accuracy': cosine_multi_accuracy,
-            'correct': cosine_multi_metrics['correct_ambiguous'],
-            'higante_accuracy': f"{cosine_multi_higante}/50",
-            'higanti_accuracy': f"{cosine_multi_higanti}/50"
-        },
         'mlm_pll': {
-            'name': 'MLM PLL + Multi-Feature (Current)',
-            'strategy': 'MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology',
-            'accuracy': context_accuracy,
-            'correct': metrics['correct_ambiguous'],
+            'name': 'MLM PLL (Masked Language Model)',
+            'strategy': 'MLM pseudo-log-likelihood semantic scoring',
+            'accuracy': mlm_only_accuracy,
+            'correct': mlm_only_metrics['correct_ambiguous'],
             'higante_accuracy': f"{mlm_higante}/50",
             'higanti_accuracy': f"{mlm_higanti}/50"
         },

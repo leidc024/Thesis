@@ -315,6 +315,7 @@ print("📊 COMPARISON SUMMARY")
 print("="*70)
 
 context_accuracy = mlm_only_accuracy
+mlm_only_imp = mlm_only_accuracy - baseline_accuracy
 improvement = context_accuracy - baseline_accuracy
 
 # Count per-word accuracy for Pure MLM-PLL method
@@ -338,13 +339,13 @@ print(f"""
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                       DISAMBIGUATION RESULTS                             │
 ├──────────────────────────────┬──────────────┬────────────┬───────────────┤
-│        Method                │   Accuracy   │{{{word1.capitalize()}}} (50) │ {{{word2.capitalize()}}} (50) │
+│        Method                │   Accuracy   │ Poso (50)  │  Puso (50)    │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ MaBaybay Default             │   {{baseline_accuracy:6.2f}}%    │   {{baseline_correct_{word1}:2d}}/50    │    {{baseline_correct_{word2}:2d}}/50     │
+│ MaBaybay Default             │   {baseline_accuracy:6.2f}%    │   {baseline_correct_poso:2d}/50    │    {baseline_correct_puso:2d}/50     │
 │ (First Candidate)            │              │            │               │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ ★ Pure MLM-PLL               │   {{context_accuracy:6.2f}}%    │   {{mlm_{word1}:2d}}/50    │    {{mlm_{word2}:2d}}/50     │
-│   (Semantic Only)            │ ({{improvement:+6.2f}}%)  │            │               │
+│ ★ Pure MLM-PLL               │   {mlm_only_accuracy:6.2f}%    │   {mlm_poso:2d}/50    │    {mlm_puso:2d}/50     │
+│   (MLM Scoring Only)         │ ({mlm_only_imp:+6.2f}%)  │            │               │
 └──────────────────────────────┴──────────────┴────────────┴───────────────┘
 
 Note: MaBaybay default always returns first candidate from transliteration.
@@ -366,31 +367,15 @@ output = {
             'poso_accuracy': f"{baseline_correct_poso}/50",
             'puso_accuracy': f"{baseline_correct_puso}/50"
         },
-        'cosine_only': {
-            'name': 'Pure Cosine Similarity (Semantic Only)',
-            'strategy': '100% cosine similarity of mean-pooled RoBERTa embeddings, no other features',
-            'accuracy': cosine_only_accuracy,
-            'correct': cosine_only_metrics['correct_ambiguous'],
-            'poso_accuracy': f"{cosine_only_poso}/50",
-            'puso_accuracy': f"{cosine_only_puso}/50"
-        },
-        'cosine_multi': {
-            'name': 'Cosine Similarity + Multi-Feature (Old Method)',
-            'strategy': 'Cosine similarity semantic + frequency + cooccurrence + morphology',
-            'accuracy': cosine_multi_accuracy,
-            'correct': cosine_multi_metrics['correct_ambiguous'],
-            'poso_accuracy': f"{cosine_multi_poso}/50",
-            'puso_accuracy': f"{cosine_multi_puso}/50"
-        },
         'mlm_pll': {
-            'name': 'MLM PLL + Multi-Feature (Current)',
-            'strategy': 'MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology',
-            'accuracy': context_accuracy,
-            'correct': metrics['correct_ambiguous'],
+            'name': 'Pure MLM-PLL (MLM Scoring Only)',
+            'strategy': 'MLM pseudo-log-likelihood scoring for context-aware disambiguation',
+            'accuracy': mlm_only_accuracy,
+            'correct': mlm_only_metrics['correct_ambiguous'],
             'poso_accuracy': f"{mlm_poso}/50",
             'puso_accuracy': f"{mlm_puso}/50"
         },
-        'improvement_over_baseline': improvement
+        'improvement_over_baseline': mlm_only_imp
     },
     'metrics': mlm_only_metrics
 }

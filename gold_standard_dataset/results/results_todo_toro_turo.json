@@ -3,52 +3,34 @@
   "baybayin": "ᜆᜓᜇᜓ",
   "type": "O/U + D/R",
   "num_candidates": 3,
-  "test_sentences": 150,
+  "test_sentences": 149,
   "comparison": {
     "baseline": {
       "name": "MaBaybay Default (First Candidate)",
       "strategy": "Always pick first candidate from transliteration",
-      "accuracy": 33.33333333333333,
+      "accuracy": 33.557046979865774,
       "correct": 50,
       "todo_accuracy": "50/50",
       "toro_accuracy": "0/50",
       "turo_accuracy": "0/50"
     },
-    "cosine_only": {
-      "name": "Pure Cosine Similarity (Semantic Only)",
-      "strategy": "100% cosine similarity of mean-pooled RoBERTa embeddings, no other features",
-      "accuracy": 44.666666666666664,
-      "correct": 67,
-      "todo_accuracy": "5/50",
-      "toro_accuracy": "17/50",
-      "turo_accuracy": "45/50"
-    },
-    "cosine_multi": {
-      "name": "Cosine Similarity + Multi-Feature (Old Method)",
-      "strategy": "Cosine similarity semantic + frequency + cooccurrence + morphology",
-      "accuracy": 43.333333333333336,
-      "correct": 65,
-      "todo_accuracy": "50/50",
-      "toro_accuracy": "0/50",
-      "turo_accuracy": "15/50"
-    },
-    "mlm_multi": {
-      "name": "MLM PLL + Multi-Feature (Current)",
-      "strategy": "MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology",
-      "accuracy": 96.66666666666667,
+    "mlm_pll": {
+      "name": "Pure MLM-PLL (MLM Scoring Only)",
+      "strategy": "MLM pseudo-log-likelihood scoring for context-aware disambiguation",
+      "accuracy": 97.31543624161074,
       "correct": 145,
       "todo_accuracy": "50/50",
-      "toro_accuracy": "45/50",
-      "turo_accuracy": "50/50"
+      "toro_accuracy": "46/50",
+      "turo_accuracy": "49/50"
     },
-    "improvement_over_baseline": 63.33333333333334
+    "improvement_over_baseline": 63.758389261744966
   },
   "metrics": {
-    "total_words": 1068,
-    "correct_words": 1063,
-    "total_accuracy": 0.9953183520599251,
-    "total_ambiguous": 150,
+    "total_words": 1066,
+    "correct_words": 1062,
+    "total_accuracy": 0.9962476547842402,
+    "total_ambiguous": 149,
     "correct_ambiguous": 145,
-    "ambiguous_accuracy": 0.9666666666666667
+    "ambiguous_accuracy": 0.9731543624161074
   }
 }

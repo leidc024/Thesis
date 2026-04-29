@@ -12,25 +12,9 @@
       "bola_accuracy": "50/50",
       "bula_accuracy": "0/50"
     },
-    "cosine_only": {
-      "name": "Pure Cosine Similarity (Semantic Only)",
-      "strategy": "100% cosine similarity of mean-pooled RoBERTa embeddings, no other features",
-      "accuracy": 59.0,
-      "correct": 59,
-      "bola_accuracy": "29/50",
-      "bula_accuracy": "30/50"
-    },
-    "cosine_multi": {
-      "name": "Cosine Similarity + Multi-Feature (Old Method)",
-      "strategy": "Cosine similarity semantic + frequency + cooccurrence + morphology",
-      "accuracy": 53.0,
-      "correct": 53,
-      "bola_accuracy": "49/50",
-      "bula_accuracy": "4/50"
-    },
-    "mlm_multi": {
-      "name": "MLM PLL + Multi-Feature (Current)",
-      "strategy": "MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology",
+    "mlm_pll": {
+      "name": "Pure MLM-PLL (MLM Scoring Only)",
+      "strategy": "MLM pseudo-log-likelihood scoring for context-aware disambiguation",
       "accuracy": 90.0,
       "correct": 90,
       "bola_accuracy": "50/50",

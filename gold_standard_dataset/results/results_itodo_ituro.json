@@ -2,48 +2,32 @@
   "ambiguous_pair": "itodo, ituro",
   "baybayin": "ᜁᜆᜓᜇᜓ",
   "type": "D/R",
-  "test_sentences": 99,
+  "test_sentences": 100,
   "comparison": {
     "baseline": {
       "name": "MaBaybay Default (First Candidate)",
       "strategy": "Always pick first candidate from transliteration",
-      "accuracy": 49.0,
-      "correct": 49,
-      "itodo_accuracy": "49/50",
+      "accuracy": 50.0,
+      "correct": 50,
+      "itodo_accuracy": "50/50",
       "ituro_accuracy": "0/50"
     },
-    "cosine_only": {
-      "name": "Pure Cosine Similarity (Semantic Only)",
-      "strategy": "100% cosine similarity of mean-pooled RoBERTa embeddings, no other features",
-      "accuracy": 56.56565656565656,
-      "correct": 56,
-      "itodo_accuracy": "9/50",
-      "ituro_accuracy": "47/50"
-    },
-    "cosine_multi": {
-      "name": "Cosine Similarity + Multi-Feature (Old Method)",
-      "strategy": "Cosine similarity semantic + frequency + cooccurrence + morphology",
-      "accuracy": 50.505050505050505,
-      "correct": 50,
-      "itodo_accuracy": "0/50",
+    "mlm_pll": {
+      "name": "MLM PLL (Masked Language Model)",
+      "strategy": "MLM pseudo-log-likelihood semantic scoring",
+      "accuracy": 56.99999999999999,
+      "correct": 57,
+      "itodo_accuracy": "7/50",
       "ituro_accuracy": "50/50"
     },
-    "mlm_multi": {
-      "name": "MLM PLL + Multi-Feature (Current)",
-      "strategy": "MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology",
-      "accuracy": 56.56565656565656,
-      "correct": 56,
-      "itodo_accuracy": "6/50",
-      "ituro_accuracy": "50/50"
-    },
-    "improvement_over_baseline": 7.56565656565656
+    "improvement_over_baseline": 6.999999999999993
   },
   "metrics": {
-    "total_words": 904,
-    "correct_words": 861,
-    "total_accuracy": 0.952433628318584,
-    "total_ambiguous": 99,
-    "correct_ambiguous": 56,
-    "ambiguous_accuracy": 0.5656565656565656
+    "total_words": 938,
+    "correct_words": 895,
+    "total_accuracy": 0.9541577825159915,
+    "total_ambiguous": 100,
+    "correct_ambiguous": 57,
+    "ambiguous_accuracy": 0.57
   }
 }

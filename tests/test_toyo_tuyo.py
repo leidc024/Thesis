@@ -358,6 +358,7 @@ print("📊 COMPARISON SUMMARY")
 print("="*70)
 
 context_accuracy = mlm_only_accuracy
+mlm_only_imp = mlm_only_accuracy - baseline_accuracy
 improvement = context_accuracy - baseline_accuracy
 
 # Count per-word accuracy for each method
@@ -375,21 +376,19 @@ def count_word_accuracy(result_list):
                 w_tuyo += 1
     return w_toyo, w_tuyo
 
-cosine_only_toyo, cosine_only_tuyo = count_word_accuracy(cosine_only_results)
-cosine_multi_toyo, cosine_multi_tuyo = count_word_accuracy(cosine_multi_results)
-mlm_toyo, mlm_tuyo = count_word_accuracy(mlm_results)
+mlm_toyo, mlm_tuyo = count_word_accuracy(mlm_only_results)
 
 print(f"""
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                       DISAMBIGUATION RESULTS                             │
 ├──────────────────────────────┬──────────────┬────────────┬───────────────┤
-│        Method                │   Accuracy   │{{{word1.capitalize()}}} (50) │ {{{word2.capitalize()}}} (50) │
+│        Method                │   Accuracy   │ Toyo (50)  │  Tuyo (50)    │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ MaBaybay Default             │   {{baseline_accuracy:6.2f}}%    │   {{baseline_correct_{word1}:2d}}/50    │    {{baseline_correct_{word2}:2d}}/50     │
+│ MaBaybay Default             │   {baseline_accuracy:6.2f}%    │   {baseline_correct_toyo:2d}/{TOYO_COUNT}    │    {baseline_correct_tuyo:2d}/{TUYO_COUNT}     │
 │ (First Candidate)            │              │            │               │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ ★ Pure MLM-PLL               │   {{context_accuracy:6.2f}}%    │   {{mlm_{word1}:2d}}/50    │    {{mlm_{word2}:2d}}/50     │
-│   (Semantic Only)            │ ({{improvement:+6.2f}}%)  │            │               │
+│ ★ Pure MLM-PLL               │   {mlm_only_accuracy:6.2f}%    │   {mlm_toyo:2d}/{TOYO_COUNT}    │    {mlm_tuyo:2d}/{TUYO_COUNT}     │
+│   (MLM Scoring Only)         │ ({mlm_only_imp:+6.2f}%)  │            │               │
 └──────────────────────────────┴──────────────┴────────────┴───────────────┘
 
 Note: MaBaybay default always returns first candidate from transliteration.
@@ -414,33 +413,17 @@ output = {
             'toyo_accuracy': f"{baseline_correct_toyo}/{TOYO_COUNT}",
             'tuyo_accuracy': f"{baseline_correct_tuyo}/{TUYO_COUNT}"
         },
-        'cosine_only': {
-            'name': 'Pure Cosine Similarity (Semantic Only)',
-            'strategy': '100% cosine similarity of mean-pooled RoBERTa embeddings, no other features',
-            'accuracy': cosine_only_accuracy,
-            'correct': cosine_only_metrics['correct_ambiguous'],
-            'toyo_accuracy': f"{cosine_only_toyo}/{TOYO_COUNT}",
-            'tuyo_accuracy': f"{cosine_only_tuyo}/{TUYO_COUNT}"
-        },
-        'cosine_multi': {
-            'name': 'Cosine Similarity + Multi-Feature (Old Method)',
-            'strategy': 'Cosine similarity semantic + frequency + cooccurrence + morphology',
-            'accuracy': cosine_multi_accuracy,
-            'correct': cosine_multi_metrics['correct_ambiguous'],
-            'toyo_accuracy': f"{cosine_multi_toyo}/{TOYO_COUNT}",
-            'tuyo_accuracy': f"{cosine_multi_tuyo}/{TUYO_COUNT}"
-        },
         'mlm_pll': {
-            'name': 'MLM PLL + Multi-Feature (Current)',
-            'strategy': 'MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology',
-            'accuracy': context_accuracy,
-            'correct': metrics['correct_ambiguous'],
+            'name': 'Pure MLM-PLL (MLM Scoring Only)',
+            'strategy': 'MLM pseudo-log-likelihood scoring for context-aware disambiguation',
+            'accuracy': mlm_only_accuracy,
+            'correct': mlm_only_metrics['correct_ambiguous'],
             'toyo_accuracy': f"{mlm_toyo}/{TOYO_COUNT}",
             'tuyo_accuracy': f"{mlm_tuyo}/{TUYO_COUNT}",
             'tuyo_fish_correct': len(tuyo_fish_correct),
             'tuyo_dry_correct': len(tuyo_dry_correct)
         },
-        'improvement_over_baseline': improvement
+        'improvement_over_baseline': mlm_only_imp
     },
     'metrics': mlm_only_metrics
 }

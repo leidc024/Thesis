@@ -15,19 +15,19 @@
     "mlm_pll": {
       "name": "Pure MLM-PLL (Semantic Only)",
       "strategy": "MLM pseudo-log-likelihood semantic (100%), no other features",
-      "accuracy": 99.0,
-      "correct": 99,
-      "boto_accuracy": "49/50",
+      "accuracy": 100.0,
+      "correct": 100,
+      "boto_accuracy": "50/50",
       "buto_accuracy": "50/50"
     },
-    "improvement_over_baseline": 49.0
+    "improvement_over_baseline": 50.0
   },
   "metrics": {
     "total_words": 846,
-    "correct_words": 845,
-    "total_accuracy": 0.9988179669030733,
+    "correct_words": 846,
+    "total_accuracy": 1.0,
     "total_ambiguous": 100,
-    "correct_ambiguous": 99,
-    "ambiguous_accuracy": 0.99
+    "correct_ambiguous": 100,
+    "ambiguous_accuracy": 1.0
   }
 }

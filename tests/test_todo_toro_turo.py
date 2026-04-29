@@ -383,6 +383,7 @@ print("📊 COMPARISON SUMMARY")
 print("="*70)
 
 context_accuracy = mlm_only_accuracy
+mlm_only_imp = mlm_only_accuracy - baseline_accuracy
 improvement = context_accuracy - baseline_accuracy
 
 # Count per-word accuracy for each method
@@ -404,21 +405,21 @@ def count_word_accuracy(result_list):
                 w_turo += 1
     return w_todo, w_toro, w_turo
 
-cosine_only_todo, cosine_only_toro, cosine_only_turo = count_word_accuracy(cosine_only_results)
-cosine_multi_todo, cosine_multi_toro, cosine_multi_turo = count_word_accuracy(cosine_multi_results)
-mlm_todo, mlm_toro, mlm_turo = count_word_accuracy(mlm_results)
+mlm_todo, mlm_toro, mlm_turo = count_word_accuracy(mlm_only_results)
+
+mlm_only_imp = mlm_only_accuracy - baseline_accuracy
 
 print(f"""
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                       DISAMBIGUATION RESULTS                             │
 ├──────────────────────────────┬──────────────┬────────────┬───────────────┤
-│        Method                │   Accuracy   │{{{word1.capitalize()}}} (50) │ {{{word2.capitalize()}}} (50) │
+│        Method                │   Accuracy   │ Todo (50)  │  Toro (50)    │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ MaBaybay Default             │   {{baseline_accuracy:6.2f}}%    │   {{baseline_correct_{word1}:2d}}/50    │    {{baseline_correct_{word2}:2d}}/50     │
+│ MaBaybay Default             │   {baseline_accuracy:6.2f}%    │   {baseline_correct_todo:2d}/50    │    {baseline_correct_toro:2d}/50     │
 │ (First Candidate)            │              │            │               │
 ├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ ★ Pure MLM-PLL               │   {{context_accuracy:6.2f}}%    │   {{mlm_{word1}:2d}}/50    │    {{mlm_{word2}:2d}}/50     │
-│   (Semantic Only)            │ ({{improvement:+6.2f}}%)  │            │               │
+│ ★ Pure MLM-PLL               │   {mlm_only_accuracy:6.2f}%    │   {mlm_todo:2d}/50    │    {mlm_toro:2d}/50     │
+│   (MLM Scoring Only)         │ ({mlm_only_imp:+6.2f}%)  │            │               │
 └──────────────────────────────┴──────────────┴────────────┴───────────────┘
 
 Note: MaBaybay default always returns first candidate from transliteration.
@@ -442,34 +443,16 @@ output = {
             'toro_accuracy': f"{baseline_correct_toro}/{PER_WORD}",
             'turo_accuracy': f"{baseline_correct_turo}/{PER_WORD}"
         },
-        'cosine_only': {
-            'name': 'Pure Cosine Similarity (Semantic Only)',
-            'strategy': '100% cosine similarity of mean-pooled RoBERTa embeddings, no other features',
-            'accuracy': cosine_only_accuracy,
-            'correct': cosine_only_metrics['correct_ambiguous'],
-            'todo_accuracy': f"{cosine_only_todo}/{PER_WORD}",
-            'toro_accuracy': f"{cosine_only_toro}/{PER_WORD}",
-            'turo_accuracy': f"{cosine_only_turo}/{PER_WORD}"
-        },
-        'cosine_multi': {
-            'name': 'Cosine Similarity + Multi-Feature (Old Method)',
-            'strategy': 'Cosine similarity semantic + frequency + cooccurrence + morphology',
-            'accuracy': cosine_multi_accuracy,
-            'correct': cosine_multi_metrics['correct_ambiguous'],
-            'todo_accuracy': f"{cosine_multi_todo}/{PER_WORD}",
-            'toro_accuracy': f"{cosine_multi_toro}/{PER_WORD}",
-            'turo_accuracy': f"{cosine_multi_turo}/{PER_WORD}"
-        },
         'mlm_pll': {
-            'name': 'MLM PLL + Multi-Feature (Current)',
-            'strategy': 'MLM pseudo-log-likelihood semantic + frequency + cooccurrence + morphology',
-            'accuracy': context_accuracy,
-            'correct': metrics['correct_ambiguous'],
+            'name': 'Pure MLM-PLL (MLM Scoring Only)',
+            'strategy': 'MLM pseudo-log-likelihood scoring for context-aware disambiguation',
+            'accuracy': mlm_only_accuracy,
+            'correct': mlm_only_metrics['correct_ambiguous'],
             'todo_accuracy': f"{mlm_todo}/{PER_WORD}",
             'toro_accuracy': f"{mlm_toro}/{PER_WORD}",
             'turo_accuracy': f"{mlm_turo}/{PER_WORD}"
         },
-        'improvement_over_baseline': improvement
+        'improvement_over_baseline': mlm_only_imp
     },
     'metrics': mlm_only_metrics
 }

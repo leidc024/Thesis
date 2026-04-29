@@ -1,15 +1,15 @@
 Todo ang suporta ng pamilya niya sa pag-aaral niya.
-Naginsayo siya nang todo para sa final match.
+Nag-ensayo siya nang todo para sa huling laban.
 Todo ang sigaw ng mga fans sa concert.
 Kumain ako nang todo dahil gutom na gutom ako.
 Todo ang effort niya sa paggawa ng project.
 Naglinis kami nang todo bago dumating ang bisita.
-Todo ang saya ng mga bata sa party.
-Nag-review siya nang todo para pumasa sa exam.
+Todo ang saya ng mga bata sa handaan.
+Nag-aral siya nang todo para pumasa sa pagsusulit.
 Todo ang kaba ko habang hinihintay ang resulta.
 Uminom siya nang todo ng tubig pagkatapos tumakbo.
 Todo ang suporta ng barkada sa negosyo niya.
-Nagpraktis sila nang todo bago ang competition.
+Nagpraktis sila nang todo bago ang kompetisyon.
 Todo ang ingay sa loob ng gym kanina.
 Kumayod siya nang todo para sa pamilya.
 Todo ang ngiti niya nang makita ang regalo.
@@ -17,11 +17,11 @@ Nag-ipon ako nang todo nitong mga nakaraang buwan.
 Todo ang paghanga ko sa performance mo.
 Nagtulungan kami nang todo para matapos agad.
 Todo ang iyak ng bata nang madapa siya.
-Nag-focus siya nang todo sa trabaho.
+Nagpokus siya nang todo sa trabaho.
 Todo ang saya namin sa bakasyon sa probinsya.
-Pinush niya ang sarili niya nang todo sa training.
+Itinulak niya ang sarili niya nang todo sa training.
 Todo ang pagod ko pagkatapos ng overtime.
-Nag-cheer kami nang todo para sa team namin.
+Sumigaw kami nang todo para sa team namin.
 Todo ang dasal niya bago ang interview.
 Nag-aral ako nang todo kagabi para sa quiz.
 Todo ang suporta ng guro sa mga estudyante.
@@ -39,7 +39,7 @@ Nag-enjoy kami nang todo sa outing.
 Todo ang pag-ensayo nila sa sayaw.
 Nagpuyat ako nang todo para matapos ito.
 Todo ang paghahanda niya sa presentation.
-Nagbenta sila nang todo noong weekend sale.
+Todo ang benta nila noong fiesta.
 Todo ang pagod pero sulit ang resulta.
 Nagtiwala siya nang todo sa kakayahan niya.
 Todo ang effort ng team sa finals.
@@ -67,7 +67,7 @@ Ang toro ay bahagi ng pista sa baryo.
 Maingat na inalagaan ang toro sa rancho.
 Umilag siya nang sumugod ang toro.
 Ang toro ay may matutulis na sungay.
-Pinakain ng damo ang toro.
+Pinakain nila ng damo ang toro.
 Malakas ang yabag ng toro sa lupa.
 Nag-ingay ang toro buong gabi.
 Ang toro ay mukhang pagod matapos ang laban.
@@ -78,7 +78,7 @@ Natakot ang mga bata sa malaking toro.
 Ang toro ay umiinom sa sapa.
 Maamo ang toro kapag kilala ang lumalapit.
 Biglang huminto ang toro sa gitna ng daan.
-Ang toro ay bantay sa pastulan.
+Ang toro ay nagbabantay sa pastulan.
 Malusog ang alagang toro ng kapitbahay.
 Sumingit ang toro sa bukas na gate.
 Inobserbahan namin ang toro mula sa malayo.
@@ -86,7 +86,7 @@ Ang toro ay simbolo ng lakas sa kuwento.
 Nagpahinga ang toro sa ilalim ng puno.
 Mahirap kontrolin ang galit na toro.
 Ang toro ay tumatakbo paikot sa bakuran.
-Pinicturan namin ang toro sa bukid.
+Kinunan namin ng larawan ang toro sa bukid.
 Tahimik ang toro habang kumakain.
 Ang toro ay tila nagmamasid sa amin.
 Umalingawngaw ang ungol ng toro.
@@ -111,7 +111,7 @@ Ang turo sa seminar ay kapaki-pakinabang.
 Sinubukan kong sundin ang turo mo.
 Ang turo niya tungkol sa disiplina ay tumatak sa akin.
 Malinaw ang bawat turo sa training.
-Pinuri ang turo ng propesor.
+Pinuri ang paraan ng pagtuturo ng propesor.
 Ang turo ng simbahan ay tungkol sa kabutihan.
 Hindi ko makakalimutan ang turo mo.
 Ang turo niya ang naging gabay ko.
@@ -137,7 +137,7 @@ May saysay ang bawat turo niya.
 Ang turo sa orientation ay nakatulong sa amin.
 Pinakinggan naming mabuti ang turo.
 Ang turo niya ay madaling tandaan.
-Dinala ko ang turo niya hanggang trabaho.
+Dinala ko ang turo niya hanggang sa trabaho.
 Ang turo ng coach ay nagpaangat sa laro ko.
 Sinunod ng klase ang turo ng guro.
 Ang turo niya ay puno ng karanasan.
@@ -146,5 +146,5 @@ Ang turo niya ay simple pero epektibo.
 Isinasabuhay ko ang turo ng pamilya ko.
 Ang turo sa module ay detalyado.
 Ang turo ng aking mga magulang ay dala-dala ko hanggang sa pagtanda.
-Ang turo niya ay may kasamang demo.
+Ang turo niya ay may kasamang demonstrasyon.
 Pinahalagahan ko ang bawat turo na natanggap ko.
