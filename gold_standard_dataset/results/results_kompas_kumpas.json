@@ -22,6 +22,21 @@
     },
     "improvement_over_baseline": 0.0
   },
+  "runtime_metrics": {
+    "baseline": {
+      "method": "MaBaybay Default (First Candidate)",
+      "execution_time_seconds": 0.0,
+      "milliseconds_per_ambiguous_position": 0.0
+    },
+    "mlm_pll": {
+      "method": "Pure MLM-PLL",
+      "initialization_time_seconds": 2.856250286102295,
+      "execution_time_seconds": 26.044018507003784,
+      "total_time_seconds": 28.90026879310608,
+      "milliseconds_per_ambiguous_position": 260.44018507003784,
+      "ambiguous_positions_evaluated": 100
+    }
+  },
   "metrics": {
     "total_words": 746,
     "correct_words": 696,

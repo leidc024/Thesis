@@ -3,12 +3,12 @@
   "baybayin": "ᜆᜓᜇᜓ",
   "type": "O/U + D/R",
   "num_candidates": 3,
-  "test_sentences": 149,
+  "test_sentences": 150,
   "comparison": {
     "baseline": {
       "name": "MaBaybay Default (First Candidate)",
       "strategy": "Always pick first candidate from transliteration",
-      "accuracy": 33.557046979865774,
+      "accuracy": 33.33333333333333,
       "correct": 50,
       "todo_accuracy": "50/50",
       "toro_accuracy": "0/50",
@@ -17,20 +17,35 @@
     "mlm_pll": {
       "name": "Pure MLM-PLL (MLM Scoring Only)",
       "strategy": "MLM pseudo-log-likelihood scoring for context-aware disambiguation",
-      "accuracy": 97.31543624161074,
-      "correct": 145,
+      "accuracy": 97.33333333333334,
+      "correct": 146,
       "todo_accuracy": "50/50",
       "toro_accuracy": "46/50",
-      "turo_accuracy": "49/50"
+      "turo_accuracy": "50/50"
     },
-    "improvement_over_baseline": 63.758389261744966
+    "improvement_over_baseline": 64.00000000000001
+  },
+  "runtime_metrics": {
+    "baseline": {
+      "method": "MaBaybay Default (First Candidate)",
+      "execution_time_seconds": 0.0,
+      "milliseconds_per_ambiguous_position": 0.0
+    },
+    "mlm_pll": {
+      "method": "Pure MLM-PLL",
+      "initialization_time_seconds": 3.0081865787506104,
+      "execution_time_seconds": 36.3642840385437,
+      "total_time_seconds": 39.37247061729431,
+      "milliseconds_per_ambiguous_position": 242.428560256958,
+      "ambiguous_positions_evaluated": 150
+    }
   },
   "metrics": {
-    "total_words": 1066,
-    "correct_words": 1062,
-    "total_accuracy": 0.9962476547842402,
-    "total_ambiguous": 149,
-    "correct_ambiguous": 145,
-    "ambiguous_accuracy": 0.9731543624161074
+    "total_words": 1076,
+    "correct_words": 1072,
+    "total_accuracy": 0.9962825278810409,
+    "total_ambiguous": 150,
+    "correct_ambiguous": 146,
+    "ambiguous_accuracy": 0.9733333333333334
   }
 }

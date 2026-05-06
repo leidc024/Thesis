@@ -9,6 +9,7 @@ import json
 import re
 import sys
 import os
+import time
 from pathlib import Path
 
 # Ensure project root is in sys.path (so tests/ can import src/)
@@ -199,6 +200,7 @@ baseline_correct_todo = 0
 baseline_correct_toro = 0
 baseline_correct_turo = 0
 
+baseline_start_time = time.time()
 for test_item in test_data:
     gt = test_item['ground_truth']
     gt_words = get_clean_words(gt)
@@ -209,6 +211,7 @@ for test_item in test_data:
         baseline_correct_todo += 1
     # If ground truth is "toro" or "turo", baseline gets it wrong (picks "todo")
 
+baseline_time = time.time() - baseline_start_time
 baseline_accuracy = baseline_correct_total / TOTAL_SENTENCES * 100
 
 print(f"\nBaseline Strategy: Always select 'todo' (first candidate)")
@@ -225,6 +228,7 @@ print("INITIALIZING MODEL")
 print("="*70)
 
 all_test_sentences = [item['ground_truth'] for item in test_data]
+init_start_time = time.time()
 model = BaybayinDisambiguator(
     corpus_files=[
         "corpus/Tagalog_Literary_Text.txt",
@@ -233,6 +237,8 @@ model = BaybayinDisambiguator(
     ],
     exclude_sentences=all_test_sentences  # Clean evaluation - no data leakage
 )
+init_time = time.time() - init_start_time
+print(f"Initialization time: {init_time:.2f}s")
 
 # ============================================================================
 # METHOD 1: Pure MLM-PLL (Semantic Only)
@@ -248,11 +254,15 @@ print(f"\nWeights: {mlm_only_weights}")
 print("Semantic scoring: MLM PLL (Masked Language Model Pseudo-Log-Likelihood)")
 print("Running evaluation...")
 
+eval_start_time = time.time()
 mlm_only_metrics, mlm_only_results = model.evaluate(
     test_data, show_progress=True, use_mlm=True, weights_override=mlm_only_weights
 )
+eval_time = time.time() - eval_start_time
 mlm_only_accuracy = mlm_only_metrics['ambiguous_accuracy'] * 100
+time_per_ambiguity = eval_time / mlm_only_metrics['total_ambiguous']
 print(f"★ Pure MLM-PLL accuracy: {mlm_only_accuracy:.2f}%")
+print(f"Evaluation time: {eval_time:.2f}s ({time_per_ambiguity*1000:.2f}ms per ambiguity)")
 
 # Use MLM-PLL results for detailed predictions display
 metrics = mlm_only_metrics
@@ -412,15 +422,15 @@ mlm_only_imp = mlm_only_accuracy - baseline_accuracy
 print(f"""
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                       DISAMBIGUATION RESULTS                             │
-├──────────────────────────────┬──────────────┬────────────┬───────────────┤
-│        Method                │   Accuracy   │ Todo (50)  │  Toro (50)    │
-├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ MaBaybay Default             │   {baseline_accuracy:6.2f}%    │   {baseline_correct_todo:2d}/50    │    {baseline_correct_toro:2d}/50     │
-│ (First Candidate)            │              │            │               │
-├──────────────────────────────┼──────────────┼────────────┼───────────────┤
-│ ★ Pure MLM-PLL               │   {mlm_only_accuracy:6.2f}%    │   {mlm_todo:2d}/50    │    {mlm_toro:2d}/50     │
-│   (MLM Scoring Only)         │ ({mlm_only_imp:+6.2f}%)  │            │               │
-└──────────────────────────────┴──────────────┴────────────┴───────────────┘
+├──────────────────────────────┬──────────────┬────────────┬────────────┬────────────┤
+│        Method                │   Accuracy   │ Todo (50)  │ Toro (50)  │ Turo (50)  │
+├──────────────────────────────┼──────────────┼────────────┼────────────┼────────────┤
+│ MaBaybay Default             │   {baseline_accuracy:6.2f}%    │   {baseline_correct_todo:2d}/50    │    {baseline_correct_toro:2d}/50     │    {baseline_correct_turo:2d}/50     │
+│ (First Candidate)            │              │            │            │            │
+├──────────────────────────────┼──────────────┼────────────┼────────────┼────────────┤
+│ ★ Pure MLM-PLL               │   {mlm_only_accuracy:6.2f}%    │   {mlm_todo:2d}/50    │    {mlm_toro:2d}/50     │    {mlm_turo:2d}/50     │
+│   (MLM Scoring Only)         │ ({mlm_only_imp:+6.2f}%)  │            │            │            │
+└──────────────────────────────┴──────────────┴────────────┴────────────┴────────────┘
 
 Note: MaBaybay default always returns first candidate from transliteration.
       Baseline always picks first candidate.
@@ -453,6 +463,21 @@ output = {
             'turo_accuracy': f"{mlm_turo}/{PER_WORD}"
         },
         'improvement_over_baseline': mlm_only_imp
+    },
+    'runtime_metrics': {
+        'baseline': {
+            'method': 'MaBaybay Default (First Candidate)',
+            'execution_time_seconds': baseline_time,
+            'milliseconds_per_ambiguous_position': (baseline_time / TOTAL_SENTENCES) * 1000
+        },
+        'mlm_pll': {
+            'method': 'Pure MLM-PLL',
+            'initialization_time_seconds': init_time,
+            'execution_time_seconds': eval_time,
+            'total_time_seconds': init_time + eval_time,
+            'milliseconds_per_ambiguous_position': time_per_ambiguity * 1000,
+            'ambiguous_positions_evaluated': mlm_only_metrics['total_ambiguous']
+        }
     },
     'metrics': mlm_only_metrics
 }
