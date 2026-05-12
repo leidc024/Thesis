@@ -76,7 +76,7 @@ The system operates via a hybrid bridge. MATLAB handles image segmentation and c
 - **Python Side**: MATLAB triggers `disambiguate.py` via a system call.
 - **Scoring**: The `BaybayinDisambiguator` class computes Pseudo-Log-Likelihood (PLL) scores:
 
-$$\text{PLL(candidate)} = \sum \log P(\text{tokens} \mid \text{context})$$
+<!-- $$\text{PLL(candidate)} = \sum \log P(\text{tokens} \mid \text{context})$$ -->
 
 - **Output**: The disambiguated text is returned to the MATLAB terminal for final display.
 
@@ -106,7 +106,7 @@ The results and timing logs will be saved in `gold_standard_dataset/results/` in
 - **src/**: Contains `disambiguator.py` (Core scoring logic)
 - **gold_standard_dataset/**: The 1,600-sample benchmark dataset
   - **sentences/**: Ground truth text files
-  - **images/**: Handwritten Baybayin test images
+  - **images/**: tagalog stylized.ttf Baybayin test images
 - **disambiguate.py**: The entry point wrapper for MATLAB system calls
 - **ambiguous_pairs_complete.csv**: The mapping of 74,419+ words used for candidate generation
 
