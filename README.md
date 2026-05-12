@@ -1,6 +1,6 @@
 # MaBaybay-OCR 2.0: Context-Aware Baybayin Transliteration
 
-MaBaybay-OCR 2.0 addresses the inherent phonetic ambiguities of the Baybayin script (specifically e/i, o/u, and d/r overlaps) by applying a bidirectional Masked Language Model (MLM) scoring mechanism of Salazar et.al 2021. By leveraging jcblaise/roberta-tagalog-base, the system achieves a disambiguation accuracy of **83%**, significantly outperforming the 46% baseline of the OCR's heuristic-based systems.
+MaBaybay-OCR 2.0 addresses the inherent phonetic ambiguities of the Baybayin script (specifically e/i, o/u, and d/r overlaps) by applying a bidirectional Masked Language Model (MLM) scoring mechanism of Salazar et.al 2020. By leveraging jcblaise/roberta-tagalog-base, the system achieves a disambiguation accuracy of **83%**, significantly outperforming the 46% baseline of the OCR's heuristic-based systems.
 
 ## 1. Prerequisites
 
