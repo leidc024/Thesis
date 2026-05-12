@@ -25,15 +25,15 @@
   "runtime_metrics": {
     "baseline": {
       "method": "MaBaybay Default (First Candidate)",
-      "execution_time_seconds": 0.009676694869995117,
-      "milliseconds_per_ambiguous_position": 0.09676694869995117
+      "execution_time_seconds": 0.0,
+      "milliseconds_per_ambiguous_position": 0.0
     },
     "mlm_pll": {
       "method": "Pure MLM-PLL",
-      "initialization_time_seconds": 4.159257888793945,
-      "execution_time_seconds": 33.2522919178009,
-      "total_time_seconds": 37.41154980659485,
-      "milliseconds_per_ambiguous_position": 332.52291917800903,
+      "initialization_time_seconds": 4.444249391555786,
+      "execution_time_seconds": 33.99687099456787,
+      "total_time_seconds": 38.44112038612366,
+      "milliseconds_per_ambiguous_position": 339.9687099456787,
       "ambiguous_positions_evaluated": 100
     }
   },
